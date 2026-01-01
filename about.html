@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story — CHRONOS Luxury Watches</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C9A962;
+            --gold-light: #E8D5A3;
+            --gold-dark: #8B7355;
+            --obsidian: #0A0A0A;
+            --charcoal: #1A1A1A;
+            --slate: #2A2A2A;
+            --silver: #C0C0C0;
+            --cream: #F5F3EF;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Outfit', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--obsidian);
+            color: var(--cream);
+            line-height: 1.8;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--slate);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 0.3em;
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero */
+        .page-hero {
+            padding: 100px 40px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--charcoal), var(--obsidian));
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .page-hero h1 em {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            color: var(--silver);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .content h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--gold);
+            margin-bottom: 30px;
+            margin-top: 60px;
+        }
+
+        .content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .content p {
+            font-size: 1rem;
+            color: var(--silver);
+            margin-bottom: 20px;
+        }
+
+        .content ul {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .content ul li {
+            padding: 15px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--silver);
+            border-bottom: 1px solid var(--slate);
+        }
+
+        .content ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        .content strong {
+            color: var(--cream);
+        }
+
+        /* Values Grid */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .value-card {
+            background: var(--charcoal);
+            border: 1px solid var(--slate);
+            padding: 30px;
+        }
+
+        .value-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            color: var(--cream);
+            margin-bottom: 15px;
+        }
+
+        .value-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        /* CTA */
+        .cta-section {
+            text-align: center;
+            padding: 80px 40px;
+            background: var(--charcoal);
+            margin-top: 60px;
+        }
+
+        .cta-section h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: var(--silver);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: var(--gold);
+            color: var(--obsidian);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--gold-light);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid var(--slate);
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: var(--silver);
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">CHRONOS</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">Our Story</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <h1>Our <em>Story</em></h1>
+        <p>Dedicated to helping watch enthusiasts discover exceptional timepieces from the world's most trusted retailers.</p>
+    </section>
+
+    <!-- Content -->
+    <div class="content">
+        <h2>The CHRONOS Mission</h2>
+        <p>At CHRONOS, we believe that finding the perfect luxury timepiece should be an experience as refined as the watches themselves. Our mission is simple: to curate the finest selection of luxury watches from trusted retailers worldwide, making it easier for collectors and enthusiasts to discover their next exceptional timepiece.</p>
+        
+        <p>We understand that a luxury watch is more than just an accessory — it's a statement of craftsmanship, heritage, and personal style. Whether you're seeking your first luxury timepiece or adding to a distinguished collection, CHRONOS is here to guide your journey.</p>
+
+        <h2>What We Do</h2>
+        <p>CHRONOS serves as your personal gateway to the world's most prestigious watch retailers. We carefully curate selections from authorized dealers and trusted marketplaces, bringing together an unparalleled collection of timepieces in one elegant destination.</p>
+
+        <ul>
+            <li><strong>Curated Selection</strong> — We handpick exceptional timepieces from verified, reputable retailers</li>
+            <li><strong>Trusted Partners</strong> — We work only with established retailers known for authenticity and service</li>
+            <li><strong>Expert Guidance</strong> — Our content helps you understand what makes each timepiece special</li>
+            <li><strong>Best Prices</strong> — We help you find competitive prices across multiple retailers</li>
+        </ul>
+
+        <h2>Our Values</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <h3>Authenticity</h3>
+                <p>We partner only with authorized dealers and trusted marketplaces to ensure every timepiece is genuine.</p>
+            </div>
+            <div class="value-card">
+                <h3>Excellence</h3>
+                <p>We curate only the finest examples of horological craftsmanship from prestigious brands.</p>
+            </div>
+            <div class="value-card">
+                <h3>Trust</h3>
+                <p>Transparency is at the heart of everything we do. We're honest about our affiliate relationships.</p>
+            </div>
+            <div class="value-card">
+                <h3>Passion</h3>
+                <p>Our love for fine timepieces drives us to deliver the best possible experience for collectors.</p>
+            </div>
+        </div>
+
+        <h2>Affiliate Disclosure</h2>
+        <p>CHRONOS is an affiliate website. This means when you click on links to retailers on our site and make a purchase, we may earn a small commission at no additional cost to you. This is how we keep CHRONOS running and continue to bring you the finest curated selections.</p>
+        
+        <p>Our affiliate relationships never influence our curation process. We feature timepieces based solely on their quality, craftsmanship, and value — not on commission rates. Your trust is more valuable to us than any commission.</p>
+
+        <h2>Contact Us</h2>
+        <p>Have questions, suggestions, or feedback? We'd love to hear from you.</p>
+        <p><strong>Email:</strong> customerservice@chronos-luxury-watches.com</p>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Begin Your Journey</h2>
+        <p>Discover exceptional timepieces from the world's most prestigious watchmakers.</p>
+        <a href="index.html" class="btn">Explore Collection →</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 CHRONOS. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
