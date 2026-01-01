@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Authentication — CHRONOS</title>
+    <meta name="description" content="Learn how to verify the authenticity of luxury watches and why buying from authorized dealers guarantees genuine timepieces.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C9A962;
+            --gold-light: #E8D5A3;
+            --obsidian: #0A0A0A;
+            --charcoal: #1A1A1A;
+            --slate: #2A2A2A;
+            --silver: #C0C0C0;
+            --cream: #F5F3EF;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Outfit', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--obsidian);
+            color: var(--cream);
+            line-height: 1.8;
+        }
+
+        header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--slate);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 0.3em;
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .page-hero {
+            padding: 80px 40px;
+            text-align: center;
+            border-bottom: 1px solid var(--slate);
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+
+        .page-hero p {
+            color: var(--silver);
+            font-size: 1.1rem;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .content h2 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--gold);
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .content h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--cream);
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            color: var(--silver);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .content ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .content ul li {
+            padding: 12px 0;
+            padding-left: 25px;
+            position: relative;
+            color: var(--silver);
+            border-bottom: 1px solid var(--slate);
+        }
+
+        .content ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        .content strong {
+            color: var(--cream);
+        }
+
+        .content a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+        .info-box {
+            background: var(--charcoal);
+            border-left: 4px solid var(--gold);
+            padding: 25px 30px;
+            margin: 30px 0;
+        }
+
+        .info-box h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .trust-card {
+            background: var(--charcoal);
+            border: 1px solid var(--slate);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .trust-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .trust-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--cream);
+            margin-bottom: 10px;
+        }
+
+        .trust-card p {
+            font-size: 0.9rem;
+            color: var(--silver);
+            margin: 0;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid var(--slate);
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: var(--silver);
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">CHRONOS</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">Our Story</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <h1>Watch Authentication</h1>
+        <p>Ensuring your timepiece is 100% genuine</p>
+    </section>
+
+    <div class="content">
+        <h2>Our Commitment to Authenticity</h2>
+        <p>At CHRONOS, authenticity isn't just important—it's everything. That's why we exclusively link to official brand websites and authorized retailers. When you purchase through our recommended sources, you're guaranteed a genuine timepiece.</p>
+
+        <div class="trust-grid">
+            <div class="trust-card">
+                <div class="icon">🛡️</div>
+                <h4>100% Genuine</h4>
+                <p>Only official sources and authorized dealers</p>
+            </div>
+            <div class="trust-card">
+                <div class="icon">📜</div>
+                <h4>Full Documentation</h4>
+                <p>Complete papers, warranty, and provenance</p>
+            </div>
+            <div class="trust-card">
+                <div class="icon">✓</div>
+                <h4>Verified Retailers</h4>
+                <p>Every linked retailer is brand-authorized</p>
+            </div>
+            <div class="trust-card">
+                <div class="icon">🔒</div>
+                <h4>Protected Purchase</h4>
+                <p>Full consumer protections apply</p>
+            </div>
+        </div>
+
+        <h2>Why Authorized Sources Matter</h2>
+        <p>Purchasing from authorized dealers and official brand boutiques provides guarantees that no other source can match:</p>
+        <ul>
+            <li><strong>Guaranteed authenticity</strong> — Watches come directly from the manufacturer</li>
+            <li><strong>Full manufacturer warranty</strong> — Typically 2-5 years of coverage</li>
+            <li><strong>Proper documentation</strong> — Original box, papers, warranty card, and receipt</li>
+            <li><strong>Service network access</strong> — Full support from the brand's service centers</li>
+            <li><strong>Resale value protection</strong> — Complete provenance enhances future value</li>
+            <li><strong>Legal recourse</strong> — Consumer protection laws apply to authorized transactions</li>
+        </ul>
+
+        <h2>How Brands Ensure Authenticity</h2>
+
+        <h3>Serial Numbers</h3>
+        <p>Every luxury watch has a unique serial number engraved on the case. Authorized dealers register this number with the manufacturer at the time of sale, creating a permanent record of ownership.</p>
+
+        <h3>Security Features</h3>
+        <p>Modern luxury watches include numerous anti-counterfeiting measures:</p>
+        <ul>
+            <li><strong>Micro-engravings</strong> — Tiny details impossible to replicate accurately</li>
+            <li><strong>Laser-etched logos</strong> — Often visible only under magnification</li>
+            <li><strong>Holographic elements</strong> — On warranty cards and documentation</li>
+            <li><strong>Unique movements</strong> — In-house calibers with proprietary components</li>
+            <li><strong>Material quality</strong> — Specific alloys and finishing only available to the brand</li>
+        </ul>
+
+        <h3>Digital Verification</h3>
+        <p>Many brands now offer digital authentication:</p>
+        <ul>
+            <li><strong>Rolex</strong> — Green card with serial number verification</li>
+            <li><strong>Omega</strong> — Digital warranty registration system</li>
+            <li><strong>Breitling</strong> — Blockchain-based digital passport</li>
+            <li><strong>TAG Heuer</strong> — Connected warranty activation</li>
+        </ul>
+
+        <div class="info-box">
+            <h3>Concerned About a Watch?</h3>
+            <p>If you're considering a watch from a non-authorized source and want to verify authenticity, we recommend having it inspected by an authorized service center. They can verify the serial number and confirm all components are genuine. Read our guide: <a href="blog-spot-fake-watch.html">How to Spot a Fake Luxury Watch</a></p>
+        </div>
+
+        <h2>Red Flags to Avoid</h2>
+        <p>When shopping for luxury watches, be wary of:</p>
+        <ul>
+            <li><strong>Prices too good to be true</strong> — Significant discounts on in-demand models</li>
+            <li><strong>Missing documentation</strong> — No box, papers, or warranty card</li>
+            <li><strong>Pressure tactics</strong> — Urgency to buy before you can verify</li>
+            <li><strong>Unusual payment methods</strong> — Requests for wire transfer or cryptocurrency only</li>
+            <li><strong>No return policy</strong> — Legitimate sellers offer returns</li>
+            <li><strong>Seller won't verify</strong> — Unwillingness to prove authenticity</li>
+        </ul>
+
+        <h2>CHRONOS Authentication Promise</h2>
+        <p>Every brand and retailer featured on CHRONOS has been verified as an official or authorized source. We do not link to:</p>
+        <ul>
+            <li>Grey market dealers</li>
+            <li>Unauthorized resellers</li>
+            <li>Peer-to-peer marketplaces</li>
+            <li>Unknown or unverified sources</li>
+        </ul>
+        <p>When you click through from CHRONOS to make a purchase, you can buy with confidence knowing the source is legitimate.</p>
+
+        <div class="info-box">
+            <h3>Questions About Authenticity?</h3>
+            <p>If you have any concerns or questions about authentication, please <a href="contact.html">contact us</a>. We're happy to help guide you to legitimate sources for any watch you're interested in.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 CHRONOS. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

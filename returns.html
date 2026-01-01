@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returns & Exchanges — CHRONOS</title>
+    <meta name="description" content="Understand return and exchange policies when purchasing luxury watches from authorized dealers and official brand boutiques.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C9A962;
+            --gold-light: #E8D5A3;
+            --obsidian: #0A0A0A;
+            --charcoal: #1A1A1A;
+            --slate: #2A2A2A;
+            --silver: #C0C0C0;
+            --cream: #F5F3EF;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Outfit', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--obsidian);
+            color: var(--cream);
+            line-height: 1.8;
+        }
+
+        header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--slate);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 0.3em;
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .page-hero {
+            padding: 80px 40px;
+            text-align: center;
+            border-bottom: 1px solid var(--slate);
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+
+        .page-hero p {
+            color: var(--silver);
+            font-size: 1.1rem;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .content h2 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--gold);
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .content p {
+            color: var(--silver);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .content ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .content ul li {
+            padding: 12px 0;
+            padding-left: 25px;
+            position: relative;
+            color: var(--silver);
+            border-bottom: 1px solid var(--slate);
+        }
+
+        .content ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        .content strong {
+            color: var(--cream);
+        }
+
+        .content a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+        .info-box {
+            background: var(--charcoal);
+            border-left: 4px solid var(--gold);
+            padding: 25px 30px;
+            margin: 30px 0;
+        }
+
+        .info-box h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        .warning-box {
+            background: var(--charcoal);
+            border-left: 4px solid #e74c3c;
+            padding: 25px 30px;
+            margin: 30px 0;
+        }
+
+        .warning-box h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        .warning-box p {
+            margin-bottom: 0;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid var(--slate);
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: var(--silver);
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">CHRONOS</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">Our Story</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <h1>Returns & Exchanges</h1>
+        <p>Understanding retailer policies before you buy</p>
+    </section>
+
+    <div class="content">
+        <div class="info-box">
+            <h3>Important Note</h3>
+            <p>CHRONOS is a curated guide to luxury watches. We do not sell watches directly. Return and exchange policies are set by the individual brands and authorized retailers you purchase from.</p>
+        </div>
+
+        <h2>Typical Return Policies</h2>
+        <p>Most authorized dealers and official brand boutiques have generous return policies for luxury timepieces. Here's what you can typically expect:</p>
+        <ul>
+            <li><strong>Return window</strong> — Usually 14-30 days from delivery date</li>
+            <li><strong>Condition requirements</strong> — Watch must be unworn with all tags attached</li>
+            <li><strong>Original packaging</strong> — All boxes, papers, and accessories must be included</li>
+            <li><strong>Proof of purchase</strong> — Original receipt or order confirmation required</li>
+            <li><strong>Refund method</strong> — Typically returned to original payment method</li>
+        </ul>
+
+        <h2>Exchange Options</h2>
+        <p>If you'd like to exchange your watch for a different model, most authorized dealers offer flexible options:</p>
+        <ul>
+            <li><strong>Size exchanges</strong> — Different bracelet sizes or strap lengths</li>
+            <li><strong>Model exchanges</strong> — Swap for a different reference (subject to price difference)</li>
+            <li><strong>Color variations</strong> — Different dial colors or bezel options</li>
+            <li><strong>In-store exchanges</strong> — Often easier and faster than shipping</li>
+        </ul>
+
+        <div class="warning-box">
+            <h3>Items Typically Not Returnable</h3>
+            <p>Be aware that certain items may have restrictions: personalized or engraved watches, special orders, limited editions purchased through allocation, watches with broken seals or removed tags, and items showing signs of wear.</p>
+        </div>
+
+        <h2>Brand-Specific Policies</h2>
+        <p>Each luxury watch brand has its own policies. Here's general guidance:</p>
+        
+        <h3>Rolex</h3>
+        <p>Rolex does not sell directly online in most markets. Purchases are made through authorized dealers, each with their own return policy. Many Rolex ADs have strict policies due to high demand—always confirm before purchasing.</p>
+
+        <h3>Omega</h3>
+        <p>Omega's official online boutique typically offers a 14-day return policy for unworn watches in original condition. Returns are free within this window.</p>
+
+        <h3>TAG Heuer</h3>
+        <p>TAG Heuer's official website generally allows returns within 14 days of delivery for a full refund, provided the watch is unworn and in original packaging.</p>
+
+        <h3>Other Brands</h3>
+        <p>Policies vary by brand and region. We recommend checking the specific return policy on the brand's website or contacting customer service before completing your purchase.</p>
+
+        <h2>Tips for Hassle-Free Returns</h2>
+        <ul>
+            <li><strong>Read the policy first</strong> — Before purchasing, review the return policy carefully</li>
+            <li><strong>Keep everything</strong> — Don't discard any packaging, tags, or documentation</li>
+            <li><strong>Don't remove tags</strong> — Many returns are rejected if tags are removed</li>
+            <li><strong>Document condition</strong> — Photograph the watch before wearing or returning</li>
+            <li><strong>Act quickly</strong> — Start the return process within the first few days if you're unsure</li>
+            <li><strong>Use provided shipping</strong> — Always use the retailer's return label if provided</li>
+            <li><strong>Get confirmation</strong> — Ensure you receive return authorization before shipping</li>
+        </ul>
+
+        <h2>What If Something Is Wrong?</h2>
+        <p>If your watch arrives damaged, defective, or is not as described:</p>
+        <ul>
+            <li><strong>Document immediately</strong> — Photograph any issues right away</li>
+            <li><strong>Contact seller</strong> — Reach out to customer service within 24-48 hours</li>
+            <li><strong>Don't wear it</strong> — Leave the watch unworn until the issue is resolved</li>
+            <li><strong>Save all packaging</strong> — Keep shipping materials in case they're needed for investigation</li>
+        </ul>
+
+        <div class="info-box">
+            <h3>Need Help?</h3>
+            <p>If you have questions about a specific retailer's return policy or need guidance navigating a return, feel free to <a href="contact.html">contact us</a>. While we can't process returns ourselves, we can help point you to the right resources.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 CHRONOS. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
