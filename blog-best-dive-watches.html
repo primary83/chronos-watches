@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Dive Watches for Every Budget: From $500 to $50,000 — CHRONOS</title>
+    <meta name="description" content="Discover the best dive watches at every price point. From affordable tool watches to haute horlogerie, find the perfect underwater companion for your budget.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C9A962;
+            --gold-light: #E8D5A3;
+            --gold-dark: #8B7355;
+            --obsidian: #0A0A0A;
+            --charcoal: #1A1A1A;
+            --slate: #2A2A2A;
+            --silver: #C0C0C0;
+            --cream: #F5F3EF;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Outfit', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--obsidian);
+            color: var(--cream);
+            line-height: 1.8;
+        }
+
+        header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--slate);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 0.3em;
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .article-hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .article-hero img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+        }
+
+        .article-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 40px;
+        }
+
+        .article-tag {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .article-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 300;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: var(--silver);
+        }
+
+        .article-content {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .article-content p {
+            font-size: 1.05rem;
+            color: var(--silver);
+            margin-bottom: 25px;
+        }
+
+        .article-content h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--cream);
+            margin-top: 50px;
+            margin-bottom: 25px;
+        }
+
+        .article-content h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--gold);
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .article-content ul {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .article-content ul li {
+            padding: 12px 0;
+            padding-left: 25px;
+            position: relative;
+            color: var(--silver);
+            border-bottom: 1px solid var(--slate);
+        }
+
+        .article-content ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        .article-content strong {
+            color: var(--cream);
+        }
+
+        .article-content a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .article-content a:hover {
+            text-decoration: underline;
+        }
+
+        .article-content blockquote {
+            border-left: 3px solid var(--gold);
+            padding-left: 30px;
+            margin: 40px 0;
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--cream);
+        }
+
+        .watch-card {
+            background: var(--charcoal);
+            border: 1px solid var(--slate);
+            padding: 35px;
+            margin: 40px 0;
+        }
+
+        .watch-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .watch-card-badge {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--obsidian);
+            background: var(--gold);
+            padding: 5px 12px;
+        }
+
+        .watch-card-price {
+            font-size: 0.9rem;
+            color: var(--gold);
+            background: var(--slate);
+            padding: 8px 15px;
+        }
+
+        .watch-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--cream);
+            margin-bottom: 15px;
+        }
+
+        .watch-card p {
+            color: var(--silver);
+            margin-bottom: 20px;
+        }
+
+        .watch-specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--slate);
+        }
+
+        .watch-spec {
+            font-size: 0.85rem;
+        }
+
+        .watch-spec span {
+            display: block;
+            color: var(--gold-dark);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 5px;
+        }
+
+        .budget-section {
+            background: var(--charcoal);
+            padding: 25px 30px;
+            margin: 50px 0 30px 0;
+            border-left: 4px solid var(--gold);
+        }
+
+        .budget-section h2 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin: 0;
+        }
+
+        .tip-box {
+            background: var(--charcoal);
+            border-left: 4px solid var(--gold);
+            padding: 25px 30px;
+            margin: 40px 0;
+        }
+
+        .tip-box h4 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .tip-box p {
+            margin-bottom: 0;
+        }
+
+        .cta-box {
+            background: var(--charcoal);
+            border: 1px solid var(--gold);
+            padding: 40px;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--cream);
+        }
+
+        .cta-box p {
+            margin-bottom: 25px;
+        }
+
+        .cta-box .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: var(--gold);
+            color: var(--obsidian);
+            transition: all 0.3s ease;
+        }
+
+        .cta-box .btn:hover {
+            background: var(--gold-light);
+        }
+
+        .related-articles {
+            background: var(--charcoal);
+            padding: 80px 40px;
+        }
+
+        .related-articles h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .related-card {
+            background: var(--obsidian);
+            border: 1px solid var(--slate);
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .related-card:hover {
+            border-color: var(--gold);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .related-card-content {
+            padding: 25px;
+        }
+
+        .related-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .related-card p {
+            font-size: 0.9rem;
+            color: var(--silver);
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid var(--slate);
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: var(--silver);
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .article-hero {
+                height: 400px;
+            }
+
+            .watch-card-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">CHRONOS</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">Our Story</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+        </nav>
+    </header>
+
+    <section class="article-hero">
+        <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=1200&q=80" alt="Dive watch underwater">
+        <div class="article-hero-content">
+            <span class="article-tag">Buying Guide</span>
+            <h1>Best Dive Watches for Every Budget</h1>
+            <p class="article-meta">January 2025 • 14 min read</p>
+        </div>
+    </section>
+
+    <article class="article-content">
+        <p>The dive watch is perhaps the most versatile category in watchmaking. Originally designed as professional tools for underwater exploration, dive watches have evolved into stylish everyday companions that work equally well on the beach or in the boardroom.</p>
+
+        <p>Whether you're an actual diver seeking a reliable instrument or simply love the aesthetic, there's a perfect dive watch for every budget. This guide covers the best options from $500 to $50,000.</p>
+
+        <blockquote>"A true dive watch must be functional first. Beauty is the bonus."</blockquote>
+
+        <h2>What Makes a Dive Watch?</h2>
+
+        <p>According to ISO 6425 standards, a true dive watch must meet specific criteria:</p>
+
+        <ul>
+            <li><strong>Water resistance</strong> — Minimum 100 meters (330 feet)</li>
+            <li><strong>Unidirectional rotating bezel</strong> — To time dives safely</li>
+            <li><strong>Luminous markers</strong> — For visibility in dark conditions</li>
+            <li><strong>Secure strap/bracelet</strong> — Won't come loose during activities</li>
+            <li><strong>Anti-magnetic protection</strong> — Resists magnetic interference</li>
+        </ul>
+
+        <p>Most watches marketed as "dive watches" meet these requirements, but always verify the specifications before relying on one underwater.</p>
+
+        <div class="budget-section">
+            <h2>Budget: Under $1,000</h2>
+        </div>
+
+        <p>You don't need to spend a fortune to get a capable, attractive dive watch. These options punch well above their weight.</p>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-badge">Best Value</span>
+                <span class="watch-card-price">~$500</span>
+            </div>
+            <h3>Seiko Prospex SPB143 "62MAS Reissue"</h3>
+            <p>Seiko's modern interpretation of their legendary 1965 diver offers incredible value. The 40.5mm case is perfectly sized, the dial is stunning, and the 6R35 movement provides 70 hours of power reserve. It's the watch many enthusiasts say you should buy before spending more.</p>
+            <div class="watch-specs">
+                <div class="watch-spec"><span>Water Resistance</span>200m</div>
+                <div class="watch-spec"><span>Movement</span>6R35 Automatic</div>
+                <div class="watch-spec"><span>Case Size</span>40.5mm</div>
+                <div class="watch-spec"><span>Power Reserve</span>70 hours</div>
+            </div>
+        </div>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-badge">Tool Watch Legend</span>
+                <span class="watch-card-price">~$350</span>
+            </div>
+            <h3>Orient Kamasu</h3>
+            <p>The Kamasu offers sapphire crystal, a solid automatic movement, and excellent finishing at a price that seems almost impossible. Available in multiple colors, it's the perfect entry point into mechanical dive watches.</p>
+            <div class="watch-specs">
+                <div class="watch-spec"><span>Water Resistance</span>200m</div>
+                <div class="watch-spec"><span>Movement</span>F6922 Automatic</div>
+                <div class="watch-spec"><span>Case Size</span>41.8mm</div>
+                <div class="watch-spec"><span>Crystal</span>Sapphire</div>
+            </div>
+        </div>
+
+        <div class="budget-section">
+            <h2>Budget: $1,000 - $3,000</h2>
+        </div>
+
+        <p>This sweet spot offers serious horological credibility with established Swiss and German brands.</p>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-badge">Editor's Choice</span>
+                <span class="watch-card-price">~$2,200</span>
+            </div>
+            <h3>Tissot Seastar 2000 Professional</h3>
+            <p>600 meters of water resistance, a helium escape valve, and Swiss Powermatic 80 movement—all for around $2,000. Tissot delivers professional-grade specifications at an accessible price point.</p>
+            <div class="watch-specs">
+                <div class="watch-spec"><span>Water Resistance</span>600m</div>
+                <div class="watch-spec"><span>Movement</span>Powermatic 80</div>
+                <div class="watch-spec"><span>Case Size</span>46mm</div>
+                <div class="watch-spec"><span>Power Reserve</span>80 hours</div>
+            </div>
+        </div>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-badge">Heritage Design</span>
+                <span class="watch-card-price">~$2,500</span>
+            </div>
+            <h3>Longines Legend Diver</h3>
+            <p>A beautiful homage to Longines' 1960s divers, featuring a distinctive internal rotating bezel. The 42mm case, superb finishing, and L888 movement make this a compelling alternative to more expensive vintage-inspired divers.</p>
+            <div class="watch-specs">
+                <div class="watch-spec"><span>Water Resistance</span>300m</div>
+                <div class="watch-spec"><span>Movement</span>L888.5 Automatic</div>
+                <div class="watch-spec"><span>Case Size</span>42mm</div>
+                <div class="watch-spec"><span>Power Reserve</span>72 hours</div>
+            </div>
+        </div>
+
+        <div class="budget-section">
+            <h2>Budget: $3,000 - $7,000</h2>
+        </div>
+
+        <p>Entering luxury territory, these watches offer premium finishing, in-house movements, and strong brand heritage.</p>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-badge">Icon</span>
+                <span class="watch-card-price">~$3,250</span>
+            </div>
+            <h3>Tudor Black Bay Fifty-Eight</h3>
+            <p>The watch that changed Tudor's fortunes. The 39mm case wears perfectly, the vintage-inspired design is timeless, and the in-house MT5402 movement delivers 70-hour power reserve with COSC certification. It's as close to a vintage Submariner as you can get without the Rolex price tag.</p>
+            <div class="watch-specs">
+                <div class="watch-spec"><span>Water Resistance</span>200m</div>
+                <div class="watch-spec"><span>Movement</span>MT5402 In-house</div>
+                <div class="watch-spec"><span>Case Size</span>39mm</div>
+                <div class="watch-spec"><span>Power Reserve</span>70 hours</div>
+            </div>
+        </div>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-badge">Independent Swiss</span>
+                <span class="watch-card-price">~$3,500</span>
+            </div>
+            <h3>Oris Aquis Date Caliber 400</h3>
+            <p>Oris's new in-house Caliber 400 elevates the Aquis to new heights: 5-day power reserve, 10-year warranty, antimagnetic protection. It's a statement of independence from one of the last family-owned Swiss brands.</p>
+            <div class="watch-specs">
+                <div class="watch-spec"><span>Water Resistance</span>300m</div>
+                <div class="watch-spec"><span>Movement</span>Caliber 400 In-house</div>
+                <div class="watch-spec"><span>Case Size</span>41.5mm</div>
+                <div class="watch-spec"><span>Power Reserve</span>120 hours</div>
+            </div>
+        </div>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-badge">James Bond's Choice</span>
+                <span class="watch-card-price">~$5,500</span>
+            </div>
+            <h3>Omega Seamaster Diver 300M</h3>
+            <p>The modern Seamaster features Master Chronometer certification (industry-leading accuracy and magnetic resistance), ceramic bezel and dial, and that iconic wave pattern. It's the watch that's been to the depths with James Bond and to the moon with NASA.</p>
+            <div class="watch-specs">
+                <div class="watch-spec"><span>Water Resistance</span>300m</div>
+                <div class="watch-spec"><span>Movement</span>Co-Axial 8800</div>
+                <div class="watch-spec"><span>Case Size</span>42mm</div>
+                <div class="watch-spec"><span>Power Reserve</span>55 hours</div>
+            </div>
+        </div>
+
+        <div class="budget-section">
+            <h2>Budget: $7,000 - $15,000</h2>
+        </div>
+
+        <p>Premium dive watches with exceptional movements, finishing, and heritage.</p>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-badge">The Legend</span>
+                <span class="watch-card-price">~$9,100</span>
+            </div>
+            <h3>Rolex Submariner</h3>
+            <p>The dive watch that defined the category. The Submariner hasn't fundamentally changed since 1953 because it doesn't need to. Rolex's legendary reliability, the Oyster case, Oystersteel, Cerachrom bezel—it's the benchmark against which all others are measured.</p>
+            <div class="watch-specs">
+                <div class="watch-spec"><span>Water Resistance</span>300m</div>
+                <div class="watch-spec"><span>Movement</span>Caliber 3230</div>
+                <div class="watch-spec"><span>Case Size</span>41mm</div>
+                <div class="watch-spec"><span>Power Reserve</span>70 hours</div>
+            </div>
+        </div>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-badge">Italian Style</span>
+                <span class="watch-card-price">~$10,000</span>
+            </div>
+            <h3>Panerai Luminor Marina</h3>
+            <p>Originally designed for Italian naval commandos, the Luminor's cushion case and crown-protecting bridge are instantly recognizable. At 44mm, it's bold—but that's the point. Panerai isn't for wallflowers.</p>
+            <div class="watch-specs">
+                <div class="watch-spec"><span>Water Resistance</span>300m</div>
+                <div class="watch-spec"><span>Movement</span>P.9010 In-house</div>
+                <div class="watch-spec"><span>Case Size</span>44mm</div>
+                <div class="watch-spec"><span>Power Reserve</span>72 hours</div>
+            </div>
+        </div>
+
+        <div class="budget-section">
+            <h2>Budget: $15,000+</h2>
+        </div>
+
+        <p>Haute horlogerie dive watches—where extreme engineering meets exquisite craftsmanship.</p>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-badge">Extreme Depth</span>
+                <span class="watch-card-price">~$28,000</span>
+            </div>
+            <h3>Omega Seamaster Planet Ocean Ultra Deep</h3>
+            <p>6,000 meters of water resistance. That's not a typo. The Ultra Deep accompanied Victor Vescovo to the bottom of the Mariana Trench and survived. For mere mortals, it's a statement of engineering excellence.</p>
+            <div class="watch-specs">
+                <div class="watch-spec"><span>Water Resistance</span>6,000m</div>
+                <div class="watch-spec"><span>Movement</span>Co-Axial 8912</div>
+                <div class="watch-spec"><span>Case Size</span>45.5mm</div>
+                <div class="watch-spec"><span>Material</span>O-MEGASTEEL</div>
+            </div>
+        </div>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-badge">Ultimate Tool Watch</span>
+                <span class="watch-card-price">~$12,500</span>
+            </div>
+            <h3>Rolex Sea-Dweller</h3>
+            <p>The Submariner's more capable sibling, with 1,220m water resistance and a helium escape valve for saturation diving. The slightly larger 43mm case and Cyclops lens distinguish it from its more famous brother.</p>
+            <div class="watch-specs">
+                <div class="watch-spec"><span>Water Resistance</span>1,220m</div>
+                <div class="watch-spec"><span>Movement</span>Caliber 3235</div>
+                <div class="watch-spec"><span>Case Size</span>43mm</div>
+                <div class="watch-spec"><span>Power Reserve</span>70 hours</div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <h4>💡 Do You Really Need a Dive Watch?</h4>
+            <p>Most dive watch owners never take them deeper than a swimming pool. That's perfectly fine—dive watches are popular because they're durable, legible, and versatile. You're buying style and capability, even if you never use the full capability. Think of it like owning a sports car—the joy isn't just in reaching top speed.</p>
+        </div>
+
+        <h2>Key Features to Consider</h2>
+
+        <h3>Water Resistance</h3>
+        <p>100m is fine for swimming and snorkeling. 200m handles recreational scuba. 300m+ is overkill for most people but provides extra peace of mind. Beyond that, you're paying for engineering bragging rights.</p>
+
+        <h3>Bezel Type</h3>
+        <p>Unidirectional bezels are standard for dive watches—they can only move counterclockwise, so an accidental bump won't show more remaining dive time than you actually have. Ceramic bezels resist scratches; aluminum bezels develop attractive patina.</p>
+
+        <h3>Size Matters</h3>
+        <p>Classic dive watches were 38-40mm. Modern ones trend larger (42-44mm). Consider your wrist size—a massive diver can look cartoonish on a slim wrist. When in doubt, go smaller.</p>
+
+        <h3>Bracelet vs. Strap</h3>
+        <p>Steel bracelets are versatile and durable. Rubber straps are more comfortable in water and during hot weather. Many enthusiasts own both and swap based on activity and mood.</p>
+
+        <div class="cta-box">
+            <h3>Ready to Dive In?</h3>
+            <p>Explore our curated selection of dive watches from authorized retailers.</p>
+            <a href="index.html#retailers" class="btn">Shop Dive Watches →</a>
+        </div>
+
+        <h2>Final Thoughts</h2>
+
+        <p>The dive watch is perhaps the most democratic category in luxury watches—there are genuinely excellent options at every price point. A $500 Seiko will tell time just as well as a $50,000 Blancpain. The difference is in the finishing, the movement, the heritage, and—let's be honest—the prestige.</p>
+
+        <p>Choose based on your budget, your style preferences, and how you'll actually use the watch. A capable diver on your wrist beats a "grail" watch in a safe. Whatever you choose, you're joining a tradition of explorers, adventurers, and enthusiasts who have trusted these tools to perform when it matters most.</p>
+
+        <p>Time to take the plunge.</p>
+    </article>
+
+    <section class="related-articles">
+        <h2>Related Articles</h2>
+        <div class="related-grid">
+            <a href="blog-top-10-under-5000.html" class="related-card">
+                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80" alt="Luxury watches">
+                <div class="related-card-content">
+                    <h3>Top 10 Luxury Watches Under $5,000</h3>
+                    <p>Exceptional timepieces that won't break the bank.</p>
+                </div>
+            </a>
+            <a href="blog-rolex-vs-omega.html" class="related-card">
+                <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="Rolex vs Omega">
+                <div class="related-card-content">
+                    <h3>Rolex vs Omega: Which is Right for You?</h3>
+                    <p>An in-depth comparison of two legendary brands.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 CHRONOS. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
