@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Luxury Watches Under $5,000 — CHRONOS</title>
+    <meta name="description" content="Discover the best luxury watches under $5,000. From TAG Heuer to Longines, find exceptional timepieces that deliver prestige without breaking the bank.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C9A962;
+            --gold-light: #E8D5A3;
+            --gold-dark: #8B7355;
+            --obsidian: #0A0A0A;
+            --charcoal: #1A1A1A;
+            --slate: #2A2A2A;
+            --silver: #C0C0C0;
+            --cream: #F5F3EF;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Outfit', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--obsidian);
+            color: var(--cream);
+            line-height: 1.8;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--slate);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 0.3em;
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* Article Hero */
+        .article-hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .article-hero img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+        }
+
+        .article-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 40px;
+        }
+
+        .article-tag {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .article-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 300;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: var(--silver);
+        }
+
+        /* Article Content */
+        .article-content {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .article-content p {
+            font-size: 1.05rem;
+            color: var(--silver);
+            margin-bottom: 25px;
+        }
+
+        .article-content h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--cream);
+            margin-top: 50px;
+            margin-bottom: 25px;
+        }
+
+        .article-content h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--gold);
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .article-content strong {
+            color: var(--cream);
+        }
+
+        .article-content a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .article-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Watch Card */
+        .watch-card {
+            background: var(--charcoal);
+            border: 1px solid var(--slate);
+            padding: 35px;
+            margin: 40px 0;
+        }
+
+        .watch-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .watch-card-rank {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 300;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .watch-card-price {
+            font-size: 0.9rem;
+            color: var(--gold);
+            background: var(--slate);
+            padding: 8px 15px;
+        }
+
+        .watch-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--cream);
+            margin-bottom: 15px;
+        }
+
+        .watch-card p {
+            color: var(--silver);
+            margin-bottom: 20px;
+        }
+
+        .watch-specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--slate);
+        }
+
+        .watch-spec {
+            font-size: 0.85rem;
+        }
+
+        .watch-spec span {
+            display: block;
+            color: var(--gold-dark);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 5px;
+        }
+
+        /* CTA Box */
+        .cta-box {
+            background: var(--charcoal);
+            border: 1px solid var(--gold);
+            padding: 40px;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--cream);
+        }
+
+        .cta-box p {
+            margin-bottom: 25px;
+        }
+
+        .cta-box .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: var(--gold);
+            color: var(--obsidian);
+            transition: all 0.3s ease;
+        }
+
+        .cta-box .btn:hover {
+            background: var(--gold-light);
+        }
+
+        /* Related Articles */
+        .related-articles {
+            background: var(--charcoal);
+            padding: 80px 40px;
+        }
+
+        .related-articles h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .related-card {
+            background: var(--obsidian);
+            border: 1px solid var(--slate);
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .related-card:hover {
+            border-color: var(--gold);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .related-card-content {
+            padding: 25px;
+        }
+
+        .related-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .related-card p {
+            font-size: 0.9rem;
+            color: var(--silver);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid var(--slate);
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: var(--silver);
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .article-hero {
+                height: 400px;
+            }
+
+            .watch-card-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">CHRONOS</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">Our Story</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+        </nav>
+    </header>
+
+    <!-- Article Hero -->
+    <section class="article-hero">
+        <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1200&q=80" alt="Luxury watch collection">
+        <div class="article-hero-content">
+            <span class="article-tag">Buying Guide</span>
+            <h1>Top 10 Luxury Watches Under $5,000</h1>
+            <p class="article-meta">January 2025 • 8 min read</p>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="article-content">
+        <p>You don't need to spend five figures to own a truly exceptional luxury timepiece. The sub-$5,000 segment offers some of the most compelling watches in the industry—pieces with genuine horological heritage, impressive craftsmanship, and designs that rival watches costing many times more.</p>
+
+        <p>Whether you're buying your first luxury watch or adding to a collection, these ten timepieces represent the best value in prestige watchmaking today.</p>
+
+        <h2>Our Top Picks</h2>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-rank">01</span>
+                <span class="watch-card-price">~$3,250</span>
+            </div>
+            <h3>Tudor Black Bay 58</h3>
+            <p>The little brother of Rolex delivers exceptional value with in-house movements, vintage-inspired design, and build quality that rivals watches twice the price. The 39mm case size makes it perfect for any wrist, and it's quickly becoming a modern classic.</p>
+            <div class="watch-specs">
+                <div class="watch-spec">
+                    <span>Movement</span>
+                    In-house MT5402
+                </div>
+                <div class="watch-spec">
+                    <span>Case Size</span>
+                    39mm
+                </div>
+                <div class="watch-spec">
+                    <span>Water Resistance</span>
+                    200m
+                </div>
+                <div class="watch-spec">
+                    <span>Power Reserve</span>
+                    70 hours
+                </div>
+            </div>
+        </div>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-rank">02</span>
+                <span class="watch-card-price">~$3,100</span>
+            </div>
+            <h3>Longines Spirit Zulu Time</h3>
+            <p>A true GMT watch at an incredible price point. Longines delivers exceptional finishing, an impressive silicon balance spring for magnetic resistance, and a beautifully executed design that works equally well in the boardroom or on adventure.</p>
+            <div class="watch-specs">
+                <div class="watch-spec">
+                    <span>Movement</span>
+                    L844.4 (COSC)
+                </div>
+                <div class="watch-spec">
+                    <span>Case Size</span>
+                    42mm
+                </div>
+                <div class="watch-spec">
+                    <span>Water Resistance</span>
+                    100m
+                </div>
+                <div class="watch-spec">
+                    <span>Power Reserve</span>
+                    72 hours
+                </div>
+            </div>
+        </div>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-rank">03</span>
+                <span class="watch-card-price">~$2,800</span>
+            </div>
+            <h3>TAG Heuer Carrera</h3>
+            <p>A motorsport legend reborn. The Carrera offers timeless chronograph styling, robust build quality, and a heritage that dates back to the golden age of racing. It's the perfect daily driver for those who appreciate automotive history.</p>
+            <div class="watch-specs">
+                <div class="watch-spec">
+                    <span>Movement</span>
+                    Calibre 16
+                </div>
+                <div class="watch-spec">
+                    <span>Case Size</span>
+                    41mm
+                </div>
+                <div class="watch-spec">
+                    <span>Water Resistance</span>
+                    100m
+                </div>
+                <div class="watch-spec">
+                    <span>Complication</span>
+                    Chronograph
+                </div>
+            </div>
+        </div>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-rank">04</span>
+                <span class="watch-card-price">~$4,500</span>
+            </div>
+            <h3>Omega Seamaster Aqua Terra 38mm</h3>
+            <p>Just under budget, the Aqua Terra is arguably the most versatile watch in Omega's lineup. The textured dial inspired by teak yacht decks, Master Chronometer certification, and elegant proportions make this a true do-everything watch.</p>
+            <div class="watch-specs">
+                <div class="watch-spec">
+                    <span>Movement</span>
+                    Co-Axial 8800
+                </div>
+                <div class="watch-spec">
+                    <span>Case Size</span>
+                    38mm
+                </div>
+                <div class="watch-spec">
+                    <span>Water Resistance</span>
+                    150m
+                </div>
+                <div class="watch-spec">
+                    <span>Power Reserve</span>
+                    55 hours
+                </div>
+            </div>
+        </div>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-rank">05</span>
+                <span class="watch-card-price">~$2,400</span>
+            </div>
+            <h3>Tissot PRX Powermatic 80</h3>
+            <p>The watch world's favorite comeback story. The PRX combines 1970s integrated bracelet design with modern reliability at an unbeatable price. It's the luxury sports watch for those who know what they want.</p>
+            <div class="watch-specs">
+                <div class="watch-spec">
+                    <span>Movement</span>
+                    Powermatic 80
+                </div>
+                <div class="watch-spec">
+                    <span>Case Size</span>
+                    40mm
+                </div>
+                <div class="watch-spec">
+                    <span>Water Resistance</span>
+                    100m
+                </div>
+                <div class="watch-spec">
+                    <span>Power Reserve</span>
+                    80 hours
+                </div>
+            </div>
+        </div>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-rank">06</span>
+                <span class="watch-card-price">~$3,500</span>
+            </div>
+            <h3>Oris Aquis Date</h3>
+            <p>Independent Swiss watchmaking at its finest. The Aquis is a serious dive watch with a distinctive design language, excellent build quality, and the satisfaction of owning something different from the crowd.</p>
+            <div class="watch-specs">
+                <div class="watch-spec">
+                    <span>Movement</span>
+                    Calibre 400
+                </div>
+                <div class="watch-spec">
+                    <span>Case Size</span>
+                    41.5mm
+                </div>
+                <div class="watch-spec">
+                    <span>Water Resistance</span>
+                    300m
+                </div>
+                <div class="watch-spec">
+                    <span>Power Reserve</span>
+                    120 hours
+                </div>
+            </div>
+        </div>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-rank">07</span>
+                <span class="watch-card-price">~$2,900</span>
+            </div>
+            <h3>Nomos Tangente</h3>
+            <p>German Bauhaus design meets modern watchmaking. The Tangente is a masterclass in minimalism—clean, functional, and utterly distinctive. It's the thinking person's dress watch.</p>
+            <div class="watch-specs">
+                <div class="watch-spec">
+                    <span>Movement</span>
+                    Alpha manual
+                </div>
+                <div class="watch-spec">
+                    <span>Case Size</span>
+                    35mm
+                </div>
+                <div class="watch-spec">
+                    <span>Water Resistance</span>
+                    30m
+                </div>
+                <div class="watch-spec">
+                    <span>Style</span>
+                    Dress
+                </div>
+            </div>
+        </div>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-rank">08</span>
+                <span class="watch-card-price">~$3,700</span>
+            </div>
+            <h3>Breitling Superocean Heritage</h3>
+            <p>Aviation heritage meets diving capability. The Superocean Heritage offers distinctive Breitling styling, impressive build quality, and a mesh bracelet that's become iconic in its own right.</p>
+            <div class="watch-specs">
+                <div class="watch-spec">
+                    <span>Movement</span>
+                    Caliber 17
+                </div>
+                <div class="watch-spec">
+                    <span>Case Size</span>
+                    42mm
+                </div>
+                <div class="watch-spec">
+                    <span>Water Resistance</span>
+                    200m
+                </div>
+                <div class="watch-spec">
+                    <span>Power Reserve</span>
+                    38 hours
+                </div>
+            </div>
+        </div>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-rank">09</span>
+                <span class="watch-card-price">~$2,600</span>
+            </div>
+            <h3>Hamilton Khaki Field Mechanical</h3>
+            <p>Military heritage distilled to its purest form. The Khaki Field traces its lineage to watches Hamilton supplied to American forces in WWII. It's rugged, reliable, and effortlessly cool.</p>
+            <div class="watch-specs">
+                <div class="watch-spec">
+                    <span>Movement</span>
+                    H-50 manual
+                </div>
+                <div class="watch-spec">
+                    <span>Case Size</span>
+                    38mm
+                </div>
+                <div class="watch-spec">
+                    <span>Water Resistance</span>
+                    50m
+                </div>
+                <div class="watch-spec">
+                    <span>Power Reserve</span>
+                    80 hours
+                </div>
+            </div>
+        </div>
+
+        <div class="watch-card">
+            <div class="watch-card-header">
+                <span class="watch-card-rank">10</span>
+                <span class="watch-card-price">~$4,800</span>
+            </div>
+            <h3>Grand Seiko SBGW231</h3>
+            <p>Japanese perfection at the top of our budget. Grand Seiko offers finishing that rivals Swiss watches costing many times more. The Zaratsu polishing technique creates mirror surfaces that must be seen to be believed.</p>
+            <div class="watch-specs">
+                <div class="watch-spec">
+                    <span>Movement</span>
+                    9S64 manual
+                </div>
+                <div class="watch-spec">
+                    <span>Case Size</span>
+                    37.3mm
+                </div>
+                <div class="watch-spec">
+                    <span>Water Resistance</span>
+                    30m
+                </div>
+                <div class="watch-spec">
+                    <span>Power Reserve</span>
+                    72 hours
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h3>Ready to Find Your Perfect Watch?</h3>
+            <p>Explore our curated collection from authorized retailers worldwide.</p>
+            <a href="index.html#retailers" class="btn">Shop the Collection →</a>
+        </div>
+
+        <h2>Final Thoughts</h2>
+
+        <p>The sub-$5,000 market has never been stronger. Whether you prioritize heritage, technical innovation, or pure design, there's a perfect watch waiting for you. Our advice? Try them on in person if possible, buy from authorized dealers, and choose the one that speaks to you—not the one that seems most "practical."</p>
+
+        <p>A great watch is one you'll want to wear every day. In this price range, you're getting timepieces that will last generations with proper care. That's not just a purchase—it's an investment in craftsmanship and memories.</p>
+    </article>
+
+    <!-- Related Articles -->
+    <section class="related-articles">
+        <h2>Related Articles</h2>
+        <div class="related-grid">
+            <a href="blog-rolex-vs-omega.html" class="related-card">
+                <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="Rolex vs Omega">
+                <div class="related-card-content">
+                    <h3>Rolex vs Omega: Which is Right for You?</h3>
+                    <p>An in-depth comparison of two legendary brands.</p>
+                </div>
+            </a>
+            <a href="blog-spot-fake-watch.html" class="related-card">
+                <img src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=600&q=80" alt="Watch authentication">
+                <div class="related-card-content">
+                    <h3>How to Spot a Fake Luxury Watch</h3>
+                    <p>Protect yourself from counterfeit timepieces.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 CHRONOS. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
