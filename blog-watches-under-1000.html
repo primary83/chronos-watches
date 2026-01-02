@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Watches Under $1,000 — Authentic Wrist</title>
+    <meta name="description" content="Exceptional timepieces that punch above their price. Discover the best watches under $1,000 for style, quality, and value.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; --font-display: 'Cormorant Garamond', Georgia, serif; --font-body: 'Outfit', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); background: var(--obsidian); color: var(--cream); line-height: 1.8; }
+        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
+        .logo { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        nav { display: flex; gap: 30px; }
+        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a:hover { color: var(--gold); }
+        .article-hero { height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.9)), url('https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=1600&q=80'); background-size: cover; background-position: center; }
+        .article-hero-content { max-width: 800px; padding: 0 20px; }
+        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+        .article-hero h1 { font-family: var(--font-display); font-size: 3rem; font-weight: 300; line-height: 1.2; margin-bottom: 20px; }
+        .article-meta { font-size: 0.85rem; color: var(--silver); }
+        .article-content { max-width: 800px; margin: 0 auto; padding: 80px 20px; }
+        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 30px; color: var(--silver); }
+        .article-content h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 400; margin: 60px 0 30px; color: var(--cream); }
+        .article-content h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; margin: 40px 0 20px; color: var(--gold); }
+        .lead-paragraph { font-size: 1.25rem; color: var(--cream); border-left: 2px solid var(--gold); padding-left: 30px; margin-bottom: 40px; }
+        .watch-card { background: var(--charcoal); border: 1px solid var(--slate); padding: 30px; margin: 30px 0; display: grid; grid-template-columns: 140px 1fr; gap: 25px; align-items: center; }
+        .watch-card:hover { border-color: var(--gold); }
+        .watch-card img { width: 100%; height: 140px; object-fit: cover; }
+        .watch-card h4 { font-family: var(--font-display); font-size: 1.3rem; color: var(--cream); margin-bottom: 5px; }
+        .watch-card .brand { font-size: 0.75rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+        .watch-card .price { font-size: 1.2rem; color: var(--gold); margin: 10px 0; }
+        .watch-card .specs { font-size: 0.85rem; color: var(--silver); margin-bottom: 10px; }
+        .watch-card p { font-size: 0.95rem; margin-bottom: 15px; }
+        .watch-card .btn { display: inline-block; padding: 10px 20px; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--gold); color: var(--gold); transition: all 0.3s ease; }
+        .watch-card .btn:hover { background: var(--gold); color: var(--obsidian); }
+        .value-tag { display: inline-block; background: rgba(201, 169, 98, 0.2); color: var(--gold); font-size: 0.7rem; padding: 3px 10px; letter-spacing: 0.05em; margin-left: 10px; }
+        blockquote { font-family: var(--font-display); font-size: 1.5rem; font-style: italic; color: var(--cream); border-left: 2px solid var(--gold); padding-left: 30px; margin: 50px 0; }
+        .related-articles { background: var(--charcoal); padding: 80px 40px; }
+        .related-articles h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 300; text-align: center; margin-bottom: 50px; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .related-card { background: var(--obsidian); border: 1px solid var(--slate); text-decoration: none; transition: all 0.3s ease; }
+        .related-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .related-card img { width: 100%; height: 200px; object-fit: cover; }
+        .related-card-content { padding: 25px; }
+        .related-card-content h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--cream); margin-bottom: 10px; }
+        .related-card-content p { font-size: 0.85rem; color: var(--silver); }
+        footer { background: var(--obsidian); border-top: 1px solid var(--slate); padding: 60px 40px 30px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 60px; }
+        .footer-brand p { font-size: 0.9rem; color: var(--silver); margin-top: 15px; }
+        .footer-column h4 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; }
+        .footer-column a { display: block; font-size: 0.9rem; color: var(--silver); text-decoration: none; margin-bottom: 12px; }
+        .footer-column a:hover { color: var(--gold); }
+        .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding-top: 30px; border-top: 1px solid var(--slate); text-align: center; font-size: 0.85rem; color: var(--silver); }
+        @media (max-width: 768px) { header { padding: 15px 20px; flex-direction: column; gap: 15px; } nav { gap: 15px; flex-wrap: wrap; justify-content: center; } .article-hero h1 { font-size: 2.2rem; } .watch-card { grid-template-columns: 1fr; } .footer-content { grid-template-columns: 1fr; gap: 40px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">AUTHENTIC WRIST</a>
+        <nav>
+            <a href="index.html#new">New Arrivals</a>
+            <a href="index.html#collections">Collections</a>
+            <a href="index.html#brands">Brands</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <section class="article-hero">
+        <div class="article-hero-content">
+            <div class="article-category">Buying Guide</div>
+            <h1>Best Watches Under $1,000</h1>
+            <div class="article-meta">January 2, 2025 · 10 min read</div>
+        </div>
+    </section>
+
+    <article class="article-content">
+        <p class="lead-paragraph">You don't need to spend thousands to own a quality timepiece. The sub-$1,000 market has never been stronger, with respected brands delivering automatic movements, sapphire crystals, and serious craftsmanship at accessible prices.</p>
+
+        <p>This price range is perfect for first-time collectors, daily beaters you won't stress about, or adding variety to an existing collection without significant investment.</p>
+
+        <h2>Top Picks Under $1,000</h2>
+
+        <h3>Best Overall</h3>
+
+        <div class="watch-card">
+            <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=300&q=80" alt="Tissot PRX">
+            <div>
+                <div class="brand">Tissot</div>
+                <h4>PRX Powermatic 80 <span class="value-tag">Editor's Choice</span></h4>
+                <div class="price">$675</div>
+                <div class="specs">40mm · Powermatic 80 automatic · 100m WR · sapphire crystal</div>
+                <p>The PRX revived the integrated bracelet sports watch at an accessible price. With 80-hour power reserve, Swiss automatic movement, and design DNA echoing watches costing 10x more, it's arguably the best value in watches today.</p>
+                <a href="https://www.amazon.com/s?k=tissot+prx+powermatic" class="btn">Shop on Amazon →</a>
+            </div>
+        </div>
+
+        <h3>Best Dive Watch</h3>
+
+        <div class="watch-card">
+            <img src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=300&q=80" alt="Orient Kamasu">
+            <div>
+                <div class="brand">Orient</div>
+                <h4>Kamasu</h4>
+                <div class="price">$275</div>
+                <div class="specs">41.8mm · In-house automatic · 200m WR · sapphire crystal</div>
+                <p>Orient's in-house movement, sapphire crystal, and solid construction at this price is remarkable. The Kamasu offers true dive watch specs with sunburst dials that punch way above their weight class.</p>
+                <a href="https://www.amazon.com/s?k=orient+kamasu" class="btn">Shop on Amazon →</a>
+            </div>
+        </div>
+
+        <blockquote>"The best watch is the one you'll actually wear. At under $1,000, you can own a quality timepiece without anxiety about scratches or theft."</blockquote>
+
+        <h3>Best Dress Watch</h3>
+
+        <div class="watch-card">
+            <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=300&q=80" alt="Orient Bambino">
+            <div>
+                <div class="brand">Orient</div>
+                <h4>Bambino Version 2</h4>
+                <div class="price">$165</div>
+                <div class="specs">40.5mm · Automatic · 30m WR · domed mineral crystal</div>
+                <p>Dress watch elegance with an automatic movement at a price that seems like an error. The domed crystal creates a vintage aesthetic that pairs perfectly with suits. The gateway drug to watch collecting.</p>
+                <a href="https://www.amazon.com/s?k=orient+bambino" class="btn">Shop on Amazon →</a>
+            </div>
+        </div>
+
+        <h3>Best Field Watch</h3>
+
+        <div class="watch-card">
+            <img src="https://images.unsplash.com/photo-1587925358603-c2eea5305bbc?w=300&q=80" alt="Hamilton Khaki">
+            <div>
+                <div class="brand">Hamilton</div>
+                <h4>Khaki Field Mechanical</h4>
+                <div class="price">$495</div>
+                <div class="specs">38mm · H-50 hand-wound · 50m WR · sapphire crystal</div>
+                <p>Hamilton supplied watches to the U.S. military, and that heritage lives here. The hand-wound H-50 offers 80-hour power reserve in an historically accurate 38mm case. Rugged elegance defined.</p>
+                <a href="https://www.amazon.com/s?k=hamilton+khaki+field+mechanical" class="btn">Shop on Amazon →</a>
+            </div>
+        </div>
+
+        <h3>Best Chronograph</h3>
+
+        <div class="watch-card">
+            <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=300&q=80" alt="Seiko Speedtimer">
+            <div>
+                <div class="brand">Seiko</div>
+                <h4>Prospex Speedtimer Solar</h4>
+                <div class="price">$525</div>
+                <div class="specs">39mm · Solar chronograph · 100m WR · sapphire crystal</div>
+                <p>Solar-powered chronograph with panda dial aesthetic clearly inspired by a certain famous moonwatch. Never needs batteries, and the 39mm case is perfect for those finding modern chronographs too large.</p>
+                <a href="https://www.amazon.com/s?k=seiko+speedtimer+solar" class="btn">Shop on Amazon →</a>
+            </div>
+        </div>
+
+        <h2>The Bottom Line</h2>
+
+        <p>The sub-$1,000 category has never offered more value. Brands like Seiko, Orient, Tissot, and Hamilton deliver genuine horological quality that would have been unthinkable at these prices twenty years ago.</p>
+
+        <p>These aren't compromises—they're legitimate timepieces that many collectors continue wearing alongside far more expensive pieces. Start here, and you'll understand what the watch hobby is all about.</p>
+    </article>
+
+    <section class="related-articles">
+        <h2>Continue Reading</h2>
+        <div class="related-grid">
+            <a href="blog-first-luxury-watch-guide.html" class="related-card">
+                <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="First watch">
+                <div class="related-card-content">
+                    <h3>Buying Your First Luxury Watch</h3>
+                    <p>A complete guide for first-time collectors.</p>
+                </div>
+            </a>
+            <a href="blog-watch-straps-guide.html" class="related-card">
+                <img src="https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=600&q=80" alt="Straps">
+                <div class="related-card-content">
+                    <h3>Watch Straps & Bracelets Guide</h3>
+                    <p>Transform your watch with the perfect strap.</p>
+                </div>
+            </a>
+            <a href="blog-watches-for-small-wrists.html" class="related-card">
+                <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600&q=80" alt="Small wrists">
+                <div class="related-card-content">
+                    <h3>Best Watches for Small Wrists</h3>
+                    <p>Perfectly proportioned timepieces.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">AUTHENTIC WRIST</a>
+                <p>Your curated destination for authentic luxury timepieces.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <a href="index.html#new">New Arrivals</a>
+                <a href="index.html#collections">Collections</a>
+                <a href="index.html#brands">Brands</a>
+            </div>
+            <div class="footer-column">
+                <h4>Help</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-column">
+                <h4>About</h4>
+                <a href="about.html">Our Story</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Authentic Wrist. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
