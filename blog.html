@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog — AUTHENTIC WRIST Luxury Watches</title>
@@ -336,6 +337,11 @@
             text-decoration: none;
         }
 
+        /* Hidden class for filtering */
+        .blog-card.hidden {
+            display: none;
+        }
+
         /* Responsive */
         @media (max-width: 900px) {
             .featured-article {
@@ -380,8 +386,7 @@
             <a href="index.html">Home</a>
             <a href="blog.html">Blog</a>
             <a href="about.html">Our Story</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
+            <a href="search.html">Search</a>
         </nav>
     </header>
 
@@ -395,15 +400,15 @@
     <section class="blog-section">
         <!-- Categories -->
         <div class="blog-categories">
-            <a href="#" class="category-btn active">All Articles</a>
-            <a href="#" class="category-btn">Buying Guides</a>
-            <a href="#" class="category-btn">Brand Stories</a>
-            <a href="#" class="category-btn">Watch Care</a>
-            <a href="#" class="category-btn">Industry News</a>
+            <button class="category-btn active" data-category="all">All Articles</button>
+            <button class="category-btn" data-category="buying-guide">Buying Guides</button>
+            <button class="category-btn" data-category="brand-story">Brand Stories</button>
+            <button class="category-btn" data-category="watch-care">Watch Care</button>
+            <button class="category-btn" data-category="industry">Industry News</button>
         </div>
 
         <!-- Featured Article -->
-        <a href="blog-rolex-vs-omega.html" class="featured-article">
+        <a href="blog-rolex-vs-omega.html" class="featured-article" data-category="buying-guide">
             <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=800&q=80" alt="Rolex vs Omega comparison">
             <div class="featured-article-content">
                 <span class="featured-tag">Featured • Buying Guide</span>
@@ -415,84 +420,291 @@
 
         <!-- Blog Grid -->
         <div class="blog-grid">
-            <a href="blog-top-10-under-5000.html" class="blog-card">
-                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80" alt="Luxury watches collection">
-                <div class="blog-card-content">
-                    <span class="blog-card-tag">Buying Guide</span>
-                    <h2>Top 10 Luxury Watches Under $5,000</h2>
-                    <p>You don't need to spend a fortune to own a prestigious timepiece. Here are our top picks for exceptional watches under $5,000.</p>
-                    <span class="blog-card-meta">January 2025 • 8 min read</span>
-                    <span class="read-more">Read More →</span>
-                </div>
-            </a>
 
-            <a href="blog-spot-fake-watch.html" class="blog-card">
-                <img src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=600&q=80" alt="Examining luxury watch">
-                <div class="blog-card-content">
-                    <span class="blog-card-tag">Watch Care</span>
-                    <h2>How to Spot a Fake Luxury Watch</h2>
-                    <p>Protect yourself from counterfeits with our expert guide to authenticating luxury timepieces from Rolex, Omega, and more.</p>
-                    <span class="blog-card-meta">January 2025 • 10 min read</span>
-                    <span class="read-more">Read More →</span>
-                </div>
-            </a>
-
-            <a href="blog-patek-philippe-history.html" class="blog-card">
-                <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Patek Philippe watch">
+            <!-- ========== BRAND STORIES ========== -->
+            
+            <a href="brand-story-rolex.html" class="blog-card" data-category="brand-story">
+                <img src="https://images.unsplash.com/photo-1623998021446-45cd9b269056?w=600&q=80" alt="Rolex watch">
                 <div class="blog-card-content">
                     <span class="blog-card-tag">Brand Story</span>
-                    <h2>The History of Patek Philippe</h2>
-                    <p>Discover the fascinating story behind the world's most prestigious watchmaker and why collectors pay millions for their timepieces.</p>
+                    <h2>The History of Rolex</h2>
+                    <p>From a London office in 1905 to the world's most recognized luxury watch brand. The complete Rolex story.</p>
                     <span class="blog-card-meta">January 2025 • 15 min read</span>
                     <span class="read-more">Read More →</span>
                 </div>
             </a>
 
-            <a href="blog-first-luxury-watch-guide.html" class="blog-card">
-                <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=600&q=80" alt="Watch on wrist">
+            <a href="brand-story-omega.html" class="blog-card" data-category="brand-story">
+                <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&q=80" alt="Omega watch">
                 <div class="blog-card-content">
-                    <span class="blog-card-tag">Buying Guide</span>
-                    <h2>Your First Luxury Watch: A Complete Guide</h2>
-                    <p>Everything you need to know before purchasing your first luxury timepiece. From budget to brand selection.</p>
-                    <span class="blog-card-meta">January 2025 • 12 min read</span>
-                    <span class="read-more">Read More →</span>
-                </div>
-            </a>
-
-            <a href="blog-best-dive-watches.html" class="blog-card">
-                <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Dive watch underwater">
-                <div class="blog-card-content">
-                    <span class="blog-card-tag">Buying Guide</span>
-                    <h2>Best Dive Watches for Every Budget</h2>
-                    <p>From affordable tool watches to haute horlogerie, discover the best dive watches for underwater adventures.</p>
+                    <span class="blog-card-tag">Brand Story</span>
+                    <h2>The History of Omega</h2>
+                    <p>From Swiss workshop to the Moon and James Bond's wrist. Discover Omega's legendary journey.</p>
                     <span class="blog-card-meta">January 2025 • 14 min read</span>
                     <span class="read-more">Read More →</span>
                 </div>
             </a>
 
-            <a href="blog-watch-maintenance-guide.html" class="blog-card">
-                <img src="https://images.unsplash.com/photo-1526045431048-f857369baa09?w=600&q=80" alt="Watch movement">
+            <a href="brand-story-cartier.html" class="blog-card" data-category="brand-story">
+                <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?w=600&q=80" alt="Cartier watch">
                 <div class="blog-card-content">
-                    <span class="blog-card-tag">Watch Care</span>
-                    <h2>How to Maintain Your Luxury Watch</h2>
-                    <p>Essential tips for keeping your timepiece in perfect condition for generations to come.</p>
+                    <span class="blog-card-tag">Brand Story</span>
+                    <h2>The History of Cartier</h2>
+                    <p>The jeweler of kings who invented the modern wristwatch. From Santos to Tank.</p>
+                    <span class="blog-card-meta">January 2025 • 13 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="brand-story-tudor.html" class="blog-card" data-category="brand-story">
+                <img src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=600&q=80" alt="Tudor watch">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Brand Story</span>
+                    <h2>The History of Tudor</h2>
+                    <p>Rolex's sibling brand emerges from the shadows to become a collector favorite.</p>
+                    <span class="blog-card-meta">January 2025 • 12 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="brand-story-tag-heuer.html" class="blog-card" data-category="brand-story">
+                <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&q=80" alt="TAG Heuer watch">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Brand Story</span>
+                    <h2>The History of TAG Heuer</h2>
+                    <p>Swiss precision meets motorsport. From stopwatches to Steve McQueen's Monaco.</p>
+                    <span class="blog-card-meta">January 2025 • 13 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="brand-story-breitling.html" class="blog-card" data-category="brand-story">
+                <img src="https://images.unsplash.com/photo-1594576722512-582bcd46fba3?w=600&q=80" alt="Breitling watch">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Brand Story</span>
+                    <h2>The History of Breitling</h2>
+                    <p>Instruments for professionals. Aviation heritage and the legendary Navitimer.</p>
+                    <span class="blog-card-meta">January 2025 • 12 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="brand-story-audemars-piguet.html" class="blog-card" data-category="brand-story">
+                <img src="https://images.unsplash.com/photo-1617714651523-867e529ef5f5?w=600&q=80" alt="Audemars Piguet watch">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Brand Story</span>
+                    <h2>The History of Audemars Piguet</h2>
+                    <p>Masters of the Royal Oak. How two friends created haute horlogerie history.</p>
+                    <span class="blog-card-meta">January 2025 • 14 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="brand-story-seiko.html" class="blog-card" data-category="brand-story">
+                <img src="https://images.unsplash.com/photo-1585123334904-845d60e97b29?w=600&q=80" alt="Seiko watch">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Brand Story</span>
+                    <h2>The History of Seiko</h2>
+                    <p>Japan's watchmaking giant. From the quartz revolution to Spring Drive innovation.</p>
+                    <span class="blog-card-meta">January 2025 • 15 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="brand-story-grand-seiko.html" class="blog-card" data-category="brand-story">
+                <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Grand Seiko watch">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Brand Story</span>
+                    <h2>The History of Grand Seiko</h2>
+                    <p>Japanese perfection elevated to art. Zaratsu polishing and the Nature of Time.</p>
+                    <span class="blog-card-meta">January 2025 • 13 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="brand-story-longines.html" class="blog-card" data-category="brand-story">
+                <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600&q=80" alt="Longines watch">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Brand Story</span>
+                    <h2>The History of Longines</h2>
+                    <p>Elegance is an Attitude. Aviation heritage and timeless Swiss design since 1832.</p>
+                    <span class="blog-card-meta">January 2025 • 12 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="brand-story-breguet.html" class="blog-card" data-category="brand-story">
+                <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Breguet watch">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Brand Story</span>
+                    <h2>The History of Breguet</h2>
+                    <p>The father of modern watchmaking. Inventor of the tourbillon and countless innovations.</p>
+                    <span class="blog-card-meta">January 2025 • 16 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="brand-story-hublot.html" class="blog-card" data-category="brand-story">
+                <img src="https://images.unsplash.com/photo-1544117519-31a4b719223d?w=600&q=80" alt="Hublot watch">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Brand Story</span>
+                    <h2>The History of Hublot</h2>
+                    <p>The Art of Fusion. How bold design and marketing created a luxury powerhouse.</p>
                     <span class="blog-card-meta">January 2025 • 11 min read</span>
                     <span class="read-more">Read More →</span>
                 </div>
             </a>
 
-            <a href="blog-why-authorized-dealers.html" class="blog-card">
+            <a href="brand-story-jacob-co.html" class="blog-card" data-category="brand-story">
+                <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=600&q=80" alt="Jacob & Co watch">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Brand Story</span>
+                    <h2>The History of Jacob & Co</h2>
+                    <p>From Diamond District to haute horlogerie. The Jacob the Jeweler story.</p>
+                    <span class="blog-card-meta">January 2025 • 12 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="brand-story-chopard.html" class="blog-card" data-category="brand-story">
+                <img src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=600&q=80" alt="Chopard watch">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Brand Story</span>
+                    <h2>The History of Chopard</h2>
+                    <p>The Artisan of Emotions. Happy Diamonds, Cannes, and ethical luxury.</p>
+                    <span class="blog-card-meta">January 2025 • 11 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="blog-patek-philippe-history.html" class="blog-card" data-category="brand-story">
+                <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Patek Philippe watch">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Brand Story</span>
+                    <h2>The History of Patek Philippe</h2>
+                    <p>Discover the fascinating story behind the world's most prestigious watchmaker.</p>
+                    <span class="blog-card-meta">January 2025 • 15 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <!-- ========== BUYING GUIDES ========== -->
+
+            <a href="blog-top-10-under-5000.html" class="blog-card" data-category="buying-guide">
+                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80" alt="Luxury watches collection">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Buying Guide</span>
+                    <h2>Top 10 Luxury Watches Under $5,000</h2>
+                    <p>You don't need to spend a fortune to own a prestigious timepiece. Here are our top picks.</p>
+                    <span class="blog-card-meta">January 2025 • 8 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="blog-first-luxury-watch-guide.html" class="blog-card" data-category="buying-guide">
+                <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=600&q=80" alt="Watch on wrist">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Buying Guide</span>
+                    <h2>Your First Luxury Watch: A Complete Guide</h2>
+                    <p>Everything you need to know before purchasing your first luxury timepiece.</p>
+                    <span class="blog-card-meta">January 2025 • 12 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="blog-best-dive-watches.html" class="blog-card" data-category="buying-guide">
+                <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Dive watch underwater">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Buying Guide</span>
+                    <h2>Best Dive Watches for Every Budget</h2>
+                    <p>From affordable tool watches to haute horlogerie, discover the best dive watches.</p>
+                    <span class="blog-card-meta">January 2025 • 14 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="blog-why-authorized-dealers.html" class="blog-card" data-category="buying-guide">
                 <img src="https://images.unsplash.com/photo-1491933382434-500287f9b54b?w=600&q=80" alt="Watch boutique">
                 <div class="blog-card-content">
                     <span class="blog-card-tag">Buying Guide</span>
                     <h2>Why Buy From Authorized Dealers</h2>
-                    <p>Protect your investment with guaranteed authenticity, full warranty, and lifetime service support.</p>
+                    <p>Protect your investment with guaranteed authenticity and full warranty.</p>
                     <span class="blog-card-meta">January 2025 • 9 min read</span>
                     <span class="read-more">Read More →</span>
                 </div>
             </a>
 
-            <a href="blog-true-cost-fake-watches.html" class="blog-card">
+            <a href="blog-watches-for-small-wrists.html" class="blog-card" data-category="buying-guide">
+                <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=600&q=80" alt="Watch on small wrist">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Buying Guide</span>
+                    <h2>Best Watches for Small Wrists</h2>
+                    <p>Finding the perfect fit: luxury watches that look great on smaller wrists.</p>
+                    <span class="blog-card-meta">January 2025 • 10 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="blog-buy-preowned-watches-safely.html" class="blog-card" data-category="buying-guide">
+                <img src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=600&q=80" alt="Pre-owned watch">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Buying Guide</span>
+                    <h2>How to Buy Pre-Owned Watches Safely</h2>
+                    <p>Expert tips for buying pre-owned luxury watches with confidence.</p>
+                    <span class="blog-card-meta">January 2025 • 11 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="blog-watches-under-1000.html" class="blog-card" data-category="buying-guide">
+                <img src="https://images.unsplash.com/photo-1539874754764-5a96559165b0?w=600&q=80" alt="Affordable watches">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Buying Guide</span>
+                    <h2>Best Watches Under $1,000</h2>
+                    <p>Exceptional value timepieces that punch above their weight class.</p>
+                    <span class="blog-card-meta">January 2025 • 10 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <!-- ========== WATCH CARE ========== -->
+
+            <a href="blog-spot-fake-watch.html" class="blog-card" data-category="watch-care">
+                <img src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=600&q=80" alt="Examining luxury watch">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Watch Care</span>
+                    <h2>How to Spot a Fake Luxury Watch</h2>
+                    <p>Protect yourself from counterfeits with our expert authentication guide.</p>
+                    <span class="blog-card-meta">January 2025 • 10 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="blog-watch-servicing-guide.html" class="blog-card" data-category="watch-care">
+                <img src="https://images.unsplash.com/photo-1526045431048-f857369baa09?w=600&q=80" alt="Watch movement">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Watch Care</span>
+                    <h2>Complete Watch Servicing Guide</h2>
+                    <p>Everything you need to know about maintaining your luxury timepiece.</p>
+                    <span class="blog-card-meta">January 2025 • 11 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="blog-watch-straps-guide.html" class="blog-card" data-category="watch-care">
+                <img src="https://images.unsplash.com/photo-1509941943102-10c232fc4c32?w=600&q=80" alt="Watch straps">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Watch Care</span>
+                    <h2>Complete Watch Straps Guide</h2>
+                    <p>Leather, metal, rubber, NATO: choosing the perfect strap for your watch.</p>
+                    <span class="blog-card-meta">January 2025 • 9 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <!-- ========== INDUSTRY / EDUCATION ========== -->
+
+            <a href="blog-true-cost-fake-watches.html" class="blog-card" data-category="industry">
                 <img src="https://images.unsplash.com/photo-1495704907664-81f74a7efd9b?w=600&q=80" alt="Watch authentication">
                 <div class="blog-card-content">
                     <span class="blog-card-tag">Industry Insights</span>
@@ -503,18 +715,18 @@
                 </div>
             </a>
 
-            <a href="blog-watch-investment-guide.html" class="blog-card">
+            <a href="blog-watch-investment-guide.html" class="blog-card" data-category="industry">
                 <img src="https://images.unsplash.com/photo-1526045431048-f857369baa09?w=600&q=80" alt="Watch collection">
                 <div class="blog-card-content">
-                    <span class="blog-card-tag">Investment Guide</span>
-                    <h2>Investment Value of Luxury Watches</h2>
+                    <span class="blog-card-tag">Investment</span>
+                    <h2>Watches That Hold Their Value</h2>
                     <p>Which timepieces hold their worth and how to protect your investment.</p>
                     <span class="blog-card-meta">January 2025 • 12 min read</span>
                     <span class="read-more">Read More →</span>
                 </div>
             </a>
 
-            <a href="blog-watch-movements-explained.html" class="blog-card">
+            <a href="blog-watch-movements-explained.html" class="blog-card" data-category="industry">
                 <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="Watch movement">
                 <div class="blog-card-content">
                     <span class="blog-card-tag">Education</span>
@@ -524,6 +736,29 @@
                     <span class="read-more">Read More →</span>
                 </div>
             </a>
+
+            <a href="blog-iconic-watch-designs.html" class="blog-card" data-category="industry">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80" alt="Iconic watch">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">History</span>
+                    <h2>Most Iconic Watch Designs in History</h2>
+                    <p>The timepieces that changed watchmaking forever.</p>
+                    <span class="blog-card-meta">January 2025 • 14 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
+            <a href="blog-watches-for-every-occasion.html" class="blog-card" data-category="buying-guide">
+                <img src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?w=600&q=80" alt="Watches for occasions">
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Style Guide</span>
+                    <h2>Watches for Every Occasion</h2>
+                    <p>From boardroom to beach: the right watch for every moment.</p>
+                    <span class="blog-card-meta">January 2025 • 11 min read</span>
+                    <span class="read-more">Read More →</span>
+                </div>
+            </a>
+
         </div>
     </section>
 
@@ -541,5 +776,43 @@
     <footer>
         <p>© 2025 AUTHENTIC WRIST. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
     </footer>
+
+    <!-- Category Filter Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+            const featuredArticle = document.querySelector('.featured-article');
+
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const category = this.dataset.category;
+
+                    // Filter cards
+                    blogCards.forEach(card => {
+                        if (category === 'all' || card.dataset.category === category) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+
+                    // Show/hide featured article
+                    if (featuredArticle) {
+                        if (category === 'all' || featuredArticle.dataset.category === category) {
+                            featuredArticle.style.display = 'grid';
+                        } else {
+                            featuredArticle.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
