@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search — Authentic Wrist</title>
+    <meta name="description" content="Search our collection of luxury watches, brand stories, and buying guides.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; --font-display: 'Cormorant Garamond', Georgia, serif; --font-body: 'Outfit', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); background: var(--obsidian); color: var(--cream); line-height: 1.8; min-height: 100vh; }
+        
+        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
+        .logo { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        nav { display: flex; gap: 30px; align-items: center; }
+        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a:hover { color: var(--gold); }
+        .nav-search { background: none; border: none; cursor: pointer; color: var(--cream); transition: color 0.3s; }
+        .nav-search:hover { color: var(--gold); }
+        
+        .search-hero { padding: 80px 40px; text-align: center; border-bottom: 1px solid var(--slate); }
+        .search-hero h1 { font-family: var(--font-display); font-size: 3rem; font-weight: 300; margin-bottom: 30px; }
+        
+        .search-container { max-width: 600px; margin: 0 auto; position: relative; }
+        .search-input-wrapper { position: relative; display: flex; align-items: center; }
+        .search-icon { position: absolute; left: 20px; color: var(--silver); pointer-events: none; }
+        .search-input { width: 100%; padding: 18px 20px 18px 55px; font-size: 1.1rem; font-family: var(--font-body); background: var(--charcoal); border: 1px solid var(--slate); color: var(--cream); border-radius: 0; transition: border-color 0.3s; }
+        .search-input:focus { outline: none; border-color: var(--gold); }
+        .search-input::placeholder { color: var(--silver); }
+        .search-btn { padding: 18px 35px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; background: var(--gold); color: var(--obsidian); border: none; cursor: pointer; transition: background 0.3s; }
+        .search-btn:hover { background: var(--cream); }
+        
+        .search-suggestions { margin-top: 20px; font-size: 0.85rem; color: var(--silver); }
+        .search-suggestions span { color: var(--gold); cursor: pointer; margin: 0 8px; transition: color 0.3s; }
+        .search-suggestions span:hover { color: var(--cream); }
+        
+        .search-results { max-width: 1000px; margin: 0 auto; padding: 60px 40px; }
+        .results-header { margin-bottom: 40px; }
+        .results-header h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; color: var(--silver); }
+        .results-header .query { color: var(--gold); }
+        .results-count { font-size: 0.9rem; color: var(--silver); margin-top: 10px; }
+        
+        .results-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+        .result-card { background: var(--charcoal); border: 1px solid var(--slate); text-decoration: none; transition: all 0.3s ease; display: block; }
+        .result-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .result-card-content { padding: 25px; }
+        .result-category { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+        .result-card h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--cream); margin-bottom: 10px; line-height: 1.4; }
+        .result-card p { font-size: 0.9rem; color: var(--silver); line-height: 1.6; }
+        
+        .no-results { text-align: center; padding: 60px 20px; }
+        .no-results h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--cream); margin-bottom: 15px; }
+        .no-results p { color: var(--silver); margin-bottom: 30px; }
+        
+        .popular-searches { max-width: 1000px; margin: 0 auto; padding: 0 40px 80px; }
+        .popular-searches h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; margin-bottom: 30px; text-align: center; }
+        .popular-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+        .popular-tag { padding: 10px 25px; font-size: 0.8rem; letter-spacing: 0.1em; background: var(--charcoal); border: 1px solid var(--slate); color: var(--cream); text-decoration: none; transition: all 0.3s; }
+        .popular-tag:hover { border-color: var(--gold); color: var(--gold); }
+        
+        footer { background: var(--obsidian); border-top: 1px solid var(--slate); padding: 60px 40px 30px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 60px; }
+        .footer-brand p { font-size: 0.9rem; color: var(--silver); margin-top: 15px; }
+        .footer-column h4 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; }
+        .footer-column a { display: block; font-size: 0.9rem; color: var(--silver); text-decoration: none; margin-bottom: 12px; }
+        .footer-column a:hover { color: var(--gold); }
+        .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding-top: 30px; border-top: 1px solid var(--slate); text-align: center; font-size: 0.85rem; color: var(--silver); }
+        
+        @media (max-width: 768px) { 
+            header { padding: 15px 20px; flex-direction: column; gap: 15px; } 
+            nav { gap: 15px; flex-wrap: wrap; justify-content: center; } 
+            .search-hero { padding: 50px 20px; }
+            .search-hero h1 { font-size: 2rem; }
+            .search-input-wrapper { flex-direction: column; }
+            .search-input { border-radius: 0; }
+            .search-btn { width: 100%; }
+            .search-results { padding: 40px 20px; }
+            .footer-content { grid-template-columns: 1fr; gap: 40px; } 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">AUTHENTIC WRIST</a>
+        <nav>
+            <a href="index.html#new">New Arrivals</a>
+            <a href="index.html#collections">Collections</a>
+            <a href="index.html#brands">Brands</a>
+            <a href="blog.html">Blog</a>
+            <a href="search.html" class="nav-search" title="Search">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <section class="search-hero">
+        <h1>Search</h1>
+        <div class="search-container">
+            <form id="searchForm" onsubmit="performSearch(event)">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search brands, articles, guides..." autocomplete="off">
+                    <button type="submit" class="search-btn">Search</button>
+                </div>
+            </form>
+            <div class="search-suggestions">
+                Try: <span onclick="quickSearch('Rolex')">Rolex</span> • <span onclick="quickSearch('Omega')">Omega</span> • <span onclick="quickSearch('dive watch')">Dive Watch</span> • <span onclick="quickSearch('investment')">Investment</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-results" id="searchResults" style="display: none;">
+        <div class="results-header">
+            <h2>Results for "<span class="query" id="queryDisplay"></span>"</h2>
+            <p class="results-count" id="resultsCount"></p>
+        </div>
+        <div class="results-grid" id="resultsGrid"></div>
+    </section>
+
+    <section class="no-results" id="noResults" style="display: none;">
+        <h3>No results found</h3>
+        <p>Try different keywords or browse our popular topics below.</p>
+    </section>
+
+    <section class="popular-searches" id="popularSearches">
+        <h3>Popular Searches</h3>
+        <div class="popular-tags">
+            <a href="#" class="popular-tag" onclick="quickSearch('Rolex'); return false;">Rolex</a>
+            <a href="#" class="popular-tag" onclick="quickSearch('Omega'); return false;">Omega</a>
+            <a href="#" class="popular-tag" onclick="quickSearch('Cartier'); return false;">Cartier</a>
+            <a href="#" class="popular-tag" onclick="quickSearch('Patek'); return false;">Patek Philippe</a>
+            <a href="#" class="popular-tag" onclick="quickSearch('Tudor'); return false;">Tudor</a>
+            <a href="#" class="popular-tag" onclick="quickSearch('Seiko'); return false;">Seiko</a>
+            <a href="#" class="popular-tag" onclick="quickSearch('dive'); return false;">Dive Watches</a>
+            <a href="#" class="popular-tag" onclick="quickSearch('chronograph'); return false;">Chronographs</a>
+            <a href="#" class="popular-tag" onclick="quickSearch('investment'); return false;">Investment Watches</a>
+            <a href="#" class="popular-tag" onclick="quickSearch('budget'); return false;">Budget Watches</a>
+            <a href="#" class="popular-tag" onclick="quickSearch('service'); return false;">Watch Service</a>
+            <a href="#" class="popular-tag" onclick="quickSearch('strap'); return false;">Watch Straps</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">AUTHENTIC WRIST</a>
+                <p>Your curated destination for authentic luxury timepieces.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <a href="index.html#new">New Arrivals</a>
+                <a href="index.html#collections">Collections</a>
+                <a href="index.html#brands">Brands</a>
+            </div>
+            <div class="footer-column">
+                <h4>Help</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-column">
+                <h4>About</h4>
+                <a href="about.html">Our Story</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Authentic Wrist. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Searchable content database
+        const searchContent = [
+            // Brand Stories
+            { title: "The History of Rolex", category: "Brand Stories", url: "brand-story-rolex.html", keywords: "rolex history crown oyster submariner daytona datejust gmt hans wilsdorf swiss luxury perpetual", description: "From London to legend. How Hans Wilsdorf built the world's most recognized watch brand." },
+            { title: "The History of Omega", category: "Brand Stories", url: "brand-story-omega.html", keywords: "omega history speedmaster seamaster moon nasa astronaut olympic james bond swiss", description: "From Swiss workshop to the Moon. The complete Omega story including NASA and Olympics." },
+            { title: "The History of Cartier", category: "Brand Stories", url: "brand-story-cartier.html", keywords: "cartier history tank santos jeweler paris french luxury royal", description: "The jeweler of kings who invented the modern wristwatch with the Santos." },
+            { title: "The History of Tudor", category: "Brand Stories", url: "brand-story-tudor.html", keywords: "tudor history black bay pelagos rolex heritage dive military navy", description: "How Rolex's sibling brand emerged from the shadows to become a collector favorite." },
+            { title: "The History of TAG Heuer", category: "Brand Stories", url: "brand-story-tag-heuer.html", keywords: "tag heuer history carrera monaco steve mcqueen racing motorsport chronograph f1 formula", description: "Swiss precision meets motorsport. From stopwatches to the Monaco and Carrera." },
+            { title: "The History of Breitling", category: "Brand Stories", url: "brand-story-breitling.html", keywords: "breitling history navitimer aviation pilot chronograph professional instrument", description: "Instruments for professionals. Aviation heritage and the legendary Navitimer." },
+            { title: "The History of Audemars Piguet", category: "Brand Stories", url: "brand-story-audemars-piguet.html", keywords: "audemars piguet ap history royal oak offshore gerald genta luxury swiss", description: "Masters of the Royal Oak. How two friends created haute horlogerie history." },
+            { title: "The History of Seiko", category: "Brand Stories", url: "brand-story-seiko.html", keywords: "seiko history japan japanese quartz astron spring drive prospex turtle samurai", description: "Japan's watchmaking giant. From quartz revolution to Spring Drive innovation." },
+            { title: "The History of Grand Seiko", category: "Brand Stories", url: "brand-story-grand-seiko.html", keywords: "grand seiko history japan japanese zaratsu snowflake spring drive luxury finishing", description: "Japanese perfection elevated to art. The Nature of Time philosophy." },
+            { title: "The History of Longines", category: "Brand Stories", url: "brand-story-longines.html", keywords: "longines history aviation lindbergh elegance swiss heritage pilot", description: "Elegance is an Attitude. Aviation heritage and timeless Swiss design." },
+            { title: "The History of Breguet", category: "Brand Stories", url: "brand-story-breguet.html", keywords: "breguet history tourbillon abraham louis invention tradition classique marine", description: "The father of modern watchmaking. Inventor of the tourbillon and countless innovations." },
+            { title: "The History of Hublot", category: "Brand Stories", url: "brand-story-hublot.html", keywords: "hublot history big bang fusion rubber jean claude biver lvmh", description: "The Art of Fusion. How bold design and marketing created a luxury powerhouse." },
+            { title: "The History of Jacob & Co", category: "Brand Stories", url: "brand-story-jacob-co.html", keywords: "jacob co history astronomia diamond hip hop jewelry luxury", description: "From Diamond District to haute horlogerie. The Jacob the Jeweler story." },
+            { title: "The History of Chopard", category: "Brand Stories", url: "brand-story-chopard.html", keywords: "chopard history happy diamonds luc cannes film festival ethical gold", description: "The Artisan of Emotions. Happy Diamonds, Cannes, and ethical luxury." },
+            { title: "The History of Patek Philippe", category: "Brand Stories", url: "blog-patek-philippe-history.html", keywords: "patek philippe history nautilus calatrava complications geneva seal perpetual calendar", description: "The most prestigious name in watchmaking. Generations of excellence." },
+            
+            // Blog Articles
+            { title: "Best Watches Under $5,000", category: "Buying Guide", url: "blog-best-watches-under-5000.html", keywords: "budget affordable value under 5000 rolex omega tudor cartier entry level best", description: "Exceptional timepieces that offer remarkable value under $5,000." },
+            { title: "Rolex vs Omega: Complete Comparison", category: "Buying Guide", url: "blog-rolex-vs-omega.html", keywords: "rolex omega comparison versus vs submariner seamaster which better", description: "Two titans compared. Which Swiss giant is right for you?" },
+            { title: "Watches That Hold Their Value", category: "Investment", url: "blog-watches-that-hold-value.html", keywords: "investment value appreciation resale roi rolex patek audemars money", description: "Investment-grade timepieces that retain or increase in value." },
+            { title: "Complete Watch Servicing Guide", category: "Ownership", url: "blog-watch-servicing-guide.html", keywords: "service maintenance repair cost how often when overhaul cleaning", description: "Everything you need to know about maintaining your timepiece." },
+            { title: "Watches for Every Occasion", category: "Style Guide", url: "blog-watches-for-every-occasion.html", keywords: "occasion dress sport casual formal wedding business office", description: "The right watch for every moment in life." },
+            { title: "Iconic Watch Designs", category: "History", url: "blog-iconic-watch-designs.html", keywords: "iconic design classic famous history influential revolutionary", description: "The most influential watch designs in horological history." },
+            { title: "Best Watches for Small Wrists", category: "Buying Guide", url: "blog-watches-for-small-wrists.html", keywords: "small wrist size 36mm 38mm 39mm fit comfortable", description: "Finding the perfect fit for smaller wrists." },
+            { title: "How to Buy Pre-Owned Watches Safely", category: "Buying Guide", url: "blog-buy-preowned-watches-safely.html", keywords: "pre-owned used vintage buy purchase authentic fake counterfeit chrono24", description: "Expert tips for buying pre-owned watches with confidence." },
+            { title: "Complete Watch Straps Guide", category: "Ownership", url: "blog-watch-straps-guide.html", keywords: "strap band bracelet leather rubber nato metal change swap", description: "Everything about watch straps: leather, metal, rubber, and NATO." },
+            { title: "Best Watches Under $1,000", category: "Buying Guide", url: "blog-watches-under-1000.html", keywords: "budget affordable cheap value under 1000 seiko orient tissot hamilton", description: "Exceptional value timepieces under $1,000." },
+            { title: "How to Spot Fake Watches", category: "Authentication", url: "blog-spot-fake-watches.html", keywords: "fake counterfeit authentic real spot identify tell replica", description: "Learn to identify counterfeit watches and protect yourself." },
+            { title: "Understanding Watch Movements", category: "Education", url: "blog-watch-movements-explained.html", keywords: "movement automatic manual quartz mechanical caliber how works", description: "Automatic, manual, quartz explained in simple terms." },
+            { title: "Best Dive Watches", category: "Buying Guide", url: "blog-best-dive-watches.html", keywords: "dive diver diving water resistance submariner seamaster pelagos", description: "Top dive watches for underwater adventures." },
+            { title: "Your First Luxury Watch", category: "Buying Guide", url: "blog-first-luxury-watch.html", keywords: "first entry beginner start starting collection", description: "How to choose your first luxury timepiece." },
+            { title: "Authorized Dealers Guide", category: "Buying Guide", url: "blog-authorized-dealers.html", keywords: "authorized dealer ad boutique buy purchase official warranty", description: "Understanding authorized dealers and the buying process." },
+        ];
+
+        function performSearch(event) {
+            if (event) event.preventDefault();
+            const query = document.getElementById('searchInput').value.trim().toLowerCase();
+            
+            if (!query) return;
+            
+            const results = searchContent.filter(item => {
+                const searchText = (item.title + ' ' + item.keywords + ' ' + item.description + ' ' + item.category).toLowerCase();
+                return query.split(' ').every(term => searchText.includes(term));
+            });
+            
+            displayResults(query, results);
+        }
+
+        function quickSearch(term) {
+            document.getElementById('searchInput').value = term;
+            performSearch();
+        }
+
+        function displayResults(query, results) {
+            const resultsSection = document.getElementById('searchResults');
+            const noResultsSection = document.getElementById('noResults');
+            const popularSection = document.getElementById('popularSearches');
+            const queryDisplay = document.getElementById('queryDisplay');
+            const resultsCount = document.getElementById('resultsCount');
+            const resultsGrid = document.getElementById('resultsGrid');
+
+            queryDisplay.textContent = query;
+            
+            if (results.length > 0) {
+                resultsCount.textContent = `${results.length} result${results.length > 1 ? 's' : ''} found`;
+                resultsGrid.innerHTML = results.map(item => `
+                    <a href="${item.url}" class="result-card">
+                        <div class="result-card-content">
+                            <div class="result-category">${item.category}</div>
+                            <h3>${item.title}</h3>
+                            <p>${item.description}</p>
+                        </div>
+                    </a>
+                `).join('');
+                
+                resultsSection.style.display = 'block';
+                noResultsSection.style.display = 'none';
+                popularSection.style.display = 'none';
+            } else {
+                resultsSection.style.display = 'none';
+                noResultsSection.style.display = 'block';
+                popularSection.style.display = 'block';
+            }
+        }
+
+        // Check for search query in URL
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('q');
+            if (query) {
+                document.getElementById('searchInput').value = query;
+                performSearch();
+            }
+        }
+    </script>
+</body>
+</html>
