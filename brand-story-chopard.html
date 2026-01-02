@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The History of Chopard: The Artisan of Emotions — Authentic Wrist</title>
+    <meta name="description" content="From Swiss watchmaker to global luxury house. How the Scheufele family transformed Chopard into a symbol of joyful luxury and ethical excellence.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; --font-display: 'Cormorant Garamond', Georgia, serif; --font-body: 'Outfit', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); background: var(--obsidian); color: var(--cream); line-height: 1.8; }
+        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
+        .logo { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        nav { display: flex; gap: 30px; }
+        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a:hover { color: var(--gold); }
+        .article-hero { height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(10,10,10,0.6), rgba(10,10,10,0.9)), url('https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=1600&q=80'); background-size: cover; background-position: center; }
+        .article-hero-content { max-width: 800px; padding: 0 20px; }
+        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+        .article-hero h1 { font-family: var(--font-display); font-size: 3.5rem; font-weight: 300; line-height: 1.2; margin-bottom: 20px; }
+        .article-meta { font-size: 0.85rem; color: var(--silver); }
+        .article-content { max-width: 800px; margin: 0 auto; padding: 80px 20px; }
+        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 30px; color: var(--silver); }
+        .article-content h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 400; margin: 60px 0 30px; color: var(--cream); }
+        .lead-paragraph { font-size: 1.25rem; color: var(--cream); border-left: 2px solid var(--gold); padding-left: 30px; margin-bottom: 40px; }
+        blockquote { font-family: var(--font-display); font-size: 1.5rem; font-style: italic; color: var(--cream); border-left: 2px solid var(--gold); padding-left: 30px; margin: 50px 0; }
+        .brand-cta { background: var(--charcoal); border: 1px solid var(--gold); padding: 40px; margin: 50px 0; text-align: center; }
+        .brand-cta h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--cream); margin-bottom: 15px; }
+        .brand-cta p { margin-bottom: 25px; }
+        .brand-cta .btn { display: inline-block; padding: 15px 35px; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; background: var(--gold); color: var(--obsidian); transition: all 0.3s ease; }
+        .brand-cta .btn:hover { background: var(--cream); }
+        .related-articles { background: var(--charcoal); padding: 80px 40px; }
+        .related-articles h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 300; text-align: center; margin-bottom: 50px; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .related-card { background: var(--obsidian); border: 1px solid var(--slate); text-decoration: none; transition: all 0.3s ease; }
+        .related-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .related-card img { width: 100%; height: 200px; object-fit: cover; }
+        .related-card-content { padding: 25px; }
+        .related-card-content h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--cream); margin-bottom: 10px; }
+        .related-card-content p { font-size: 0.85rem; color: var(--silver); }
+        footer { background: var(--obsidian); border-top: 1px solid var(--slate); padding: 60px 40px 30px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 60px; }
+        .footer-brand p { font-size: 0.9rem; color: var(--silver); margin-top: 15px; }
+        .footer-column h4 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; }
+        .footer-column a { display: block; font-size: 0.9rem; color: var(--silver); text-decoration: none; margin-bottom: 12px; }
+        .footer-column a:hover { color: var(--gold); }
+        .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding-top: 30px; border-top: 1px solid var(--slate); text-align: center; font-size: 0.85rem; color: var(--silver); }
+        @media (max-width: 768px) { header { padding: 15px 20px; flex-direction: column; gap: 15px; } nav { gap: 15px; flex-wrap: wrap; justify-content: center; } .article-hero h1 { font-size: 2.5rem; } .footer-content { grid-template-columns: 1fr; gap: 40px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">AUTHENTIC WRIST</a>
+        <nav>
+            <a href="index.html#new">New Arrivals</a>
+            <a href="index.html#collections">Collections</a>
+            <a href="index.html#brands">Brands</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <section class="article-hero">
+        <div class="article-hero-content">
+            <div class="article-category">Brand Stories</div>
+            <h1>The History of Chopard</h1>
+            <div class="article-meta">January 2, 2025 · 11 min read</div>
+        </div>
+    </section>
+
+    <article class="article-content">
+        <p class="lead-paragraph">"The Artisan of Emotions." Chopard creates timepieces and jewelry designed to evoke joy and celebration. From the playful Happy Diamonds to the prestigious Cannes Film Festival partnership, Chopard embodies luxury with heart—and has become a leader in ethical sourcing.</p>
+
+        <h2>The Founding</h2>
+        <p>In 1860, Louis-Ulysse Chopard established his workshop in Sonvilier, Switzerland. His specialty was pocket watches for European railway companies. By the 1960s, the founding family was aging, and German goldsmith Karl Scheufele purchased the brand in 1963, relocating to Geneva.</p>
+
+        <h2>Happy Diamonds</h2>
+        <p>In 1976, Chopard introduced Happy Diamonds—watches featuring loose diamonds floating freely between two sapphire crystals. This revolutionary concept became Chopard's signature, spawning entire collections that define the brand's joyful personality.</p>
+
+        <blockquote>"We have the freedom to follow our hearts. That's the privilege of being family-owned." — Caroline Scheufele</blockquote>
+
+        <h2>L.U.C Manufacture</h2>
+        <p>In 1996, Chopard opened its own movement manufacture in Fleurier—the L.U.C line. These calibers have won multiple Grand Prix d'Horlogerie awards, proving Chopard can compete with traditional manufacture brands on pure watchmaking merit.</p>
+
+        <h2>Cannes Film Festival</h2>
+        <p>Since 1998, Chopard creates the Palme d'Or trophy and adorns stars on the red carpet. The brand has become synonymous with cinema's most glamorous moments.</p>
+
+        <h2>Ethical Leadership</h2>
+        <p>By 2018, Chopard committed to using 100% ethical gold in all production—setting a standard few competitors have matched. The Green Carpet Collection proves luxury and responsibility can coexist.</p>
+
+        <div class="brand-cta">
+            <h3>Explore the Chopard Collection</h3>
+            <p>Discover the complete range of Chopard timepieces at the official website.</p>
+            <a href="https://www.chopard.com" class="btn">Visit Chopard →</a>
+        </div>
+
+        <h2>Modern Collections</h2>
+        <p><strong>Happy Sport:</strong> Steel meets dancing diamonds—accessible luxury with playful spirit.<br><strong>L.U.C:</strong> Haute horlogerie with in-house movements and sophisticated complications.<br><strong>Alpine Eagle:</strong> Luxury steel sports watch competing with Royal Oak and Nautilus.<br><strong>Mille Miglia:</strong> Racing-inspired chronographs for the legendary Italian road rally.</p>
+
+        <p>Still family-owned, Chopard proves independent luxury can thrive. The Scheufele family has created an artisan of emotions that honors heritage while building something Louis-Ulysse Chopard never could have imagined.</p>
+    </article>
+
+    <section class="related-articles">
+        <h2>More Brand Stories</h2>
+        <div class="related-grid">
+            <a href="brand-story-cartier.html" class="related-card">
+                <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?w=600&q=80" alt="Cartier">
+                <div class="related-card-content">
+                    <h3>The History of Cartier</h3>
+                    <p>The jeweler of kings who invented the modern watch.</p>
+                </div>
+            </a>
+            <a href="brand-story-rolex.html" class="related-card">
+                <img src="https://images.unsplash.com/photo-1623998021446-45cd9b269056?w=600&q=80" alt="Rolex">
+                <div class="related-card-content">
+                    <h3>The History of Rolex</h3>
+                    <p>From London to legend—the crown's story.</p>
+                </div>
+            </a>
+            <a href="brand-story-omega.html" class="related-card">
+                <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&q=80" alt="Omega">
+                <div class="related-card-content">
+                    <h3>The History of Omega</h3>
+                    <p>From Swiss workshop to the Moon and beyond.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">AUTHENTIC WRIST</a>
+                <p>Your curated destination for authentic luxury timepieces.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <a href="index.html#new">New Arrivals</a>
+                <a href="index.html#collections">Collections</a>
+                <a href="index.html#brands">Brands</a>
+            </div>
+            <div class="footer-column">
+                <h4>Help</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-column">
+                <h4>About</h4>
+                <a href="about.html">Our Story</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Authentic Wrist. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
