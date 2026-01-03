@@ -4,43 +4,115 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog — Authentic Wrist | Watch Guides, Brand Stories & Horological Insights</title>
-    <meta name="description" content="Expert insights into the world of luxury timepieces. Buying guides, brand histories, watch care tips, and industry news from Authentic Wrist.">
+    <title>Blog — Authentic Wrist | Watch Guides & Brand Stories</title>
+    <meta name="description" content="Expert insights into luxury timepieces. Buying guides, brand histories, and watch care tips.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --gold-light: #E8D5A3; --gold-dark: #8B7355; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; --font-display: 'Cormorant Garamond', Georgia, serif; --font-body: 'Outfit', sans-serif; }
+        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-body); background: var(--obsidian); color: var(--cream); line-height: 1.6; }
+        body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.6; }
         header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
         nav { display: flex; gap: 30px; }
-        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; transition: color 0.3s ease; }
+        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
         nav a:hover { color: var(--gold); }
         .page-header { padding: 80px 40px; text-align: center; border-bottom: 1px solid var(--slate); }
-        .page-header h1 { font-family: var(--font-display); font-size: 3.5rem; font-weight: 300; margin-bottom: 15px; }
+        .page-header h1 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; margin-bottom: 15px; }
         .page-header p { font-size: 1.1rem; color: var(--silver); max-width: 600px; margin: 0 auto; }
         .category-filter { padding: 30px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .filter-btn { padding: 10px 25px; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; background: transparent; border: 1px solid var(--slate); color: var(--silver); cursor: pointer; transition: all 0.3s ease; }
+        .filter-btn { padding: 10px 25px; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; background: transparent; border: 1px solid var(--slate); color: var(--silver); cursor: pointer; }
         .filter-btn:hover, .filter-btn.active { border-color: var(--gold); color: var(--gold); }
-        .featured-article { padding: 80px 40px; border-bottom: 1px solid var(--slate); }
-        .featured-article h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; margin-bottom: 40px; color: var(--gold); }
-        .featured-card { display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; background: var(--charcoal); border: 1px solid var(--slate); overflow: hidden; text-decoration: none; transition: all 0.3s ease; }
-        .featured-card:hover { border-color: var(--gold); }
-        .featured-card img { width: 100%; height: 100%; min-height: 400px; object-fit: cover; }
-        .featured-content { padding: 50px 50px 50px 0; display: flex; flex-direction: column; justify-content: center; }
-        .featured-category { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 15px; }
-        .featured-content h3 { font-family: var(--font-display); font-size: 2.5rem; font-weight: 300; color: var(--cream); margin-bottom: 20px; line-height: 1.2; }
-        .featured-content p { font-size: 1rem; color: var(--silver); margin-bottom: 25px; line-height: 1.8; }
-        .featured-meta { font-size: 0.85rem; color: var(--silver); }
         .articles-section { padding: 80px 40px; }
-        .articles-section h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; margin-bottom: 40px; color: var(--gold); }
+        .articles-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 40px; color: var(--gold); }
         .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; }
         .article-card { background: var(--charcoal); border: 1px solid var(--slate); text-decoration: none; transition: all 0.3s ease; }
         .article-card:hover { border-color: var(--gold); transform: translateY(-5px); }
         .article-card img { width: 100%; height: 220px; object-fit: cover; }
         .article-card-content { padding: 25px; }
         .article-card-category { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
-        .article-card-content h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; color: var(--cream); margin-bottom: 12px; line-height: 1.3; }
-        .article-card-content p { font-size: 0.9rem; color
+        .article-card-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; color: var(--cream); margin-bottom: 12px; }
+        .article-card-content p { font-size: 0.9rem; color: var(--silver); margin-bottom: 15px; }
+        .article-card-meta { font-size: 0.8rem; color: var(--silver); }
+        .hidden { display: none !important; }
+        footer { background: var(--obsidian); border-top: 1px solid var(--slate); padding: 40px; text-align: center; }
+        footer p { color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .articles-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">AUTHENTIC WRIST</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">Our Story</a>
+            <a href="search.html">Search</a>
+        </nav>
+    </header>
+    <section class="page-header">
+        <h1>The Journal</h1>
+        <p>Expert insights, buying guides, and stories from the world of luxury timepieces</p>
+    </section>
+    <section class="category-filter">
+        <button class="filter-btn active" data-filter="all">All Articles</button>
+        <button class="filter-btn" data-filter="brand-story">Brand Stories</button>
+        <button class="filter-btn" data-filter="buying-guide">Buying Guides</button>
+    </section>
+    <section class="articles-section">
+        <h2>All Articles</h2>
+        <div class="articles-grid">
+            <a href="brand-story-vacheron-constantin.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Vacheron Constantin"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Vacheron Constantin</h3><p>The world's oldest continuously operating manufacture since 1755.</p><div class="article-card-meta">January 2025</div></div></a>
+            <a href="brand-story-jaeger-lecoultre.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80" alt="Jaeger-LeCoultre"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Jaeger-LeCoultre</h3><p>The watchmaker's watchmaker from the Vallée de Joux.</p><div class="article-card-meta">January 2025</div></div></a>
+            <a href="brand-story-a-lange-sohne.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="A. Lange & Söhne"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of A. Lange & Söhne</h3><p>German precision from Glashütte.</p><div class="article-card-meta">January 2025</div></div></a>
+            <a href="brand-story-iwc.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=600&q=80" alt="IWC"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of IWC Schaffhausen</h3><p>Engineering dreams since 1868.</p><div class="article-card-meta">January 2025</div></div></a>
+            <a href="brand-story-panerai.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Panerai"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Panerai</h3><p>From Italian Navy frogmen to global phenomenon.</p><div class="article-card-meta">January 2025</div></div></a>
+            <a href="brand-story-zenith.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1526045431048-f857369baa09?w=600&q=80" alt="Zenith"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Zenith</h3><p>Home of El Primero chronograph.</p><div class="article-card-meta">January 2025</div></div></a>
+            <a href="brand-story-blancpain.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Blancpain"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Blancpain</h3><p>World's oldest watch brand since 1735.</p><div class="article-card-meta">January 2025</div></div></a>
+            <a href="brand-story-bulgari.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=600&q=80" alt="Bulgari"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Bulgari</h3><p>Italian magnificence in watchmaking.</p><div class="article-card-meta">January 2025</div></div></a>
+            <a href="brand-story-girard-perregaux.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Girard-Perregaux"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Girard-Perregaux</h3><p>Three Bridges legacy since 1791.</p><div class="article-card-meta">January 2025</div></div></a>
+            <a href="brand-story-ulysse-nardin.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Ulysse Nardin"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Ulysse Nardin</h3><p>Master of marine chronometers.</p><div class="article-card-meta">January 2025</div></div></a>
+            <a href="brand-story-rolex.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1623998021446-45cd9b269056?w=600&q=80" alt="Rolex"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Rolex</h3><p>The crown of watchmaking since 1905.</p><div class="article-card-meta">December 2024</div></div></a>
+            <a href="brand-story-omega.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&q=80" alt="Omega"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Omega</h3><p>First watch on the Moon.</p><div class="article-card-meta">December 2024</div></div></a>
+            <a href="brand-story-cartier.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?w=600&q=80" alt="Cartier"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Cartier</h3><p>The jeweler of kings.</p><div class="article-card-meta">December 2024</div></div></a>
+            <a href="blog-patek-philippe-history.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Patek Philippe"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Patek Philippe</h3><p>The most prestigious name in watchmaking.</p><div class="article-card-meta">December 2024</div></div></a>
+            <a href="brand-story-tudor.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=600&q=80" alt="Tudor"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Tudor</h3><p>Born to dare.</p><div class="article-card-meta">December 2024</div></div></a>
+            <a href="brand-story-tag-heuer.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&q=80" alt="TAG Heuer"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of TAG Heuer</h3><p>Swiss precision meets motorsport.</p><div class="article-card-meta">December 2024</div></div></a>
+            <a href="brand-story-breitling.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1594576722512-582bcd46fba3?w=600&q=80" alt="Breitling"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Breitling</h3><p>Instruments for professionals.</p><div class="article-card-meta">December 2024</div></div></a>
+            <a href="brand-story-audemars-piguet.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=600&q=80" alt="Audemars Piguet"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Audemars Piguet</h3><p>Masters of the Royal Oak.</p><div class="article-card-meta">December 2024</div></div></a>
+            <a href="brand-story-seiko.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1585123334904-845d60c97427?w=600&q=80" alt="Seiko"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Seiko</h3><p>Japan's watchmaking pioneer.</p><div class="article-card-meta">December 2024</div></div></a>
+            <a href="brand-story-grand-seiko.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=600&q=80" alt="Grand Seiko"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Grand Seiko</h3><p>The nature of time.</p><div class="article-card-meta">December 2024</div></div></a>
+            <a href="brand-story-longines.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80" alt="Longines"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Longines</h3><p>Elegance is an attitude.</p><div class="article-card-meta">December 2024</div></div></a>
+            <a href="brand-story-breguet.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="Breguet"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Breguet</h3><p>The father of modern watchmaking.</p><div class="article-card-meta">December 2024</div></div></a>
+            <a href="brand-story-hublot.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1544117519-31a4b719223d?w=600&q=80" alt="Hublot"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Hublot</h3><p>The Art of Fusion.</p><div class="article-card-meta">December 2024</div></div></a>
+            <a href="brand-story-jacob-co.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=600&q=80" alt="Jacob & Co"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Jacob & Co</h3><p>Spectacular complications.</p><div class="article-card-meta">December 2024</div></div></a>
+            <a href="brand-story-chopard.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=600&q=80" alt="Chopard"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Chopard</h3><p>Happy Diamonds.</p><div class="article-card-meta">December 2024</div></div></a>
+            <a href="brand-story-franck-muller.html" class="article-card" data-category="brand-story"><img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Franck Muller"><div class="article-card-content"><div class="article-card-category">Brand Story</div><h3>The History of Franck Muller</h3><p>Master of Complications.</p><div class="article-card-meta">December 2024</div></div></a>
+            <a href="blog-first-luxury-watch.html" class="article-card" data-category="buying-guide"><img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600&q=80" alt="First luxury watch"><div class="article-card-content"><div class="article-card-category">Buying Guide</div><h3>Your First Luxury Watch</h3><p>A complete guide for beginners.</p><div class="article-card-meta">December 2024</div></div></a>
+            <a href="blog-rolex-vs-omega.html" class="article-card" data-category="buying-guide"><img src="https://images.unsplash.com/photo-1623998021446-45cd9b269056?w=600&q=80" alt="Rolex vs Omega"><div class="article-card-content"><div class="article-card-category">Buying Guide</div><h3>Rolex vs Omega Comparison</h3><p>Which brand is right for you?</p><div class="article-card-meta">December 2024</div></div></a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Authentic Wrist. All rights reserved.</p>
+    </footer>
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const articleCards = document.querySelectorAll('.article-card');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const filter = button.dataset.filter;
+                articleCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
