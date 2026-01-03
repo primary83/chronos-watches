@@ -4,271 +4,67 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The History of Girard-Perregaux: Three Bridges Legacy — Authentic Wrist</title>
-    <meta name="description" content="Home of the iconic Three Bridges tourbillon. Discover Girard-Perregaux's 230+ years of horological innovation from La Chaux-de-Fonds.">
+    <title>The History of Girard-Perregaux — Authentic Wrist</title>
+    <meta name="description" content="Discover Girard-Perregaux, home of the iconic Three Bridges tourbillon since 1791.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --gold-light: #E8D5A3; --gold-dark: #8B7355; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; --font-display: 'Cormorant Garamond', Georgia, serif; --font-body: 'Outfit', sans-serif; }
+        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-body); background: var(--obsidian); color: var(--cream); line-height: 1.8; }
+        body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
         header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
         nav { display: flex; gap: 30px; }
         nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
         nav a:hover { color: var(--gold); }
-        .article-hero { height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(10,10,10,0.6), rgba(10,10,10,0.9)), url('https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=1600&q=80'); background-size: cover; background-position: center; }
-        .article-hero-content { max-width: 800px; padding: 0 20px; }
+        .article-hero { height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%); border-bottom: 1px solid var(--gold); }
+        .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; margin-bottom: 15px; }
         .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-        .article-hero h1 { font-family: var(--font-display); font-size: 3.5rem; font-weight: 300; line-height: 1.2; margin-bottom: 20px; }
         .article-meta { font-size: 0.85rem; color: var(--silver); }
-        .article-content { max-width: 800px; margin: 0 auto; padding: 80px 20px; }
-        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 30px; color: var(--silver); }
-        .article-content h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 400; margin: 60px 0 30px; color: var(--cream); }
-        .article-content h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; margin: 40px 0 20px; color: var(--cream); }
-        .lead-paragraph { font-size: 1.25rem; color: var(--cream); border-left: 2px solid var(--gold); padding-left: 30px; margin-bottom: 40px; }
-        blockquote { font-family: var(--font-display); font-size: 1.5rem; font-style: italic; color: var(--cream); border-left: 2px solid var(--gold); padding-left: 30px; margin: 50px 0; }
-        .timeline { margin: 50px 0; padding-left: 30px; border-left: 2px solid var(--slate); }
-        .timeline-item { margin-bottom: 30px; position: relative; }
-        .timeline-item::before { content: ''; position: absolute; left: -37px; top: 8px; width: 12px; height: 12px; background: var(--gold); border-radius: 50%; }
-        .timeline-year { font-size: 0.8rem; color: var(--gold); letter-spacing: 0.1em; margin-bottom: 5px; }
-        .timeline-text { color: var(--silver); }
-        .highlight-box { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 30px; margin: 40px 0; }
-        .highlight-box h4 { font-family: var(--font-display); font-size: 1.2rem; color: var(--gold); margin-bottom: 15px; }
+        .article-content { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
+        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 25px; color: var(--silver); }
+        .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; margin: 45px 0 20px; color: var(--cream); }
+        .lead-paragraph { font-size: 1.15rem; color: var(--cream); border-left: 3px solid var(--gold); padding-left: 25px; margin-bottom: 35px; }
+        .highlight-box { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .highlight-box h4 { color: var(--gold); margin-bottom: 15px; }
         .highlight-box ul { list-style: none; }
         .highlight-box li { padding: 8px 0; color: var(--silver); border-bottom: 1px solid var(--slate); }
         .highlight-box li:last-child { border-bottom: none; }
-        .brand-cta { background: var(--charcoal); border: 1px solid var(--gold); padding: 40px; margin: 50px 0; text-align: center; }
-        .brand-cta h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--cream); margin-bottom: 15px; }
-        .brand-cta p { margin-bottom: 25px; }
-        .brand-cta .btn { display: inline-block; padding: 15px 35px; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; background: var(--gold); color: var(--obsidian); transition: all 0.3s ease; }
-        .brand-cta .btn:hover { background: var(--cream); }
-        .related-articles { background: var(--charcoal); padding: 80px 40px; }
-        .related-articles h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 300; text-align: center; margin-bottom: 50px; }
-        .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        .related-card { background: var(--obsidian); border: 1px solid var(--slate); text-decoration: none; transition: all 0.3s ease; }
-        .related-card:hover { border-color: var(--gold); transform: translateY(-5px); }
-        .related-card img { width: 100%; height: 200px; object-fit: cover; }
-        .related-card-content { padding: 25px; }
-        .related-card-content h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--cream); margin-bottom: 10px; }
-        .related-card-content p { font-size: 0.85rem; color: var(--silver); }
-        footer { background: var(--obsidian); border-top: 1px solid var(--slate); padding: 60px 40px 30px; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 60px; }
-        .footer-brand p { font-size: 0.9rem; color: var(--silver); margin-top: 15px; }
-        .footer-column h4 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; }
-        .footer-column a { display: block; font-size: 0.9rem; color: var(--silver); text-decoration: none; margin-bottom: 12px; }
-        .footer-column a:hover { color: var(--gold); }
-        .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding-top: 30px; border-top: 1px solid var(--slate); text-align: center; font-size: 0.85rem; color: var(--silver); }
-        @media (max-width: 768px) { header { padding: 15px 20px; flex-direction: column; gap: 15px; } nav { gap: 15px; flex-wrap: wrap; justify-content: center; } .article-hero h1 { font-size: 2.5rem; } .footer-content { grid-template-columns: 1fr; gap: 40px; } }
+        footer { border-top: 1px solid var(--slate); padding: 40px; text-align: center; }
+        footer p { color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .article-hero h1 { font-size: 2.2rem; } }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="blog.html">Blog</a>
-            <a href="about.html">Our Story</a>
-            <a href="search.html">Search</a>
-        </nav>
+        <nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">Our Story</a><a href="search.html">Search</a></nav>
     </header>
-
     <section class="article-hero">
-        <div class="article-hero-content">
-            <div class="article-category">Brand Stories</div>
+        <div>
+            <div class="article-category">Brand Story</div>
             <h1>The History of Girard-Perregaux</h1>
-            <div class="article-meta">January 2025 · 13 min read</div>
+            <div class="article-meta">January 2025 · 10 min read</div>
         </div>
     </section>
-
     <article class="article-content">
-        <p class="lead-paragraph">"Bridging Time Since 1791." The Three Bridges tourbillon is one of watchmaking's most instantly recognizable movements—three parallel arrow-shaped bridges holding the going train in perfect alignment. This iconic design has represented Girard-Perregaux for over 150 years, symbolizing a manufacture that has survived longer than most nations.</p>
-
-        <h2>Geneva Beginnings</h2>
-        <p>The company's origins trace to 1791, when Jean-François Bautte established a watchmaking workshop in Geneva. Bautte was remarkable for his era—he created complete watches in-house at a time when most watchmakers assembled components from various suppliers. His thin watches and repeater mechanisms earned admiration throughout Europe.</p>
-
-        <p>Bautte died in 1837, but his enterprise continued through successors. In 1852, Constant Girard married Marie Perregaux, and the couple eventually assumed control. The hyphenated name "Girard-Perregaux" would become one of horology's most respected.</p>
-
-        <h2>The Move to La Chaux-de-Fonds</h2>
-        <p>In 1856, the company relocated to La Chaux-de-Fonds in the Neuchâtel mountains. This move proved strategically brilliant—the town was becoming a center of Swiss watchmaking, with excellent schools and a pool of skilled craftsmen. Girard-Perregaux established its manufacture here, where it remains today.</p>
-
-        <p>Constant Girard proved an exceptional watchmaker and businessman. Under his leadership, the company won numerous prizes at international exhibitions and established relationships with markets worldwide, including significant business in the Americas.</p>
-
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-year">1791</div>
-                <div class="timeline-text">Jean-François Bautte establishes workshop in Geneva</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">1856</div>
-                <div class="timeline-text">Company moves to La Chaux-de-Fonds</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">1867</div>
-                <div class="timeline-text">First Three Bridges tourbillon pocket watch created</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">1889</div>
-                <div class="timeline-text">Gold Medal at Paris Universal Exhibition</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">1970</div>
-                <div class="timeline-text">First quartz wristwatch movement at 32,768 Hz</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">1991</div>
-                <div class="timeline-text">Three Bridges tourbillon adapted to wristwatch</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">2011</div>
-                <div class="timeline-text">Constant Escapement achieves perfect isochronism</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">2022</div>
-                <div class="timeline-text">Joins Kering luxury group alongside Ulysse Nardin</div>
-            </div>
-        </div>
-
-        <h2>The Three Bridges Masterpiece</h2>
-        <p>In 1867, Constant Girard created a pocket watch movement that would become the brand's signature: the tourbillon with three parallel bridges. The design was purely functional—three arrow-shaped bridges support the barrel, wheel train, and tourbillon carriage. But Girard executed them with such beauty that the movement became art.</p>
-
-        <blockquote>"The bridges are not decoration—they are structure. Their beauty comes from perfect function, not ornament."<br><span style="font-size: 1rem; font-style: normal;">— Constant Girard</span></blockquote>
-
-        <p>The Three Bridges tourbillon won a Gold Medal at the 1889 Paris Universal Exhibition, the same fair that debuted the Eiffel Tower. This recognition established Girard-Perregaux among the elite of Swiss watchmaking—a position it has maintained through multiple ownership changes and industry upheavals.</p>
-
+        <p class="lead-paragraph">Home of the iconic Three Bridges tourbillon. Since 1791, Girard-Perregaux has created some of horologys most distinctive and technically accomplished timepieces.</p>
+        <h2>La Chaux-de-Fonds Heritage</h2>
+        <p>The brand traces its origins to 1791 in Geneva. Constant Girard and Marie Perregaux later established the manufacture in La Chaux-de-Fonds, where it remains today as one of the oldest Swiss watchmakers.</p>
+        <h2>The Three Bridges</h2>
+        <p>The Tourbillon with Three Gold Bridges, first created in 1867, won gold at the Paris Universal Exhibition. Its distinctive arrow-shaped bridges became the brands signature, reinterpreted in modern collections.</p>
         <div class="highlight-box">
-            <h4>Three Bridges: Design Elements</h4>
+            <h4>Key Collections</h4>
             <ul>
-                <li><strong>Arrow Shape:</strong> Each bridge tapers to a point, creating visual flow</li>
-                <li><strong>Parallel Alignment:</strong> Three bridges in perfect parallel formation</li>
-                <li><strong>Neo-Classical Style:</strong> Gold decoration with hand-engraved patterns</li>
-                <li><strong>Functional Layout:</strong> Barrel, gear train, and tourbillon each supported by one bridge</li>
-                <li><strong>Visible Architecture:</strong> Movement designed to be admired from both sides</li>
+                <li><strong>Bridges:</strong> Signature three-bridge design</li>
+                <li><strong>Laureato:</strong> Integrated bracelet sports watch</li>
+                <li><strong>1966:</strong> Classic dress watches</li>
+                <li><strong>Vintage 1945:</strong> Art Deco rectangle</li>
             </ul>
         </div>
-
-        <h2>The Quartz Revolution</h2>
-        <p>Ironically, the traditional manufacture played a crucial role in quartz watchmaking. In 1970, Girard-Perregaux developed a quartz movement vibrating at 32,768 Hz—a frequency that would become the industry standard still used today. Every quartz watch in the world operates at this frequency because of Girard-Perregaux's engineering.</p>
-
-        <p>The company successfully navigated the quartz crisis by producing both quartz and mechanical watches. This flexibility ensured survival when many competitors failed. By the 1990s, Girard-Perregaux was ready to lead the mechanical renaissance.</p>
-
-        <h2>Three Bridges Returns</h2>
-        <p>In 1991, Girard-Perregaux achieved something remarkable: adapting the legendary Three Bridges tourbillon to wristwatch size. The miniaturization required rethinking every component while preserving the visual impact that made the original famous. The result reestablished Girard-Perregaux among haute horlogerie's elite.</p>
-
-        <p>Modern iterations include variations with titanium bridges, rose gold finishing, and even diamond settings. But the essential design—three parallel arrow-shaped bridges supporting the movement—remains unchanged from Constant Girard's 1867 masterpiece.</p>
-
-        <h2>The Constant Escapement</h2>
-        <p>In 2011, Girard-Perregaux unveiled perhaps its most significant technical innovation: the Constant Escapement. This mechanism addresses a fundamental problem in mechanical watchmaking—the decreasing force delivered by the mainspring as it unwinds, which affects accuracy.</p>
-
-        <p>The Constant Escapement uses a silicon blade that buckles and releases, delivering identical impulses to the balance wheel regardless of mainspring tension. The result approaches perfect isochronism—consistent timekeeping throughout the power reserve. The innovation earned awards across the industry.</p>
-
-        <h2>Key Collections</h2>
-
-        <h3>Bridges</h3>
-        <p>The collection showcasing Girard-Perregaux's signature aesthetic. From the classical Three Bridges Tourbillon to more accessible Neo Bridges, these watches display the iconic parallel bridge architecture. Skeletonized dials reveal the mechanical artistry beneath.</p>
-
-        <h3>Laureato</h3>
-        <p>Originally launched in 1975, the Laureato features an integrated bracelet design comparable to the Royal Oak and Nautilus. The octagonal bezel and Clous de Paris dial pattern create a distinctive luxury sports watch. Recent years have seen significant collection expansion.</p>
-
-        <h3>1966</h3>
-        <p>Classical round watches with clean aesthetics, named for a significant year in company history. The 1966 collection offers refined dress watches suitable for formal occasions, available with complications including annual calendar and moon phase.</p>
-
-        <h3>Cat's Eye</h3>
-        <p>Feminine watches featuring an oval case shape inspired by gemstone cuts. These aren't simplified men's watches—they're designed specifically for women, with proportions and complications appropriate to smaller wrists.</p>
-
-        <div class="brand-cta">
-            <h3>Explore Girard-Perregaux</h3>
-            <p>Discover over 230 years of watchmaking excellence.</p>
-            <a href="https://www.girard-perregaux.com" class="btn">Visit Official Site →</a>
-        </div>
-
-        <h2>La Chaux-de-Fonds Manufacture</h2>
-        <p>Girard-Perregaux maintains one of watchmaking's most complete manufactures. The La Chaux-de-Fonds facility handles everything from movement development to case production, from hands to dials. Few competitors match this vertical integration.</p>
-
-        <p>The manufacture produces several base calibers that serve across collections, alongside dedicated movements for complications. This combination of standardization and specialization allows both efficiency and flexibility—essential for a mid-sized independent brand.</p>
-
-        <h2>The Kering Era</h2>
-        <p>In 2022, Girard-Perregaux and sister brand Ulysse Nardin joined Kering, the luxury group behind Gucci and Balenciaga. This partnership provides resources for continued development while maintaining brand independence. Under Kering's ownership, both brands have refreshed their collections while honoring heritage.</p>
-
-        <div class="highlight-box">
-            <h4>What Defines Girard-Perregaux</h4>
-            <ul>
-                <li><strong>Three Bridges:</strong> The iconic movement architecture since 1867</li>
-                <li><strong>Heritage:</strong> Continuous operation since 1791</li>
-                <li><strong>32,768 Hz:</strong> Established the quartz frequency standard</li>
-                <li><strong>Constant Escapement:</strong> Revolutionary silicon-blade innovation</li>
-                <li><strong>Manufacture:</strong> Vertically integrated production in La Chaux-de-Fonds</li>
-                <li><strong>Laureato:</strong> Integrated bracelet sports watch since 1975</li>
-            </ul>
-        </div>
-
-        <h2>The Collector's Perspective</h2>
-        <p>Girard-Perregaux occupies an interesting position in watch collecting. The brand lacks the mainstream recognition of Rolex or Omega, but commands deep respect among enthusiasts. The Three Bridges is instantly recognizable to those who know watches; the Constant Escapement impresses those who understand mechanics.</p>
-
-        <p>For collectors who find the usual suspects too common, Girard-Perregaux offers genuine heritage without ubiquity. The manufacture capabilities ensure quality, while the lower profile means less premium over retail than hyped competitors. It's a thinking collector's brand.</p>
-
-        <h2>Bridging Centuries</h2>
-        <p>From Jean-François Bautte's 1791 Geneva workshop to today's La Chaux-de-Fonds manufacture, Girard-Perregaux has survived longer than most institutions. The brand navigated the transition from pocket watches to wristwatches, from mechanical to quartz and back again, from family ownership to corporate structures.</p>
-
-        <p>Through it all, the Three Bridges endures—three parallel lines supporting the movement, just as they did when Constant Girard first designed them. In watchmaking, where some "heritage brands" trace history through acquisitions and name purchases, Girard-Perregaux offers genuine continuity: same name, same location, same iconic design, for over 230 years.</p>
+        <p>Now part of Kerings luxury division alongside Ulysse Nardin, Girard-Perregaux continues to honor its heritage while innovating for contemporary collectors.</p>
     </article>
-
-    <section class="related-articles">
-        <h2>More Brand Stories</h2>
-        <div class="related-grid">
-            <a href="brand-story-vacheron-constantin.html" class="related-card">
-                <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Vacheron Constantin">
-                <div class="related-card-content">
-                    <h3>The History of Vacheron Constantin</h3>
-                    <p>The oldest continuously operating manufacture since 1755.</p>
-                </div>
-            </a>
-            <a href="brand-story-audemars-piguet.html" class="related-card">
-                <img src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=600&q=80" alt="Audemars Piguet">
-                <div class="related-card-content">
-                    <h3>The History of Audemars Piguet</h3>
-                    <p>Masters of the Royal Oak and haute horlogerie.</p>
-                </div>
-            </a>
-            <a href="brand-story-breguet.html" class="related-card">
-                <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="Breguet">
-                <div class="related-card-content">
-                    <h3>The History of Breguet</h3>
-                    <p>The father of modern watchmaking.</p>
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-                <p>Your curated destination for authentic luxury timepieces.</p>
-            </div>
-            <div class="footer-column">
-                <h4>Explore</h4>
-                <a href="index.html#new">New Arrivals</a>
-                <a href="index.html#collections">Collections</a>
-                <a href="index.html#brands">Brands</a>
-            </div>
-            <div class="footer-column">
-                <h4>Learn</h4>
-                <a href="blog.html">Blog</a>
-                <a href="blog.html">Buying Guides</a>
-                <a href="blog.html">Brand Stories</a>
-            </div>
-            <div class="footer-column">
-                <h4>About</h4>
-                <a href="about.html">Our Story</a>
-                <a href="contact.html">Contact</a>
-                <a href="privacy.html">Privacy</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2025 Authentic Wrist. All rights reserved.</p>
-        </div>
-    </footer>
+    <footer><p>&copy; 2025 Authentic Wrist. All rights reserved.</p></footer>
 </body>
 </html>
