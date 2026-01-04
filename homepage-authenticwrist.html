@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentic Wrist — Independent Luxury Watch Guide</title>
+    <meta name="description" content="Independent editorial guide to luxury timepieces. Expert reviews, buying guides, and trusted retailer recommendations. We research watches — you make informed decisions.">
+    <link rel="canonical" href="https://www.authenticwrist.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--gold:#C9A962;--obsidian:#0A0A0A;--charcoal:#1A1A1A;--slate:#2A2A2A;--silver:#C0C0C0;--cream:#F5F3EF}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Outfit',sans-serif;background:var(--obsidian);color:var(--cream);line-height:1.6}
+        header{padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--slate)}
+        .logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:.2em;color:var(--gold);text-decoration:none}
+        nav{display:flex;gap:30px}
+        nav a{font-size:.75rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--cream);text-decoration:none;transition:color .3s}
+        nav a:hover{color:var(--gold)}
+        
+        /* Hero Section */
+        .hero{padding:120px 40px;text-align:center;border-bottom:1px solid var(--slate);background:linear-gradient(180deg,var(--obsidian) 0%,var(--charcoal) 100%)}
+        .hero h1{font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:300;margin-bottom:20px;letter-spacing:.05em}
+        .hero .tagline{font-size:1.3rem;color:var(--silver);max-width:600px;margin:0 auto 30px;font-weight:300}
+        .hero .positioning{font-size:.9rem;color:var(--gold);max-width:700px;margin:0 auto 40px;padding:20px 30px;border:1px solid var(--slate);background:rgba(201,169,98,0.05)}
+        .hero-cta{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+        .btn{padding:15px 40px;font-size:.8rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;transition:all .3s}
+        .btn-primary{background:var(--gold);color:var(--obsidian);border:1px solid var(--gold)}
+        .btn-primary:hover{background:transparent;color:var(--gold)}
+        .btn-secondary{background:transparent;color:var(--cream);border:1px solid var(--slate)}
+        .btn-secondary:hover{border-color:var(--gold);color:var(--gold)}
+        
+        /* What We Do Section */
+        .what-we-do{padding:80px 40px;border-bottom:1px solid var(--slate)}
+        .section-title{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;text-align:center;margin-bottom:50px}
+        .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;max-width:1200px;margin:0 auto}
+        .feature{text-align:center;padding:30px}
+        .feature-icon{font-size:2.5rem;margin-bottom:20px}
+        .feature h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);margin-bottom:15px}
+        .feature p{color:var(--silver);font-size:.95rem}
+        
+        /* Featured Content */
+        .featured{padding:80px 40px;border-bottom:1px solid var(--slate);background:var(--charcoal)}
+        .featured-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;max-width:1200px;margin:0 auto}
+        .featured-card{background:var(--obsidian);border:1px solid var(--slate);padding:30px;text-decoration:none;transition:all .3s}
+        .featured-card:hover{border-color:var(--gold);transform:translateY(-5px)}
+        .featured-card-category{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:15px}
+        .featured-card h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--cream);margin-bottom:10px}
+        .featured-card p{color:var(--silver);font-size:.9rem}
+        
+        /* Trust Banner */
+        .trust-banner{padding:60px 40px;text-align:center;border-bottom:1px solid var(--slate)}
+        .trust-banner p{color:var(--silver);font-size:1rem;max-width:800px;margin:0 auto}
+        .trust-banner strong{color:var(--cream)}
+        
+        /* Stats */
+        .stats{padding:60px 40px;border-bottom:1px solid var(--slate)}
+        .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;max-width:1000px;margin:0 auto;text-align:center}
+        .stat-number{font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--gold);margin-bottom:5px}
+        .stat-label{font-size:.85rem;color:var(--silver);text-transform:uppercase;letter-spacing:.1em}
+        
+        footer{padding:60px 40px;text-align:center}
+        footer p{color:var(--silver);font-size:.85rem;margin-bottom:10px}
+        footer a{color:var(--gold);text-decoration:none}
+        footer a:hover{text-decoration:underline}
+        
+        @media(max-width:768px){
+            header{flex-direction:column;gap:15px;padding:15px 20px}
+            nav{gap:15px}
+            .hero{padding:60px 20px}
+            .hero h1{font-size:2.5rem}
+            .hero .tagline{font-size:1.1rem}
+            .section-title{font-size:2rem}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">AUTHENTIC WRIST</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="deals.html">Deals</a>
+            <a href="about.html">About</a>
+            <a href="search.html">Search</a>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Time, Informed</h1>
+        <p class="tagline">Independent editorial guide to luxury timepieces</p>
+        <p class="positioning">We research and review watches. We connect you with trusted retailers. We never sell watches directly — our only agenda is helping you find the right timepiece.</p>
+        <div class="hero-cta">
+            <a href="blog.html" class="btn btn-primary">Explore 205 Guides</a>
+            <a href="about.html" class="btn btn-secondary">How We Work</a>
+        </div>
+    </section>
+    
+    <section class="what-we-do">
+        <h2 class="section-title">What We Do</h2>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">📖</div>
+                <h3>Research & Review</h3>
+                <p>In-depth guides covering every price point from $50 Casios to six-figure Pateks. No brand pays for placement.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚖️</div>
+                <h3>Compare & Contrast</h3>
+                <p>Side-by-side comparisons to help you choose between similar watches. Real differences, honest opinions.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔗</div>
+                <h3>Connect to Trusted Sellers</h3>
+                <p>We link to authorized dealers and vetted secondary-market retailers. You buy with confidence, not from us.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="featured">
+        <h2 class="section-title">Popular Guides</h2>
+        <div class="featured-grid">
+            <a href="blog-buying-first-rolex.html" class="featured-card">
+                <div class="featured-card-category">Buying Guide</div>
+                <h3>Buying Your First Rolex</h3>
+                <p>Navigate waitlists, ADs, and grey market in 2026.</p>
+            </a>
+            <a href="blog-best-watches-under-1000.html" class="featured-card">
+                <div class="featured-card-category">Buying Guide</div>
+                <h3>Best Watches Under $1,000</h3>
+                <p>Swiss and Japanese excellence at accessible prices.</p>
+            </a>
+            <a href="comparison-rolex-vs-omega-complete.html" class="featured-card">
+                <div class="featured-card-category">Comparison</div>
+                <h3>Rolex vs Omega</h3>
+                <p>Complete comparison: heritage, movements, value.</p>
+            </a>
+            <a href="blog-pre-owned-watch-buying-guide.html" class="featured-card">
+                <div class="featured-card-category">Buying Guide</div>
+                <h3>Pre-Owned Watch Guide</h3>
+                <p>Authentication, pricing, where to buy safely.</p>
+            </a>
+        </div>
+    </section>
+    
+    <section class="trust-banner">
+        <p><strong>Editorial Independence:</strong> Authentic Wrist is reader-supported. When you purchase through links on our site, we may earn an affiliate commission at no extra cost to you. This never influences our recommendations — we suggest watches we'd buy ourselves.</p>
+    </section>
+    
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat">
+                <div class="stat-number">205</div>
+                <div class="stat-label">In-Depth Guides</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Brands Covered</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">$50-$500K</div>
+                <div class="stat-label">Price Range</div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2026 Authentic Wrist. All rights reserved.</p>
+        <p><a href="about.html">About Us</a> · <a href="blog.html">All Guides</a> · <a href="search.html">Search</a></p>
+    </footer>
+</body>
+</html>
