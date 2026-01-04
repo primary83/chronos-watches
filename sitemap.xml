@@ -5,7 +5,23 @@
 <url><loc>https://www.authenticwrist.com/about.html</loc><lastmod>2025-01-01</lastmod><priority>0.7</priority></url>
 <url><loc>https://www.authenticwrist.com/search.html</loc><lastmod>2025-01-01</lastmod><priority>0.6</priority></url>
 <url><loc>https://www.authenticwrist.com/watch-glossary.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<!-- NEW SERVICING & VINTAGE GUIDES (15) -->
+<!-- NEW PRIORITY 1 BRANDS (15) -->
+<url><loc>https://www.authenticwrist.com/brand-story-richard-mille.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-fp-journe.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-timex.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-fossil.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-garmin.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-swatch.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-parmigiani-fleurier.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-bovet.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-harry-winston.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-vulcain.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-jaquet-droz.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-universal-geneve.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-chronoswiss.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-edox.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-mondaine.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<!-- SERVICING & CARE GUIDES (10) -->
 <url><loc>https://www.authenticwrist.com/guide-signs-watch-needs-service.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/guide-what-happens-watch-service.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/guide-watch-service-cost.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
@@ -16,12 +32,13 @@
 <url><loc>https://www.authenticwrist.com/guide-restore-vintage-watch-value.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/guide-preserve-watch-resale-value.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/guide-watch-insurance-documentation.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<!-- BATCH 9 INDEPENDENTS (5) -->
 <url><loc>https://www.authenticwrist.com/brand-story-de-bethune.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/brand-story-czapek.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/brand-story-gronefeld.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/brand-story-armin-strom.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/brand-story-laurent-ferrier.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
-<!-- BATCH 9 (6) -->
+<!-- BATCH 8 -->
 <url><loc>https://www.authenticwrist.com/brand-story-ressence.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/comparison-tank-vs-reverso.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/guide-best-gmt-watches.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
@@ -57,54 +74,6 @@
 <url><loc>https://www.authenticwrist.com/blog-how-often-service-watch.html</loc><lastmod>2025-01-01</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/blog-watch-care-mistakes.html</loc><lastmod>2025-01-01</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/blog-how-to-store-watches.html</loc><lastmod>2025-01-01</lastmod><priority>0.8</priority></url>
-<!-- BRAND STORIES -->
-<url><loc>https://www.authenticwrist.com/brand-story-bremont.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-mbf.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-h-moser.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-ming.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-zodiac.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-muhle-glashutte.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-squale.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-vostok.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-steinhart.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-christopher-ward.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-farer.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-anordain.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-corum.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-raymond-weil.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-baume-mercier.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-carl-f-bucherer.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-eterna.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-perrelet.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-glashutte-original.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-fortis.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-victorinox.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-rado.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-movado.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-junghans.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-laco.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-ball.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-glycine.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-alpina.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-ebel.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-doxa.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-tutima.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-citizen.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-casio.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-sinn.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-orient.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-maurice-lacroix.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-mido.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-stowa.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-frederique-constant.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-certina.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-bulova.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-piaget.html</loc><lastmod>2025-01-01</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-roger-dubuis.html</loc><lastmod>2025-01-01</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-bell-ross.html</loc><lastmod>2025-01-01</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-oris.html</loc><lastmod>2025-01-01</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-tissot.html</loc><lastmod>2025-01-01</lastmod><priority>0.8</priority></url>
-<url><loc>https://www.authenticwrist.com/brand-story-hamilton.html</loc><lastmod>2025-01-01</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/brand-story-nomos.html</loc><lastmod>2025-01-01</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/brand-story-montblanc.html</loc><lastmod>2025-01-01</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/brand-story-vacheron-constantin.html</loc><lastmod>2025-01-01</lastmod><priority>0.8</priority></url>
