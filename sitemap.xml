@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://www.authenticwrist.com/</loc><lastmod>2025-01-03</lastmod><priority>1.0</priority></url>
-<url><loc>https://www.authenticwrist.com/blog.html</loc><lastmod>2025-01-03</lastmod><priority>0.9</priority></url>
+<url><loc>https://www.authenticwrist.com/</loc><lastmod>2025-01-04</lastmod><priority>1.0</priority></url>
+<url><loc>https://www.authenticwrist.com/blog.html</loc><lastmod>2025-01-04</lastmod><priority>0.9</priority></url>
 <url><loc>https://www.authenticwrist.com/about.html</loc><lastmod>2025-01-01</lastmod><priority>0.7</priority></url>
 <url><loc>https://www.authenticwrist.com/search.html</loc><lastmod>2025-01-01</lastmod><priority>0.6</priority></url>
 <url><loc>https://www.authenticwrist.com/watch-glossary.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
-<!-- NEW 6 ARTICLES -->
+<!-- NEW SERVICING & VINTAGE GUIDES (15) -->
+<url><loc>https://www.authenticwrist.com/guide-signs-watch-needs-service.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/guide-what-happens-watch-service.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/guide-watch-service-cost.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/guide-authorized-vs-local-watchmaker.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/guide-worth-repairing-old-watch.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/guide-luxury-watch-care.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/guide-vintage-watch-care.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/guide-restore-vintage-watch-value.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/guide-preserve-watch-resale-value.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/guide-watch-insurance-documentation.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-de-bethune.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-czapek.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-gronefeld.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-armin-strom.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-laurent-ferrier.html</loc><lastmod>2025-01-04</lastmod><priority>0.8</priority></url>
+<!-- BATCH 9 (6) -->
 <url><loc>https://www.authenticwrist.com/brand-story-ressence.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/comparison-tank-vs-reverso.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/guide-best-gmt-watches.html</loc><lastmod>2025-01-03</lastmod><priority>0.8</priority></url>
