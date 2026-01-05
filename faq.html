@@ -1,338 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frequently Asked Questions — AUTHENTIC WRIST</title>
-    <meta name="description" content="Find answers to common questions about AUTHENTIC WRIST, luxury watches, authorized dealers, and making informed watch purchases.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --gold: #C9A962;
-            --gold-light: #E8D5A3;
-            --obsidian: #0A0A0A;
-            --charcoal: #1A1A1A;
-            --slate: #2A2A2A;
-            --silver: #C0C0C0;
-            --cream: #F5F3EF;
-            --font-display: 'Cormorant Garamond', Georgia, serif;
-            --font-body: 'Outfit', sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-body);
-            background: var(--obsidian);
-            color: var(--cream);
-            line-height: 1.8;
-        }
-
-        header {
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--slate);
-        }
-
-        .logo {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            font-weight: 400;
-            letter-spacing: 0.3em;
-            color: var(--gold);
-            text-decoration: none;
-        }
-
-        nav {
-            display: flex;
-            gap: 30px;
-        }
-
-        nav a {
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--cream);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--gold);
-        }
-
-        .page-hero {
-            padding: 80px 40px;
-            text-align: center;
-            border-bottom: 1px solid var(--slate);
-        }
-
-        .page-hero h1 {
-            font-family: var(--font-display);
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 300;
-            margin-bottom: 15px;
-        }
-
-        .page-hero p {
-            color: var(--silver);
-            font-size: 1.1rem;
-        }
-
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 80px 40px;
-        }
-
-        .faq-section {
-            margin-bottom: 60px;
-        }
-
-        .faq-section h2 {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            font-weight: 400;
-            color: var(--gold);
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid var(--slate);
-        }
-
-        .faq-item {
-            margin-bottom: 25px;
-        }
-
-        .faq-question {
-            font-family: var(--font-display);
-            font-size: 1.25rem;
-            font-weight: 400;
-            color: var(--cream);
-            margin-bottom: 12px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-
-        .faq-question::after {
-            content: '+';
-            color: var(--gold);
-            font-size: 1.5rem;
-            line-height: 1;
-            margin-left: 20px;
-            flex-shrink: 0;
-        }
-
-        .faq-answer {
-            color: var(--silver);
-            font-size: 1rem;
-            padding-bottom: 25px;
-            border-bottom: 1px solid var(--slate);
-        }
-
-        .faq-answer a {
-            color: var(--gold);
-            text-decoration: none;
-        }
-
-        .faq-answer a:hover {
-            text-decoration: underline;
-        }
-
-        .contact-cta {
-            background: var(--charcoal);
-            border: 1px solid var(--gold);
-            padding: 40px;
-            text-align: center;
-            margin-top: 60px;
-        }
-
-        .contact-cta h2 {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 15px;
-        }
-
-        .contact-cta p {
-            color: var(--silver);
-            margin-bottom: 25px;
-        }
-
-        .contact-cta .btn {
-            display: inline-block;
-            padding: 15px 35px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            text-decoration: none;
-            background: var(--gold);
-            color: var(--obsidian);
-            transition: background 0.3s ease;
-        }
-
-        .contact-cta .btn:hover {
-            background: var(--gold-light);
-        }
-
-        footer {
-            padding: 40px;
-            text-align: center;
-            border-top: 1px solid var(--slate);
-        }
-
-        footer p {
-            font-size: 0.85rem;
-            color: var(--silver);
-        }
-
-        footer a {
-            color: var(--gold);
-            text-decoration: none;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-    </style>
+    <title>Watch FAQ — Common Questions Answered | Authentic Wrist</title>
+    <meta name="description" content="Frequently asked questions about watches. Learn about movements, water resistance, servicing, and how to buy your first luxury watch.">
+    <link rel="canonical" href="https://www.authenticwrist.com/faq.html">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>:root{--gold:#C9A962;--obsidian:#0A0A0A;--charcoal:#1A1A1A;--slate:#2A2A2A;--silver:#C0C0C0;--cream:#F5F3EF}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Outfit',sans-serif;background:var(--obsidian);color:var(--cream);line-height:1.6}header{padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--slate)}.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:.2em;color:var(--gold);text-decoration:none}nav{display:flex;gap:30px}nav a{font-size:.75rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--cream);text-decoration:none;transition:color .3s}nav a:hover{color:var(--gold)}.hero{padding:60px 40px;text-align:center;border-bottom:1px solid var(--slate);background:linear-gradient(135deg,var(--charcoal) 0%,var(--obsidian) 100%)}.hero h1{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;margin-bottom:15px}.hero p{font-size:1.1rem;color:var(--silver);max-width:600px;margin:0 auto}.content{max-width:800px;margin:0 auto;padding:50px 40px}.faq-section{margin-bottom:50px}.faq-section h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gold);margin-bottom:25px;padding-bottom:10px;border-bottom:1px solid var(--slate)}.faq-item{margin-bottom:25px;background:var(--charcoal);border:1px solid var(--slate);padding:25px}.faq-item h3{font-size:1.1rem;color:var(--cream);margin-bottom:12px;font-weight:500}.faq-item p{color:var(--silver);font-size:.95rem;line-height:1.7}footer{padding:60px 40px;text-align:center;border-top:1px solid var(--slate)}footer p{color:var(--silver);font-size:.85rem;margin-bottom:10px}footer a{color:var(--gold);text-decoration:none}@media(max-width:768px){header{flex-direction:column;gap:15px;padding:15px 20px}nav{gap:15px;flex-wrap:wrap;justify-content:center}.hero{padding:40px 20px}.hero h1{font-size:2.2rem}.content{padding:30px 20px}}</style>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="blog.html">Blog</a>
-            <a href="about.html">Our Story</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-        </nav>
-    </header>
-
-    <section class="page-hero">
-        <h1>Frequently Asked Questions</h1>
-        <p>Everything you need to know about AUTHENTIC WRIST</p>
-    </section>
-
+    <header><a href="index.html" class="logo">AUTHENTIC WRIST</a><nav><a href="index.html">Home</a><a href="blog.html">Guides</a><a href="directories.html">Directories</a><a href="deals.html">Deals</a><a href="about.html">About</a></nav></header>
+    <section class="hero"><h1>Frequently Asked Questions</h1><p>Everything you need to know about watches, from movements to maintenance.</p></section>
     <div class="content">
-        <div class="faq-section">
-            <h2>About AUTHENTIC WRIST</h2>
-
-            <div class="faq-item">
-                <div class="faq-question">What is AUTHENTIC WRIST?</div>
-                <div class="faq-answer">AUTHENTIC WRIST is a curated guide to luxury watches. We provide educational content, buying guides, and direct links to official brand websites and authorized retailers. We help watch enthusiasts make informed decisions without the pressure of a sales environment.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Does AUTHENTIC WRIST sell watches?</div>
-                <div class="faq-answer">No, we do not sell watches directly. AUTHENTIC WRIST is an informational resource that connects you with official brand boutiques and authorized dealers. When you click through to purchase, you're buying directly from the brand or retailer—not from us.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">How does AUTHENTIC WRIST make money?</div>
-                <div class="faq-answer">We may earn affiliate commissions when you purchase through some of our links. This doesn't affect the price you pay—it simply helps us maintain and improve our content. We only recommend authorized sources we genuinely trust.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Why should I trust AUTHENTIC WRIST recommendations?</div>
-                <div class="faq-answer">We exclusively link to official brand websites and verified authorized dealers. We never recommend grey market sources, unauthorized sellers, or questionable retailers. Our priority is your confidence and protection, not maximizing clicks.</div>
-            </div>
-        </div>
-
-        <div class="faq-section">
-            <h2>Buying Watches</h2>
-
-            <div class="faq-item">
-                <div class="faq-question">What is an authorized dealer?</div>
-                <div class="faq-answer">An authorized dealer has a direct contractual relationship with the watch brand. They receive watches directly from the manufacturer, are trained by the brand, and can offer official warranties. Purchasing from authorized dealers guarantees authenticity. Learn more in our guide: <a href="blog-why-authorized-dealers.html">Why Buy From Authorized Dealers</a>.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">What's the difference between authorized and grey market?</div>
-                <div class="faq-answer">Authorized dealers have brand approval and offer manufacturer warranties. Grey market dealers sell genuine watches but without brand authorization, typically at discounted prices—but without manufacturer warranty coverage. We only link to authorized sources.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">How can I verify if a dealer is authorized?</div>
-                <div class="faq-answer">Visit the brand's official website and use their dealer locator tool. You can also contact the brand directly to confirm a retailer's status. All retailers featured on AUTHENTIC WRIST have been verified as authorized.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Why are some watches so hard to buy?</div>
-                <div class="faq-answer">Certain models from brands like Rolex, Patek Philippe, and Audemars Piguet have demand that far exceeds supply. Authorized dealers often maintain waiting lists, and allocation may depend on purchase history. This scarcity is real—be wary of anyone offering these watches without a wait.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">What's my first luxury watch should be?</div>
-                <div class="faq-answer">It depends on your budget, style, and intended use. Generally, we recommend starting with versatile models from established brands like Omega, Tudor, or TAG Heuer. Read our complete guide: <a href="blog-first-luxury-watch-guide.html">Your First Luxury Watch</a>.</div>
-            </div>
-        </div>
-
-        <div class="faq-section">
-            <h2>Watch Care & Service</h2>
-
-            <div class="faq-item">
-                <div class="faq-question">How often should I service my watch?</div>
-                <div class="faq-answer">Most manufacturers recommend service every 5-7 years for mechanical watches. Quartz watches need battery replacement every 2-3 years. Always use authorized service centers to maintain warranty coverage and ensure genuine parts.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Can any watchmaker service my luxury watch?</div>
-                <div class="faq-answer">While many independent watchmakers are skilled, using non-authorized service can void your warranty and potentially affect resale value. For watches under warranty, always use the brand's authorized service network. Read more: <a href="blog-watch-maintenance-guide.html">Watch Maintenance Guide</a>.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">How do I spot a fake watch?</div>
-                <div class="faq-answer">Common signs include weight differences, poor finishing, misspellings, incorrect fonts, and movement quality. However, counterfeits are increasingly sophisticated. The safest approach is buying from authorized sources. See our detailed guide: <a href="blog-spot-fake-watch.html">How to Spot a Fake Luxury Watch</a>.</div>
-            </div>
-        </div>
-
-        <div class="faq-section">
-            <h2>Orders & Support</h2>
-
-            <div class="faq-item">
-                <div class="faq-question">I have an issue with my order. Can AUTHENTIC WRIST help?</div>
-                <div class="faq-answer">Since purchases are made directly with brands or retailers, they handle all order-related matters. We recommend contacting their customer service directly. However, if you need help navigating the process, feel free to <a href="contact.html">contact us</a> for guidance.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">How do I return a watch I purchased?</div>
-                <div class="faq-answer">Return policies vary by retailer. Generally, watches can be returned within 14-30 days if unworn with all original packaging. Contact the retailer's customer service for their specific policy. See our guide: <a href="returns.html">Returns & Exchanges</a>.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Can you recommend a specific watch for me?</div>
-                <div class="faq-answer">While we can't provide personalized consulting, our blog articles cover recommendations for various budgets and styles. Browse our <a href="blog.html">articles</a> for guidance, or <a href="contact.html">contact us</a> with general questions.</div>
-            </div>
-        </div>
-
-        <div class="contact-cta">
-            <h2>Still Have Questions?</h2>
-            <p>Can't find what you're looking for? We're happy to help.</p>
-            <a href="contact.html" class="btn">Contact Us →</a>
-        </div>
+        <section class="faq-section">
+            <h2>Watch Basics</h2>
+            <div class="faq-item"><h3>What's the difference between quartz and automatic watches?</h3><p>Quartz watches use a battery to power an electronic oscillator regulated by a quartz crystal—they're accurate to within seconds per month and require little maintenance beyond battery changes. Automatic (mechanical) watches are powered by a wound mainspring and regulated by a balance wheel—they typically gain or lose a few seconds per day but are prized for their craftsmanship and don't require batteries. Many enthusiasts appreciate automatics for their engineering artistry.</p></div>
+            <div class="faq-item"><h3>What does "water resistance" actually mean?</h3><p>Water resistance ratings indicate the static pressure a watch can withstand, not actual depth you can dive to. 30m/3ATM means splash-resistant only (no swimming). 50m/5ATM is suitable for brief swimming. 100m/10ATM works for swimming and snorkeling. 200m+ is suitable for recreational diving. For serious diving, look for ISO 6425 certified dive watches. Always have water resistance tested after any service.</p></div>
+            <div class="faq-item"><h3>How often should I service my watch?</h3><p>Mechanical watches should be serviced every 5-7 years, though some modern movements claim 10-year intervals. Quartz watches need battery replacement every 2-3 years and a full service every 7-10 years. If you notice accuracy issues, the watch stops, or the crown feels gritty, it's time for service. Always use authorized or reputable independent watchmakers.</p></div>
+            <div class="faq-item"><h3>What is a COSC chronometer?</h3><p>COSC (Contrôle Officiel Suisse des Chronomètres) is the Official Swiss Chronometer Testing Institute. A COSC-certified chronometer has passed 15 days of testing in multiple positions and temperatures, achieving accuracy within -4/+6 seconds per day. It's a mark of precision, though many excellent watches don't have this certification.</p></div>
+        </section>
+        <section class="faq-section">
+            <h2>Buying Advice</h2>
+            <div class="faq-item"><h3>Should I buy my first luxury watch new or pre-owned?</h3><p>Both have merits. New watches come with full warranties and are guaranteed authentic, but you'll pay retail and face depreciation. Pre-owned watches offer 20-40% savings on most brands, allow access to discontinued models, but require careful authentication. For first-time buyers, consider authorized dealers for peace of mind, or reputable pre-owned dealers like Crown & Caliber, Hodinkee Shop, or Chrono24's trusted sellers.</p></div>
+            <div class="faq-item"><h3>What size watch should I get?</h3><p>Watch size depends on wrist circumference and personal preference. Generally: under 6.5" wrist suits 36-40mm cases; 6.5-7" wrist suits 38-42mm; over 7" wrist suits 40-46mm. The watch should not overhang your wrist, and lugs shouldn't extend past your wrist edges. When in doubt, go smaller—oversized watches are going out of style. Visit our <a href="size-guide.html" style="color:var(--gold)">Size Guide</a> for detailed measurements.</p></div>
+            <div class="faq-item"><h3>Are luxury watches good investments?</h3><p>Some watches appreciate (Rolex sports models, Patek Philippe Nautilus, rare pieces), but most luxury watches depreciate 20-50% after purchase. Buy watches you love and will wear—if they happen to hold value, that's a bonus. For true investment potential, stick to limited editions, in-demand steel sports watches, or historically significant pieces. Never buy on credit expecting appreciation.</p></div>
+            <div class="faq-item"><h3>How do I spot a fake watch?</h3><p>Red flags include: too-good-to-be-true prices, lightweight feel, misaligned text/indices, rough finishing, "genuine" claims in listings, and sellers avoiding questions. Always buy from authorized dealers or reputable pre-owned sellers. For expensive purchases, get the watch authenticated before buying. When in doubt, trust your gut—if something feels wrong, walk away.</p></div>
+        </section>
+        <section class="faq-section">
+            <h2>Care & Maintenance</h2>
+            <div class="faq-item"><h3>How should I store my watches?</h3><p>Store watches in a cool, dry place away from direct sunlight and magnetic fields (speakers, phones, laptops). Use a watch box or roll to prevent scratches. For automatic watches you don't wear daily, let them stop rather than using a winder—constant running can increase wear. Wind manual watches monthly even if not wearing them to keep oils distributed.</p></div>
+            <div class="faq-item"><h3>Can I shower with my watch?</h3><p>Generally, no. Hot water and steam can compromise gaskets, and soap can degrade them faster. Even water-resistant watches should avoid hot showers. Cold, brief rinses to clean saltwater are usually fine for 100m+ rated watches, but dry thoroughly afterward. The safest approach: remove your watch before showering.</p></div>
+            <div class="faq-item"><h3>How do I care for a leather strap?</h3><p>Avoid water exposure—leather absorbs moisture and can deteriorate. Let it dry naturally if it gets wet (never use heat). Apply leather conditioner every few months. Rotate between straps to let them air out. In humid conditions, consider switching to a rubber or metal bracelet. Quality leather straps typically last 1-2 years with regular wear.</p></div>
+            <div class="faq-item"><h3>My watch is running fast/slow—is that normal?</h3><p>For mechanical watches, ±5-10 seconds per day is normal; COSC chronometers are ±4-6 seconds/day. Quartz watches should be within ±15 seconds per month. If your watch is significantly outside these ranges, it may need regulation or service. Magnetic exposure, shocks, or old lubricants can affect accuracy.</p></div>
+        </section>
+        <section class="faq-section">
+            <h2>Specific Features</h2>
+            <div class="faq-item"><h3>What is a GMT watch?</h3><p>GMT watches display a second time zone using an additional hour hand that circles the dial once every 24 hours. Combined with a rotating bezel, you can track up to three time zones simultaneously. Originally developed for Pan Am pilots in 1954 (Rolex GMT-Master), they're perfect for travelers and anyone who works across time zones.</p></div>
+            <div class="faq-item"><h3>What does "chronograph" mean?</h3><p>A chronograph is a watch with a built-in stopwatch function. Pushers on the side start, stop, and reset the timing function, while subdials display elapsed seconds, minutes, and sometimes hours. The main hands continue showing the time independently. Chronographs were originally developed for aviation, racing, and scientific timing.</p></div>
+            <div class="faq-item"><h3>What is a "moonphase" complication?</h3><p>A moonphase display shows the current phase of the moon through a small aperture on the dial. A disc with two moons rotates beneath, completing a full cycle every 29.5 days (a lunar month). High-end moonphases are accurate enough to need correction only once every 122+ years. It's both useful for tide-dependent activities and simply beautiful.</p></div>
+        </section>
     </div>
-
-    <footer>
-        <p>© 2025 AUTHENTIC WRIST. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
-    </footer>
+    <footer><p>&copy; 2026 Authentic Wrist. All rights reserved.</p><p><a href="index.html">Home</a> · <a href="glossary.html">Watch Glossary</a> · <a href="size-guide.html">Size Guide</a></p></footer>
 </body>
 </html>
