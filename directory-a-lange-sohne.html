@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete A. Lange & Söhne watch directory. Lange 1, Saxonia, Zeitwerk, Datograph collections with specifications and prices.">
+    <title>A. Lange & Söhne Watch Directory — Complete Collection & Prices | Authentic Wrist</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C9A962;
+            --gold-light: #E8D5A3;
+            --obsidian: #0A0A0A;
+            --charcoal: #1A1A1A;
+            --slate: #2A2A2A;
+            --silver: #C0C0C0;
+            --cream: #F5F3EF;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--obsidian);
+            color: var(--cream);
+            line-height: 1.6;
+        }
+        header {
+            padding: 20px 40px;
+            border-bottom: 1px solid var(--slate);
+        }
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 0.2em;
+        }
+        nav {
+            display: flex;
+            gap: 30px;
+            margin-top: 15px;
+        }
+        nav a {
+            color: var(--silver);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: var(--gold); }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        .breadcrumb {
+            font-size: 0.8rem;
+            color: var(--silver);
+            margin-bottom: 30px;
+        }
+        .breadcrumb a { color: var(--gold); text-decoration: none; }
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        .intro {
+            font-size: 1.1rem;
+            color: var(--silver);
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+        .jump-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 60px;
+        }
+        .jump-links h3 {
+            width: 100%;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--silver);
+            margin-bottom: 10px;
+        }
+        .jump-links a {
+            padding: 8px 16px;
+            border: 1px solid var(--slate);
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        .jump-links a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        .collection {
+            margin-bottom: 80px;
+        }
+        .collection-header {
+            border-bottom: 1px solid var(--slate);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        .collection-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+        .collection-header p {
+            color: var(--gold);
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+        }
+        .watch-card {
+            background: var(--charcoal);
+            border: 1px solid var(--slate);
+            padding: 30px;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+        }
+        .watch-card:hover { border-color: var(--gold); }
+        .watch-ref {
+            font-size: 0.75rem;
+            color: var(--gold);
+            letter-spacing: 0.15em;
+            margin-bottom: 8px;
+        }
+        .watch-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        .specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .spec label {
+            font-size: 0.7rem;
+            color: var(--silver);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .spec strong {
+            display: block;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+        .watch-desc {
+            color: var(--silver);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .watch-price {
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid var(--slate);
+            color: var(--silver);
+            font-size: 0.85rem;
+        }
+        footer a { color: var(--gold); text-decoration: none; }
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .container { padding: 40px 20px; }
+            nav { flex-wrap: wrap; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">AUTHENTIC WRIST</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+            <a href="deals.html">Deals</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <p class="breadcrumb"><a href="index.html">Home</a> / <a href="directories.html">Directories</a> / A. Lange & Söhne</p>
+
+        <h1>A. Lange & Söhne Directory</h1>
+        <p class="intro">German precision at its finest. From Glashütte, Saxony—the heart of German watchmaking. Every movement assembled twice. The purist's choice for haute horlogerie.</p>
+
+        <div class="jump-links">
+            <h3>Jump to Collection</h3>
+            <a href="#lange1">Lange 1</a>
+            <a href="#saxonia">Saxonia</a>
+            <a href="#zeitwerk">Zeitwerk</a>
+            <a href="#datograph">Datograph</a>
+            <a href="#odysseus">Odysseus</a>
+            <a href="#1815">1815</a>
+        </div>
+
+        <section class="collection" id="lange1">
+            <div class="collection-header">
+                <h2>Lange 1</h2>
+                <p>The Icon Since 1994</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">191.032</p>
+                <h3 class="watch-name">Lange 1 - White Gold</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>38.5mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L121.1 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>72 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">The watch that relaunched Lange. Asymmetric dial with outsize date, power reserve, and small seconds. Three-quarter plate in German silver. Hand-engraved balance cock.</p>
+                <p class="watch-price">Retail: $44,700 | Market: $38,000 - $46,000</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">191.039</p>
+                <h3 class="watch-name">Lange 1 - Rose Gold Gray Dial</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>38.5mm Rose Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L121.1 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>72 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Classic Lange 1 in warm rose gold with gray dial. Modern colorway on timeless design. Twin mainspring barrels for 72-hour reserve.</p>
+                <p class="watch-price">Retail: $42,400 | Market: $36,000 - $44,000</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">139.032</p>
+                <h3 class="watch-name">Lange 1 Daymatic - White Gold</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>39.5mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L021.1 Auto</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>50 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Automatic Lange 1 with day indicator. Mirrored dial layout. Retrograde day display. For those who prefer self-winding convenience.</p>
+                <p class="watch-price">Retail: $46,900 | Market: $40,000 - $48,000</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">192.032</p>
+                <h3 class="watch-name">Lange 1 Moon Phase - White Gold</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>38.5mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L121.3 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>72 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Lange 1 with day/night moon phase. Moon accurate to 122.6 years. Patented orbital moon display shows both lunar and solar data.</p>
+                <p class="watch-price">Retail: $56,700 | Market: $50,000 - $60,000</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">720.038</p>
+                <h3 class="watch-name">Lange 1 Perpetual Calendar - White Gold</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>41.9mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L021.3 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>72 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Perpetual calendar in Lange 1 format. Outsize date, day, month, leap year, moonphase. Requires no correction until 2100. The ultimate Lange 1 complication.</p>
+                <p class="watch-price">Retail: $112,000 | Market: $95,000 - $115,000</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">117.028</p>
+                <h3 class="watch-name">Grand Lange 1 - Rose Gold</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>41mm Rose Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L095.1 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>72 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Larger 41mm Lange 1 for bigger wrists. Same iconic asymmetric design. More presence while maintaining perfect proportions.</p>
+                <p class="watch-price">Retail: $50,500 | Market: $44,000 - $52,000</p>
+            </div>
+        </section>
+
+        <section class="collection" id="saxonia">
+            <div class="collection-header">
+                <h2>Saxonia</h2>
+                <p>Purist Elegance</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">380.032</p>
+                <h3 class="watch-name">Saxonia Thin - White Gold</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>40mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L093.1 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>72 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">The essence of a dress watch. Hours, minutes, small seconds. Nothing more, nothing less. Only 6.2mm thick. Pure Lange perfection.</p>
+                <p class="watch-price">Retail: $24,200 | Market: $20,000 - $25,000</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">385.032</p>
+                <h3 class="watch-name">Saxonia - White Gold</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>38.5mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L941.1 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>45 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Entry to A. Lange & Söhne. All hallmarks present: German silver plate, hand-engraved balance cock, blued steel screws. Exceptional value.</p>
+                <p class="watch-price">Retail: $20,100 | Market: $17,000 - $21,000</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">330.032</p>
+                <h3 class="watch-name">Saxonia Outsize Date - White Gold</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>38.5mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L086.1 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>72 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Clean dial with Lange's signature outsize date. Perfectly legible date display at 6 o'clock. Understated yet distinctive.</p>
+                <p class="watch-price">Retail: $28,900 | Market: $25,000 - $30,000</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">384.032</p>
+                <h3 class="watch-name">Saxonia Moon Phase - White Gold</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>40mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L086.5 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>72 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Moon phase complication in clean Saxonia design. Outsize date and moon phase at 12. Accurate to 122.6 years between corrections.</p>
+                <p class="watch-price">Retail: $35,800 | Market: $31,000 - $38,000</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">386.032</p>
+                <h3 class="watch-name">Saxonia Annual Calendar - White Gold</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>38.5mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L085.1 Auto</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>72 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Annual calendar with outsize date. Only requires correction once per year on March 1. Moon phase, day, month indicators.</p>
+                <p class="watch-price">Retail: $55,200 | Market: $48,000 - $58,000</p>
+            </div>
+        </section>
+
+        <section class="collection" id="zeitwerk">
+            <div class="collection-header">
+                <h2>Zeitwerk</h2>
+                <p>Revolutionary Digital Display</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">145.025</p>
+                <h3 class="watch-name">Zeitwerk - White Gold</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>41.9mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L043.1 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>36 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Mechanical digital time display. Jumping hours, jumping minutes. Constant-force escapement. A revolutionary interpretation of time.</p>
+                <p class="watch-price">Retail: $95,500 | Market: $85,000 - $100,000</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">147.025</p>
+                <h3 class="watch-name">Zeitwerk Date - White Gold</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>44.2mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L043.8 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>72 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Zeitwerk with jumping digital date at 6 o'clock. Increased power reserve through new mainspring barrel. The practical Zeitwerk.</p>
+                <p class="watch-price">Retail: $108,000 | Market: $95,000 - $115,000</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">145.029</p>
+                <h3 class="watch-name">Zeitwerk Minute Repeater</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>44.2mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L043.2 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>36 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Digital display with decimal minute repeater. Chimes hours, ten-minutes, and single minutes—matching the digital display. Groundbreaking complication.</p>
+                <p class="watch-price">Retail: $462,000 | Market: $400,000 - $500,000</p>
+            </div>
+        </section>
+
+        <section class="collection" id="datograph">
+            <div class="collection-header">
+                <h2>Datograph</h2>
+                <p>The King of Chronographs</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">405.035</p>
+                <h3 class="watch-name">Datograph Up/Down - White Gold</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>41mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L951.6 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>60 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Perhaps the greatest chronograph ever made. Flyback function, outsize date, power reserve indicator. The movement to end all movements.</p>
+                <p class="watch-price">Retail: $99,500 | Market: $88,000 - $105,000</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">405.031</p>
+                <h3 class="watch-name">Datograph Up/Down - Platinum</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>41mm Platinum</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L951.6 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>60 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Ultimate Datograph in platinum. Heavier, more substantial. The collector's choice for the definitive dress chronograph.</p>
+                <p class="watch-price">Retail: $121,000 | Market: $105,000 - $130,000</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">410.038</p>
+                <h3 class="watch-name">Datograph Perpetual Tourbillon</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>41.5mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L952.2 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>50 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Flyback chronograph with perpetual calendar and tourbillon. Three grand complications in one. 729 components. Watchmaking's Everest.</p>
+                <p class="watch-price">Retail: $360,000+ | Market: $320,000 - $400,000</p>
+            </div>
+        </section>
+
+        <section class="collection" id="odysseus">
+            <div class="collection-header">
+                <h2>Odysseus</h2>
+                <p>Lange's Sports Watch Since 2019</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">363.179</p>
+                <h3 class="watch-name">Odysseus - Steel</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>40.5mm Steel</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L155.1 Auto</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>50 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>120m</strong></div>
+                </div>
+                <p class="watch-desc">Lange's first stainless steel watch and first integrated bracelet. Day and outsize date. The German answer to luxury sports watches.</p>
+                <p class="watch-price">Retail: $32,000 | Market: $55,000 - $70,000</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">363.068</p>
+                <h3 class="watch-name">Odysseus - White Gold Blue</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>40.5mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L155.1 Auto</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>50 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>120m</strong></div>
+                </div>
+                <p class="watch-desc">White gold Odysseus with blue dial. Integrated gold bracelet. Day and date complications. Luxurious sports elegance, German-style.</p>
+                <p class="watch-price">Retail: $59,900 | Market: $65,000 - $80,000</p>
+            </div>
+        </section>
+
+        <section class="collection" id="1815">
+            <div class="collection-header">
+                <h2>1815</h2>
+                <p>Tribute to Ferdinand Adolph Lange</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">235.032</p>
+                <h3 class="watch-name">1815 - White Gold</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>38.5mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L051.1 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>55 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Named for founder's birth year. Classic design with railway chapter ring. Small seconds at 6. Pure pocket watch heritage on the wrist.</p>
+                <p class="watch-price">Retail: $26,500 | Market: $22,000 - $28,000</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">234.032</p>
+                <h3 class="watch-name">1815 Up/Down - White Gold</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>39mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L051.2 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>72 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">1815 with power reserve indicator at 12. Small seconds at 6. Perfect symmetry. Extended 72-hour power reserve.</p>
+                <p class="watch-price">Retail: $32,700 | Market: $28,000 - $35,000</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">414.028</p>
+                <h3 class="watch-name">1815 Chronograph - Rose Gold</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>39.5mm Rose Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L951.5 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>60 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Classic chronograph with pulsometer scale. Flyback function. Based on the Datograph movement. Heritage styling, modern performance.</p>
+                <p class="watch-price">Retail: $64,500 | Market: $55,000 - $68,000</p>
+            </div>
+
+            <div class="watch-card">
+                <p class="watch-ref">706.025</p>
+                <h3 class="watch-name">1815 Rattrapante Perpetual Calendar</h3>
+                <div class="specs">
+                    <div class="spec"><label>Case</label><strong>41.9mm White Gold</strong></div>
+                    <div class="spec"><label>Movement</label><strong>L101.1 Manual</strong></div>
+                    <div class="spec"><label>Power Reserve</label><strong>42 hours</strong></div>
+                    <div class="spec"><label>Water Resistance</label><strong>30m</strong></div>
+                </div>
+                <p class="watch-desc">Split-seconds chronograph with perpetual calendar. Two of watchmaking's greatest complications. 631 components. Extreme horology.</p>
+                <p class="watch-price">Retail: $275,000 | Market: $240,000 - $300,000</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Authentic Wrist. All rights reserved.</p>
+        <p style="margin-top: 15px;">
+            <a href="directories.html">Back to All Directories</a> · 
+            <a href="brand-story-a-lange-sohne.html">A. Lange & Söhne History</a> · 
+            <a href="directory-patek-philippe.html">Patek Philippe</a>
+        </p>
+    </footer>
+</body>
+</html>
