@@ -1,325 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Story — AUTHENTIC WRIST Luxury Watches</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>About — Authentic Wrist | How We Work</title>
+    <meta name="description" content="Learn how Authentic Wrist works. Independent watch reviews, editorial integrity, and how we connect readers with trusted retailers.">
+    <link rel="canonical" href="https://www.authenticwrist.com/about.html">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --gold: #C9A962;
-            --gold-light: #E8D5A3;
-            --gold-dark: #8B7355;
-            --obsidian: #0A0A0A;
-            --charcoal: #1A1A1A;
-            --slate: #2A2A2A;
-            --silver: #C0C0C0;
-            --cream: #F5F3EF;
-            --font-display: 'Cormorant Garamond', Georgia, serif;
-            --font-body: 'Outfit', sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-body);
-            background: var(--obsidian);
-            color: var(--cream);
-            line-height: 1.8;
-        }
-
-        /* Header */
-        header {
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--slate);
-        }
-
-        .logo {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            font-weight: 400;
-            letter-spacing: 0.3em;
-            color: var(--gold);
-            text-decoration: none;
-        }
-
-        nav {
-            display: flex;
-            gap: 30px;
-        }
-
-        nav a {
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--cream);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--gold);
-        }
-
-        /* Hero */
-        .page-hero {
-            padding: 100px 40px;
-            text-align: center;
-            background: linear-gradient(to bottom, var(--charcoal), var(--obsidian));
-        }
-
-        .page-hero h1 {
-            font-family: var(--font-display);
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 300;
-            margin-bottom: 20px;
-        }
-
-        .page-hero h1 em {
-            color: var(--gold);
-            font-style: italic;
-        }
-
-        .page-hero p {
-            font-size: 1.1rem;
-            color: var(--silver);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Content */
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 80px 40px;
-        }
-
-        .content h2 {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            font-weight: 400;
-            color: var(--gold);
-            margin-bottom: 30px;
-            margin-top: 60px;
-        }
-
-        .content h2:first-of-type {
-            margin-top: 0;
-        }
-
-        .content p {
-            font-size: 1rem;
-            color: var(--silver);
-            margin-bottom: 20px;
-        }
-
-        .content ul {
-            list-style: none;
-            margin: 30px 0;
-        }
-
-        .content ul li {
-            padding: 15px 0;
-            padding-left: 30px;
-            position: relative;
-            color: var(--silver);
-            border-bottom: 1px solid var(--slate);
-        }
-
-        .content ul li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--gold);
-        }
-
-        .content strong {
-            color: var(--cream);
-        }
-
-        /* Values Grid */
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        .value-card {
-            background: var(--charcoal);
-            border: 1px solid var(--slate);
-            padding: 30px;
-        }
-
-        .value-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            color: var(--cream);
-            margin-bottom: 15px;
-        }
-
-        .value-card p {
-            font-size: 0.9rem;
-            margin-bottom: 0;
-        }
-
-        /* CTA */
-        .cta-section {
-            text-align: center;
-            padding: 80px 40px;
-            background: var(--charcoal);
-            margin-top: 60px;
-        }
-
-        .cta-section h2 {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            font-weight: 300;
-            margin-bottom: 20px;
-        }
-
-        .cta-section p {
-            color: var(--silver);
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            text-decoration: none;
-            background: var(--gold);
-            color: var(--obsidian);
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background: var(--gold-light);
-        }
-
-        /* Footer */
-        footer {
-            padding: 40px;
-            text-align: center;
-            border-top: 1px solid var(--slate);
-        }
-
-        footer p {
-            font-size: 0.85rem;
-            color: var(--silver);
-        }
-
-        footer a {
-            color: var(--gold);
-            text-decoration: none;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .values-grid {
-                grid-template-columns: 1fr;
-            }
+        :root{--gold:#C9A962;--obsidian:#0A0A0A;--charcoal:#1A1A1A;--slate:#2A2A2A;--silver:#C0C0C0;--cream:#F5F3EF}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Outfit',sans-serif;background:var(--obsidian);color:var(--cream);line-height:1.8}
+        header{padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--slate)}
+        .logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:.2em;color:var(--gold);text-decoration:none}
+        nav{display:flex;gap:30px}
+        nav a{font-size:.75rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--cream);text-decoration:none;transition:color .3s}
+        nav a:hover{color:var(--gold)}
+        
+        .page-header{padding:80px 40px;text-align:center;border-bottom:1px solid var(--slate)}
+        .page-header h1{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;margin-bottom:15px}
+        .page-header p{font-size:1.1rem;color:var(--silver);max-width:600px;margin:0 auto}
+        
+        .content{max-width:800px;margin:0 auto;padding:60px 40px}
+        .content h2{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold);margin:50px 0 20px;padding-bottom:10px;border-bottom:1px solid var(--slate)}
+        .content h2:first-of-type{margin-top:0}
+        .content p{color:var(--silver);margin-bottom:20px;font-size:1.05rem}
+        .content strong{color:var(--cream)}
+        
+        .highlight-box{background:var(--charcoal);border:1px solid var(--slate);padding:30px;margin:30px 0}
+        .highlight-box h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);margin-bottom:15px}
+        .highlight-box p{margin-bottom:0}
+        
+        .how-it-works{display:grid;gap:25px;margin:30px 0}
+        .step{display:flex;gap:20px;align-items:flex-start}
+        .step-number{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold);min-width:40px}
+        .step-content h4{color:var(--cream);margin-bottom:5px}
+        .step-content p{margin-bottom:0;color:var(--silver)}
+        
+        .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;margin:30px 0}
+        .value{padding:25px;border:1px solid var(--slate)}
+        .value h4{color:var(--gold);margin-bottom:10px}
+        .value p{color:var(--silver);font-size:.95rem;margin:0}
+        
+        footer{padding:60px 40px;text-align:center;border-top:1px solid var(--slate)}
+        footer p{color:var(--silver);font-size:.85rem;margin-bottom:10px}
+        footer a{color:var(--gold);text-decoration:none}
+        footer a:hover{text-decoration:underline}
+        
+        @media(max-width:768px){
+            header{flex-direction:column;gap:15px;padding:15px 20px}
+            nav{gap:15px}
+            .page-header{padding:50px 20px}
+            .page-header h1{font-size:2.5rem}
+            .content{padding:40px 20px}
+            .step{flex-direction:column;gap:10px}
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
         <nav>
             <a href="index.html">Home</a>
-            <a href="about.html">Our Story</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+            <a href="deals.html">Deals</a>
+            <a href="about.html">About</a>
+            <a href="search.html">Search</a>
         </nav>
     </header>
-
-    <!-- Hero -->
-    <section class="page-hero">
-        <h1>Our <em>Story</em></h1>
-        <p>Dedicated to helping watch enthusiasts discover exceptional timepieces from the world's most trusted retailers.</p>
+    
+    <section class="page-header">
+        <h1>About Authentic Wrist</h1>
+        <p>Independent editorial guide to luxury timepieces</p>
     </section>
-
-    <!-- Content -->
+    
     <div class="content">
-        <h2>The AUTHENTIC WRIST Mission</h2>
-        <p>At AUTHENTIC WRIST, we believe that finding the perfect luxury timepiece should be an experience as refined as the watches themselves. Our mission is simple: to curate the finest selection of luxury watches from trusted retailers worldwide, making it easier for collectors and enthusiasts to discover their next exceptional timepiece.</p>
+        <div class="highlight-box">
+            <h3>What We Are (And What We're Not)</h3>
+            <p><strong>Authentic Wrist is an independent editorial platform.</strong> We research, review, and recommend watches — then connect you with trusted authorized dealers and vetted secondary-market retailers. We never sell watches directly. We have no inventory, no showroom, no sales targets. Our only agenda is helping you find the right timepiece.</p>
+        </div>
         
-        <p>We understand that a luxury watch is more than just an accessory — it's a statement of craftsmanship, heritage, and personal style. Whether you're seeking your first luxury timepiece or adding to a distinguished collection, AUTHENTIC WRIST is here to guide your journey.</p>
-
-        <h2>What We Do</h2>
-        <p>AUTHENTIC WRIST serves as your personal gateway to the world's most prestigious watch retailers. We carefully curate selections from authorized dealers and trusted marketplaces, bringing together an unparalleled collection of timepieces in one elegant destination.</p>
-
-        <ul>
-            <li><strong>Curated Selection</strong> — We handpick exceptional timepieces from verified, reputable retailers</li>
-            <li><strong>Trusted Partners</strong> — We work only with established retailers known for authenticity and service</li>
-            <li><strong>Expert Guidance</strong> — Our content helps you understand what makes each timepiece special</li>
-            <li><strong>Best Prices</strong> — We help you find competitive prices across multiple retailers</li>
-        </ul>
-
-        <h2>Our Values</h2>
-        <div class="values-grid">
-            <div class="value-card">
-                <h3>Authenticity</h3>
-                <p>We partner only with authorized dealers and trusted marketplaces to ensure every timepiece is genuine.</p>
+        <h2>How We Work</h2>
+        <div class="how-it-works">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>We Research</h4>
+                    <p>Our team studies watches across every price point — specifications, history, market positioning, real-world ownership experiences. We read forums, talk to collectors, and handle pieces whenever possible.</p>
+                </div>
             </div>
-            <div class="value-card">
-                <h3>Excellence</h3>
-                <p>We curate only the finest examples of horological craftsmanship from prestigious brands.</p>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>We Write Honest Guides</h4>
+                    <p>No brand pays for coverage or placement. We recommend watches we'd buy ourselves. When a watch has flaws, we say so. When a cheaper option outperforms an expensive one, we tell you.</p>
+                </div>
             </div>
-            <div class="value-card">
-                <h3>Trust</h3>
-                <p>Transparency is at the heart of everything we do. We're honest about our affiliate relationships.</p>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>We Connect You to Trusted Sellers</h4>
+                    <p>When you're ready to buy, we link to authorized dealers and established secondary-market retailers. We vet these partners for reputation and customer service. You buy from them, not us.</p>
+                </div>
             </div>
-            <div class="value-card">
-                <h3>Passion</h3>
-                <p>Our love for fine timepieces drives us to deliver the best possible experience for collectors.</p>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>We Earn Through Affiliate Commissions</h4>
+                    <p>When you purchase through our links, we may earn a commission at no extra cost to you. This is how we fund our work — but it never influences what we recommend. We suggest watches we believe in, regardless of affiliate relationships.</p>
+                </div>
             </div>
         </div>
-
-        <h2>Affiliate Disclosure</h2>
-        <p>AUTHENTIC WRIST is an affiliate website. This means when you click on links to retailers on our site and make a purchase, we may earn a small commission at no additional cost to you. This is how we keep AUTHENTIC WRIST running and continue to bring you the finest curated selections.</p>
         
-        <p>Our affiliate relationships never influence our curation process. We feature timepieces based solely on their quality, craftsmanship, and value — not on commission rates. Your trust is more valuable to us than any commission.</p>
-
-        <h2>Contact Us</h2>
-        <p>Have questions, suggestions, or feedback? We'd love to hear from you.</p>
-        <p><strong>Email:</strong> customerservice@authenticwrist-luxury-watches.com</p>
+        <h2>Our Editorial Values</h2>
+        <div class="values-grid">
+            <div class="value">
+                <h4>Independence</h4>
+                <p>No brand sponsors our content. Recommendations are based on merit, not partnerships.</p>
+            </div>
+            <div class="value">
+                <h4>Transparency</h4>
+                <p>We clearly disclose affiliate relationships. You always know how we make money.</p>
+            </div>
+            <div class="value">
+                <h4>Accessibility</h4>
+                <p>We cover $50 Casios with the same care as $50,000 Pateks. Great watches exist at every price.</p>
+            </div>
+            <div class="value">
+                <h4>Honesty</h4>
+                <p>We acknowledge limitations, call out overpriced pieces, and admit when we don't know something.</p>
+            </div>
+        </div>
+        
+        <h2>Why Trust Us?</h2>
+        <p>We're watch enthusiasts who got tired of biased reviews, hidden agendas, and content that seemed written for search engines rather than people. We built Authentic Wrist as the resource we wished existed — clear, honest, comprehensive.</p>
+        <p>Our team includes collectors, former retail professionals, and horological researchers. We don't claim to know everything, but we commit to being straightforward about what we do know and transparent about our limitations.</p>
+        <p>We have no inventory to move, no brand partnerships to protect, no advertising pressure. When we recommend a watch, it's because we genuinely think it's worth your consideration — not because someone paid us to say so.</p>
+        
+        <h2>Contact</h2>
+        <p>Questions, corrections, or suggestions? We'd love to hear from you.</p>
+        <p>Email: <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bbd3ded7d7d4fbdacecfd3ded5cfd2d8ccc9d2c8cf95d8d4d6">[email&#160;protected]</a></strong></p>
+        
+        <div class="highlight-box" style="margin-top:50px">
+            <h3>The Short Version</h3>
+            <p>We review watches. We don't sell them. When you buy through our links, we may earn a commission — but that never changes what we recommend. We're here to help you find the right watch, not to sell you one.</p>
+        </div>
     </div>
-
-    <!-- CTA -->
-    <section class="cta-section">
-        <h2>Begin Your Journey</h2>
-        <p>Discover exceptional timepieces from the world's most prestigious watchmakers.</p>
-        <a href="index.html" class="btn">Explore Collection →</a>
-    </section>
-
-    <!-- Footer -->
+    
     <footer>
-        <p>© 2025 AUTHENTIC WRIST. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
-    </footer>
-</body>
-</html>
+        <p>&copy; 2026 Authentic Wrist. All rights reserved.</p>
+        <p><a href="in
