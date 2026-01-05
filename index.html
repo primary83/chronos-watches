@@ -2,172 +2,2191 @@
 <html lang="en">
 <head>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authentic Wrist — Independent Luxury Watch Guide</title>
-    <meta name="description" content="Independent editorial guide to luxury timepieces. Expert reviews, buying guides, and trusted retailer recommendations. We research watches — you make informed decisions.">
-    <link rel="canonical" href="https://www.authenticwrist.com/">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>AUTHENTIC WRIST — Curated Luxury Timepieces</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root{--gold:#C9A962;--obsidian:#0A0A0A;--charcoal:#1A1A1A;--slate:#2A2A2A;--silver:#C0C0C0;--cream:#F5F3EF}
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Outfit',sans-serif;background:var(--obsidian);color:var(--cream);line-height:1.6}
-        header{padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--slate)}
-        .logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:.2em;color:var(--gold);text-decoration:none}
-        nav{display:flex;gap:30px}
-        nav a{font-size:.75rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--cream);text-decoration:none;transition:color .3s}
-        nav a:hover{color:var(--gold)}
-        
+        :root {
+            --gold: #C9A962;
+            --gold-light: #E8D5A3;
+            --gold-dark: #8B7355;
+            --obsidian: #0A0A0A;
+            --charcoal: #1A1A1A;
+            --slate: #2A2A2A;
+            --silver: #C0C0C0;
+            --cream: #F5F3EF;
+            --white: #FFFFFF;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Outfit', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--obsidian);
+            color: var(--cream);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--charcoal);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 4px;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Header / Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent);
+            transition: all 0.4s ease;
+        }
+
+        header.scrolled {
+            background: rgba(10,10,10,0.98);
+            backdrop-filter: blur(20px);
+            padding: 15px 40px;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 0.3em;
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .logo span {
+            font-weight: 300;
+            color: var(--cream);
+        }
+
+        nav {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        nav a {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--cream);
+            text-decoration: none;
+            position: relative;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cart {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cart-count {
+            width: 20px;
+            height: 20px;
+            background: var(--gold);
+            color: var(--obsidian);
+            border-radius: 50%;
+            font-size: 0.65rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         /* Hero Section */
-        .hero{padding:120px 40px;text-align:center;border-bottom:1px solid var(--slate);background:linear-gradient(180deg,var(--obsidian) 0%,var(--charcoal) 100%)}
-        .hero h1{font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:300;margin-bottom:20px;letter-spacing:.05em}
-        .hero .tagline{font-size:1.3rem;color:var(--silver);max-width:600px;margin:0 auto 30px;font-weight:300}
-        .hero .positioning{font-size:.9rem;color:var(--gold);max-width:700px;margin:0 auto 40px;padding:20px 30px;border:1px solid var(--slate);background:rgba(201,169,98,0.05)}
-        .hero-cta{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
-        .btn{padding:15px 40px;font-size:.8rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;transition:all .3s}
-        .btn-primary{background:var(--gold);color:var(--obsidian);border:1px solid var(--gold)}
-        .btn-primary:hover{background:transparent;color:var(--gold)}
-        .btn-secondary{background:transparent;color:var(--cream);border:1px solid var(--slate)}
-        .btn-secondary:hover{border-color:var(--gold);color:var(--gold)}
-        
-        /* What We Do Section */
-        .what-we-do{padding:80px 40px;border-bottom:1px solid var(--slate)}
-        .section-title{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;text-align:center;margin-bottom:50px}
-        .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;max-width:1200px;margin:0 auto}
-        .feature{text-align:center;padding:30px}
-        .feature-icon{font-size:2.5rem;margin-bottom:20px}
-        .feature h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);margin-bottom:15px}
-        .feature p{color:var(--silver);font-size:.95rem}
-        
-        /* Featured Content */
-        .featured{padding:80px 40px;border-bottom:1px solid var(--slate);background:var(--charcoal)}
-        .featured-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;max-width:1200px;margin:0 auto}
-        .featured-card{background:var(--obsidian);border:1px solid var(--slate);padding:30px;text-decoration:none;transition:all .3s}
-        .featured-card:hover{border-color:var(--gold);transform:translateY(-5px)}
-        .featured-card-category{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:15px}
-        .featured-card h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--cream);margin-bottom:10px}
-        .featured-card p{color:var(--silver);font-size:.9rem}
-        
-        /* Trust Banner */
-        .trust-banner{padding:60px 40px;text-align:center;border-bottom:1px solid var(--slate)}
-        .trust-banner p{color:var(--silver);font-size:1rem;max-width:800px;margin:0 auto}
-        .trust-banner strong{color:var(--cream)}
-        
-        /* Stats */
-        .stats{padding:60px 40px;border-bottom:1px solid var(--slate)}
-        .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;max-width:1000px;margin:0 auto;text-align:center}
-        .stat-number{font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--gold);margin-bottom:5px}
-        .stat-label{font-size:.85rem;color:var(--silver);text-transform:uppercase;letter-spacing:.1em}
-        
-        footer{padding:60px 40px;text-align:center}
-        footer p{color:var(--silver);font-size:.85rem;margin-bottom:10px}
-        footer a{color:var(--gold);text-decoration:none}
-        footer a:hover{text-decoration:underline}
-        
-        @media(max-width:768px){
-            header{flex-direction:column;gap:15px;padding:15px 20px}
-            nav{gap:15px}
-            .hero{padding:60px 20px}
-            .hero h1{font-size:2.5rem}
-            .hero .tagline{font-size:1.1rem}
-            .section-title{font-size:2rem}
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 120px 80px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-tag {
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+        }
+
+        .hero-tag::before {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .hero-description {
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--silver);
+            max-width: 450px;
+            line-height: 1.8;
+            margin-bottom: 50px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.8s forwards;
+        }
+
+        .btn {
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 18px 40px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--obsidian);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(201, 169, 98, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--cream);
+            border: 1px solid var(--slate);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image-main {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: fadeIn 1.2s ease 0.3s forwards;
+        }
+
+        .hero-floating {
+            position: absolute;
+            border: 1px solid var(--slate);
+            padding: 20px;
+            background: rgba(10,10,10,0.9);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-floating-1 {
+            top: 20%;
+            left: -50px;
+            opacity: 0;
+            animation: floatIn 0.8s ease 1s forwards;
+        }
+
+        .hero-floating-2 {
+            bottom: 25%;
+            right: -30px;
+            opacity: 0;
+            animation: floatIn 0.8s ease 1.2s forwards;
+        }
+
+        .hero-floating img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .hero-floating span {
+            display: block;
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-top: 10px;
+        }
+
+        /* Ticker */
+        .ticker {
+            background: var(--charcoal);
+            padding: 15px 0;
+            overflow: hidden;
+            border-top: 1px solid var(--slate);
+            border-bottom: 1px solid var(--slate);
+        }
+
+        .ticker-track {
+            display: flex;
+            animation: ticker 30s linear infinite;
+        }
+
+        .ticker-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 0 50px;
+            white-space: nowrap;
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--silver);
+        }
+
+        .ticker-item svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--gold);
+        }
+
+        /* Partner Retailers */
+        .retailers {
+            padding: 120px 0;
+            background: var(--charcoal);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-tag {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 300;
+        }
+
+        .retailers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .retailer-card {
+            background: var(--obsidian);
+            border: 1px solid var(--slate);
+            padding: 40px 30px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--cream);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .retailer-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .retailer-card:hover {
+            border-color: var(--gold-dark);
+            transform: translateY(-5px);
+        }
+
+        .retailer-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .retailer-logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            margin-bottom: 10px;
+            color: var(--cream);
+        }
+
+        .retailer-desc {
+            font-size: 0.8rem;
+            color: var(--silver);
+            margin-bottom: 15px;
+        }
+
+        .retailer-reward {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        /* Gallery Grid */
+        .gallery {
+            padding: 120px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 300px);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10,10,10,0.9), transparent 50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h4 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .gallery-overlay span {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        /* Categories */
+        .categories {
+            padding: 120px 0;
+            background: var(--charcoal);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .category-card {
+            position: relative;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--cream);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .category-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .category-content {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.3) 50%, transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+        }
+
+        .category-content h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .category-content span {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        /* Featured Product */
+        .featured {
+            padding: 120px 0;
+        }
+
+        .featured-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .featured-images {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        .featured-main {
+            aspect-ratio: 3/4;
+            position: relative;
+        }
+
+        .featured-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--gold);
+            color: var(--obsidian);
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 8px 15px;
+        }
+
+        .featured-thumbnails {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .featured-thumb {
+            aspect-ratio: 1;
+            overflow: hidden;
+            border: 1px solid var(--slate);
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+
+        .featured-thumb:hover {
+            border-color: var(--gold);
+        }
+
+        .featured-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-content {
+            padding: 40px 0;
+        }
+
+        .featured-tag {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .featured-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            font-weight: 300;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .featured-description {
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--silver);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .featured-specs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            border-top: 1px solid var(--slate);
+            border-bottom: 1px solid var(--slate);
+        }
+
+        .spec-item {
+            text-align: center;
+        }
+
+        .spec-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--silver);
+            margin-bottom: 8px;
+        }
+
+        .spec-value {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--cream);
+        }
+
+        .featured-price {
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .price-current {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: var(--cream);
+        }
+
+        .price-original {
+            font-size: 1.2rem;
+            color: var(--silver);
+            text-decoration: line-through;
+        }
+
+        /* Lookbook */
+        /* Featured Articles */
+        .featured-articles {
+            padding: 120px 0;
+            background: var(--charcoal);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .article-card {
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: var(--cream);
+            background: var(--obsidian);
+            border: 1px solid var(--slate);
+            transition: all 0.4s ease;
+        }
+
+        .article-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .article-card.featured {
+            grid-row: span 2;
+        }
+
+        .article-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .article-card.featured img {
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .article-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .article-card-content {
+            padding: 30px;
+        }
+
+        .article-card.featured .article-card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(10,10,10,0.95), rgba(10,10,10,0.7) 70%, transparent);
+            padding: 40px;
+        }
+
+        .article-card-tag {
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .article-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .article-card.featured h3 {
+            font-size: 1.8rem;
+        }
+
+        .article-card p {
+            font-size: 0.9rem;
+            color: var(--silver);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .article-card-link {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .articles-cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Products Grid */
+        .products {
+            padding: 120px 0;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            position: relative;
+            text-decoration: none;
+            color: var(--cream);
+        }
+
+        .product-images {
+            position: relative;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            background: var(--charcoal);
+            margin-bottom: 20px;
+        }
+
+        .product-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.4s ease;
+        }
+
+        .product-images img:last-child {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+        }
+
+        .product-card:hover .product-images img:last-child {
+            opacity: 1;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--gold);
+            color: var(--obsidian);
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            z-index: 2;
+        }
+
+        .product-badge.new {
+            background: var(--cream);
+        }
+
+        .product-quick-add {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--gold);
+            color: var(--obsidian);
+            padding: 15px;
+            text-align: center;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product-card:hover .product-quick-add {
+            transform: translateY(0);
+        }
+
+        .product-info h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+        }
+
+        .product-price .current {
+            font-size: 1rem;
+            color: var(--cream);
+        }
+
+        .product-price .original {
+            font-size: 0.85rem;
+            color: var(--silver);
+            text-decoration: line-through;
+        }
+
+        /* Instagram Section */
+        .instagram {
+            padding: 120px 0;
+            background: var(--charcoal);
+        }
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 5px;
+            margin-top: 60px;
+        }
+
+        .instagram-item {
+            aspect-ratio: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .instagram-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .instagram-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .instagram-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(10,10,10,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .instagram-item:hover .instagram-overlay {
+            opacity: 1;
+        }
+
+        .instagram-overlay svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--cream);
+        }
+
+        .instagram-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .instagram-cta a {
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: gap 0.3s ease;
+        }
+
+        .instagram-cta a:hover {
+            gap: 15px;
+        }
+
+        /* Testimonial */
+        .testimonial {
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .testimonial-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.2;
+        }
+
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .testimonial-quote {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold);
+        }
+
+        .testimonial-author h4 {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .testimonial-author span {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        /* Newsletter */
+        .newsletter {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--obsidian) 100%);
+        }
+
+        .newsletter-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .newsletter-image {
+            aspect-ratio: 4/5;
+            overflow: hidden;
+        }
+
+        .newsletter-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .newsletter-content {
+            padding: 40px;
+        }
+
+        .newsletter-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 3vw, 2.5rem);
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .newsletter-description {
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--silver);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 15px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            background: transparent;
+            border: 1px solid var(--slate);
+            padding: 18px 25px;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: var(--cream);
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .newsletter-form input::placeholder {
+            color: var(--silver);
+        }
+
+        .newsletter-form input:focus {
+            border-color: var(--gold);
+        }
+
+        .newsletter-form button {
+            background: var(--gold);
+            color: var(--obsidian);
+            border: none;
+            padding: 18px 35px;
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--gold-light);
+        }
+
+        /* Affiliate Disclosure */
+        .disclosure {
+            padding: 40px;
+            background: var(--charcoal);
+            border-top: 1px solid var(--slate);
+            text-align: center;
+        }
+
+        .disclosure p {
+            font-size: 0.75rem;
+            color: var(--silver);
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .disclosure strong {
+            color: var(--gold);
+        }
+
+        /* Footer */
+        footer {
+            padding: 80px 40px 40px;
+            background: var(--obsidian);
+            border-top: 1px solid var(--slate);
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 0.3em;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            color: var(--silver);
+            line-height: 1.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--slate);
+            color: var(--silver);
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .footer-column h4 {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--cream);
+            margin-bottom: 25px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column a {
+            font-size: 0.85rem;
+            color: var(--silver);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            border-top: 1px solid var(--slate);
+        }
+
+        .footer-copyright {
+            font-size: 0.75rem;
+            color: var(--silver);
+        }
+
+        .footer-payments {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-payments span {
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            color: var(--silver);
+            padding: 8px 12px;
+            border: 1px solid var(--slate);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes floatIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .retailers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .article-card.featured {
+                grid-row: span 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero-content {
+                padding: 120px 30px 80px;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            .retailers-grid,
+            .categories-grid,
+            .products-grid,
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .gallery-item:nth-child(1) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .featured-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .lookbook-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .instagram-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .newsletter-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-image {
+                display: none;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">AUTHENTIC WRIST</a>
+    <!-- Header -->
+    <header id="header">
+        <a href="#" class="logo">AUTHENTIC WRIST <span>|</span></a>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="blog.html">Guides</a>
-            <a href="directories.html">Directories</a>
-            <a href="deals.html">Deals</a>
-            <a href="about.html">About</a>
+           <a href="deals.html">Deals</a>
+            <a href="#collections">Collections</a>
+            <a href="#brands">Brands</a>
+            <a href="blog.html">Blog</a>
+            <a href="#shop">Shop All</a>
             <a href="search.html">Search</a>
         </nav>
     </header>
-    
+
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Time, Informed</h1>
-        <p class="tagline">Independent editorial guide to luxury timepieces</p>
-        <p class="positioning">We research and review watches. We connect you with trusted retailers. We never sell watches directly — our only agenda is helping you find the right timepiece.</p>
-        <div class="hero-cta">
-            <a href="blog.html" class="btn btn-primary">Explore 205 Guides</a>
-            <a href="about.html" class="btn btn-secondary">How We Work</a>
+        <div class="hero-content">
+            <span class="hero-tag">Curated Luxury Timepieces</span>
+            <h1>Time Is<br><em>Priceless</em></h1>
+            <p class="hero-description">We handpick exceptional timepieces from the world's most prestigious watchmakers. Discover horological masterpieces at the finest prices — curated from trusted global retailers, all in one destination.</p>
+            <div class="hero-cta">
+                <a href="#shop" class="btn btn-primary">Explore Collection →</a>
+                <a href="#brands" class="btn btn-secondary">Our Partners</a>
+            </div>
         </div>
-    </section>
-    
-    <section class="what-we-do">
-        <h2 class="section-title">What We Do</h2>
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">📖</div>
-                <h3>Research & Review</h3>
-                <p>In-depth guides covering every price point from $50 Casios to six-figure Pateks. No brand pays for placement.</p>
+        <div class="hero-visual">
+            <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1200&q=80" alt="Luxury watch" class="hero-image-main">
+            <div class="hero-floating hero-floating-1">
+                <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=300&q=80" alt="Watch detail">
+                <span>Swiss Made</span>
             </div>
-            <div class="feature">
-                <div class="feature-icon">⚖️</div>
-                <h3>Compare & Contrast</h3>
-                <p>Side-by-side comparisons to help you choose between similar watches. Real differences, honest opinions.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🔗</div>
-                <h3>Connect to Trusted Sellers</h3>
-                <p>We link to authorized dealers and vetted secondary-market retailers. You buy with confidence, not from us.</p>
+            <div class="hero-floating hero-floating-2">
+                <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=300&q=80" alt="Watch mechanism">
+                <span>Automatic</span>
             </div>
         </div>
     </section>
-    
+
+    <!-- Ticker -->
+    <div class="ticker">
+        <div class="ticker-track">
+            <div class="ticker-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                Authentic Timepieces
+            </div>
+            <div class="ticker-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                Worldwide Shipping
+            </div>
+            <div class="ticker-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                Certified Pre-Owned
+            </div>
+            <div class="ticker-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                Expert Authentication
+            </div>
+            <div class="ticker-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                Authentic Timepieces
+            </div>
+            <div class="ticker-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                Worldwide Shipping
+            </div>
+            <div class="ticker-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                Certified Pre-Owned
+            </div>
+            <div class="ticker-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                Expert Authentication
+            </div>
+        </div>
+    </div>
+
+    <!-- Partner Retailers -->
+    <section class="retailers" id="retailers">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Partner Retailers</p>
+                <h2 class="section-title">Shop By Store</h2>
+            </div>
+            <div class="retailers-grid">
+                <a href="https://www.amazon.com/luxury-watches/b?node=6358540011&tag=YOUR-AMAZON-TAG" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">AMAZON</div>
+                    <p class="retailer-desc">Premium Watches & Accessories</p>
+                    <span class="retailer-reward">Up to 4% Back</span>
+                </a>
+                <a href="https://www.nordstrom.com/browse/men/accessories/watches" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">NORDSTROM</div>
+                    <p class="retailer-desc">Luxury Designer Brands</p>
+                    <span class="retailer-reward">Up to 7% Back</span>
+                </a>
+                <a href="https://www.jomashop.com/" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">JOMASHOP</div>
+                    <p class="retailer-desc">Certified Watch Dealer</p>
+                    <span class="retailer-reward">Up to 5% Back</span>
+                </a>
+                <a href="https://www.watchbox.com/" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">WATCHBOX</div>
+                    <p class="retailer-desc">Pre-Owned Luxury Watches</p>
+                    <span class="retailer-reward">Up to 3% Back</span>
+                </a>
+                <a href="https://www.chrono24.com/" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">CHRONO24</div>
+                    <p class="retailer-desc">Global Watch Marketplace</p>
+                    <span class="retailer-reward">Up to 4% Back</span>
+                </a>
+                <a href="https://www.hodinkee.com/shop" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">HODINKEE</div>
+                    <p class="retailer-desc">Curated Timepieces</p>
+                    <span class="retailer-reward">Up to 6% Back</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop By Brand -->
+    <section class="retailers" id="brands">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Official Brand Sites</p>
+                <h2 class="section-title">Shop By Brand</h2>
+            </div>
+            <div class="retailers-grid">
+                <a href="https://www.rolex.com/" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">ROLEX</div>
+                    <p class="retailer-desc">Crown of Watchmaking</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+                <a href="https://www.omegawatches.com/" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">OMEGA</div>
+                    <p class="retailer-desc">Swiss Luxury Since 1848</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+                <a href="https://www.tagheuer.com/" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">TAG HEUER</div>
+                    <p class="retailer-desc">Swiss Avant-Garde</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+                <a href="https://www.breitling.com/" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">BREITLING</div>
+                    <p class="retailer-desc">Instruments for Professionals</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+                <a href="https://www.cartier.com/en-us/watches" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">CARTIER</div>
+                    <p class="retailer-desc">French Luxury Maison</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+                <a href="https://www.iwc.com/" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">IWC</div>
+                    <p class="retailer-desc">Schaffhausen Excellence</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+                <a href="https://www.longines.com/" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">LONGINES</div>
+                    <p class="retailer-desc">Elegance is an Attitude</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+                <a href="https://www.gucci.com/us/en/ca/jewelry-watches/watches-c-jewelry-watches-702702" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">GUCCI</div>
+                    <p class="retailer-desc">Italian Fashion House</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+                <a href="https://www.armani.com/en-us/emporio-armani/man/accessories/watches/" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">ARMANI</div>
+                    <p class="retailer-desc">Emporio Armani Timepieces</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+                <a href="https://www.michaelkors.com/watches/" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">MICHAEL KORS</div>
+                    <p class="retailer-desc">Jet Set Luxury</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+                <a href="https://www.patek.com/" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">PATEK PHILIPPE</div>
+                    <p class="retailer-desc">The Most Prestigious</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+                <a href="https://www.audemarspiguet.com/" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">AUDEMARS PIGUET</div>
+                    <p class="retailer-desc">Masters of Royal Oak</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+                <a href="https://www.panerai.com/" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">PANERAI</div>
+                    <p class="retailer-desc">Italian Dive Luxury</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+                <a href="https://www.hublot.com/" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">HUBLOT</div>
+                    <p class="retailer-desc">The Art of Fusion</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+                <a href="https://www.zenith-watches.com/" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">ZENITH</div>
+                    <p class="retailer-desc">Swiss Watchmaking Since 1865</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+                <a href="https://www.tudorwatch.com/" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">TUDOR</div>
+                    <p class="retailer-desc">Born to Dare</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+                <a href="https://www.chopard.com/en-us/watches" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">CHOPARD</div>
+                    <p class="retailer-desc">Swiss Luxury & Jewelry</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+                <a href="https://www.bulgari.com/en-us/watches" target="_blank" class="retailer-card">
+                    <div class="retailer-logo">BULGARI</div>
+                    <p class="retailer-desc">Italian Elegance</p>
+                    <span class="retailer-reward">Official Site</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=1200&q=80" alt="Luxury watch detail">
+                    <div class="gallery-overlay">
+                        <h4>The Art of Horology</h4>
+                        <span>Explore Craftsmanship</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1526045431048-f857369baa09?w=600&q=80" alt="Watch mechanism">
+                    <div class="gallery-overlay">
+                        <h4>Swiss Movement</h4>
+                        <span>Precision Engineering</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=600&q=80" alt="Gold watch">
+                    <div class="gallery-overlay">
+                        <h4>Precious Metals</h4>
+                        <span>18K Gold Collection</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=600&q=80" alt="Watch on wrist">
+                    <div class="gallery-overlay">
+                        <h4>Statement Pieces</h4>
+                        <span>Dress Watches</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=600&q=80" alt="Dive watch">
+                    <div class="gallery-overlay">
+                        <h4>Sport Collection</h4>
+                        <span>Professional Dive Watches</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories" id="collections">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Shop By Category</p>
+                <h2 class="section-title">Curated Collections</h2>
+            </div>
+            <div class="categories-grid">
+                <a href="https://www.amazon.com/s?k=dress+watches+men+luxury&tag=YOUR-AMAZON-TAG" target="_blank" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600&q=80" alt="Dress watches">
+                    <div class="category-content">
+                        <h3>Dress Watches</h3>
+                        <span>48 Pieces</span>
+                    </div>
+                </a>
+                <a href="https://www.amazon.com/s?k=dive+watches+men+automatic&tag=YOUR-AMAZON-TAG" target="_blank" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Dive watches">
+                    <div class="category-content">
+                        <h3>Dive Watches</h3>
+                        <span>36 Pieces</span>
+                    </div>
+                </a>
+                <a href="https://www.amazon.com/s?k=chronograph+watches+men+luxury&tag=YOUR-AMAZON-TAG" target="_blank" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Chronographs">
+                    <div class="category-content">
+                        <h3>Chronographs</h3>
+                        <span>52 Pieces</span>
+                    </div>
+                </a>
+                <a href="https://www.amazon.com/s?k=skeleton+watches+men+automatic&tag=YOUR-AMAZON-TAG" target="_blank" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=600&q=80" alt="Skeleton watches">
+                    <div class="category-content">
+                        <h3>Skeleton</h3>
+                        <span>24 Pieces</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Product -->
     <section class="featured">
-        <h2 class="section-title">Popular Guides</h2>
-        <div class="featured-grid">
-            <a href="blog-buying-first-rolex.html" class="featured-card">
-                <div class="featured-card-category">Buying Guide</div>
-                <h3>Buying Your First Rolex</h3>
-                <p>Navigate waitlists, ADs, and grey market in 2026.</p>
-            </a>
-            <a href="blog-best-watches-under-1000.html" class="featured-card">
-                <div class="featured-card-category">Buying Guide</div>
-                <h3>Best Watches Under $1,000</h3>
-                <p>Swiss and Japanese excellence at accessible prices.</p>
-            </a>
-            <a href="comparison-rolex-vs-omega-complete.html" class="featured-card">
-                <div class="featured-card-category">Comparison</div>
-                <h3>Rolex vs Omega</h3>
-                <p>Complete comparison: heritage, movements, value.</p>
-            </a>
-            <a href="blog-pre-owned-watch-buying-guide.html" class="featured-card">
-                <div class="featured-card-category">Buying Guide</div>
-                <h3>Pre-Owned Watch Guide</h3>
-                <p>Authentication, pricing, where to buy safely.</p>
-            </a>
-        </div>
-    </section>
-    
-    <section class="trust-banner">
-        <p><strong>Editorial Independence:</strong> Authentic Wrist is reader-supported. When you purchase through links on our site, we may earn an affiliate commission at no extra cost to you. This never influences our recommendations — we suggest watches we'd buy ourselves.</p>
-    </section>
-    
-    <section class="stats">
-        <div class="stats-grid">
-            <div class="stat">
-                <div class="stat-number">205</div>
-                <div class="stat-label">In-Depth Guides</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">50+</div>
-                <div class="stat-label">Brands Covered</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">$50-$500K</div>
-                <div class="stat-label">Price Range</div>
+        <div class="container">
+            <div class="featured-wrapper">
+                <div class="featured-images">
+                    <div class="featured-main">
+                        <span class="featured-badge">Editor's Choice</span>
+                        <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=800&q=80" alt="Omega Seamaster">
+                    </div>
+                    <div class="featured-thumbnails">
+                        <div class="featured-thumb">
+                            <img src="https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=400&q=80" alt="Watch detail">
+                        </div>
+                        <div class="featured-thumb">
+                            <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=400&q=80" alt="Watch mechanism">
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-content">
+                    <span class="featured-tag">Featured This Season</span>
+                    <h2 class="featured-title">Omega Seamaster Aqua Terra 150M</h2>
+                    <p class="featured-description">An icon of maritime heritage meets contemporary elegance. The Aqua Terra combines the legacy of ocean exploration with refined sophistication, featuring Omega's revolutionary Co-Axial Master Chronometer caliber and water resistance to 150 meters.</p>
+                    <div class="featured-specs">
+                        <div class="spec-item">
+                            <p class="spec-label">Movement</p>
+                            <p class="spec-value">Automatic</p>
+                        </div>
+                        <div class="spec-item">
+                            <p class="spec-label">Case Size</p>
+                            <p class="spec-value">41mm</p>
+                        </div>
+                        <div class="spec-item">
+                            <p class="spec-label">Water Resist</p>
+                            <p class="spec-value">150M</p>
+                        </div>
+                    </div>
+                    <div class="featured-price">
+                        <span class="price-current">$5,900</span>
+                        <span class="price-original">$6,500</span>
+                    </div>
+                    <a href="https://www.omegawatches.com/en-us/watches/seamaster/aqua-terra-150m" target="_blank" class="btn btn-primary">View at Omega →</a>
+                </div>
             </div>
         </div>
     </section>
-    
+
+    <!-- Featured Articles -->
+    <section class="featured-articles" id="articles">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Expert Insights</p>
+                <h2 class="section-title">Knowledge & Trust</h2>
+            </div>
+            <div class="articles-grid">
+                <a href="blog-why-authorized-dealers.html" class="article-card featured">
+                    <img src="https://images.unsplash.com/photo-1491933382434-500287f9b54b?w=800&q=80" alt="Luxury watch boutique">
+                    <div class="article-card-content">
+                        <span class="article-card-tag">Buying Guide</span>
+                        <h3>Why Buy From Authorized Dealers</h3>
+                        <p>Protect your investment with guaranteed authenticity, full warranty, and lifetime service support.</p>
+                        <span class="article-card-link">Read Article →</span>
+                    </div>
+                </a>
+                <a href="blog-true-cost-fake-watches.html" class="article-card">
+                    <img src="https://images.unsplash.com/photo-1495704907664-81f74a7efd9b?w=600&q=80" alt="Watch authentication">
+                    <div class="article-card-content">
+                        <span class="article-card-tag">Industry Insights</span>
+                        <h3>The True Cost of Fake Watches</h3>
+                        <p>Why counterfeits are never worth the risk—legally, financially, or ethically.</p>
+                        <span class="article-card-link">Read Article →</span>
+                    </div>
+                </a>
+                <a href="blog-watch-investment-guide.html" class="article-card">
+                    <img src="https://images.unsplash.com/photo-1526045431048-f857369baa09?w=600&q=80" alt="Watch collection">
+                    <div class="article-card-content">
+                        <span class="article-card-tag">Investment Guide</span>
+                        <h3>Investment Value of Luxury Watches</h3>
+                        <p>Which timepieces hold their worth and how to protect your investment.</p>
+                        <span class="article-card-link">Read Article →</span>
+                    </div>
+                </a>
+                <a href="blog-spot-fake-watch.html" class="article-card">
+                    <img src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=600&q=80" alt="Examining watch">
+                    <div class="article-card-content">
+                        <span class="article-card-tag">Watch Care</span>
+                        <h3>How to Spot a Fake Luxury Watch</h3>
+                        <p>Expert tips to authenticate timepieces and avoid counterfeit traps.</p>
+                        <span class="article-card-link">Read Article →</span>
+                    </div>
+                </a>
+                <a href="blog-watch-movements-explained.html" class="article-card">
+                    <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="Watch movement">
+                    <div class="article-card-content">
+                        <span class="article-card-tag">Education</span>
+                        <h3>Watch Movements Explained</h3>
+                        <p>Understand automatic, manual & quartz movements and which is right for you.</p>
+                        <span class="article-card-link">Read Article →</span>
+                    </div>
+                </a>
+            </div>
+            <div class="articles-cta">
+                <a href="blog.html" class="btn btn-secondary">View All Articles →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products" id="shop">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">New Arrivals</p>
+                <h2 class="section-title">Fresh Timepieces</h2>
+            </div>
+            <div class="products-grid">
+                <a href="https://www.rolex.com/watches/submariner" target="_blank" class="product-card">
+                    <div class="product-images">
+                        <span class="product-badge">Sale</span>
+                        <img src="https://images.unsplash.com/photo-1623998021446-45cd9b269056?w=600&q=80" alt="Rolex Submariner">
+                        <img src="https://images.unsplash.com/photo-1626808642875-0aa545482dfb?w=600&q=80" alt="Rolex Submariner side">
+                        <div class="product-quick-add">View Official Page</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Rolex Submariner</h3>
+                        <div class="product-price">
+                            <span class="current">$9,100</span>
+                            <span class="original">$10,500</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.rolex.com/watches/datejust" target="_blank" class="product-card">
+                    <div class="product-images">
+                        <img src="https://images.unsplash.com/photo-1587925358603-c2eea5305bbc?w=600&q=80" alt="Rolex Datejust">
+                        <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=600&q=80" alt="Rolex Datejust side">
+                        <div class="product-quick-add">View Official Page</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Rolex Datejust 41</h3>
+                        <div class="product-price">
+                            <span class="current">$12,500</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.omegawatches.com/watches/seamaster" target="_blank" class="product-card">
+                    <div class="product-images">
+                        <span class="product-badge new">New</span>
+                        <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&q=80" alt="Omega Seamaster">
+                        <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Omega Seamaster dive">
+                        <div class="product-quick-add">View Official Page</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Omega Seamaster</h3>
+                        <div class="product-price">
+                            <span class="current">$5,500</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.omegawatches.com/watches/speedmaster" target="_blank" class="product-card">
+                    <div class="product-images">
+                        <span class="product-badge">Sale</span>
+                        <img src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=600&q=80" alt="Omega Speedmaster">
+                        <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=600&q=80" alt="Omega Speedmaster side">
+                        <div class="product-quick-add">View Official Page</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Omega Speedmaster</h3>
+                        <div class="product-price">
+                            <span class="current">$6,800</span>
+                            <span class="original">$7,500</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tudorwatch.com/en/watches/black-bay" target="_blank" class="product-card">
+                    <div class="product-images">
+                        <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&q=80" alt="Tudor Black Bay">
+                        <img src="https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=600&q=80" alt="Tudor Black Bay side">
+                        <div class="product-quick-add">View Official Page</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tudor Black Bay</h3>
+                        <div class="product-price">
+                            <span class="current">$3,975</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.patek.com/en/collection/calatrava" target="_blank" class="product-card">
+                    <div class="product-images">
+                        <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="Patek Philippe Calatrava">
+                        <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=600&q=80" alt="Patek Philippe side">
+                        <div class="product-quick-add">View Official Page</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Patek Philippe Calatrava</h3>
+                        <div class="product-price">
+                            <span class="current">$22,000</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.audemarspiguet.com/en/watch-collection/royal-oak/" target="_blank" class="product-card">
+                    <div class="product-images">
+                        <span class="product-badge new">New</span>
+                        <img src="https://images.unsplash.com/photo-1585123334904-845d60e97427?w=600&q=80" alt="Audemars Piguet Royal Oak">
+                        <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&q=80" alt="Audemars Piguet side">
+                        <div class="product-quick-add">View Official Page</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Audemars Piguet Royal Oak</h3>
+                        <div class="product-price">
+                            <span class="current">$28,500</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.grand-seiko.com/us-en/collections/heritage" target="_blank" class="product-card">
+                    <div class="product-images">
+                        <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600&q=80" alt="Grand Seiko Heritage">
+                        <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80" alt="Grand Seiko side">
+                        <div class="product-quick-add">View Official Page</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Grand Seiko Heritage</h3>
+                        <div class="product-price">
+                            <span class="current">$5,400</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram -->
+    <section class="instagram">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Follow Us</p>
+                <h2 class="section-title">@Authentic WristLuxury</h2>
+            </div>
+        </div>
+        <div class="instagram-grid">
+            <div class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=400&q=80" alt="Instagram 1">
+                <div class="instagram-overlay">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </div>
+            </div>
+            <div class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?w=400&q=80" alt="Instagram 2">
+                <div class="instagram-overlay">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </div>
+            </div>
+            <div class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=400&q=80" alt="Instagram 3">
+                <div class="instagram-overlay">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </div>
+            </div>
+            <div class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=400&q=80" alt="Instagram 4">
+                <div class="instagram-overlay">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </div>
+            </div>
+            <div class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=400&q=80" alt="Instagram 5">
+                <div class="instagram-overlay">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </div>
+            </div>
+            <div class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1639037687665-4b3c1e5e5d47?w=400&q=80" alt="Instagram 6">
+                <div class="instagram-overlay">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </div>
+            </div>
+        </div>
+        <div class="instagram-cta">
+            <a href="#">Follow @Authentic WristLuxury for daily inspiration →</a>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial">
+        <div class="testimonial-bg">
+            <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1600&q=80" alt="Background">
+        </div>
+        <div class="container">
+            <div class="testimonial-content">
+                <p class="section-tag">What Collectors Say</p>
+                <p class="testimonial-quote">"Authentic Wrist has transformed how I discover exceptional timepieces. Their curation is impeccable, and I've found pieces from trusted retailers that I never would have discovered otherwise. A must for any serious collector."</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="James">
+                    <h4>James Thornton</h4>
+                    <span>Watch Collector, London</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" id="new">
+        <div class="container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-image">
+                    <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=800&q=80" alt="Watch collection">
+                </div>
+                <div class="newsletter-content">
+                    <p class="section-tag">Stay Connected</p>
+                    <h2 class="newsletter-title">Join the Authentic Wrist Circle</h2>
+                    <p class="newsletter-description">Subscribe to receive exclusive deals, price drop alerts on sought-after timepieces, and expert insights delivered straight to your inbox. Never miss a rare find again.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Disclosure -->
+    <div class="disclosure">
+        <p><strong>Affiliate Disclosure:</strong> Authentic Wrist is a participant in affiliate advertising programs including Amazon Associates, ShareASale, AWIN, Rakuten, and CJ Affiliate. This means we may earn a small commission when you click our links and make a purchase — at no extra cost to you. These commissions help us keep this site running and continue bringing you the finest timepiece discoveries. <a href="#" style="color: var(--gold);">Learn more</a></p>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Authentic Wrist. All rights reserved.</p>
-        <p><a href="about.html">About Us</a> · <a href="blog.html">All Guides</a> · <a href="search.html">Search</a></p>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">AUTHENTIC WRIST</div>
+                    <p>Your curated destination for authentic luxury — from the world's finest timepieces to exquisite wrist accessories. Only trusted, authorized sources.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" title="Instagram" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" title="Facebook" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" title="X (Twitter)" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" title="Pinterest" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" title="YouTube" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#shop">New Arrivals</a></li>
+                        <li><a href="#collections">Dress Watches</a></li>
+                        <li><a href="blog-best-dive-watches.html">Dive Watches</a></li>
+                        <li><a href="#collections">Chronographs</a></li>
+                        <li><a href="https://www.hodinkee.com/shop" target="_blank">Pre-Owned</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="returns.html">Returns & Exchanges</a></li>
+                        <li><a href="authentication.html">Authentication</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="about.html#values">Expert Team</a></li>
+                        <li><a href="about.html">Press</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 Authentic Wrist. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth reveal on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-header, .retailer-card, .category-card, .product-card, .lookbook-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Newsletter form
+        document.querySelector('.newsletter-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for subscribing to Authentic Wrist!');
+        });
+    </script>
+    <!-- WATCH ASSISTANT WIDGET - Copy everything below and paste before </body> in your index.html -->
+
+<style>
+.chat-button{position:fixed;bottom:30px;right:30px;width:65px;height:65px;border-radius:50%;background:linear-gradient(135deg,#c4a35a 0%,#d4b86a 50%,#a48940 100%);border:none;cursor:pointer;box-shadow:0 8px 32px rgba(196,163,90,0.4);display:flex;align-items:center;justify-content:center;transition:all .3s ease;z-index:9998}.chat-button:hover{transform:scale(1.1);box-shadow:0 12px 40px rgba(196,163,90,0.5)}.chat-button svg{width:28px;height:28px;fill:#0a0a0f;transition:transform .3s ease}.chat-button.open svg{transform:rotate(90deg)}.chat-badge{position:absolute;top:-5px;right:-5px;width:22px;height:22px;background:#e74c3c;border-radius:50%;font-size:12px;font-weight:600;color:#fff;display:flex;align-items:center;justify-content:center;animation:pulse 2s infinite}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}.chat-window{position:fixed;bottom:110px;right:30px;width:400px;height:580px;background:#12121a;border:1px solid rgba(196,163,90,0.2);border-radius:16px;display:flex;flex-direction:column;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(20px) scale(0.95);transition:all .3s ease;z-index:9999;box-shadow:0 25px 80px rgba(0,0,0,0.5);font-family:'Raleway',sans-serif}.chat-window.open{opacity:1;visibility:visible;transform:translateY(0) scale(1)}.chat-header{background:linear-gradient(135deg,#c4a35a 0%,#d4b86a 50%,#a48940 100%);padding:20px;display:flex;align-items:center;gap:15px}.chat-avatar{width:50px;height:50px;background:#0a0a0f;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px}.chat-header-info h3{color:#0a0a0f;font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;margin:0}.chat-header-info p{color:rgba(0,0,0,0.6);font-size:.8rem;display:flex;align-items:center;gap:5px;margin:0}.online-dot{width:8px;height:8px;background:#27ae60;border-radius:50%;animation:blink 2s infinite}@keyframes blink{0%,100%{opacity:1}50%{opacity:.5}}.chat-close{margin-left:auto;background:rgba(0,0,0,0.2);border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .3s}.chat-close:hover{background:rgba(0,0,0,0.3)}.chat-close svg{width:16px;height:16px;fill:#0a0a0f}.chat-messages{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:15px;background:#1a1a24}.chat-messages::-webkit-scrollbar{width:6px}.chat-messages::-webkit-scrollbar-track{background:transparent}.chat-messages::-webkit-scrollbar-thumb{background:rgba(196,163,90,0.2);border-radius:3px}.message{max-width:85%;animation:messageIn .3s ease}@keyframes messageIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}.message.bot{align-self:flex-start}.message.user{align-self:flex-end}.message-content{padding:14px 18px;border-radius:18px;font-size:.95rem;line-height:1.6}.message.bot .message-content{background:#1e1e2a;color:#f5f5f5;border-bottom-left-radius:4px}.message.user .message-content{background:linear-gradient(135deg,#c4a35a 0%,#d4b86a 50%,#a48940 100%);color:#0a0a0f;border-bottom-right-radius:4px}.message-time{font-size:.7rem;color:#666;margin-top:5px;padding:0 5px}.message.user .message-time{text-align:right}.quick-replies{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.quick-reply{background:transparent;border:1px solid #c4a35a;color:#c4a35a;padding:8px 16px;border-radius:20px;font-size:.85rem;cursor:pointer;transition:all .3s ease;font-family:'Raleway',sans-serif}.quick-reply:hover{background:#c4a35a;color:#0a0a0f}.typing-indicator{display:flex;gap:5px;padding:14px 18px;background:#1e1e2a;border-radius:18px;border-bottom-left-radius:4px;width:fit-content}.typing-indicator span{width:8px;height:8px;background:#666;border-radius:50%;animation:typingBounce 1.4s infinite ease-in-out}.typing-indicator span:nth-child(1){animation-delay:0s}.typing-indicator span:nth-child(2){animation-delay:.2s}.typing-indicator span:nth-child(3){animation-delay:.4s}@keyframes typingBounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-8px)}}.chat-input-container{padding:15px 20px;background:#12121a;border-top:1px solid rgba(196,163,90,0.2);display:flex;gap:10px;align-items:center}.chat-input{flex:1;background:#1a1a24;border:1px solid rgba(196,163,90,0.2);border-radius:25px;padding:12px 20px;color:#f5f5f5;font-family:'Raleway',sans-serif;font-size:.95rem;outline:none;transition:border-color .3s}.chat-input::placeholder{color:#666}.chat-input:focus{border-color:#c4a35a}.chat-send{width:45px;height:45px;background:linear-gradient(135deg,#c4a35a 0%,#d4b86a 50%,#a48940 100%);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .3s,box-shadow .3s}.chat-send:hover{transform:scale(1.05);box-shadow:0 5px 20px rgba(196,163,90,0.4)}.chat-send svg{width:20px;height:20px;fill:#0a0a0f;margin-left:2px}.promo-code{display:inline-flex;align-items:center;gap:8px;background:rgba(196,163,90,0.15);border:1px dashed #c4a35a;padding:8px 14px;border-radius:6px;margin:8px 0;cursor:pointer;transition:all .3s}.promo-code:hover{background:rgba(196,163,90,0.25)}.promo-code code{color:#d4b86a;font-weight:600;font-size:.95rem}.promo-code .copy-icon{width:14px;height:14px;fill:#c4a35a}@media(max-width:500px){.chat-window{width:calc(100% - 20px);height:calc(100% - 100px);bottom:90px;right:10px;border-radius:12px}.chat-button{bottom:20px;right:20px;width:60px;height:60px}}
+</style>
+
+<button class="chat-button" id="chatToggle" onclick="toggleChat()">
+<span class="chat-badge" id="chatBadge">1</span>
+<svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+</button>
+
+<div class="chat-window" id="chatWindow">
+<div class="chat-header">
+<div class="chat-avatar">⌚</div>
+<div class="chat-header-info">
+<h3>Watch Concierge</h3>
+<p><span class="online-dot"></span> Online now</p>
+</div>
+<button class="chat-close" onclick="toggleChat()">
+<svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+</button>
+</div>
+<div class="chat-messages" id="chatMessages"></div>
+<div class="chat-input-container">
+<input type="text" class="chat-input" id="chatInput" placeholder="Ask about watches..." onkeypress="handleKeyPress(event)">
+<button class="chat-send" onclick="sendMessage()">
+<svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+</button>
+</div>
+</div>
+
+<script>
+const watchKnowledge={brands:{rolex:{name:"Rolex",tier:"Ultra Luxury",priceRange:"$7,000 - $400,000+",avgPrice:"$14,978",valueRetention:"98%",popular:["Submariner","Daytona","GMT-Master II","Datejust","Day-Date"],tip:"Rolex rarely offers discounts. Best to buy from authorized dealers or trusted pre-owned sellers like WatchBox.",deals:"Check Chrono24 for pre-owned deals, often 10-15% below retail for unworn pieces."},omega:{name:"Omega",tier:"Luxury",priceRange:"$5,000 - $50,000+",valueRetention:"82%",popular:["Speedmaster","Seamaster","Constellation","Planet Ocean"],tip:"Grey market dealers like Jomashop offer Omega at 20-35% off retail!",deals:"Use code SDFLASH5 at Jomashop for $5 off, or find Speedmasters around $4,500 grey market vs $6,500 retail."},tagheuer:{name:"TAG Heuer",tier:"Premium",priceRange:"$1,500 - $30,000+",valueRetention:"65%",popular:["Carrera","Monaco","Aquaracer","Formula 1"],tip:"Excellent entry into Swiss luxury. Grey market saves 20-30%.",deals:"Jomashop has TAG Heuer Aquaracers starting around $1,200 (vs $1,800 retail)."},breitling:{name:"Breitling",tier:"Luxury",priceRange:"$3,500 - $50,000+",valueRetention:"70%",popular:["Navitimer","Avenger","Superocean","Chronomat"],tip:"Aviation heritage brand. Pre-owned market has great deals.",deals:"Breitling Avenger 43 at Jomashop: $2,595 (was $4,400) - 41% off!"},tudor:{name:"Tudor",tier:"Premium",priceRange:"$2,500 - $8,000+",valueRetention:"72%",popular:["Black Bay","Pelagos","Ranger","Royal"],tip:"Rolex's sister brand - same quality DNA at lower prices. Best value in Swiss watches!",deals:"Tudor Black Bay 58 around $3,200 grey market vs $3,900 retail."},cartier:{name:"Cartier",tier:"Ultra Luxury",priceRange:"$3,000 - $300,000+",valueRetention:"88%",popular:["Santos","Tank","Ballon Bleu","Panthère"],tip:"The 'Jeweler of Kings' - best for dress watches and unisex appeal.",deals:"Grey market Santos de Cartier around $5,500 vs $7,250 retail."},longines:{name:"Longines",tier:"Premium",priceRange:"$1,000 - $5,000+",valueRetention:"55%",popular:["Master Collection","HydroConquest","Spirit","Conquest"],tip:"Best value Swiss heritage brand. Nearly 200 years of excellence.",deals:"Up to 40% off at Jomashop. HydroConquest under $1,000!"},tissot:{name:"Tissot",tier:"Accessible Luxury",priceRange:"$300 - $2,000",valueRetention:"45%",popular:["PRX","Gentleman","Le Locle","Seastar"],tip:"Best entry-level Swiss brand under $1,000. The PRX is incredibly popular!",deals:"Tissot PRX Powermatic: $569 (was $725) - 22% off at Jomashop."}}};
+let chatOpen=false,conversationHistory=[];
+function toggleChat(){chatOpen=!chatOpen;const e=document.getElementById("chatWindow"),t=document.getElementById("chatToggle"),n=document.getElementById("chatBadge");e.classList.toggle("open",chatOpen),t.classList.toggle("open",chatOpen),chatOpen&&n&&(n.style.display="none"),chatOpen&&0===conversationHistory.length&&showWelcomeMessage()}
+function showWelcomeMessage(){setTimeout(()=>{addBotMessage("Welcome to AuthenticWrist! 👋\n\nI'm your personal watch concierge. I can help you find the perfect timepiece, discover deals, and answer any questions.\n\nWhat are you looking for today?"),addQuickReplies(["Recommend a watch","Best deals now","Compare brands","Promo codes"])},500)}
+function addBotMessage(e){const t=document.getElementById("chatMessages"),n=(new Date).toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"}),a=document.createElement("div");a.className="message bot",a.innerHTML=`<div class="message-content">${e.replace(/\n/g,"<br>").replace(/\*\*(.*?)\*\*/g,"<strong>$1</strong>")}</div><div class="message-time">${n}</div>`,t.appendChild(a),t.scrollTop=t.scrollHeight,conversationHistory.push({role:"bot",text:e})}
+function addUserMessage(e){const t=document.getElementById("chatMessages"),n=(new Date).toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"}),a=document.createElement("div");a.className="message user",a.innerHTML=`<div class="message-content">${e}</div><div class="message-time">${n}</div>`,t.appendChild(a),t.scrollTop=t.scrollHeight,conversationHistory.push({role:"user",text:e})}
+function addQuickReplies(e){const t=document.getElementById("chatMessages").lastElementChild,n=document.createElement("div");n.className="quick-replies",e.forEach(e=>{const t=document.createElement("button");t.className="quick-reply",t.textContent=e,t.onclick=()=>{n.remove(),handleUserInput(e)},n.appendChild(t)}),t.appendChild(n)}
+function showTyping(){const e=document.getElementById("chatMessages"),t=document.createElement("div");t.className="message bot",t.id="typingIndicator",t.innerHTML='<div class="typing-indicator"><span></span><span></span><span></span></div>',e.appendChild(t),e.scrollTop=e.scrollHeight}
+function hideTyping(){const e=document.getElementById("typingIndicator");e&&e.remove()}
+function handleKeyPress(e){"Enter"===e.key&&sendMessage()}
+function sendMessage(){const e=document.getElementById("chatInput"),t=e.value.trim();t&&(e.value="",handleUserInput(t))}
+function handleUserInput(e){addUserMessage(e),showTyping(),setTimeout(()=>{hideTyping(),processQuery(e)},800+700*Math.random())}
+function processQuery(e){const t=e.toLowerCase();t.includes("under")||t.includes("budget")||t.includes("$")?handleBudgetQuery(t):t.includes("rolex")?handleBrandQuery("rolex"):t.includes("omega")?handleBrandQuery("omega"):t.includes("tag")||t.includes("heuer")?handleBrandQuery("tagheuer"):t.includes("breitling")?handleBrandQuery("breitling"):t.includes("tudor")?handleBrandQuery("tudor"):t.includes("cartier")?handleBrandQuery("cartier"):t.includes("longines")?handleBrandQuery("longines"):t.includes("tissot")?handleBrandQuery("tissot"):t.includes("vs")||t.includes("compare")?handleComparisonQuery(t):t.includes("deal")||t.includes("sale")?handleDealsQuery():t.includes("promo")||t.includes("code")||t.includes("coupon")?handlePromoCodesQuery():t.includes("recommend")||t.includes("suggest")?handleRecommendationQuery():t.includes("grey market")||t.includes("jomashop")?handleGreyMarketQuery():t.includes("invest")||t.includes("value")?handleInvestmentQuery():handleDefaultQuery()}
+function handleBudgetQuery(e){let t=0;const n=e.match(/\$?([\d,]+)/);n&&(t=parseInt(n[1].replace(",","")));t<=500||e.includes("under 500")?(addBotMessage("Great budget to start! Here are my top picks under $500:\n\n**Tissot PRX** (~$350-400) - The hottest watch in this range.\n\n**Seiko Presage** (~$300-450) - Beautiful dials, automatic movement.\n\n**Orient Bambino** (~$150-200) - Best dress watch under $200.\n\nWould you like deals on any of these?"),addQuickReplies(["Tissot PRX deals","Show promo codes"])):t<=1e3||e.includes("under 1000")?(addBotMessage("$1,000 opens up excellent Swiss options!\n\n**Tissot PRX Powermatic 80** ($569 at Jomashop) - Currently 22% off!\n\n**Hamilton Khaki Field** (~$500-700) - Military heritage.\n\n**Longines Conquest** (~$800-1,000 grey market) - True Swiss luxury.\n\nThe Tissot PRX Powermatic is probably the best value right now."),addQuickReplies(["Tissot PRX deal","Show promo codes"])):t<=3e3||e.includes("under 3000")?(addBotMessage("$3,000 is the sweet spot! You're entering true luxury:\n\n**Tudor Black Bay 58** (~$3,200 grey market) - Rolex DNA at a fraction. My top pick!\n\n**Omega Seamaster 300** (~$2,800-3,500) - James Bond's choice.\n\n**TAG Heuer Carrera** (~$2,500-3,000) - Motorsport heritage.\n\nTudor Black Bay offers best long-term value with 72% retention."),addQuickReplies(["Tudor info","Omega deals","TAG Heuer deals"])):t<=5e3||e.includes("under 5000")?(addBotMessage("$5,000 unlocks serious luxury pieces:\n\n**Omega Speedmaster Moonwatch** (~$4,500-5,000) - First watch on the moon!\n\n**Breitling Avenger** (~$2,595-4,500 at Jomashop) - Up to 41% off!\n\n**Cartier Santos** (~$5,500 grey market) - Timeless elegance.\n\nThe Speedmaster is the most iconic choice."),addQuickReplies(["Speedmaster details","Breitling deals"])):(addBotMessage("With $"+t.toLocaleString()+"+, you're in premium territory!\n\n**Rolex** (starting ~$7,000) - Ultimate status, 98% value retention.\n\n**Omega** ($5,000-15,000) - Iconic Speedmaster, Seamaster.\n\n**Cartier** ($5,000-20,000) - Jewelry-grade elegance.\n\nFor investment, Rolex and Patek Philippe lead the pack."),addQuickReplies(["Rolex models","Best investment watches"]))}
+function handleBrandQuery(e){const t=watchKnowledge.brands[e];t?(addBotMessage(`**${t.name}** - ${t.tier}\n\n**Price Range:** ${t.priceRange}\n**Value Retention:** ${t.valueRetention}\n\n**Popular Collections:**\n${t.popular.map(e=>"• "+e).join("\n")}\n\n**💡 Pro Tip:** ${t.tip}\n\n**🏷️ Current Deals:** ${t.deals}`),addQuickReplies([t.name+" deals","Compare to others","Show promo codes"])):handleDefaultQuery()}
+function handleComparisonQuery(e){e.includes("rolex")&&e.includes("omega")||e.includes("rolex vs omega")?addBotMessage("**Rolex vs Omega** - The Classic Debate!\n\n**Rolex:**\n• Price: $7,000-400,000+\n• Value Retention: 98%\n• Status: Ultimate prestige\n• Rarely discounted\n\n**Omega:**\n• Price: $5,000-50,000+\n• Value Retention: 82%\n• Heritage: Moon landing, James Bond\n• Grey market: 20-35% savings\n\n**My Take:** Choose Rolex for investment & status. Choose Omega for better initial value & equally impressive heritage."):addBotMessage("I'd be happy to compare watches! Which brands?\n\nPopular comparisons:\n• Rolex vs Omega\n• Tudor vs Omega\n• TAG Heuer vs Breitling"),addQuickReplies(["Rolex vs Omega","Tudor vs Omega"])}
+function handleDealsQuery(){addBotMessage("🔥 **Hot Deals Right Now:**\n\n**Breitling Avenger 43**\n$2,595 (was $4,400) - **41% OFF** at Jomashop\n\n**Breitling Superocean**\n$3,450 (was $7,600) - **55% OFF**\n\n**Tissot PRX Powermatic**\n$569 (was $725) - **22% OFF**\n\n**Movado Museum Classic**\n$209 (was $895) - **77% OFF**\n\nShall I show you promo codes for extra savings?"),addQuickReplies(["Show promo codes","Breitling details"])}
+function handlePromoCodesQuery(){addBotMessage("🏷️ **Active Promo Codes (Jomashop):**\n\n**SDFLASH5** - $5 off $30+\n**CART10** - 10% off select items\n**Newsletter signup** - $20 off $250+\n**Student discount** - $10 off $125+\n\n⚠️ Note: Codes typically excluded from Rolex & Omega"),addQuickReplies(["Best deals now","Where to buy"])}
+function handleRecommendationQuery(){addBotMessage("I'd love to help find your perfect watch!\n\n**What's your budget range?**"),addQuickReplies(["Under $500","Under $1,000","$1,000-3,000","$3,000-5,000","$5,000+"])}
+function handleGreyMarketQuery(){addBotMessage("**Grey Market Explained** 🛒\n\nGrey market dealers sell authentic watches from unauthorized sources.\n\n**Pros:**\n✅ 20-50% savings off retail\n✅ Brand new, authentic watches\n✅ Dealer warranty included\n\n**Cons:**\n❌ No manufacturer warranty\n❌ Some brands (Rolex) not available\n\n**Is Jomashop legit?** Absolutely! 35+ years in business with millions of satisfied customers."),addQuickReplies(["Jomashop deals","Best grey market buys"])}
+function handleInvestmentQuery(){addBotMessage("**Watch Investment Guide** 📈\n\n**Top Value Retention:**\n1. Rolex - 98%\n2. Patek Philippe - 95%+\n3. Audemars Piguet - 92%\n4. Cartier - 88%\n5. Omega - 82%\n6. Tudor - 72%\n\n**Best Investment Picks:**\n• Rolex Submariner / GMT-Master II\n• Rolex Daytona\n• Omega Speedmaster\n\n**Pro Tip:** Buy what you love first! Investment potential is a bonus."),addQuickReplies(["Rolex info","Best under $10k"])}
+function handleDefaultQuery(){addBotMessage("I'm here to help with anything watch-related!\n\nI can assist with:\n• **Recommendations** by budget or style\n• **Brand comparisons**\n• **Current deals** and where to buy\n• **Promo codes** for extra savings\n• **Grey market** advice\n• **Investment** potential\n\nWhat would you like to know?"),addQuickReplies(["Recommend a watch","Best deals","Promo codes","Compare brands"])}
+</script>
+
+<!-- END WATCH ASSISTANT WIDGET -->
+
 </body>
 </html>
