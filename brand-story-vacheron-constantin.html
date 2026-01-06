@@ -3,129 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The history of Vacheron Constantin. Since 1755, the oldest continuously operating watch manufacturer and one of the Holy Trinity of watchmaking.">
-    <title>The History of Vacheron Constantin — Authentic Wrist</title>
+    <title>Vacheron Constantin History — Oldest Continuous Watchmaker | Authentic Wrist</title>
+    <meta name="description" content="Vacheron Constantin history from 1755 to today. The oldest continuously operating watch manufacturer, Maltese Cross, Overseas, and unbroken heritage of excellence.">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --gold: #C9A962;
-            --gold-light: #E8D5A3;
-            --obsidian: #0A0A0A;
-            --charcoal: #1A1A1A;
-            --slate: #2A2A2A;
-            --silver: #C0C0C0;
-            --cream: #F5F3EF;
-        }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Outfit', sans-serif;
-            background: var(--obsidian);
-            color: var(--cream);
-            line-height: 1.8;
-        }
-        header {
-            padding: 20px 40px;
-            border-bottom: 1px solid var(--slate);
-        }
-        .logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            color: var(--gold);
-            text-decoration: none;
-            letter-spacing: 0.2em;
-        }
-        nav {
-            display: flex;
-            gap: 30px;
-            margin-top: 15px;
-        }
-        nav a {
-            color: var(--silver);
-            text-decoration: none;
-            font-size: 0.85rem;
-            letter-spacing: 0.1em;
-            transition: color 0.3s;
-        }
+        body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
+        nav { display: flex; gap: 30px; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 40px;
-        }
-        .tag {
-            font-size: 0.75rem;
-            color: var(--gold);
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
-        h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            font-weight: 300;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        .meta {
-            font-size: 0.85rem;
-            color: var(--silver);
-            margin-bottom: 40px;
-        }
-        .intro {
-            font-size: 1.2rem;
-            color: var(--silver);
-            margin-bottom: 50px;
-            font-style: italic;
-        }
-        h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            font-weight: 400;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            color: var(--cream);
-        }
-        p {
-            margin-bottom: 20px;
-            color: var(--silver);
-        }
-        .highlight-box {
-            background: var(--charcoal);
-            border-left: 3px solid var(--gold);
-            padding: 25px 30px;
-            margin: 40px 0;
-        }
-        .highlight-box h4 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem;
-            color: var(--cream);
-            margin-bottom: 15px;
-        }
-        .highlight-box ul {
-            list-style: none;
-        }
-        .highlight-box li {
-            padding: 8px 0;
-            border-bottom: 1px solid var(--slate);
-            color: var(--silver);
-        }
-        .highlight-box li:last-child { border-bottom: none; }
-        .highlight-box strong { color: var(--gold); }
-        footer {
-            text-align: center;
-            padding: 40px;
-            border-top: 1px solid var(--slate);
-            color: var(--silver);
-            font-size: 0.85rem;
-        }
-        footer a { color: var(--gold); text-decoration: none; }
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .container { padding: 40px 20px; }
-        }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
@@ -133,67 +38,101 @@
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
         <nav>
             <a href="index.html">Home</a>
-            <a href="blog.html">Blog</a>
-            <a href="about.html">Our Story</a>
-            <a href="search.html">Search</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
         </nav>
     </header>
 
-    <div class="container">
-        <p class="tag">Brand Story</p>
-        <h1>The History of Vacheron Constantin</h1>
-        <p class="meta">January 2025 · 10 min read</p>
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>Vacheron Constantin</h1>
+        <p style="color: var(--silver);">Since 1755 — The Oldest Continuous Watchmaker</p>
+    </section>
 
-        <p class="intro">One of the "Holy Trinity" of watchmaking. Since 1755, the oldest continuously operating watch manufacturer. Their motto: "Do better if possible, and that is always possible."</p>
+    <article class="content">
+        <p>Vacheron Constantin holds an unparalleled distinction: it is the oldest watch manufacturer in continuous operation. Since Jean-Marc Vacheron opened his workshop in Geneva in 1755, the company has never stopped making watches—through revolutions, world wars, and the quartz crisis. This 269-year legacy of unbroken excellence places Vacheron Constantin among the "Holy Trinity" of watchmaking alongside Patek Philippe and Audemars Piguet.</p>
 
-        <h2>Jean-Marc Vacheron's Vision</h2>
-        <p>In 1755, at age 24, Jean-Marc Vacheron established his watchmaking workshop in Geneva. This was the Age of Enlightenment, and Geneva was becoming the epicenter of fine watchmaking. Unlike many contemporaries who produced pocket watches in quantity, Vacheron focused on exceptional quality from the very beginning.</p>
-        <p>The first signed piece, dated September 17, 1755, marked the beginning of an unbroken tradition. Vacheron Constantin is the oldest watch manufacturer in continuous operation—never having stopped production in over 265 years, even through wars and economic upheavals.</p>
+        <h2>Geneva Beginnings (1755)</h2>
+        <p>On September 17, 1755, Jean-Marc Vacheron signed his first apprentice in Geneva, marking the official founding of what would become the world's oldest continuously operating watchmaker. The young craftsman quickly earned a reputation for exceptional quality, creating watches for Geneva's wealthy merchants and European aristocracy.</p>
+        <p>The business passed through generations of the Vacheron family, each adding to its reputation. By 1770, Vacheron had created its first complication, and by 1790, the company was exporting timepieces across Europe.</p>
 
-        <h2>François Constantin Partnership</h2>
-        <p>In 1819, François Constantin joined the firm. A talented businessman with extensive travel experience, Constantin expanded the brand's reach across Europe and the Americas. His famous motto—"Do better if possible, and that is always possible"—became the company's guiding philosophy.</p>
-        <p>Constantin's commercial acumen combined with the technical expertise of Jacques-Barthélémi Vacheron (grandson of the founder) created a formidable partnership that elevated the brand to international prominence.</p>
+        <h2>François Constantin (1819)</h2>
+        <p>In 1819, businessman François Constantin joined the company, bringing commercial acumen to match its technical excellence. His motto—"Faire mieux si possible, ce qui est toujours possible" (Do better if possible, and that is always possible)—became the company's guiding principle and remains its motto today.</p>
+        <p>Constantin expanded the company's reach globally, personally traveling to establish markets in Europe and the Americas. The partnership formalized as "Vacheron et Constantin" in 1819, the name it still bears over two centuries later.</p>
 
-        <h2>The Maltese Cross</h2>
-        <p>In 1880, Vacheron Constantin adopted the Maltese Cross as its symbol—derived from a component in the movement that regulates mainspring tension. This cross has become one of the most recognized emblems in haute horlogerie, representing precision, craftsmanship, and heritage.</p>
-        <p>The symbol appears throughout Vacheron Constantin watches, from subtle case engravings to prominent positions on the Overseas collection's bezel.</p>
+        <h2>The Maltese Cross (1880)</h2>
+        <p>The Maltese Cross became Vacheron Constantin's emblem in 1880, though it had appeared in the company's movements since 1790. The symbol refers to a component in the keyless winding mechanism that resembles the cross of the Knights of Malta. It represents precision, craftsmanship, and the assembled nature of fine watchmaking.</p>
+        <p>Today, the Maltese Cross appears on every Vacheron Constantin watch—on the crown, the buckle, and as a seal of authenticity.</p>
 
-        <h2>Icons of Excellence</h2>
-        <p>Throughout the 20th century, Vacheron Constantin created some of the world's most complicated timepieces. The 1929 "King Farouk" pocket watch featured an extraordinary number of complications. The 1950s brought elegant dress watches that defined post-war sophistication.</p>
-        <p>In 1972, the brand broke new ground with the 222—a luxury sports watch that predated both the Patek Philippe Nautilus and Audemars Piguet Royal Oak. Though not as commercially successful initially, it laid the groundwork for the beloved Overseas collection.</p>
-
-        <div class="highlight-box">
-            <h4>Key Collections</h4>
-            <ul>
-                <li><strong>Overseas:</strong> The luxury sports watch with interchangeable straps</li>
-                <li><strong>Patrimony:</strong> Ultra-thin dress watch perfection</li>
-                <li><strong>Traditionnelle:</strong> Classical haute horlogerie</li>
-                <li><strong>Historiques:</strong> Vintage designs reimagined</li>
-                <li><strong>Fiftysix:</strong> Entry to Vacheron excellence</li>
-                <li><strong>Les Cabinotiers:</strong> One-of-a-kind masterpieces</li>
-            </ul>
+        <div class="highlight">
+            <p><strong>The Holy Trinity:</strong> Vacheron Constantin, Patek Philippe, and Audemars Piguet are collectively known as the "Holy Trinity" of watchmaking—the three Geneva houses that represent the absolute pinnacle of the craft. All three maintain full manufacture status and produce some of the world's most complicated and valuable timepieces.</p>
         </div>
 
+        <h2>Technical Mastery</h2>
+        <p>Vacheron Constantin has never shied from complexity. Notable achievements include:</p>
+        <p>• <strong>1790:</strong> First engine-turned dials<br>
+        • <strong>1884:</strong> First calendar watch with jumping numerals<br>
+        • <strong>1929:</strong> Movement with 198 parts in just 3.28mm thickness<br>
+        • <strong>2015:</strong> Reference 57260—the most complicated watch ever made, with 57 complications</p>
+
+        <h2>The Reference 57260</h2>
+        <p>Commissioned for a private collector in 2015, the Reference 57260 took eight years to develop and contains 57 complications in a pocket watch case. These include a perpetual calendar accurate for 400 years, a Hebrew perpetual calendar, multiple chiming functions, a double retrograde split-seconds chronograph, and astronomical indications. It may be the most complicated timepiece ever created by human hands.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1755</span>
+                <p>Jean-Marc Vacheron establishes workshop in Geneva</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1770</span>
+                <p>First complicated watch produced</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1819</span>
+                <p>François Constantin joins; company renamed</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1880</span>
+                <p>Maltese Cross officially adopted as emblem</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1955</span>
+                <p>200th anniversary; bicentennial celebrations</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1996</span>
+                <p>Acquired by Richemont Group</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2015</span>
+                <p>Reference 57260 unveiled—57 complications</p>
+            </div>
+        </div>
+
+        <h2>Today's Collections</h2>
+        <p>Vacheron Constantin organizes its offerings into distinct collections:</p>
+        <p>• <strong>Patrimony:</strong> Ultra-thin dress watches embodying Geneva elegance<br>
+        • <strong>Traditionnelle:</strong> Classic round watches with traditional complications<br>
+        • <strong>Overseas:</strong> The sporty collection with integrated bracelet (VC's Royal Oak competitor)<br>
+        • <strong>Historiques:</strong> Reissues and tributes to legendary references<br>
+        • <strong>Métiers d'Art:</strong> Artistic crafts including enameling and engraving<br>
+        • <strong>Les Cabinotiers:</strong> One-of-a-kind bespoke commissions</p>
+
         <h2>Les Cabinotiers</h2>
-        <p>The name "Cabinotiers" refers to the artisan watchmakers who worked in the top floors of Geneva buildings in the 18th century, where large windows provided the best light. Today, Les Cabinotiers represents Vacheron Constantin's atelier for unique, one-of-a-kind creations.</p>
-        <p>This department creates the world's most complicated watches, including the Reference 57260—a pocket watch with 57 complications, the most ever made. Each Les Cabinotiers piece is unique, made to order for individual collectors.</p>
+        <p>The name "Cabinotiers" refers to the 18th-century Geneva craftsmen who worked in attic workshops ("cabinets") with large windows to maximize natural light. Vacheron Constantin's Les Cabinotiers department continues this tradition, creating unique pieces for individual collectors. These one-of-one commissions can take years to complete and represent the absolute pinnacle of bespoke watchmaking.</p>
 
-        <h2>The Holy Trinity</h2>
-        <p>Vacheron Constantin stands alongside Patek Philippe and Audemars Piguet as the "Holy Trinity" of watchmaking. This distinction recognizes their unbroken history, technical innovation, and uncompromising quality standards.</p>
-        <p>What sets Vacheron apart is the sheer breadth of their expertise. From the thinnest movements to the most complicated mechanisms, from classic dress watches to luxury sports pieces, they have mastered every aspect of haute horlogerie.</p>
+        <h2>The Unbroken Thread</h2>
+        <p>What sets Vacheron Constantin apart is not just age but continuity. While other ancient brands have experienced gaps in production, Vacheron Constantin has made watches without interruption since 1755. Through the French Revolution, the Napoleonic Wars, two World Wars, and the quartz crisis, the Geneva manufacture never stopped. This unbroken thread of craftsmanship—spanning 269 years—is unique in the industry.</p>
 
-        <h2>Modern Excellence</h2>
-        <p>Today, as part of the Richemont group since 1996, Vacheron Constantin continues to create some of the world's finest timepieces. The Geneva Seal on their movements ensures adherence to the strictest quality standards in Swiss watchmaking.</p>
-        <p>The Overseas collection has gained tremendous popularity as the sophisticated alternative in the luxury sports watch category. The Patrimony remains the benchmark for elegant dress watches. And Les Cabinotiers continues to push the boundaries of what's possible in watchmaking.</p>
-        <p>After more than 265 years, Vacheron Constantin proves that doing better is, indeed, always possible.</p>
-    </div>
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore Vacheron Constantin</h3>
+            <a href="directory-vacheron-constantin.html" class="cta-btn">View Directory</a>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
+        </div>
+    </article>
 
     <footer>
-        <p>© 2025 Authentic Wrist. All rights reserved.</p>
-        <p style="margin-top: 15px;">
-            <a href="directory-vacheron-constantin.html">View Vacheron Constantin Collection</a> · 
-            <a href="directories.html">All Directories</a>
-        </p>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
     </footer>
 </body>
 </html>

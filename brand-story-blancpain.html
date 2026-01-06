@@ -3,94 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The history of Blancpain. The world's oldest watch brand since 1735. Creator of the Fifty Fathoms dive watch.">
-    <title>The History of Blancpain — Authentic Wrist</title>
+    <title>Blancpain History — The World's Oldest Watch Brand | Authentic Wrist</title>
+    <meta name="description" content="Blancpain history from 1735 to today. The world's oldest watch brand, Fifty Fathoms dive watch legacy, and the fight to save mechanical watchmaking.">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
-        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
         .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
-        nav { display: flex; gap: 30px; margin-top: 15px; }
-        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; }
+        nav { display: flex; gap: 30px; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .container { max-width: 800px; margin: 0 auto; padding: 60px 40px; }
-        .tag { font-size: 0.75rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 15px; }
-        h1 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; margin-bottom: 20px; }
-        .meta { font-size: 0.85rem; color: var(--silver); margin-bottom: 40px; }
-        .intro { font-size: 1.2rem; color: var(--silver); margin-bottom: 50px; font-style: italic; }
-        h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-top: 50px; margin-bottom: 20px; }
-        p { margin-bottom: 20px; color: var(--silver); }
-        .highlight-box { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px 30px; margin: 40px 0; }
-        .highlight-box h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--cream); margin-bottom: 15px; }
-        .highlight-box ul { list-style: none; }
-        .highlight-box li { padding: 8px 0; border-bottom: 1px solid var(--slate); color: var(--silver); }
-        .highlight-box li:last-child { border-bottom: none; }
-        .highlight-box strong { color: var(--gold); }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
         footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
-        footer a { color: var(--gold); text-decoration: none; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">Our Story</a><a href="search.html">Search</a></nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+        </nav>
     </header>
-    <div class="container">
-        <p class="tag">Brand Story</p>
-        <h1>The History of Blancpain</h1>
-        <p class="meta">January 2025 · 9 min read</p>
-        <p class="intro">Since 1735. The world's oldest watch brand. From the Swiss Jura mountains to the depths of the ocean, Blancpain has pioneered watchmaking for nearly three centuries.</p>
 
-        <h2>Jehan-Jacques Blancpain's Beginning</h2>
-        <p>In 1735, Jehan-Jacques Blancpain registered as a watchmaker in Villeret, Switzerland, establishing what would become the world's oldest watch brand. The small village in the Bernese Jura would remain Blancpain's home for over two centuries.</p>
-        <p>The Blancpain family passed the craft from generation to generation, each adding their expertise. The watches became known for their precision and reliability, earning a reputation that spread across Europe.</p>
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>Blancpain</h1>
+        <p style="color: var(--silver);">Since 1735 — The World's Oldest Watch Brand</p>
+    </section>
 
-        <h2>The Quartz Crisis</h2>
-        <p>By the late 1970s, the quartz revolution had devastated the Swiss watch industry. Like many traditional manufacturers, Blancpain struggled. The last member of the founding family, Frédéric-Emile Blancpain, died in 1932 without heirs. The company changed hands several times and nearly disappeared entirely.</p>
-        <p>In 1983, Jean-Claude Biver and Jacques Piguet acquired Blancpain. The company had no factory, no workers, and no inventory—just the name and its history.</p>
+    <article class="content">
+        <p>Blancpain holds the distinction of being the world's oldest watch brand, founded in 1735 in Villeret, Switzerland. Nearly three centuries later, the manufacture remains committed to a philosophy that has defined it since the quartz crisis: "Since 1735 there has never been a quartz Blancpain watch. And there never will be."</p>
 
-        <h2>Jean-Claude Biver's Vision</h2>
-        <p>Biver's strategy was brilliantly contrarian. While the industry chased quartz, he declared: "Since 1735, there has never been a quartz Blancpain watch. And there never will be." This became the brand's famous tagline.</p>
-        <p>Rather than competing with quartz on price, Biver positioned Blancpain as the ultimate expression of traditional mechanical watchmaking. He focused on complications, craftsmanship, and exclusivity.</p>
+        <h2>Origins in Villeret (1735)</h2>
+        <p>Jehan-Jacques Blancpain established his workshop in the upper floor of his home in Villeret, a small village in the Swiss Jura mountains. The location would become synonymous with fine watchmaking, and generations of the Blancpain family would continue the craft for over 200 years.</p>
+        <p>By the 19th century, Blancpain had developed innovative manufacturing techniques, including the use of cylinder escapements and later lever escapements. The company became known for producing high-quality timepieces that combined technical excellence with elegant design.</p>
 
-        <h2>The Fifty Fathoms Legacy</h2>
-        <p>Blancpain had created the Fifty Fathoms in 1953—the first modern dive watch. Developed in collaboration with the French Navy's combat divers, it featured a unidirectional rotating bezel, luminous markers, and 91.45 meters (fifty fathoms) water resistance.</p>
-        <p>The Fifty Fathoms predated the Rolex Submariner and established many features that would become standard for dive watches. Under Biver's leadership, this heritage became central to Blancpain's identity.</p>
+        <h2>The Fifty Fathoms (1953)</h2>
+        <p>Blancpain's most iconic creation emerged from an unlikely collaboration. Captain Robert "Bob" Maloubier of the French Navy's combat diving unit approached CEO Jean-Jacques Fiechter—himself an avid diver—to create a watch capable of withstanding underwater missions.</p>
+        <p>The result was the Fifty Fathoms, launched in 1953. It featured a rotating bezel to track dive time, luminous markers for low-light visibility, automatic movement, and water resistance to approximately 91 meters (fifty fathoms). The Fifty Fathoms predated the Rolex Submariner to market and established many standards that dive watches still follow today.</p>
 
-        <div class="highlight-box">
-            <h4>Key Collections</h4>
-            <ul>
-                <li><strong>Fifty Fathoms:</strong> The original modern dive watch since 1953</li>
-                <li><strong>Villeret:</strong> Classical haute horlogerie</li>
-                <li><strong>Ladybird:</strong> Feminine elegance since 1956</li>
-                <li><strong>Métiers d'Art:</strong> Artistic crafts and decoration</li>
-                <li><strong>L-Evolution:</strong> Contemporary sports watches</li>
-            </ul>
+        <div class="highlight">
+            <p><strong>Fifty Fathoms Legacy:</strong> The watch was adopted by military diving units worldwide, including the U.S. Navy SEALs' predecessors. Its design influenced virtually every dive watch that followed, making Blancpain the true pioneer of the modern dive watch.</p>
         </div>
 
-        <h2>Six Masterpieces</h2>
-        <p>In 1991, Blancpain unveiled its "Six Masterpieces"—six watches demonstrating mastery of traditional complications: ultra-thin, moon phase, perpetual calendar, split-seconds chronograph, tourbillon, and minute repeater. The achievement proved that a small manufacture could compete with the greatest names in watchmaking.</p>
-        <p>The 1735 Grande Complication combined all six complications in a single watch, cementing Blancpain's position in the haute horlogerie pantheon.</p>
+        <h2>Near Death and Resurrection (1970s-1980s)</h2>
+        <p>The quartz crisis devastated the Swiss watch industry, and Blancpain was not spared. By 1971, production had ceased and the brand appeared destined for obscurity. But in 1983, Jean-Claude Biver and Jacques Piguet acquired the dormant company for approximately $22,000.</p>
+        <p>Biver's vision was radical: produce only mechanical watches with the highest finishing, in limited quantities, using traditional techniques. He famously declared that Blancpain would never make a quartz watch—a stance that seemed suicidal at the time but proved visionary.</p>
 
-        <h2>Swatch Group Era</h2>
-        <p>In 1992, SMH (later Swatch Group) acquired Blancpain. Nicolas Hayek recognized the brand's value and provided resources for expansion while preserving its independence and character.</p>
-        <p>Under Swatch Group ownership, Blancpain expanded its manufacture capabilities while maintaining the artisanal approach that defined the brand. Each watch continued to be finished by hand, with movements decorated to the highest standards.</p>
+        <h2>The Villeret Collection</h2>
+        <p>Named after Blancpain's birthplace, the Villeret collection embodies classical watchmaking at its finest. These dress watches feature slim cases, Grand Feu enamel dials, and complications including moon phases, complete calendars, and minute repeaters. The Villeret represents Blancpain's mastery of traditional haute horlogerie.</p>
 
-        <h2>Ocean Commitment</h2>
-        <p>Since the Fifty Fathoms' creation for French Navy divers, Blancpain has maintained deep connections to the ocean. The Blancpain Ocean Commitment initiative supports marine research, conservation, and underwater exploration worldwide.</p>
-        <p>The brand sponsors scientific expeditions, partners with conservation organizations, and produces documentary films about ocean preservation. Limited edition watches support these initiatives while celebrating marine heritage.</p>
+        <h2>Métiers d'Art</h2>
+        <p>Blancpain maintains rare decorative arts that most manufactures have abandoned. Their artisans practice Shakudō (a Japanese metalworking technique), Binchōtan (charcoal carving), enamel painting, and engraving. Each Métiers d'Art piece requires hundreds of hours and represents the pinnacle of horological artistry.</p>
 
-        <h2>Innovation and Tradition</h2>
-        <p>Today, Blancpain continues to innovate within the framework of traditional watchmaking. The manufacture in Le Brassus produces movements with exceptionally long power reserves—some exceeding a week on a single winding. Complications remain a specialty, from simple moonphases to grand complications.</p>
-        <p>The Fifty Fathoms has evolved while maintaining its essential character—still the professional's choice for diving, still finished to haute horlogerie standards. The Villeret collection preserves classical watchmaking in its purest form.</p>
-        <p>Nearly three centuries after Jehan-Jacques Blancpain registered as a watchmaker, the brand he founded remains committed to mechanical excellence. Innovation is indeed their tradition.</p>
-    </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1735</span>
+                <p>Jehan-Jacques Blancpain establishes workshop in Villeret</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1926</span>
+                <p>First automatic wristwatch with self-winding movement</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1953</span>
+                <p>Fifty Fathoms dive watch launched for French Navy</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1983</span>
+                <p>Jean-Claude Biver acquires and revives the brand</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1991</span>
+                <p>"Six Masterpieces" complications completed</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1992</span>
+                <p>Acquired by Swatch Group</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2003</span>
+                <p>Fifty Fathoms 50th anniversary, collection relaunched</p>
+            </div>
+        </div>
+
+        <h2>Today's Blancpain</h2>
+        <p>Under Swatch Group ownership since 1992, Blancpain operates as a true manufacture, producing its own movements including the caliber 1315 with silicon balance spring and 120-hour power reserve. Annual production remains deliberately limited—estimated at 30,000 pieces—maintaining exclusivity and quality.</p>
+        <p>The brand focuses on three main collections: Fifty Fathoms for sport and diving, Villeret for classical elegance, and Ladybird for women. Each represents Blancpain's commitment to mechanical excellence and traditional craftsmanship in an age of mass production.</p>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore Blancpain</h3>
+            <a href="directory-blancpain.html" class="cta-btn">View Directory</a>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
+        </div>
+    </article>
+
     <footer>
-        <p>© 2025 Authentic Wrist. All rights reserved.</p>
-        <p style="margin-top: 15px;"><a href="directory-blancpain.html">View Blancpain Collection</a> · <a href="directories.html">All Directories</a></p>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
     </footer>
 </body>
 </html>

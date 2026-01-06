@@ -1,73 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The History of Jaeger-LeCoultre — Authentic Wrist</title>
-    <meta name="description" content="Discover Jaeger-LeCoultre, the watchmaker's watchmaker from the Vallee de Joux.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Jaeger-LeCoultre History — The Watchmaker's Watchmaker | Authentic Wrist</title>
+    <meta name="description" content="Jaeger-LeCoultre history from 1833 to today. The Grande Maison, Reverso, over 1,200 calibres, and supplier to the world's finest watch brands.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
-        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
         nav { display: flex; gap: 30px; }
-        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .article-hero { height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%); border-bottom: 1px solid var(--gold); }
-        .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; margin-bottom: 15px; }
-        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-        .article-meta { font-size: 0.85rem; color: var(--silver); }
-        .article-content { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 25px; color: var(--silver); }
-        .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; margin: 45px 0 20px; color: var(--cream); }
-        .lead-paragraph { font-size: 1.15rem; color: var(--cream); border-left: 3px solid var(--gold); padding-left: 25px; margin-bottom: 35px; }
-        .highlight-box { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
-        .highlight-box h4 { color: var(--gold); margin-bottom: 15px; }
-        .highlight-box ul { list-style: none; }
-        .highlight-box li { padding: 8px 0; color: var(--silver); border-bottom: 1px solid var(--slate); }
-        .highlight-box li:last-child { border-bottom: none; }
-        footer { border-top: 1px solid var(--slate); padding: 40px; text-align: center; }
-        footer p { color: var(--silver); font-size: 0.85rem; }
-        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .article-hero h1 { font-size: 2.2rem; } }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">Our Story</a><a href="search.html">Search</a></nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+        </nav>
     </header>
-    <section class="article-hero">
-        <div>
-            <div class="article-category">Brand Story</div>
-            <h1>The History of Jaeger-LeCoultre</h1>
-            <div class="article-meta">January 2025 · 11 min read</div>
-        </div>
+
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>Jaeger-LeCoultre</h1>
+        <p style="color: var(--silver);">Since 1833 — The Watchmaker's Watchmaker</p>
     </section>
-    <article class="article-content">
-        <p class="lead-paragraph">Known as "the watchmaker's watchmaker," Jaeger-LeCoultre has supplied movements to the most prestigious brands in history. From the Vallee de Joux, this Grande Maison has created over 1,200 calibers since 1833.</p>
-        <h2>The Vallee de Joux</h2>
-        <p>Antoine LeCoultre founded his workshop in 1833 in Le Sentier, in the remote Vallee de Joux. This isolated valley became the cradle of Swiss watchmaking, where the harsh winters drove farmers to develop precision craftsmanship.</p>
-        <h2>The Reverso Legend</h2>
-        <p>Created in 1931 for polo players who needed to protect their watch faces, the Reverso's swiveling case became an icon of Art Deco design. Today, it remains one of the most recognizable watches in the world.</p>
-        <h2>Movement Mastery</h2>
-        <p>Jaeger-LeCoultre has created movements for Patek Philippe, Audemars Piguet, and Vacheron Constantin. The Caliber 101, created in 1929, remains the world's smallest mechanical movement.</p>
-        <div class="highlight-box">
-            <h4>Key Collections</h4>
-            <ul>
-                <li><strong>Reverso:</strong> The iconic swiveling case</li>
-                <li><strong>Master:</strong> Classic round complications</li>
-                <li><strong>Polaris:</strong> Sports diving heritage</li>
-                <li><strong>Atmos:</strong> The perpetual clock</li>
-                <li><strong>Duometre:</strong> Dual-wing precision</li>
-            </ul>
+
+    <article class="content">
+        <p>Jaeger-LeCoultre is known as "La Grande Maison" (the Great House) for good reason. With over 1,200 calibres developed and 400+ patents registered, this Vallée de Joux manufacture has supplied movements to virtually every prestigious watch brand—including Patek Philippe, Audemars Piguet, and even Vacheron Constantin. Yet it also creates its own extraordinary timepieces, most famously the iconic Reverso.</p>
+
+        <h2>The LeCoultre Workshop (1833)</h2>
+        <p>Antoine LeCoultre established his workshop in Le Sentier in 1833, deep in the Vallée de Joux—the birthplace of Swiss haute horlogerie. His breakthrough came in 1844 with the invention of the Millionomètre, the first instrument capable of measuring the micron, enabling unprecedented precision in watchmaking.</p>
+        <p>By 1866, the workshop had evolved into a true manufacture, producing every component in-house. This vertical integration—rare then, rarer now—allowed LeCoultre to supply movements to the industry's most prestigious names.</p>
+
+        <h2>The Partnership with Jaeger (1903)</h2>
+        <p>Edmond Jaeger, a Parisian watchmaker, challenged Swiss manufacturers to produce his ultra-thin movements. Only Jacques-David LeCoultre, grandson of the founder, accepted. Their collaboration yielded revolutionary thin calibres that Cartier used in early wristwatches, including pieces for aviator Alberto Santos-Dumont.</p>
+        <p>The partnership formalized in 1937 under the name Jaeger-LeCoultre, combining French design sophistication with Swiss manufacturing excellence.</p>
+
+        <h2>The Reverso (1931)</h2>
+        <p>The Reverso is one of the most recognizable watches ever created—and it was born on a polo field. British officers in colonial India needed a watch that could survive the brutal sport. César de Trey approached Jaeger-LeCoultre with the concept of a swiveling case that could flip to protect its crystal.</p>
+        <p>The Art Deco design was completed by René-Alfred Chauvot, and the Reverso launched in 1931. Its reversible case became an icon of elegant problem-solving, and the blank caseback invited personalization—from initials to elaborate engravings. Over 90 years later, the Reverso remains in production virtually unchanged.</p>
+
+        <div class="highlight">
+            <p><strong>Reverso Record:</strong> The Reverso Hybris Mechanica Calibre 185 (2021) contains four faces displaying 11 complications, requiring 11 years of development. Price: $1.6 million.</p>
         </div>
-        <p>Today, Jaeger-LeCoultre continues to innovate while honoring its heritage, creating everything from ultra-thin dress watches to complex astronomical complications—all from the same valley where it began nearly 200 years ago.</p>
+
+        <h2>The Atmos Clock</h2>
+        <p>In 1928, Jaeger-LeCoultre began producing the Atmos, a clock that runs on atmospheric pressure and temperature changes alone. Requiring no batteries or winding—a one-degree temperature change provides enough energy for two days—the Atmos represents perpetual motion made practical. It has been a traditional diplomatic gift from the Swiss government for decades.</p>
+
+        <h2>Master of Complications</h2>
+        <p>Jaeger-LeCoultre's technical prowess extends far beyond thin movements and clever cases. The manufacture has created some of horology's most impressive complications:</p>
+        <p>• <strong>Gyrotourbillon:</strong> A spherical tourbillon rotating on multiple axes<br>
+        • <strong>Master Grande Tradition:</strong> Celestial complications and minute repeaters<br>
+        • <strong>Duomètre:</strong> Dual-wing system for unprecedented precision<br>
+        • <strong>Hybris Mechanica:</strong> The most complicated watches in JLC's history</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1833</span>
+                <p>Antoine LeCoultre establishes workshop in Le Sentier</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1844</span>
+                <p>Invention of the Millionomètre</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1903</span>
+                <p>Partnership with Edmond Jaeger begins</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1928</span>
+                <p>Atmos clock production begins</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1931</span>
+                <p>The Reverso is born</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1937</span>
+                <p>Jaeger-LeCoultre name officially adopted</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2000</span>
+                <p>Acquired by Richemont Group</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2004</span>
+                <p>First Gyrotourbillon introduced</p>
+            </div>
+        </div>
+
+        <h2>The Secret Supplier</h2>
+        <p>For decades, Jaeger-LeCoultre movements powered watches from other prestigious houses. Patek Philippe's legendary Calibre 12-600 AT used JLC's Calibre 920 as its base. Audemars Piguet's Royal Oak and Vacheron Constantin's Overseas also relied on JLC movements. This "supplier to the stars" role earned JLC its reputation as the watchmaker's watchmaker.</p>
+
+        <h2>Today's Grande Maison</h2>
+        <p>Under Richemont ownership since 2000, Jaeger-LeCoultre continues to operate as a true manufacture in Le Sentier, with over 180 skills practiced under one roof. The Master, Reverso, Polaris, and Rendez-Vous collections offer everything from accessible luxury to six-figure complications.</p>
+        <p>With over 1,200 calibres developed across nearly two centuries, Jaeger-LeCoultre's contribution to horology is unmatched. La Grande Maison remains one of the industry's most respected names—a watchmaker's watchmaker that finally receives the recognition it long gave to others.</p>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore Jaeger-LeCoultre</h3>
+            <a href="directory-jaeger-lecoultre.html" class="cta-btn">View Directory</a>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
+        </div>
     </article>
-    <footer><p>&copy; 2025 Authentic Wrist. All rights reserved.</p></footer>
+
+    <footer>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
+    </footer>
 </body>
 </html>

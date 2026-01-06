@@ -3,129 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The history of A. Lange & Söhne. German precision watchmaking from Glashütte. From Ferdinand Adolph Lange to modern masterpieces.">
-    <title>The History of A. Lange & Söhne — Authentic Wrist</title>
+    <title>A. Lange & Söhne History — German Haute Horlogerie | Authentic Wrist</title>
+    <meta name="description" content="A. Lange & Söhne history from 1845 to today. Saxon precision, the Lange 1, resurrection after communism, and Germany's answer to Swiss dominance.">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --gold: #C9A962;
-            --gold-light: #E8D5A3;
-            --obsidian: #0A0A0A;
-            --charcoal: #1A1A1A;
-            --slate: #2A2A2A;
-            --silver: #C0C0C0;
-            --cream: #F5F3EF;
-        }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Outfit', sans-serif;
-            background: var(--obsidian);
-            color: var(--cream);
-            line-height: 1.8;
-        }
-        header {
-            padding: 20px 40px;
-            border-bottom: 1px solid var(--slate);
-        }
-        .logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            color: var(--gold);
-            text-decoration: none;
-            letter-spacing: 0.2em;
-        }
-        nav {
-            display: flex;
-            gap: 30px;
-            margin-top: 15px;
-        }
-        nav a {
-            color: var(--silver);
-            text-decoration: none;
-            font-size: 0.85rem;
-            letter-spacing: 0.1em;
-            transition: color 0.3s;
-        }
+        body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
+        nav { display: flex; gap: 30px; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 40px;
-        }
-        .tag {
-            font-size: 0.75rem;
-            color: var(--gold);
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
-        h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            font-weight: 300;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        .meta {
-            font-size: 0.85rem;
-            color: var(--silver);
-            margin-bottom: 40px;
-        }
-        .intro {
-            font-size: 1.2rem;
-            color: var(--silver);
-            margin-bottom: 50px;
-            font-style: italic;
-        }
-        h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            font-weight: 400;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            color: var(--cream);
-        }
-        p {
-            margin-bottom: 20px;
-            color: var(--silver);
-        }
-        .highlight-box {
-            background: var(--charcoal);
-            border-left: 3px solid var(--gold);
-            padding: 25px 30px;
-            margin: 40px 0;
-        }
-        .highlight-box h4 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem;
-            color: var(--cream);
-            margin-bottom: 15px;
-        }
-        .highlight-box ul {
-            list-style: none;
-        }
-        .highlight-box li {
-            padding: 8px 0;
-            border-bottom: 1px solid var(--slate);
-            color: var(--silver);
-        }
-        .highlight-box li:last-child { border-bottom: none; }
-        .highlight-box strong { color: var(--gold); }
-        footer {
-            text-align: center;
-            padding: 40px;
-            border-top: 1px solid var(--slate);
-            color: var(--silver);
-            font-size: 0.85rem;
-        }
-        footer a { color: var(--gold); text-decoration: none; }
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .container { padding: 40px 20px; }
-        }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
@@ -133,71 +38,101 @@
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
         <nav>
             <a href="index.html">Home</a>
-            <a href="blog.html">Blog</a>
-            <a href="about.html">Our Story</a>
-            <a href="search.html">Search</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
         </nav>
     </header>
 
-    <div class="container">
-        <p class="tag">Brand Story</p>
-        <h1>The History of A. Lange & Söhne</h1>
-        <p class="meta">January 2025 · 10 min read</p>
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>A. Lange & Söhne</h1>
+        <p style="color: var(--silver);">Since 1845 — German Haute Horlogerie</p>
+    </section>
 
-        <p class="intro">German precision at its finest. From Glashütte, Saxony—a brand reborn from the ashes of war. Every movement assembled twice. The watchmaker's watchmaker.</p>
+    <article class="content">
+        <p>In a world dominated by Swiss watchmaking, A. Lange & Söhne stands as Germany's answer to Geneva's finest. Founded in the Saxon town of Glashütte in 1845, destroyed by Soviet forces, and resurrected after German reunification, Lange represents perhaps the most remarkable comeback story in horological history. Today, the manufacture produces some of the world's most beautiful and technically accomplished timepieces.</p>
 
-        <h2>Ferdinand Adolph Lange's Vision</h2>
-        <p>In 1845, Ferdinand Adolph Lange established his watchmaking workshop in Glashütte, a small Saxon mining town that had fallen on hard times. With a loan from the Saxon government, Lange brought precision watchmaking to Germany and transformed Glashütte into the center of German horology.</p>
-        <p>Trained in Dresden and having worked in Paris, London, and Switzerland, Lange combined the best of European watchmaking traditions. He introduced the metric system to watchmaking, developed new tools and techniques, and established a training program that would sustain the industry for generations.</p>
+        <h2>Ferdinand Adolph Lange (1845)</h2>
+        <p>Ferdinand Adolph Lange trained in Switzerland under the great Abraham-Louis Breguet before returning to his native Saxony with a mission: to create a German watchmaking industry. In 1845, with a loan from the Saxon government, he established his workshop in the impoverished mining town of Glashütte.</p>
+        <p>Lange didn't just build a company—he built an industry. He trained apprentices, developed new tools and techniques, and established Glashütte as Germany's watchmaking capital. His sons continued his legacy, and by the early 20th century, A. Lange & Söhne timepieces rivaled the finest Swiss creations.</p>
 
-        <h2>The Lange Standard</h2>
-        <p>From the beginning, Lange watches were distinguished by exceptional quality. The three-quarter plate in German silver (untreated nickel-silver alloy) became a Lange signature. Hand-engraved balance cocks, blued steel screws heated to exactly 300°C, and meticulous hand-finishing set these watches apart.</p>
-        <p>Lange pocket watches became the choice of royalty, scientists, and captains of industry. They were prized for their precision and reliability—essential qualities in an era when accurate timekeeping was crucial for navigation and industry.</p>
+        <h2>Distinctive German Style</h2>
+        <p>From the beginning, Lange watches differed from their Swiss counterparts:</p>
+        <p>• <strong>German silver (nickel silver):</strong> Untreated three-quarter plates that develop a warm patina<br>
+        • <strong>Hand-engraved balance cocks:</strong> Each individually decorated<br>
+        • <strong>Screwed gold chatons:</strong> Jewel settings secured with blued screws<br>
+        • <strong>Glashütte ribbing:</strong> Distinct striping pattern on plates<br>
+        • <strong>Large date displays:</strong> Borrowed from the Semper Opera House clock</p>
 
-        <h2>War and Rebirth</h2>
-        <p>World War II and the subsequent Soviet occupation devastated Glashütte. In 1948, the Communist government expropriated Lange and other watch manufacturers, merging them into a state-owned enterprise. The Lange name disappeared from dials.</p>
-        <p>After German reunification in 1990, Walter Lange—great-grandson of the founder—returned to Glashütte with a vision to restore the family legacy. On October 24, 1994, A. Lange & Söhne unveiled four watches that announced their return: the Lange 1, Arkade, Saxonia, and Tourbillon "Pour le Mérite."</p>
-
-        <h2>The Lange 1 Revolution</h2>
-        <p>The Lange 1 was revolutionary. Its asymmetric dial layout—with off-center time display, outsize date, and power reserve indicator—broke every rule of traditional German watchmaking. Yet it was unmistakably Lange, with all the hallmarks of Saxon craftsmanship.</p>
-        <p>The outsize date, inspired by the five-minute clock at the Dresden Semper Opera, became a Lange signature. Two separate discs—one for units, one for tens—create a date display with unprecedented legibility.</p>
-
-        <div class="highlight-box">
-            <h4>Key Collections</h4>
-            <ul>
-                <li><strong>Lange 1:</strong> The iconic asymmetric masterpiece</li>
-                <li><strong>Saxonia:</strong> Pure dress watch elegance</li>
-                <li><strong>Zeitwerk:</strong> Revolutionary mechanical digital display</li>
-                <li><strong>Datograph:</strong> The king of chronographs</li>
-                <li><strong>1815:</strong> Classical pocket watch heritage</li>
-                <li><strong>Odysseus:</strong> Lange's first sports watch</li>
-            </ul>
+        <div class="highlight">
+            <p><strong>The Double Assembly:</strong> Every A. Lange & Söhne movement is assembled twice. After initial assembly and testing, the entire movement is disassembled, cleaned, and rebuilt to absolute perfection. This painstaking process ensures flawless finishing and function—no other major brand does this.</p>
         </div>
 
-        <h2>Assembled Twice</h2>
-        <p>Every A. Lange & Söhne movement is assembled twice. First, the movement is assembled to check all functions and adjust the rate. Then it is completely disassembled, cleaned, and reassembled with fresh lubricants. This painstaking process ensures perfect function and extends service intervals.</p>
-        <p>The movements are finished to an extraordinary standard. Even components that will never be seen are decorated. German silver plates develop a warm patina over time. Screws are individually blued by hand. Chatons holding jewels are gold, not brass.</p>
+        <h2>Destruction and Soviet Era (1945-1990)</h2>
+        <p>World War II devastated Glashütte. Soviet forces occupied the town in May 1945, dismantled the factories, and shipped machinery to Russia as war reparations. The Lange family was expropriated, and the company was absorbed into a state-owned combine. For 45 years, the Lange name disappeared.</p>
+        <p>The communist era wasn't entirely negative for Glashütte watchmaking—the state company continued producing watches—but the Lange tradition of haute horlogerie was extinguished.</p>
 
-        <h2>The Zeitwerk Innovation</h2>
-        <p>In 2009, Lange introduced the Zeitwerk—a mechanical watch with a digital display. Jumping hours and minutes are powered by a constant-force mechanism that ensures each digit change happens instantaneously. The decimal minute repeater version chimes the time in a way that matches the digital display—a first in watchmaking.</p>
-        <p>The Zeitwerk represents Lange's philosophy: innovation in service of function, always executed to the highest possible standard.</p>
+        <h2>The Resurrection (1990)</h2>
+        <p>Just weeks after German reunification, Walter Lange—great-grandson of the founder—re-registered the company. In partnership with Günter Blümlein of LMH (later IWC), he set out to rebuild A. Lange & Söhne as a manufacture of the highest caliber.</p>
+        <p>On October 24, 1994, Lange unveiled four watches that announced its return: the Lange 1, Saxonia, Arkade, and Tourbillon "Pour le Mérite." The industry was stunned. After 45 years of darkness, Lange had returned not merely as a viable brand but as a genuine competitor to the Swiss elite.</p>
 
-        <h2>The Datograph Legacy</h2>
-        <p>The Datograph, introduced in 1999, is widely considered the finest chronograph ever made. Its movement, the L951.1, features a flyback function, column wheel, and the signature outsize date. The finishing rivals anything produced by Swiss or German competitors.</p>
-        <p>Collectors prize the Datograph for its perfect proportions, legible dial layout, and the sheer beauty of its movement. It represents the pinnacle of mechanical chronograph design.</p>
+        <h2>The Lange 1</h2>
+        <p>The Lange 1 became the brand's icon. Its asymmetric dial—with off-center time display, outsized date, and power reserve indicator—was unlike anything else in watchmaking. The large date display, inspired by the five-minute clock at Dresden's Semper Opera House, became a Lange signature.</p>
+        <p>Critically, the Lange 1 demonstrated that Glashütte could compete with Geneva on finishing and innovation. Its three-quarter plate in untreated German silver, hand-engraved balance cock, and screwed gold chatons represented the highest level of traditional craft.</p>
 
-        <h2>Modern Excellence</h2>
-        <p>Today, under Richemont ownership since 2000, A. Lange & Söhne continues to produce around 5,500 watches annually—a tiny fraction of Swiss luxury output. Each watch is assembled by a single watchmaker who signs the movement.</p>
-        <p>The introduction of the Odysseus in 2019 marked Lange's entry into the luxury sports watch market—their first steel watch and first integrated bracelet. It proved that Lange could innovate while maintaining their exceptional standards.</p>
-        <p>From the workshops of Glashütte, A. Lange & Söhne continues to produce watches that represent the absolute pinnacle of mechanical watchmaking—German precision, perfected.</p>
-    </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1845</span>
+                <p>Ferdinand Adolph Lange establishes workshop in Glashütte</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1868</span>
+                <p>Sons Richard and Emil join; "& Söhne" added to name</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1945</span>
+                <p>Factory destroyed; expropriated by Soviet forces</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1990</span>
+                <p>Walter Lange re-registers company after reunification</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1994</span>
+                <p>Four launch models unveiled; Lange 1 debuts</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2000</span>
+                <p>Acquired by Richemont Group</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2017</span>
+                <p>Walter Lange passes away at 92</p>
+            </div>
+        </div>
+
+        <h2>Technical Excellence</h2>
+        <p>Lange's technical achievements rival any manufacture:</p>
+        <p>• <strong>Tourbillon "Pour le Mérite":</strong> Chain-and-fusée transmission (first wristwatch with this mechanism)<br>
+        • <strong>Datograph:</strong> Considered the finest chronograph movement ever made<br>
+        • <strong>Zeitwerk:</strong> First mechanical watch with jumping digital display<br>
+        • <strong>Triple Split:</strong> Only watch tracking three simultaneous elapsed times<br>
+        • <strong>Grand Complication:</strong> Multiple grand complications in one case</p>
+
+        <h2>Today's Lange</h2>
+        <p>Under Richemont ownership since 2000, A. Lange & Söhne produces approximately 5,500 watches annually—each finished to the highest standards. The manufacture in Glashütte employs traditional techniques alongside modern precision engineering.</p>
+        <p>Collections include the iconic Lange 1, the chronograph Datograph, the classical Saxonia, the digital Zeitwerk, the feminine Little Lange 1, and the sporty Odysseus. Each represents Lange's commitment to German engineering, artistic finishing, and technical innovation.</p>
+        <p>From a destroyed factory in communist East Germany to one of the world's most respected watchmakers in just 30 years—A. Lange & Söhne's story is one of determination, craft, and the enduring power of tradition.</p>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore A. Lange & Söhne</h3>
+            <a href="directory-a-lange-sohne.html" class="cta-btn">View Directory</a>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
+        </div>
+    </article>
 
     <footer>
-        <p>© 2025 Authentic Wrist. All rights reserved.</p>
-        <p style="margin-top: 15px;">
-            <a href="directory-a-lange-sohne.html">View A. Lange & Söhne Collection</a> · 
-            <a href="directories.html">All Directories</a>
-        </p>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
     </footer>
 </body>
 </html>

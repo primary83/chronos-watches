@@ -1,66 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The History of Bulgari: Italian Magnificence in Watchmaking — Authentic Wrist</title>
-    <meta name="description" content="From Roman jeweler to record-breaking watchmaker. Discover how Bulgari's Octo Finissimo redefined ultra-thin haute horlogerie.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Bulgari History — Italian Magnificence in Watchmaking | Authentic Wrist</title>
+    <meta name="description" content="Bulgari history from 1884 to today. Roman jewelry house, Serpenti icon, ultra-thin records, and the Octo Finissimo revolution.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --gold-light: #E8D5A3; --gold-dark: #8B7355; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; --font-display: 'Cormorant Garamond', Georgia, serif; --font-body: 'Outfit', sans-serif; }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-body); background: var(--obsidian); color: var(--cream); line-height: 1.8; }
-        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
         nav { display: flex; gap: 30px; }
-        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .article-hero { height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(10,10,10,0.6), rgba(10,10,10,0.9)), url('https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=1600&q=80'); background-size: cover; background-position: center; }
-        .article-hero-content { max-width: 800px; padding: 0 20px; }
-        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-        .article-hero h1 { font-family: var(--font-display); font-size: 3.5rem; font-weight: 300; line-height: 1.2; margin-bottom: 20px; }
-        .article-meta { font-size: 0.85rem; color: var(--silver); }
-        .article-content { max-width: 800px; margin: 0 auto; padding: 80px 20px; }
-        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 30px; color: var(--silver); }
-        .article-content h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 400; margin: 60px 0 30px; color: var(--cream); }
-        .article-content h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; margin: 40px 0 20px; color: var(--cream); }
-        .lead-paragraph { font-size: 1.25rem; color: var(--cream); border-left: 2px solid var(--gold); padding-left: 30px; margin-bottom: 40px; }
-        blockquote { font-family: var(--font-display); font-size: 1.5rem; font-style: italic; color: var(--cream); border-left: 2px solid var(--gold); padding-left: 30px; margin: 50px 0; }
-        .timeline { margin: 50px 0; padding-left: 30px; border-left: 2px solid var(--slate); }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
         .timeline-item { margin-bottom: 30px; position: relative; }
-        .timeline-item::before { content: ''; position: absolute; left: -37px; top: 8px; width: 12px; height: 12px; background: var(--gold); border-radius: 50%; }
-        .timeline-year { font-size: 0.8rem; color: var(--gold); letter-spacing: 0.1em; margin-bottom: 5px; }
-        .timeline-text { color: var(--silver); }
-        .highlight-box { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 30px; margin: 40px 0; }
-        .highlight-box h4 { font-family: var(--font-display); font-size: 1.2rem; color: var(--gold); margin-bottom: 15px; }
-        .highlight-box ul { list-style: none; }
-        .highlight-box li { padding: 8px 0; color: var(--silver); border-bottom: 1px solid var(--slate); }
-        .highlight-box li:last-child { border-bottom: none; }
-        .brand-cta { background: var(--charcoal); border: 1px solid var(--gold); padding: 40px; margin: 50px 0; text-align: center; }
-        .brand-cta h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--cream); margin-bottom: 15px; }
-        .brand-cta p { margin-bottom: 25px; }
-        .brand-cta .btn { display: inline-block; padding: 15px 35px; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; background: var(--gold); color: var(--obsidian); transition: all 0.3s ease; }
-        .brand-cta .btn:hover { background: var(--cream); }
-        .related-articles { background: var(--charcoal); padding: 80px 40px; }
-        .related-articles h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 300; text-align: center; margin-bottom: 50px; }
-        .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        .related-card { background: var(--obsidian); border: 1px solid var(--slate); text-decoration: none; transition: all 0.3s ease; }
-        .related-card:hover { border-color: var(--gold); transform: translateY(-5px); }
-        .related-card img { width: 100%; height: 200px; object-fit: cover; }
-        .related-card-content { padding: 25px; }
-        .related-card-content h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--cream); margin-bottom: 10px; }
-        .related-card-content p { font-size: 0.85rem; color: var(--silver); }
-        footer { background: var(--obsidian); border-top: 1px solid var(--slate); padding: 60px 40px 30px; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 60px; }
-        .footer-brand p { font-size: 0.9rem; color: var(--silver); margin-top: 15px; }
-        .footer-column h4 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; }
-        .footer-column a { display: block; font-size: 0.9rem; color: var(--silver); text-decoration: none; margin-bottom: 12px; }
-        .footer-column a:hover { color: var(--gold); }
-        .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding-top: 30px; border-top: 1px solid var(--slate); text-align: center; font-size: 0.85rem; color: var(--silver); }
-        @media (max-width: 768px) { header { padding: 15px 20px; flex-direction: column; gap: 15px; } nav { gap: 15px; flex-wrap: wrap; justify-content: center; } .article-hero h1 { font-size: 2.5rem; } .footer-content { grid-template-columns: 1fr; gap: 40px; } }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
@@ -68,222 +38,103 @@
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
         <nav>
             <a href="index.html">Home</a>
-            <a href="blog.html">Blog</a>
-            <a href="about.html">Our Story</a>
-            <a href="search.html">Search</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
         </nav>
     </header>
 
-    <section class="article-hero">
-        <div class="article-hero-content">
-            <div class="article-category">Brand Stories</div>
-            <h1>The History of Bulgari</h1>
-            <div class="article-meta">January 2025 · 13 min read</div>
-        </div>
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>Bulgari</h1>
+        <p style="color: var(--silver);">Since 1884 — Italian Magnificence</p>
     </section>
 
-    <article class="article-content">
-        <p class="lead-paragraph">"Italian Magnificence." While Swiss brands dominated watchmaking for centuries, Bulgari brought something different: Roman boldness, Italian design, and a jeweler's eye for proportion. Today, the Octo Finissimo has shattered world records for thinness, proving that this Roman house can compete at the highest levels of haute horlogerie.</p>
+    <article class="content">
+        <p>Bulgari represents the bold, colorful spirit of Italian design in an industry dominated by Swiss restraint. From a small silver shop in Rome to a global luxury powerhouse, Bulgari has brought Roman audacity to watchmaking—and in recent years, has shattered ultra-thin records that humbled the Swiss establishment.</p>
 
-        <h2>The Greek Silversmith</h2>
-        <p>The Bulgari story begins not in Rome, but in the village of Paramythia in northern Greece. Sotirios Voulgaris (later Italianized to Bulgari) was born in 1857 into a family of silversmiths. Political instability eventually drove him to Italy, where he arrived in the 1880s with little more than his craft skills and ambition.</p>
+        <h2>A Greek Silversmith in Rome (1884)</h2>
+        <p>Sotirios Voulgaris (later Italianized to Bulgari) was a Greek silversmith who immigrated to Italy and opened his first shop in Rome in 1884. Located near the Spanish Steps, the boutique initially sold silver ornaments and antiquities. But Sotirios had larger ambitions.</p>
+        <p>By 1905, with his sons Constantino and Giorgio, Bulgari had transformed into a jewelry house. The flagship store on Via Condotti became a Roman landmark, attracting aristocrats, industrialists, and eventually Hollywood royalty.</p>
 
-        <p>After working in Naples, Sotirios moved to Rome in 1884, opening a small shop selling silver objets d'art. His Greek aesthetic—bold, sculptural, unafraid of color—stood out against the more restrained French jewelry that dominated the era. Roman aristocracy took notice, and Bulgari's reputation grew.</p>
+        <h2>The Roman Style</h2>
+        <p>While French jewelers favored delicate, ornate designs, Bulgari developed a distinctly Italian aesthetic: bold, colorful, and unapologetically glamorous. Inspiration came from Roman and Greek antiquity, Renaissance art, and the Mediterranean palette.</p>
+        <p>Bulgari pioneered the use of cabochon-cut colored gemstones—smooth, rounded stones rather than faceted—in unexpected combinations: amethyst with turquoise, coral with emerald. This chromatic boldness became the house's signature.</p>
 
-        <h2>The Via Condotti Landmark</h2>
-        <p>In 1905, Sotirios opened the flagship store at Via Condotti 10, facing the Spanish Steps. This location would become one of luxury retail's most famous addresses. The ornate interior, designed to showcase Bulgari's increasingly elaborate jewelry, attracted the international elite visiting Rome.</p>
+        <h2>Hollywood on the Tiber (1950s-60s)</h2>
+        <p>When Hollywood descended on Rome's Cinecittà studios in the 1950s, stars discovered Bulgari. Elizabeth Taylor became the brand's most famous devotee, often visiting Via Condotti between takes. Richard Burton famously said she knew Bulgari's Rome store better than he knew the back of his hand.</p>
+        <p>The emerald and diamond suite Burton gave Taylor included a necklace that sold for over $6 million in 2011. This celebrity association—amplified by paparazzi on the Via Veneto—established Bulgari as the jeweler of La Dolce Vita.</p>
 
-        <p>After Sotirios's death in 1932, his sons Constantino and Giorgio expanded the business. They developed what would become Bulgari's signature style: bold designs inspired by Greek and Roman art, generous use of colored gemstones, and an unmistakable sense of Italian glamour.</p>
+        <h2>Entering Watchmaking (1940s-1970s)</h2>
+        <p>Bulgari began incorporating watches into its jewelry designs in the 1940s, initially using movements from Swiss suppliers. The Serpenti bracelet watch—a coiled snake design wrapping the wrist—became an icon, worn by Elizabeth Taylor in "Cleopatra" (1963).</p>
+        <p>In 1977, Bulgari launched Bulgari Bulgari—a unisex watch with the brand name engraved twice on the bezel. This bold branding (almost unheard of at the time) created an instantly recognizable design that remains in production today.</p>
+
+        <div class="highlight">
+            <p><strong>Serpenti:</strong> The snake motif has ancient Roman origins—symbolizing wisdom, vitality, and seduction. Bulgari's Serpenti watches feature flexible gold scales that wrap around the wrist, with the watch face in the serpent's head. It remains one of the most distinctive watch designs ever created.</p>
+        </div>
+
+        <h2>Serious Watchmaking (2000s)</h2>
+        <p>In 2000, Bulgari acquired Gérald Genta and Daniel Roth—two prestigious Swiss brands known for complicated movements. This brought serious horological expertise in-house and signaled Bulgari's ambition beyond jewelry watches.</p>
+        <p>The Octo, designed by Genta before his death, launched in 2012 with its distinctive 110-facet case inspired by Rome's Basilica of Maxentius. It positioned Bulgari as a serious men's watchmaker, not merely a jewelry house making watches.</p>
+
+        <h2>The Octo Finissimo Revolution</h2>
+        <p>Beginning in 2014, Bulgari embarked on a campaign to dominate ultra-thin watchmaking—and succeeded beyond anyone's expectations:</p>
+        <p>• <strong>2014:</strong> Octo Finissimo Tourbillon—thinnest tourbillon (5mm)<br>
+        • <strong>2016:</strong> Octo Finissimo Minute Repeater—thinnest minute repeater (6.85mm)<br>
+        • <strong>2017:</strong> Octo Finissimo Automatic—thinnest automatic (5.15mm)<br>
+        • <strong>2018:</strong> Octo Finissimo Tourbillon Automatic—thinnest automatic tourbillon (3.95mm)<br>
+        • <strong>2019:</strong> Octo Finissimo Chronograph GMT Automatic—thinnest chronograph (6.9mm)<br>
+        • <strong>2020:</strong> Octo Finissimo Perpetual Calendar—thinnest perpetual calendar (5.8mm)<br>
+        • <strong>2021:</strong> Octo Finissimo Ultra—thinnest mechanical watch ever (1.80mm)</p>
+        <p>Eight world records in eight years. The Swiss establishment, accustomed to owning ultra-thin records, was stunned.</p>
 
         <div class="timeline">
             <div class="timeline-item">
-                <div class="timeline-year">1884</div>
-                <div class="timeline-text">Sotirios Bulgari opens first shop in Rome</div>
+                <span class="year">1884</span>
+                <p>Sotirios Bulgari opens shop in Rome</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-year">1905</div>
-                <div class="timeline-text">Via Condotti flagship store opens</div>
+                <span class="year">1940s</span>
+                <p>First Serpenti bracelet watches created</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-year">1940s</div>
-                <div class="timeline-text">Develops signature cabochon gemstone style</div>
+                <span class="year">1977</span>
+                <p>Bulgari Bulgari watch with double-logo bezel launched</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-year">1970s</div>
-                <div class="timeline-text">Bulgari Bulgari watch introduced—logo as design element</div>
+                <span class="year">2000</span>
+                <p>Acquires Gérald Genta and Daniel Roth</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-year">2000</div>
-                <div class="timeline-text">Acquires Daniel Roth and Gérald Genta watch brands</div>
+                <span class="year">2011</span>
+                <p>LVMH acquires Bulgari</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-year">2011</div>
-                <div class="timeline-text">Joins LVMH Group</div>
+                <span class="year">2012</span>
+                <p>Octo collection launched</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-year">2014</div>
-                <div class="timeline-text">Octo Finissimo Tourbillon sets first world record</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">2022</div>
-                <div class="timeline-text">Octo Finissimo Ultra—thinnest mechanical watch ever at 1.80mm</div>
+                <span class="year">2014-2021</span>
+                <p>Eight consecutive ultra-thin world records</p>
             </div>
         </div>
 
-        <h2>Hollywood on the Tiber</h2>
-        <p>In the 1950s and 1960s, Rome's Cinecittà studios attracted Hollywood productions, and their stars discovered Bulgari. Elizabeth Taylor, famously given spectacular jewels by Richard Burton, became an unofficial ambassador. Sophia Loren, Audrey Hepburn, and other icons of the era adorned themselves with Bulgari creations.</p>
+        <h2>Under LVMH (2011-Present)</h2>
+        <p>LVMH's acquisition in 2011 provided resources to accelerate Bulgari's watchmaking ambitions. A new manufacture in Le Sentier (Switzerland's Vallée de Joux) now produces sophisticated movements, while design and jewelry production remain in Italy.</p>
+        <p>This dual identity—Swiss movement technology with Italian design—distinguishes Bulgari from both pure Swiss manufactures and fashion brands with licensed watches.</p>
 
-        <blockquote>"The only word Elizabeth knows in Italian is Bulgari."<br><span style="font-size: 1rem; font-style: normal;">— Richard Burton</span></blockquote>
+        <h2>Today's Bulgari</h2>
+        <p>Bulgari's watch collections span jewelry pieces (Serpenti, Divas' Dream, Lvcea) and serious horology (Octo, Octo Finissimo). The brand successfully bridges two worlds: glamorous gem-set watches for the red carpet and technically accomplished movements that impress collectors.</p>
+        <p>From a Greek immigrant's silver shop to world record-holder for thin watches, Bulgari proves that Italian audacity can compete with—and occasionally surpass—Swiss tradition.</p>
 
-        <p>This celebrity association established Bulgari as a global luxury name. Unlike the discreet Parisian jewelers, Bulgari embraced glamour and visibility. The brand became synonymous with la dolce vita—the sweet life of Roman elegance.</p>
-
-        <h2>Enter Watchmaking</h2>
-        <p>Bulgari began producing watches in the 1940s, initially using Swiss movements in jeweled cases. The watches were beautiful but unremarkable technically—fashion accessories rather than serious timepieces. This would change dramatically in the following decades.</p>
-
-        <p>In 1977, Bulgari introduced the Bulgari Bulgari—a watch featuring the brand name engraved twice on the bezel. This bold design statement broke jewelry convention, transforming the logo from discreet signature into design element. The Bulgari Bulgari became an icon of 1980s luxury.</p>
-
-        <h2>Building Technical Credibility</h2>
-        <p>The early 2000s marked Bulgari's transformation from jeweler-who-makes-watches to serious watchmaker. The acquisitions of Daniel Roth and Gérald Genta in 2000 brought genuine horological expertise. Gérald Genta himself was legendary—the designer of the Royal Oak and Nautilus. His manufacture provided technical capabilities that Bulgari lacked.</p>
-
-        <p>Bulgari consolidated these acquisitions into a single manufacture in Saignelégier, Switzerland. For the first time, the brand could develop and produce movements in-house. The foundation for serious watchmaking was laid.</p>
-
-        <div class="highlight-box">
-            <h4>The Gérald Genta Acquisition</h4>
-            <ul>
-                <li><strong>Technical Expertise:</strong> Decades of complicated movement development</li>
-                <li><strong>Manufacturing:</strong> Capability to produce in-house calibers</li>
-                <li><strong>Design Heritage:</strong> Legacy of the Royal Oak designer</li>
-                <li><strong>Complications:</strong> Tourbillons, minute repeaters, grande sonneries</li>
-            </ul>
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore Bulgari</h3>
+            <a href="directory-bulgari.html" class="cta-btn">View Directory</a>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
         </div>
-
-        <h2>Octo: The New Icon</h2>
-        <p>In 2012, Bulgari introduced the Octo—a watch inspired by Rome's maxentius basilica and the geometric patterns of ancient architecture. The case featured 110 facets, creating a distinctive octagonal shape that managed to be both angular and comfortable on the wrist. Design director Fabrizio Buonamassa had created something genuinely new.</p>
-
-        <p>The Octo was impressive, but its "Finissimo" variants would shock the watch world. Beginning in 2014, Bulgari embarked on a campaign of ultra-thinness that would accumulate world records at an unprecedented pace.</p>
-
-        <h2>The Finissimo Records</h2>
-        <p>Between 2014 and 2022, Bulgari's Octo Finissimo set eight consecutive world records for thin watches:</p>
-
-        <div class="highlight-box">
-            <h4>Octo Finissimo World Records</h4>
-            <ul>
-                <li><strong>2014:</strong> Thinnest tourbillon (5.00mm)</li>
-                <li><strong>2016:</strong> Thinnest minute repeater (6.85mm)</li>
-                <li><strong>2017:</strong> Thinnest automatic movement (2.23mm) / watch (5.15mm)</li>
-                <li><strong>2018:</strong> Thinnest automatic tourbillon (3.95mm)</li>
-                <li><strong>2019:</strong> Thinnest chronograph GMT (6.90mm)</li>
-                <li><strong>2020:</strong> Thinnest automatic with tourbillon and chronograph</li>
-                <li><strong>2021:</strong> Thinnest perpetual calendar (5.80mm)</li>
-                <li><strong>2022:</strong> Thinnest mechanical watch ever—Ultra at 1.80mm</li>
-            </ul>
-        </div>
-
-        <p>The Octo Finissimo Ultra, at just 1.80mm thick, pushed mechanical watchmaking to its absolute limits. The movement is integrated into the caseback; the barrel is spread across the entire diameter; the crown is embedded in the case edge. It's as much engineering statement as functional timepiece.</p>
-
-        <h2>Key Collections</h2>
-
-        <h3>Octo</h3>
-        <p>The architectural icon inspired by Roman geometry. Available from the sporty Octo Roma to the record-breaking Finissimo, this collection represents Bulgari's serious watchmaking credentials. The 110-facet case has become instantly recognizable.</p>
-
-        <h3>Serpenti</h3>
-        <p>The snake motif dates to 1940s Bulgari jewelry. Serpenti watches wrap the wrist in coiled bracelets, combining jewelry craft with timekeeping. These feminine pieces range from diamond-set haute joaillerie to more accessible steel versions.</p>
-
-        <h3>Bulgari Bulgari</h3>
-        <p>The 1977 original, updated for modern tastes. The double-logo bezel remains distinctive, now available in various sizes and materials. This collection balances heritage recognition with contemporary refinement.</p>
-
-        <h3>Lvcea</h3>
-        <p>Meaning "light" in Latin, Lvcea targets women who want serious watches with feminine proportions. The collection includes complications unusual in women's watchmaking—tourbillons, skeleton movements—without sacrificing elegance.</p>
-
-        <div class="brand-cta">
-            <h3>Explore Bulgari</h3>
-            <p>Discover Italian magnificence in watchmaking.</p>
-            <a href="https://www.bulgari.com" class="btn">Visit Official Site →</a>
-        </div>
-
-        <h2>The LVMH Era</h2>
-        <p>In 2011, LVMH acquired Bulgari, adding the Italian house to a portfolio that includes TAG Heuer, Hublot, and Zenith. The acquisition provided resources for continued investment in watchmaking capabilities while maintaining Bulgari's Roman identity.</p>
-
-        <p>Under LVMH, Bulgari has accelerated its horological ambitions. The record-breaking Finissimo campaign, expanded manufacture capabilities, and increased emphasis on in-house movements all reflect the parent company's commitment to establishing Bulgari among serious watchmakers.</p>
-
-        <div class="highlight-box">
-            <h4>What Defines Bulgari</h4>
-            <ul>
-                <li><strong>Roman Heritage:</strong> Founded 1884 on Via Condotti</li>
-                <li><strong>Italian Design:</strong> Bold aesthetics distinct from Swiss conservatism</li>
-                <li><strong>Octo Architecture:</strong> 110-facet case inspired by Rome's geometry</li>
-                <li><strong>Ultra-Thin Mastery:</strong> Eight consecutive world records</li>
-                <li><strong>Jeweler's Eye:</strong> Attention to proportion, color, and finish</li>
-                <li><strong>Manufacturing:</strong> In-house capabilities acquired and expanded</li>
-            </ul>
-        </div>
-
-        <h2>The Italian Difference</h2>
-        <p>Bulgari brings something unique to haute horlogerie: Italian perspective. While Swiss brands emphasize precision and tradition, Bulgari emphasizes design and boldness. The Octo doesn't look like anything from Geneva or Le Locle—it looks like Rome, ancient and modern simultaneously.</p>
-
-        <p>This design-forward approach resonates with collectors who find Swiss watchmaking too conservative. The Finissimo records prove technical capability, while the distinctive aesthetics provide emotional appeal. It's a combination few brands achieve.</p>
-
-        <h2>The Legacy Continues</h2>
-        <p>From a Greek silversmith's Roman workshop to record-breaking haute horlogerie, Bulgari's journey spans over 140 years of evolution. The brand that dressed Elizabeth Taylor now competes directly with Switzerland's finest watchmakers—and wins.</p>
-
-        <p>For collectors who appreciate design as much as mechanics, who value Italian brio alongside Swiss precision, Bulgari offers something genuinely different. The Octo Finissimo has earned its place among the great watches of our era, while Serpenti and Bulgari Bulgari continue appealing to those who want glamour with their timekeeping. In a world of Swiss homogeneity, Bulgari's Roman voice rings distinctive and clear.</p>
     </article>
 
-    <section class="related-articles">
-        <h2>More Brand Stories</h2>
-        <div class="related-grid">
-            <a href="brand-story-cartier.html" class="related-card">
-                <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?w=600&q=80" alt="Cartier">
-                <div class="related-card-content">
-                    <h3>The History of Cartier</h3>
-                    <p>The jeweler of kings who invented the modern wristwatch.</p>
-                </div>
-            </a>
-            <a href="brand-story-chopard.html" class="related-card">
-                <img src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=600&q=80" alt="Chopard">
-                <div class="related-card-content">
-                    <h3>The History of Chopard</h3>
-                    <p>Happy Diamonds and ethical luxury.</p>
-                </div>
-            </a>
-            <a href="brand-story-hublot.html" class="related-card">
-                <img src="https://images.unsplash.com/photo-1544117519-31a4b719223d?w=600&q=80" alt="Hublot">
-                <div class="related-card-content">
-                    <h3>The History of Hublot</h3>
-                    <p>The Art of Fusion in modern watchmaking.</p>
-                </div>
-            </a>
-        </div>
-    </section>
-
     <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-                <p>Your curated destination for authentic luxury timepieces.</p>
-            </div>
-            <div class="footer-column">
-                <h4>Explore</h4>
-                <a href="index.html#new">New Arrivals</a>
-                <a href="index.html#collections">Collections</a>
-                <a href="index.html#brands">Brands</a>
-            </div>
-            <div class="footer-column">
-                <h4>Learn</h4>
-                <a href="blog.html">Blog</a>
-                <a href="blog.html">Buying Guides</a>
-                <a href="blog.html">Brand Stories</a>
-            </div>
-            <div class="footer-column">
-                <h4>About</h4>
-                <a href="about.html">Our Story</a>
-                <a href="contact.html">Contact</a>
-                <a href="privacy.html">Privacy</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2025 Authentic Wrist. All rights reserved.</p>
-        </div>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
     </footer>
 </body>
 </html>
