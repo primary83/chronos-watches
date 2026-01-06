@@ -1,87 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The History of Bulova — Authentic Wrist</title>
-    <meta name="description" content="Discover the history of Bulova, the American watchmaker that pioneered the Accutron tuning fork movement and went to the Moon.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Bulova History — American Innovation from Moon to Precisionist | Authentic Wrist</title>
+    <meta name="description" content="Bulova history from 1875 to today. First TV commercial, moon landing, Accutron tuning fork, and Precisionist high-frequency quartz innovation.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
-        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
         nav { display: flex; gap: 30px; }
-        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .article-hero { height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%); border-bottom: 1px solid var(--gold); }
-        .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; margin-bottom: 15px; }
-        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-        .article-meta { font-size: 0.85rem; color: var(--silver); }
-        .article-content { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 25px; color: var(--silver); }
-        .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; margin: 50px 0 25px; color: var(--cream); }
-        .lead-paragraph { font-size: 1.2rem; color: var(--cream); border-left: 3px solid var(--gold); padding-left: 25px; margin-bottom: 40px; }
-        footer { border-top: 1px solid var(--slate); padding: 40px; text-align: center; margin-top: 60px; }
-        footer p { color: var(--silver); font-size: 0.85rem; }
-        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .article-hero h1 { font-size: 2.5rem; } }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">Our Story</a><a href="search.html">Search</a></nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+        </nav>
     </header>
-    <section class="article-hero">
-        <div>
-            <div class="article-category">Brand Story</div>
-            <h1>The History of Bulova</h1>
-            <div class="article-meta">January 2025 · 10 min read</div>
-        </div>
+
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>Bulova</h1>
+        <p style="color: var(--silver);">Since 1875 — A History of Firsts</p>
     </section>
-    <article class="article-content">
-        <p class="lead-paragraph">Bulova invented the tuning fork watch, pioneered electronic timekeeping, and sent their technology to the Moon. This American brand transformed how the world kept time, yet remains accessible to everyday collectors.</p>
-        
-        <h2>Immigrant Dreams in New York</h2>
-        <p>Joseph Bulova, a Bohemian immigrant, founded J. Bulova Company in New York City in 1875. Starting as a small jewelry shop on Maiden Lane in Lower Manhattan, Bulova began manufacturing watches in 1912 at a factory in Bienne, Switzerland. The combination of American business acumen and Swiss craftsmanship would define the brand.</p>
-        <p>By the 1920s, Bulova had established itself as a leading American watch company, known for quality timepieces at fair prices.</p>
-        
-        <h2>Broadcasting Pioneer</h2>
-        <p>Bulova was a pioneer in advertising. On July 1, 1941, Bulova aired the first-ever television commercial—a simple image of a clock face with the Bulova logo, broadcast before a baseball game. The ten-second spot cost just $9. This innovative marketing approach kept Bulova at the forefront of American consciousness.</p>
-        <p>The company's radio advertising was equally groundbreaking, with the famous tagline "America runs on Bulova time" becoming part of the national lexicon.</p>
-        
-        <h2>The Accutron Revolution</h2>
-        <p>In 1960, Bulova changed watchmaking forever with the Accutron. Instead of a traditional balance wheel, the Accutron used a tuning fork vibrating at 360 Hz to regulate time—the first electronic watch movement. The result was unprecedented accuracy: within two seconds per day, far exceeding mechanical watches.</p>
-        <p>The Accutron's distinctive hum—audible when held to the ear—and its smooth, sweeping second hand became iconic. The movement's precision made it suitable for applications beyond wristwatches, including aviation instruments, railroad timekeeping, and space exploration.</p>
-        
-        <h2>To the Moon</h2>
-        <p>Bulova Accutron technology went to the Moon. While Omega's Speedmaster famously accompanied astronauts on their wrists, Accutron timing mechanisms were used in NASA instruments aboard Apollo missions. The Apollo 15 mission in 1971 included a Bulova timer on the lunar surface.</p>
-        <p>This space heritage represents the pinnacle of Accutron's reputation for precision under extreme conditions.</p>
-        
-        <h2>The Spaceview</h2>
-        <p>The Accutron Spaceview became one of the most distinctive watches ever made. Originally, the exposed tuning fork movement was intended only for dealer display models, but customer demand led Bulova to produce it for retail sale. The Spaceview's visible electronics created a futuristic aesthetic that remains striking today.</p>
-        <p>Vintage Spaceviews are highly collectible, representing a unique moment in horological history when electronic and mechanical technologies intersected.</p>
-        
-        <h2>Precisionist: The Modern Chapter</h2>
-        <p>In 2010, Bulova introduced the Precisionist, featuring a three-prong quartz crystal vibrating at 262 kHz—far higher than standard quartz watches. The result is accuracy within ten seconds per year and a smooth, sweeping second hand reminiscent of the original Accutron.</p>
-        <p>The Precisionist represents Bulova's continued commitment to precision innovation, carrying forward the spirit of the tuning fork revolution for the modern era.</p>
-        
-        <h2>CURV: World's First Curved Chronograph</h2>
-        <p>In 2016, Bulova introduced CURV, the world's first curved chronograph movement. Designed to fit the natural curve of the wrist, CURV demonstrated that Bulova still pursued meaningful innovation rather than simply trading on heritage.</p>
-        
-        <h2>Citizen Ownership</h2>
-        <p>Bulova became part of Citizen Watch Company in 2008. This Japanese ownership has provided resources for continued development while allowing Bulova to maintain its American identity and heritage. The combination of Japanese manufacturing expertise and American design sensibility has strengthened the brand.</p>
-        
-        <h2>Archive Series</h2>
-        <p>Bulova's Archive Series reissues classic designs from the brand's history, including military watches from World War II and iconic mid-century styles. These releases connect modern buyers to Bulova's rich heritage while offering vintage aesthetics with contemporary reliability.</p>
-        
-        <h2>Bulova Today</h2>
-        <p>Modern Bulova offers exceptional value: Precisionist accuracy, Swiss automatic movements, and distinctive designs at accessible prices. While the brand may lack the prestige of Swiss luxury houses, it offers genuine horological innovation and American heritage. From the tuning fork to the Moon and beyond, Bulova has earned its place in watchmaking history.</p>
+
+    <article class="content">
+        <p>Bulova's history reads like a timeline of American firsts: the first watch worn on the moon, the first television commercial, the first electronic watch, and the most accurate quartz movement ever produced. This Czech-immigrant-founded brand has been pushing timekeeping technology for nearly 150 years.</p>
+
+        <h2>New York Beginnings (1875)</h2>
+        <p>Joseph Bulova, a 23-year-old Czech immigrant, opened a small jewelry shop on Maiden Lane in Lower Manhattan in 1875. He began importing watches and soon started manufacturing his own—first in a small New York factory, then in a Swiss facility in Biel.</p>
+        <p>By the early 1900s, Bulova had established a reputation for quality and innovation, introducing standardized watch production methods that made reliable timepieces accessible to ordinary Americans.</p>
+
+        <h2>Marketing Pioneer</h2>
+        <p>Bulova understood the power of media better than any watchmaker of its era:</p>
+        <p>• <strong>1926:</strong> First nationally broadcast radio advertisement<br>
+        • <strong>1927:</strong> Official timekeeper for Charles Lindbergh's transatlantic flight<br>
+        • <strong>1941:</strong> First television commercial (aired before a baseball game, costing $9)<br>
+        • <strong>1952:</strong> First coast-to-coast television sponsorship</p>
+        <p>These weren't just advertisements—they were cultural moments that associated Bulova with American progress and achievement.</p>
+
+        <div class="highlight">
+            <p><strong>That First TV Commercial:</strong> On July 1, 1941, before a Brooklyn Dodgers game, a Bulova clock appeared on screen with the announcement: "America runs on Bulova time." The 10-second spot cost $9. Television advertising—and its transformation of consumer culture—had begun.</p>
+        </div>
+
+        <h2>The Accutron Revolution (1960)</h2>
+        <p>Bulova's most significant technological achievement came in 1960: the Accutron, the first fully electronic watch. Instead of a mechanical balance wheel or quartz crystal, Accutron used a tiny tuning fork vibrating at 360 Hz to regulate time.</p>
+        <p>The tuning fork movement was remarkably accurate—within one minute per month, far surpassing mechanical watches. It also produced a distinctive hum rather than a tick. The Accutron became a symbol of space-age technology and American innovation.</p>
+
+        <h2>On the Moon (1971)</h2>
+        <p>Bulova's space credentials are legitimate: the Accutron tuning fork technology was used in NASA equipment, and during the Apollo 15 mission in 1971, astronaut Dave Scott wore a Bulova chronograph on the lunar surface after his Omega Speedmaster's crystal popped off.</p>
+        <p>That watch—a prototype Bulova chronograph never sold to the public—became the first private watch worn on the moon, and sold at auction in 2015 for $1.6 million.</p>
+
+        <h2>Quartz and Decline</h2>
+        <p>Ironically, Bulova's Accutron technology was superseded by quartz—a technology Bulova had helped pioneer but failed to commercialize quickly enough. The quartz crisis of the 1970s devastated the American watch industry, and Bulova changed hands multiple times before being acquired by Citizen in 2008.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1875</span>
+                <p>Joseph Bulova opens shop in New York City</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1912</span>
+                <p>First factory observatory built for timing standardization</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1941</span>
+                <p>First television commercial airs</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1960</span>
+                <p>Accutron tuning fork watch launched</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1971</span>
+                <p>Bulova chronograph worn on the moon</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2008</span>
+                <p>Acquired by Citizen Watch Company</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2010</span>
+                <p>Precisionist movement debuts—262 kHz</p>
+            </div>
+        </div>
+
+        <h2>Precisionist: Reviving Innovation (2010)</h2>
+        <p>Under Citizen ownership, Bulova returned to its innovative roots with Precisionist—a quartz movement vibrating at 262,144 Hz, eight times higher than standard quartz. This frequency enables a continuously sweeping second hand (no ticking) and accuracy within 10 seconds per year.</p>
+        <p>Precisionist represented something new: the most accurate quartz watch ever produced, at accessible prices. The technology proved that innovation could continue even in "mature" quartz technology.</p>
+
+        <h2>The Collections Today</h2>
+        <p>Modern Bulova offers watches across multiple price points and styles:</p>
+        <p>• <strong>Precisionist:</strong> High-frequency quartz with sweeping seconds<br>
+        • <strong>Marine Star:</strong> Sport and dive watches<br>
+        • <strong>Classic:</strong> Traditional dress watches<br>
+        • <strong>Curv:</strong> World's first curved chronograph movement<br>
+        • <strong>Archive Series:</strong> Reissues of historic designs<br>
+        • <strong>Lunar Pilot:</strong> Recreation of the moon watch</p>
+
+        <h2>Today's Bulova</h2>
+        <p>Bulova occupies an interesting niche: a heritage American brand with genuine innovation credentials, now backed by Citizen's technological resources. Prices remain accessible—most models under $1,000—while quality and technology have improved under Japanese ownership.</p>
+        <p>For those who appreciate American watchmaking history and technological achievement over Swiss prestige, Bulova offers compelling value—watches that helped define modern timekeeping, at prices that honor Joseph Bulova's original mission of quality for ordinary people.</p>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore Bulova</h3>
+            <a href="directory-bulova.html" class="cta-btn">View Directory</a>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
+        </div>
     </article>
-    <footer><p>&copy; 2025 Authentic Wrist. All rights reserved.</p></footer>
+
+    <footer>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
+    </footer>
 </body>
 </html>

@@ -1,82 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The History of Bell & Ross: Aviation Instruments for the Wrist — Authentic Wrist</title>
-    <meta name="description" content="Discover Bell & Ross, the brand that brings aviation cockpit instruments to your wrist. From BR 01 to the iconic square case design.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Bell & Ross History — Aviation Instruments for the Wrist | Authentic Wrist</title>
+    <meta name="description" content="Bell & Ross history from 1992 to today. Square aviation-inspired watches, cockpit instrument design, and military partnerships that define the brand.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
-        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
         nav { display: flex; gap: 30px; }
-        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .article-hero { height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%); border-bottom: 1px solid var(--gold); }
-        .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; margin-bottom: 15px; }
-        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-        .article-meta { font-size: 0.85rem; color: var(--silver); }
-        .article-content { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 25px; color: var(--silver); }
-        .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; margin: 45px 0 20px; color: var(--cream); }
-        .lead-paragraph { font-size: 1.15rem; color: var(--cream); border-left: 3px solid var(--gold); padding-left: 25px; margin-bottom: 35px; }
-        .highlight-box { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
-        .highlight-box h4 { color: var(--gold); margin-bottom: 15px; }
-        .highlight-box ul { list-style: none; }
-        .highlight-box li { padding: 8px 0; color: var(--silver); border-bottom: 1px solid var(--slate); }
-        .highlight-box li:last-child { border-bottom: none; }
-        footer { border-top: 1px solid var(--slate); padding: 40px; text-align: center; }
-        footer p { color: var(--silver); font-size: 0.85rem; }
-        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .article-hero h1 { font-size: 2.2rem; } }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">Our Story</a><a href="search.html">Search</a></nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+        </nav>
     </header>
-    <section class="article-hero">
-        <div>
-            <div class="article-category">Brand Story</div>
-            <h1>The History of Bell & Ross</h1>
-            <div class="article-meta">January 2025 · 9 min read</div>
-        </div>
+
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>Bell & Ross</h1>
+        <p style="color: var(--silver);">Since 1992 — Aviation Instruments for the Wrist</p>
     </section>
-    <article class="article-content">
-        <p class="lead-paragraph">Look at a Bell & Ross BR 01 and you see something familiar—a cockpit instrument. That's exactly the point. Founded in 1992, Bell & Ross has built its identity around creating watches inspired by aviation instrumentation.</p>
 
-        <h2>The Beginning</h2>
-        <p>Bruno Belamich (the "Bell") and Carlos Rosillo (the "Ross") met at university and shared a passion for aviation and military equipment. They founded Bell & Ross in Paris with a clear mission: create professional watches meeting the exact specifications of pilots, astronauts, and special forces.</p>
-        <p>Early models were based on Sinn cases and movements—the German tool watch brand with expertise in aviation watches. This partnership provided instant credibility and technical capability.</p>
+    <article class="content">
+        <p>Bell & Ross creates watches that look like they were pulled directly from aircraft cockpits—because that's exactly the intention. The French brand's square-cased BR 01 and BR 03 models replicate the aesthetics and legibility of aviation instruments, creating some of the most instantly recognizable watches in the industry.</p>
 
-        <h2>The Square Icon</h2>
-        <p>In 2005, Bell & Ross introduced the BR 01—a 46mm square watch that looked like it had been lifted directly from an aircraft instrument panel. The circular dial within a square case, four visible screws, and ultra-legible typography became instantly iconic.</p>
-        <p>The design wasn't arbitrary. Each element referenced real cockpit instruments: the round dial in square housing, the screw-mounted bezel, the anti-reflective coating. Form followed function, then became fashion.</p>
+        <h2>Design School Origins (1992)</h2>
+        <p>Bell & Ross was founded in 1992 by Bruno Belamich (Bell) and Carlos Rosillo (Ross), who met while studying at a Paris design school. Their vision was simple but radical: apply professional aerospace instrument design principles to wristwatches.</p>
+        <p>The founding philosophy rested on four pillars: legibility, functionality, precision, and water resistance. Every design decision would serve these principles—no ornamentation for its own sake.</p>
 
-        <h2>Professional Credentials</h2>
-        <p>Bell & Ross watches are designed to meet real professional standards. The brand has worked with the French Air Force, elite diving units, and space agencies. Each collection addresses specific professional needs: pilots, divers, bomb disposal units.</p>
+        <h2>The BR 01: A Cockpit on the Wrist (2005)</h2>
+        <p>Early Bell & Ross watches were round and relatively conventional. The brand's identity crystallized in 2005 with the BR 01—a 46mm square watch that directly mimicked aircraft cockpit instruments.</p>
+        <p>The design was uncompromising: a perfect square case, circular dial within, four screws at the corners, and ultra-legible numerals inspired by actual flight instruments. It was large, bold, and impossible to mistake for anything else.</p>
 
-        <div class="highlight-box">
-            <h4>Key Collections</h4>
-            <ul>
-                <li><strong>BR 01:</strong> The original 46mm cockpit instrument</li>
-                <li><strong>BR 03:</strong> 42mm "urban" version of the icon</li>
-                <li><strong>BR 05:</strong> Integrated bracelet sports watch</li>
-                <li><strong>BR-X1:</strong> Skeletonized chronograph complications</li>
-                <li><strong>Diver:</strong> Professional diving instruments</li>
-            </ul>
+        <div class="highlight">
+            <p><strong>Design DNA:</strong> The BR 01's square-within-a-circle design directly references aircraft altimeters and airspeed indicators. The case screws recall instrument panel mounting. Even the typography comes from actual cockpit instruments. This isn't aviation-inspired styling—it's aviation-derived engineering.</p>
         </div>
 
-        <h2>Chanel Partnership</h2>
-        <p>Since 2018, Bell & Ross has been majority-owned by Chanel, providing resources for independent operation while maintaining the brand's tool-watch identity. The partnership has enabled investments in manufacture capabilities.</p>
-        <p>For pilots, aviation enthusiasts, and those who appreciate purpose-driven design, Bell & Ross offers something distinctive: watches that look like instruments because they're designed to function as instruments.</p>
+        <h2>Professional Partnerships</h2>
+        <p>Bell & Ross legitimized its professional credentials through actual military and aviation partnerships:</p>
+        <p>• <strong>French Air Force:</strong> Official supplier to the Patrouille de France aerobatic team<br>
+        • <strong>Space:</strong> Watches qualified for space flight conditions<br>
+        • <strong>Bomb disposal:</strong> Non-magnetic watches for explosive ordnance teams<br>
+        • <strong>Elite military units:</strong> Specialized models for various special forces</p>
+        <p>These aren't marketing partnerships—they're genuine professional tool supplies that validate the brand's functional design approach.</p>
+
+        <h2>The BR 03: More Wearable</h2>
+        <p>Recognizing that 46mm was too large for many wrists, Bell & Ross introduced the BR 03 in a more manageable 42mm size. The design language remained identical—square case, circular dial, corner screws—but the smaller dimensions opened the brand to a wider audience.</p>
+        <p>The BR 03 became the entry point for most collectors, offering the full Bell & Ross aesthetic in a size suitable for daily wear.</p>
+
+        <h2>Expanding the Instrument Panel</h2>
+        <p>Bell & Ross has expanded its cockpit instrument approach across multiple functions:</p>
+        <p>• <strong>BR 01/03:</strong> Core time-only and chronograph models<br>
+        • <strong>BR 05:</strong> Integrated bracelet, sportier aesthetic<br>
+        • <strong>BR-X1:</strong> Skeletonized, technical showcases<br>
+        • <strong>BR-X2:</strong> Tourbillon complications<br>
+        • <strong>Vintage:</strong> Round cases with retro aviation styling<br>
+        • <strong>Diver:</strong> Square-cased dive watches to 1000m</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1992</span>
+                <p>Bruno Belamich and Carlos Rosillo found Bell & Ross</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1997</span>
+                <p>Partnership with Sinn begins (movements and cases)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2002</span>
+                <p>Chanel acquires minority stake; production moves to Switzerland</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2005</span>
+                <p>BR 01 launches—the iconic square instrument watch</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2009</span>
+                <p>BR 03 (42mm) expands accessibility</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2019</span>
+                <p>BR 05 introduces integrated bracelet design</p>
+            </div>
+        </div>
+
+        <h2>The Chanel Connection</h2>
+        <p>In 2002, Chanel acquired a minority stake in Bell & Ross. The luxury house's investment enabled Swiss manufacturing and improved finishing while preserving Bell & Ross's independent identity and design direction. It's an unusual partnership—fashion luxury supporting tool watch authenticity—but it's worked.</p>
+
+        <h2>Criticisms and Responses</h2>
+        <p>Bell & Ross faces criticism for bold sizing and distinctive aesthetics that aren't for everyone. The brand embraces this polarization: these are tool watches designed for specific purposes, not universal crowd-pleasers. The design either resonates or it doesn't.</p>
+        <p>The brand also acknowledges that while watches are designed for professionals, most buyers are enthusiasts who appreciate the aesthetic and engineering philosophy without needing bomb-disposal resistance.</p>
+
+        <h2>Today's Bell & Ross</h2>
+        <p>Bell & Ross produces from its La Chaux-de-Fonds facility, using movements from Sellita and, for higher-end pieces, proprietary calibres. Annual production is estimated at 15,000-20,000 pieces.</p>
+        <p>The brand occupies a unique position: more design-driven than traditional tool watch makers, more functionally serious than fashion brands. For those drawn to aviation aesthetics and uncompromising legibility, Bell & Ross offers something no competitor matches—watches that truly look like cockpit instruments.</p>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore Bell & Ross</h3>
+            <a href="directory-bell-ross.html" class="cta-btn">View Directory</a>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
+        </div>
     </article>
-    <footer><p>&copy; 2025 Authentic Wrist. All rights reserved.</p></footer>
+
+    <footer>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
+    </footer>
 </body>
 </html>

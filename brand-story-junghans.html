@@ -1,83 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The History of Junghans — Authentic Wrist</title>
-    <meta name="description" content="Discover the history of Junghans, Germany's largest watchmaker and creator of the iconic Max Bill Bauhaus designs.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Junghans History — Max Bill, Bauhaus & German Precision | Authentic Wrist</title>
+    <meta name="description" content="Junghans history from 1861 to today. The iconic Max Bill Bauhaus design, world's first radio-controlled watch, and Germany's largest watchmaker.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
-        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
         nav { display: flex; gap: 30px; }
-        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .article-hero { height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%); border-bottom: 1px solid var(--gold); }
-        .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; margin-bottom: 15px; }
-        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-        .article-meta { font-size: 0.85rem; color: var(--silver); }
-        .article-content { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 25px; color: var(--silver); }
-        .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; margin: 50px 0 25px; color: var(--cream); }
-        .lead-paragraph { font-size: 1.2rem; color: var(--cream); border-left: 3px solid var(--gold); padding-left: 25px; margin-bottom: 40px; }
-        footer { border-top: 1px solid var(--slate); padding: 40px; text-align: center; margin-top: 60px; }
-        footer p { color: var(--silver); font-size: 0.85rem; }
-        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .article-hero h1 { font-size: 2.5rem; } }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">Our Story</a><a href="search.html">Search</a></nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+        </nav>
     </header>
-    <section class="article-hero">
-        <div>
-            <div class="article-category">Brand Story</div>
-            <h1>The History of Junghans</h1>
-            <div class="article-meta">January 2025 · 10 min read</div>
-        </div>
+
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>Junghans</h1>
+        <p style="color: var(--silver);">Since 1861 — German Precision Meets Bauhaus Design</p>
     </section>
-    <article class="article-content">
-        <p class="lead-paragraph">Junghans was once the world's largest clock and watch manufacturer, producing millions of timepieces annually. Today, the brand is celebrated for its Bauhaus-inspired Max Bill collection—perhaps the purest expression of German design philosophy on a wrist.</p>
-        
-        <h2>Black Forest Giant</h2>
-        <p>Erhard Junghans founded his company in 1861 in Schramberg, in Germany's Black Forest region. Starting with clock components, Junghans grew rapidly by embracing American mass production techniques—unusual for German manufacturers who favored traditional craft methods.</p>
-        <p>By the early 20th century, Junghans had become the world's largest clock manufacturer, employing over 3,000 workers and producing millions of timepieces annually. Their factory in Schramberg was a small city unto itself.</p>
-        
-        <h2>Precision and Innovation</h2>
-        <p>Junghans wasn't just about volume—they pursued precision. Their chronometers earned top marks in observatory trials, and they developed sophisticated movement technologies. The company produced chronographs for the German military and timing equipment for the 1936 and 1972 Olympic Games.</p>
-        <p>This combination of scale and quality made Junghans a powerhouse of German industry.</p>
-        
-        <h2>The Max Bill Collaboration</h2>
-        <p>In 1956, Junghans began a collaboration that would define their modern identity. Max Bill, a Swiss architect, designer, and former Bauhaus student, designed a series of kitchen clocks and wall clocks for Junghans. In 1961, he created a wristwatch using the same design principles.</p>
-        <p>The Max Bill watch embodied Bauhaus ideals: pure functionality expressed through clean geometry, legible typography, and the absence of unnecessary decoration. Every element served a purpose; nothing was arbitrary.</p>
-        
-        <h2>The Max Bill Design</h2>
-        <p>The Max Bill watch featured a slightly domed crystal, a slim case, numerals designed specifically for the dial, and hands that Bill himself specified in exact proportions. The result was a watch of extraordinary visual harmony—each element in perfect balance with the others.</p>
-        <p>Unlike retro designs that merely evoke a period aesthetic, the Max Bill represents authentic mid-century modernism, designed by one of the movement's masters and still produced essentially unchanged.</p>
-        
-        <h2>Quartz and Crisis</h2>
-        <p>The quartz revolution hit Junghans hard. The company that had built its reputation on mechanical precision struggled to compete with cheap Asian quartz watches. Through the 1970s and 1980s, Junghans underwent multiple ownership changes and restructurings.</p>
-        <p>However, Junghans also innovated in quartz technology, developing radio-controlled watches that automatically synchronized with atomic clock signals—ensuring perfect accuracy without any user adjustment.</p>
-        
-        <h2>Revival and Focus</h2>
-        <p>In 2009, the company was acquired by Hans-Jochem and Hannes Steim, members of a local Schramberg business family. Under their ownership, Junghans refocused on its strengths: the Max Bill collection, German manufacturing, and a combination of mechanical and innovative quartz technologies.</p>
-        
-        <h2>Meister Collection</h2>
-        <p>The Meister collection represents Junghans' more traditional German watchmaking, with automatic movements, refined finishing, and classic proportions. These watches appeal to buyers who appreciate German engineering without the stark minimalism of Max Bill designs.</p>
-        
-        <h2>Form Collection</h2>
-        <p>The Form collection brings Max Bill's design philosophy to more accessible price points, offering Bauhaus aesthetics with quartz movements. These watches make the design legacy available to buyers who prioritize the visual experience over mechanical complexity.</p>
-        
-        <h2>Junghans Today</h2>
-        <p>Junghans continues to manufacture in Schramberg, maintaining connections to both their industrial heritage and design legacy. For buyers seeking authentic Bauhaus design—not an interpretation or homage, but the genuine article—Junghans offers something no other brand can: Max Bill's original vision, still in production, still made in Germany.</p>
+
+    <article class="content">
+        <p>Junghans was once the world's largest clock manufacturer, producing millions of timepieces from its Black Forest factory. Today, it's best known for the Max Bill collection—watches designed by a Bauhaus master that have become icons of modernist design. From industrial giant to design legend, Junghans represents German watchmaking's evolution.</p>
+
+        <h2>Black Forest Origins (1861)</h2>
+        <p>Erhard Junghans founded his company in Schramberg, deep in Germany's Black Forest clockmaking region, in 1861. Initially producing clock components, Junghans soon expanded to complete clocks and, by 1866, pocket watches.</p>
+        <p>The company grew rapidly through industrialization and efficiency. By 1903, Junghans employed over 3,000 workers and was the largest clock manufacturer in the world, producing millions of timepieces annually.</p>
+
+        <h2>Olympic Timekeeping</h2>
+        <p>Junghans's precision earned it the role of official timekeeper for the 1936 Berlin Olympics and the 1972 Munich Olympics. The brand developed specialized timing equipment capable of measuring to hundredths of a second—crucial for determining winners in close races.</p>
+        <p>This association with precision sports timing enhanced Junghans's reputation for accuracy and reliability.</p>
+
+        <h2>Max Bill: The Bauhaus Master (1961)</h2>
+        <p>In 1956, Junghans approached Max Bill—Swiss architect, artist, and former Bauhaus student—to design a kitchen clock. The collaboration expanded, and in 1961, Bill created his first wristwatch designs for Junghans.</p>
+        <p>Max Bill's watches embodied Bauhaus principles: clean typography, minimal ornamentation, perfect proportions, and absolute legibility. The dials featured his custom-designed numerals and markers; the cases were pure geometric forms.</p>
+
+        <div class="highlight">
+            <p><strong>Design Museum Icon:</strong> The Max Bill watches are considered among the purest expressions of Bauhaus design in horology. They're displayed in museums worldwide and remain in continuous production—essentially unchanged—over 60 years later.</p>
+        </div>
+
+        <h2>Radio-Controlled Innovation (1990)</h2>
+        <p>In 1990, Junghans introduced the Mega 1—the world's first radio-controlled wristwatch. The watch received time signals from atomic clocks, automatically setting itself to perfect accuracy. No manual adjustment was ever needed.</p>
+        <p>This technology, which Junghans continued to develop, represented a different approach to precision than mechanical movements: perfect accuracy through technology rather than craftsmanship.</p>
+
+        <h2>Decline and Revival</h2>
+        <p>The quartz crisis hit Junghans hard. The company that once employed thousands shrank dramatically through the 1970s and 1980s. Ownership changed hands multiple times, and the brand's future seemed uncertain.</p>
+        <p>Revival came through focus. Rather than competing across all segments, Junghans emphasized its design heritage—particularly the Max Bill collection—and German manufacturing quality. The brand shed volume ambitions to concentrate on meaningful products.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1861</span>
+                <p>Erhard Junghans founds company in Schramberg</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1903</span>
+                <p>Becomes world's largest clock manufacturer</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1936</span>
+                <p>Official timekeeper, Berlin Olympics</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1961</span>
+                <p>Max Bill wristwatch designs debut</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1972</span>
+                <p>Official timekeeper, Munich Olympics</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1990</span>
+                <p>Mega 1—first radio-controlled wristwatch</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2009</span>
+                <p>Acquired by Uhrenfabrik Junghans; refocus on heritage</p>
+            </div>
+        </div>
+
+        <h2>The Collections Today</h2>
+        <p>Modern Junghans focuses on several distinct lines:</p>
+        <p>• <strong>Max Bill:</strong> The icon—automatic, hand-wound, and quartz versions of Bill's original designs<br>
+        • <strong>Meister:</strong> Classical German watchmaking with traditional finishing<br>
+        • <strong>Form:</strong> Contemporary minimalism for daily wear<br>
+        • <strong>Force:</strong> Sporty, robust designs<br>
+        • <strong>Spektrum:</strong> Colorful, accessible pieces</p>
+
+        <h2>Max Bill's Enduring Legacy</h2>
+        <p>Max Bill died in 1994, but his Junghans designs live on virtually unchanged. The watches remain in the permanent collections of design museums; they're specified by architects who appreciate their purity; they're worn by those who believe less is more.</p>
+        <p>In an industry often obsessed with complications and embellishment, Max Bill Junghans watches prove that restraint itself can be revolutionary.</p>
+
+        <h2>Today's Junghans</h2>
+        <p>Under German ownership since 2009, Junghans manufactures in Schramberg—the same Black Forest town where Erhard Junghans began. Production is modest compared to the brand's industrial heyday, but quality and design focus have never been higher.</p>
+        <p>For those seeking Bauhaus authenticity at accessible prices (most models fall between $500-$2,500), Junghans offers something no other brand can: designs by an actual Bauhaus master, in continuous production for over six decades.</p>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore Junghans</h3>
+            <a href="directory-junghans.html" class="cta-btn">View Directory</a>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
+        </div>
     </article>
-    <footer><p>&copy; 2025 Authentic Wrist. All rights reserved.</p></footer>
+
+    <footer>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
+    </footer>
 </body>
 </html>

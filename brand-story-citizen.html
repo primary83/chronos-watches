@@ -1,86 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The History of Citizen — Authentic Wrist</title>
-    <meta name="description" content="Discover the history of Citizen, the Japanese watchmaker that pioneered Eco-Drive technology and brought innovation to every wrist.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Citizen History — Eco-Drive Innovation & Japanese Precision | Authentic Wrist</title>
+    <meta name="description" content="Citizen history from 1918 to today. Eco-Drive solar technology, atomic timekeeping, The Citizen luxury line, and Japan's largest watchmaker.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
-        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
         nav { display: flex; gap: 30px; }
-        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .article-hero { height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%); border-bottom: 1px solid var(--gold); }
-        .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; margin-bottom: 15px; }
-        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-        .article-meta { font-size: 0.85rem; color: var(--silver); }
-        .article-content { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 25px; color: var(--silver); }
-        .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; margin: 50px 0 25px; color: var(--cream); }
-        .lead-paragraph { font-size: 1.2rem; color: var(--cream); border-left: 3px solid var(--gold); padding-left: 25px; margin-bottom: 40px; }
-        footer { border-top: 1px solid var(--slate); padding: 40px; text-align: center; margin-top: 60px; }
-        footer p { color: var(--silver); font-size: 0.85rem; }
-        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .article-hero h1 { font-size: 2.5rem; } }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">Our Story</a><a href="search.html">Search</a></nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+        </nav>
     </header>
-    <section class="article-hero">
-        <div>
-            <div class="article-category">Brand Story</div>
-            <h1>The History of Citizen</h1>
-            <div class="article-meta">January 2025 · 10 min read</div>
-        </div>
+
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>Citizen</h1>
+        <p style="color: var(--silver);">Since 1918 — Better Starts Now</p>
     </section>
-    <article class="article-content">
-        <p class="lead-paragraph">Citizen's mission has always been to create watches for all the citizens of the world. From pioneering light-powered technology to producing movements for countless brands, Citizen has democratized quality watchmaking for over a century.</p>
-        
-        <h2>Founding Vision: A Watch for Every Citizen</h2>
-        <p>The Citizen Watch Company was established in 1930 in Tokyo, Japan, though its roots trace back to 1918 when the Shokosha Watch Research Institute was founded. The name "Citizen" was chosen to reflect the company's ambition: to create watches that would be accessible to citizens everywhere, not just the wealthy elite.</p>
-        <p>This democratic philosophy has guided Citizen throughout its history, driving the company to innovate constantly in pursuit of reliable, affordable, and technologically advanced timepieces.</p>
-        
-        <h2>Post-War Innovation</h2>
-        <p>After World War II, Citizen emerged as a leader in Japanese watchmaking. In 1956, the company introduced Japan's first shock-resistant watch, followed by the country's first waterproof watch in 1959. These innovations established Citizen as a serious competitor to Swiss watchmakers.</p>
-        <p>The 1960s brought further breakthroughs, including Japan's first electronic watch in 1966. Citizen was positioning itself at the forefront of the technological revolution that would transform the watch industry.</p>
-        
-        <h2>The Quartz Revolution</h2>
-        <p>While Seiko introduced the first commercial quartz watch, Citizen quickly became a major player in quartz technology. In 1976, Citizen unveiled the world's thinnest LCD quartz watch, demonstrating its engineering prowess. The company continued to push boundaries with increasingly thin and accurate quartz movements.</p>
-        <p>Citizen's commitment to quartz excellence led to the development of movements that would be used not only in their own watches but supplied to brands worldwide through their Miyota subsidiary.</p>
-        
-        <h2>Eco-Drive: The Light-Powered Revolution</h2>
-        <p>In 1976, Citizen introduced a technology that would become their signature innovation: the light-powered watch, initially called the Crystron Solar Cell. This evolved into what we now know as Eco-Drive, officially launched in 1995.</p>
-        <p>Eco-Drive watches convert any light source—natural or artificial—into energy, eliminating the need for battery replacements. A fully charged Eco-Drive watch can run for months in complete darkness. This technology was revolutionary, combining environmental consciousness with practical convenience.</p>
-        <p>Today, Eco-Drive remains Citizen's core technology, featured across their entire range from affordable everyday watches to their high-end Chronomaster collection.</p>
-        
-        <h2>The Chronomaster and High Accuracy</h2>
-        <p>Citizen's Chronomaster line represents their pursuit of ultimate precision. The Caliber 0100, introduced in 2019, achieves an astonishing accuracy of ±1 second per year—making it the world's most accurate quartz watch. This movement uses a unique AT-cut crystal oscillating at 8.4 MHz, far higher than conventional quartz watches.</p>
-        <p>The Chronomaster series demonstrates that Citizen can compete at the highest levels of watchmaking while maintaining their commitment to innovative technology.</p>
-        
-        <h2>Promaster: Tools for Professionals</h2>
-        <p>The Promaster collection showcases Citizen's expertise in creating professional-grade tool watches. Launched in 1989, Promaster includes dive watches rated to 1000 meters, pilot watches with aviation-specific functions, and land watches built for extreme conditions.</p>
-        <p>These aren't just styled to look tough—they're ISO-certified instruments used by actual divers, pilots, and adventurers worldwide.</p>
-        
-        <h2>Satellite Wave and GPS Technology</h2>
-        <p>In 2011, Citizen introduced Satellite Wave technology, allowing watches to receive time signals from GPS satellites anywhere on Earth. This means perfect accuracy regardless of location, with automatic time zone adjustment. The technology represents another first for Citizen and continues their tradition of practical innovation.</p>
-        
-        <h2>Miyota: Powering the World</h2>
-        <p>Through their Miyota subsidiary, Citizen produces movements used by hundreds of watch brands worldwide. When you see an affordable automatic or quartz watch, there's a good chance it contains a Miyota movement. This makes Citizen one of the most important movement manufacturers in the world, even if the Citizen name doesn't appear on the dial.</p>
-        
-        <h2>Citizen Today</h2>
-        <p>Modern Citizen offers an incredibly diverse range, from sub-$100 Eco-Drive watches to the premium Chronomaster line. They've also expanded through acquisitions, bringing Bulova and Frederique Constant into the Citizen family.</p>
-        <p>The company remains committed to their founding vision: quality watches accessible to everyone. Whether you're buying your first watch or adding a high-accuracy piece to a collection, Citizen offers genuine value and proven technology that serves millions of citizens worldwide.</p>
+
+    <article class="content">
+        <p>Citizen is Japan's largest watchmaker and the world's largest watch manufacturer by volume. But beyond scale, Citizen has pioneered technologies that changed how we think about timekeeping: Eco-Drive solar power, atomic radio synchronization, and satellite-synced watches that work anywhere on Earth. Innovation, not just production, defines this century-old company.</p>
+
+        <h2>Tokyo Origins (1918)</h2>
+        <p>Citizen began as the Shokosha Watch Research Institute in Tokyo in 1918, founded to produce quality watches domestically rather than rely on imports. The first pocket watch appeared in 1924, named "Citizen" by Tokyo's mayor Shinpei Goto to reflect his hope that the watches would be widely owned by citizens.</p>
+        <p>Wristwatch production began in 1931, and Citizen grew steadily through Japan's industrialization, surviving World War II and rebuilding to become a major force in post-war Japanese manufacturing.</p>
+
+        <h2>Eco-Drive Revolution (1976)</h2>
+        <p>Citizen's defining innovation came in 1976: the first analog quartz watch powered by light. Originally marketed under various names before being unified as "Eco-Drive" in 1995, this technology converts any light—natural or artificial—into electrical energy stored in a rechargeable cell.</p>
+        <p>Eco-Drive watches never need battery replacements. A fully charged watch can run for months in complete darkness. The technology was revolutionary: sustainable, practical, and virtually maintenance-free.</p>
+
+        <div class="highlight">
+            <p><strong>How Eco-Drive Works:</strong> A solar cell beneath the dial converts light into electricity, which charges a lithium-ion cell. The system is remarkably efficient—indoor lighting is often sufficient. Citizen has produced over 500 million Eco-Drive movements, preventing billions of disposable batteries from entering landfills.</p>
+        </div>
+
+        <h2>Atomic Timekeeping (1993)</h2>
+        <p>In 1993, Citizen introduced the world's first multi-band atomic radio-controlled watch. These timepieces receive signals from atomic clock transmitters (in the US, Japan, Germany, and UK), automatically setting themselves to perfect accuracy.</p>
+        <p>Combined with Eco-Drive, this created watches that are always accurate and never need batteries—the ultimate "set and forget" timekeeping solution.</p>
+
+        <h2>Satellite Wave (2011)</h2>
+        <p>Radio-controlled watches have a limitation: they only work within range of atomic clock transmitters. In 2011, Citizen solved this with Satellite Wave technology—watches that receive time signals directly from GPS satellites.</p>
+        <p>Satellite Wave watches work anywhere on Earth with a view of the sky, automatically adjusting to local time zones. The technology was miniaturized progressively, with the 2014 CC3000 claiming the title of world's thinnest satellite-synced watch.</p>
+
+        <h2>The Citizen: Haute Horlogerie</h2>
+        <p>While Citizen is primarily known for accessible technology, the company produces a high-end line called simply "The Citizen." These watches feature:</p>
+        <p>• <strong>Annual accuracy of ±5 seconds:</strong> Among the most accurate quartz movements ever made<br>
+        • <strong>Washi paper dials:</strong> Traditional Japanese paper craft<br>
+        • <strong>Hand-assembled movements:</strong> Built by certified master watchmakers<br>
+        • <strong>Exceptional finishing:</strong> Zaratsu polishing techniques</p>
+        <p>The Citizen represents Japanese perfectionism applied to quartz technology—proof that high-accuracy quartz can be as artisanal as mechanical watchmaking.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1918</span>
+                <p>Shokosha Watch Research Institute founded in Tokyo</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1924</span>
+                <p>First "Citizen" branded pocket watch</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1976</span>
+                <p>First light-powered analog quartz watch</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1993</span>
+                <p>First multi-band atomic radio-controlled watch</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1995</span>
+                <p>"Eco-Drive" name unified globally</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2011</span>
+                <p>Satellite Wave GPS-synced watches debut</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2016</span>
+                <p>Acquires Frederique Constant and Arnold & Son</p>
+            </div>
+        </div>
+
+        <h2>The Citizen Watch Group</h2>
+        <p>Citizen has grown into a conglomerate that includes:</p>
+        <p>• <strong>Citizen:</strong> Core brand with Eco-Drive technology<br>
+        • <strong>Bulova:</strong> American heritage brand (acquired 2008)<br>
+        • <strong>Frederique Constant:</strong> Swiss manufacture (acquired 2016)<br>
+        • <strong>Arnold & Son:</strong> High-end complications (acquired 2016)<br>
+        • <strong>Campanola:</strong> Japanese luxury collection<br>
+        • <strong>La Joux-Perret:</strong> Swiss movement manufacturer</p>
+        <p>This portfolio spans from accessible Eco-Drive to haute horlogerie, all under Citizen ownership.</p>
+
+        <h2>Promaster: Professional Instruments</h2>
+        <p>The Promaster line represents Citizen's professional tool watches: dive watches to 1000m, aviation chronographs with slide rules, and land models with compass/altimeter functions. All incorporate Eco-Drive technology, meaning these professional instruments never need battery changes—even in demanding conditions.</p>
+
+        <h2>Today's Citizen</h2>
+        <p>Citizen manufactures over 300 million watches annually across its brands, making it the world's largest watchmaker by volume. Yet volume hasn't prevented innovation: the company continues developing new technologies including Super Titanium (hardened, scratch-resistant titanium) and increasingly miniaturized satellite receivers.</p>
+        <p>For those who value practical innovation over tradition, Citizen offers timepieces that are perpetually powered, permanently accurate, and essentially maintenance-free—the logical endpoint of functional watchmaking.</p>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore Citizen</h3>
+            <a href="directory-citizen.html" class="cta-btn">View Directory</a>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
+        </div>
     </article>
-    <footer><p>&copy; 2025 Authentic Wrist. All rights reserved.</p></footer>
+
+    <footer>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
+    </footer>
 </body>
 </html>
