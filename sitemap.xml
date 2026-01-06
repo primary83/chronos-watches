@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://www.authenticwrist.com/</loc><lastmod>2026-01-04</lastmod><priority>1.0</priority></url>
+<url><loc>https://www.authenticwrist.com/</loc><lastmod>2026-01-06</lastmod><priority>1.0</priority></url>
 <url><loc>https://www.authenticwrist.com/blog.html</loc><lastmod>2026-01-04</lastmod><priority>0.9</priority></url>
 <url><loc>https://www.authenticwrist.com/about.html</loc><lastmod>2026-01-04</lastmod><priority>0.7</priority></url>
 <url><loc>https://www.authenticwrist.com/search.html</loc><lastmod>2026-01-04</lastmod><priority>0.7</priority></url>
 <url><loc>https://www.authenticwrist.com/deals.html</loc><lastmod>2026-01-04</lastmod><priority>0.8</priority></url>
 <!-- DIRECTORIES LANDING PAGE -->
-<url><loc>https://www.authenticwrist.com/directories.html</loc><lastmod>2026-01-05</lastmod><priority>0.9</priority></url>
-<!-- BRAND DIRECTORIES -->
+<url><loc>https://www.authenticwrist.com/directories.html</loc><lastmod>2026-01-06</lastmod><priority>0.9</priority></url>
+<!-- BRAND DIRECTORIES - EXISTING -->
 <url><loc>https://www.authenticwrist.com/directory-rolex.html</loc><lastmod>2026-01-05</lastmod><priority>0.9</priority></url>
 <url><loc>https://www.authenticwrist.com/directory-omega.html</loc><lastmod>2026-01-05</lastmod><priority>0.9</priority></url>
 <url><loc>https://www.authenticwrist.com/directory-tudor.html</loc><lastmod>2026-01-05</lastmod><priority>0.9</priority></url>
 <url><loc>https://www.authenticwrist.com/directory-cartier.html</loc><lastmod>2026-01-05</lastmod><priority>0.9</priority></url>
 <url><loc>https://www.authenticwrist.com/directory-tag-heuer.html</loc><lastmod>2026-01-05</lastmod><priority>0.9</priority></url>
+<!-- NEW LUXURY BRAND DIRECTORIES - JAN 2026 -->
+<url><loc>https://www.authenticwrist.com/directory-vacheron-constantin.html</loc><lastmod>2026-01-05</lastmod><priority>0.9</priority></url>
+<url><loc>https://www.authenticwrist.com/directory-a-lange-sohne.html</loc><lastmod>2026-01-05</lastmod><priority>0.9</priority></url>
+<url><loc>https://www.authenticwrist.com/directory-chopard.html</loc><lastmod>2026-01-05</lastmod><priority>0.9</priority></url>
+<url><loc>https://www.authenticwrist.com/directory-hublot.html</loc><lastmod>2026-01-05</lastmod><priority>0.9</priority></url>
+<url><loc>https://www.authenticwrist.com/directory-blancpain.html</loc><lastmod>2026-01-05</lastmod><priority>0.9</priority></url>
+<url><loc>https://www.authenticwrist.com/directory-girard-perregaux.html</loc><lastmod>2026-01-05</lastmod><priority>0.9</priority></url>
+<!-- NEW SMART WATCH DIRECTORIES - JAN 2026 -->
+<url><loc>https://www.authenticwrist.com/directory-smart-watches.html</loc><lastmod>2026-01-06</lastmod><priority>0.9</priority></url>
+<url><loc>https://www.authenticwrist.com/directory-apple-watch.html</loc><lastmod>2026-01-06</lastmod><priority>0.9</priority></url>
+<url><loc>https://www.authenticwrist.com/directory-samsung-galaxy-watch.html</loc><lastmod>2026-01-06</lastmod><priority>0.9</priority></url>
+<url><loc>https://www.authenticwrist.com/directory-garmin.html</loc><lastmod>2026-01-06</lastmod><priority>0.9</priority></url>
+<url><loc>https://www.authenticwrist.com/directory-fitbit.html</loc><lastmod>2026-01-06</lastmod><priority>0.9</priority></url>
+<url><loc>https://www.authenticwrist.com/directory-google-pixel-watch.html</loc><lastmod>2026-01-06</lastmod><priority>0.9</priority></url>
+<url><loc>https://www.authenticwrist.com/directory-amazfit.html</loc><lastmod>2026-01-06</lastmod><priority>0.9</priority></url>
 <!-- NEW BATCH 8-11 ARTICLES -->
 <url><loc>https://www.authenticwrist.com/blog-best-wedding-watches.html</loc><lastmod>2026-01-04</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/blog-best-watches-teens.html</loc><lastmod>2026-01-04</lastmod><priority>0.8</priority></url>
@@ -86,7 +101,7 @@
 <url><loc>https://www.authenticwrist.com/guide-watch-service-cost.html</loc><lastmod>2026-01-04</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/blog-water-resistance-ratings.html</loc><lastmod>2026-01-04</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/blog-how-to-clean-watch.html</loc><lastmod>2026-01-04</lastmod><priority>0.8</priority></url>
-<!-- BRAND STORIES -->
+<!-- BRAND STORIES - EXISTING -->
 <url><loc>https://www.authenticwrist.com/brand-story-rolex.html</loc><lastmod>2026-01-04</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/brand-story-omega.html</loc><lastmod>2026-01-04</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/brand-story-cartier.html</loc><lastmod>2026-01-04</lastmod><priority>0.8</priority></url>
@@ -106,6 +121,13 @@
 <url><loc>https://www.authenticwrist.com/brand-story-oris.html</loc><lastmod>2026-01-04</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/brand-story-sinn.html</loc><lastmod>2026-01-04</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/brand-story-casio.html</loc><lastmod>2026-01-04</lastmod><priority>0.8</priority></url>
+<!-- NEW BRAND STORIES - LUXURY JAN 2026 -->
+<url><loc>https://www.authenticwrist.com/brand-story-vacheron-constantin.html</loc><lastmod>2026-01-05</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-a-lange-sohne.html</loc><lastmod>2026-01-05</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-chopard.html</loc><lastmod>2026-01-05</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-hublot.html</loc><lastmod>2026-01-05</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-blancpain.html</loc><lastmod>2026-01-05</lastmod><priority>0.8</priority></url>
+<url><loc>https://www.authenticwrist.com/brand-story-girard-perregaux.html</loc><lastmod>2026-01-05</lastmod><priority>0.8</priority></url>
 <!-- COMPARISONS -->
 <url><loc>https://www.authenticwrist.com/comparison-tudor-vs-omega.html</loc><lastmod>2026-01-04</lastmod><priority>0.8</priority></url>
 <url><loc>https://www.authenticwrist.com/comparison-seiko-vs-orient.html</loc><lastmod>2026-01-04</lastmod><priority>0.8</priority></url>
