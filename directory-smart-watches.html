@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Watch Directory — Apple, Samsung, Garmin & More | Authentic Wrist</title>
+    <meta name="description" content="Complete smart watch directory. Apple Watch, Samsung Galaxy Watch, Garmin, Fitbit, Google Pixel Watch, Amazfit. Compare specs, features, and prices.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.6; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
+        nav { display: flex; gap: 30px; flex-wrap: wrap; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.3s; }
+        nav a:hover { color: var(--gold); }
+        .breadcrumb { padding: 20px 40px; font-size: 0.85rem; color: var(--silver); }
+        .breadcrumb a { color: var(--gold); text-decoration: none; }
+        .hero { padding: 60px 40px; max-width: 1000px; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero p { color: var(--silver); font-size: 1.1rem; max-width: 800px; margin-bottom: 30px; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 40px 80px; }
+        .section-title { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; margin: 50px 0 25px; padding-bottom: 15px; border-bottom: 1px solid var(--slate); color: var(--gold); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; }
+        .card { background: var(--charcoal); border: 1px solid var(--slate); padding: 30px; text-decoration: none; color: var(--cream); transition: all 0.3s ease; }
+        .card:hover { border-color: var(--gold); transform: translateY(-3px); }
+        .card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 10px; }
+        .card p { color: var(--silver); font-size: 0.9rem; margin-bottom: 15px; line-height: 1.6; }
+        .card .meta { display: flex; gap: 20px; font-size: 0.8rem; }
+        .card .meta span { color: var(--gold); }
+        .comparison { background: var(--charcoal); padding: 40px; margin-top: 50px; border: 1px solid var(--slate); }
+        .comparison h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 20px; color: var(--gold); }
+        .comparison-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .comparison-table th, .comparison-table td { padding: 15px; text-align: left; border-bottom: 1px solid var(--slate); font-size: 0.9rem; }
+        .comparison-table th { color: var(--gold); font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.75rem; }
+        .comparison-table td { color: var(--silver); }
+        .comparison-table tr:hover td { color: var(--cream); }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        footer a { color: var(--gold); text-decoration: none; }
+        @media (max-width: 768px) { 
+            header, .breadcrumb, .hero, .container { padding-left: 20px; padding-right: 20px; } 
+            nav { gap: 15px; }
+            .comparison { padding: 20px; overflow-x: auto; }
+            .comparison-table { font-size: 0.8rem; }
+            .comparison-table th, .comparison-table td { padding: 10px 8px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">AUTHENTIC WRIST</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+            <a href="deals.html">Deals</a>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> → <a href="directories.html">Directories</a> → Smart Watches
+    </div>
+
+    <section class="hero">
+        <h1>Smart Watch Directory</h1>
+        <p>Your complete guide to the best smart watches. Compare Apple Watch, Samsung Galaxy Watch, Garmin, Fitbit, and more. Find the perfect blend of style, health tracking, and smart features for your lifestyle.</p>
+    </section>
+
+    <div class="container">
+
+        <h2 class="section-title">Shop by Brand</h2>
+        <div class="grid">
+            <a href="directory-apple-watch.html" class="card">
+                <h3>Apple Watch</h3>
+                <p>The world's best-selling smart watch. Series 10, Ultra 2, SE, and Hermès editions. Seamless iPhone integration and industry-leading health features.</p>
+                <div class="meta">
+                    <span>15+ models</span>
+                    <span>From $249</span>
+                </div>
+            </a>
+            <a href="directory-samsung-galaxy-watch.html" class="card">
+                <h3>Samsung Galaxy Watch</h3>
+                <p>Premium Android smart watch experience. Galaxy Watch 7, Ultra, Classic with rotating bezel. Best-in-class Super AMOLED displays.</p>
+                <div class="meta">
+                    <span>12+ models</span>
+                    <span>From $199</span>
+                </div>
+            </a>
+            <a href="directory-garmin.html" class="card">
+                <h3>Garmin</h3>
+                <p>Built for athletes and adventurers. Fenix, Forerunner, Venu, Instinct, Epix. Unmatched GPS accuracy and weeks of battery life.</p>
+                <div class="meta">
+                    <span>30+ models</span>
+                    <span>From $199</span>
+                </div>
+            </a>
+            <a href="directory-fitbit.html" class="card">
+                <h3>Fitbit</h3>
+                <p>The pioneer of fitness tracking. Sense, Versa, Charge, Inspire. Industry-leading sleep tracking and stress management.</p>
+                <div class="meta">
+                    <span>10+ models</span>
+                    <span>From $79</span>
+                </div>
+            </a>
+            <a href="directory-google-pixel-watch.html" class="card">
+                <h3>Google Pixel Watch</h3>
+                <p>Google's vision for the perfect smart watch. Pixel Watch 3 with Fitbit health tracking and seamless Google integration.</p>
+                <div class="meta">
+                    <span>5+ models</span>
+                    <span>From $349</span>
+                </div>
+            </a>
+            <a href="directory-amazfit.html" class="card">
+                <h3>Amazfit</h3>
+                <p>Premium features at accessible prices. GTR, GTS, T-Rex, Balance, Cheetah. Exceptional battery life and value.</p>
+                <div class="meta">
+                    <span>20+ models</span>
+                    <span>From $49</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="comparison">
+            <h3>Quick Comparison: Flagship Models</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Price</th>
+                        <th>Battery</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Apple Watch Ultra 2</td>
+                        <td>$799</td>
+                        <td>36 hours</td>
+                        <td>iPhone users, diving</td>
+                    </tr>
+                    <tr>
+                        <td>Samsung Galaxy Watch Ultra</td>
+                        <td>$649</td>
+                        <td>100+ hours GPS</td>
+                        <td>Android users, outdoor</td>
+                    </tr>
+                    <tr>
+                        <td>Garmin Fenix 8 AMOLED</td>
+                        <td>$999</td>
+                        <td>29 days</td>
+                        <td>Serious athletes</td>
+                    </tr>
+                    <tr>
+                        <td>Fitbit Sense 2</td>
+                        <td>$299</td>
+                        <td>6+ days</td>
+                        <td>Stress & wellness</td>
+                    </tr>
+                    <tr>
+                        <td>Google Pixel Watch 3</td>
+                        <td>$399</td>
+                        <td>24 hours</td>
+                        <td>Google ecosystem</td>
+                    </tr>
+                    <tr>
+                        <td>Amazfit T-Rex Ultra</td>
+                        <td>$399</td>
+                        <td>20 days</td>
+                        <td>Budget adventure</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
+        <p style="margin-top: 10px;">
+            <a href="directories.html">All Directories</a> · 
+            <a href="directory-rolex.html">Rolex</a> · 
+            <a href="directory-omega.html">Omega</a>
+        </p>
+    </footer>
+</body>
+</html>
