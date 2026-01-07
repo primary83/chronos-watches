@@ -1,83 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The History of Mido — Authentic Wrist</title>
-    <meta name="description" content="Discover the history of Mido, the Swiss watchmaker inspired by architecture, known for exceptional value and timeless design.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Mido History — Inspired by Architecture | Authentic Wrist</title>
+    <meta name="description" content="Mido history from 1918 to today. The Ocean Star legacy, architectural inspiration, and Switzerland's best-kept secret for value and quality.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
-        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
         nav { display: flex; gap: 30px; }
-        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .article-hero { height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%); border-bottom: 1px solid var(--gold); }
-        .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; margin-bottom: 15px; }
-        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-        .article-meta { font-size: 0.85rem; color: var(--silver); }
-        .article-content { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 25px; color: var(--silver); }
-        .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; margin: 50px 0 25px; color: var(--cream); }
-        .lead-paragraph { font-size: 1.2rem; color: var(--cream); border-left: 3px solid var(--gold); padding-left: 25px; margin-bottom: 40px; }
-        footer { border-top: 1px solid var(--slate); padding: 40px; text-align: center; margin-top: 60px; }
-        footer p { color: var(--silver); font-size: 0.85rem; }
-        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .article-hero h1 { font-size: 2.5rem; } }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">Our Story</a><a href="search.html">Search</a></nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+        </nav>
     </header>
-    <section class="article-hero">
-        <div>
-            <div class="article-category">Brand Story</div>
-            <h1>The History of Mido</h1>
-            <div class="article-meta">January 2025 · 9 min read</div>
-        </div>
+
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>Mido</h1>
+        <p style="color: var(--silver);">Since 1918 — Inspired by Architecture</p>
     </section>
-    <article class="article-content">
-        <p class="lead-paragraph">Mido draws inspiration from the world's greatest architectural achievements. The Sydney Opera House, the Eiffel Tower, the Colosseum—these timeless structures inform Mido's design philosophy: watches that endure beyond fashion, built to last like the monuments they celebrate.</p>
-        
-        <h2>A Name Meaning "I Measure"</h2>
-        <p>Mido was founded in 1918 by George Schaeren in Le Locle, Switzerland, at the heart of the Swiss watchmaking region. The name comes from the Spanish "Yo mido," meaning "I measure"—a declaration of the brand's fundamental purpose. From the beginning, Mido focused on creating reliable, well-designed watches accessible to a broad audience.</p>
-        
-        <h2>Early Innovation</h2>
-        <p>Mido established itself as an innovator early on. In the 1930s, they introduced the first water-resistant automatic watch with a crown secured by a cork gasket. This wasn't just a technical achievement—it showed Mido's commitment to practical innovation that served wearers' actual needs.</p>
-        <p>The brand's early success was built on combining Swiss quality with accessible pricing, a formula that continues to define Mido today.</p>
-        
+
+    <article class="content">
+        <p>Mido is Switzerland's best-kept secret—a century-old brand offering exceptional value with in-house movements, sapphire crystals, and 80-hour power reserves at prices that embarrass the competition. While better-known Swatch Group siblings like Omega and Longines attract attention, Mido quietly delivers remarkable watches for those who know where to look.</p>
+
+        <h2>The Spanish Name (1918)</h2>
+        <p>George Schaeren founded Mido in Zurich in 1918. The name comes from the Spanish "yo mido"—"I measure"—reflecting the brand's precision focus. Schaeren was an innovator who believed watches should be both beautiful and functional, waterproof and dust-proof in an era when neither was standard.</p>
+        <p>Early Mido watches gained reputation for reliability in harsh conditions, establishing the practical philosophy that continues today.</p>
+
+        <h2>The Aquadura System</h2>
+        <p>Mido developed the Aquadura crown sealing system—using natural cork (like wine bottles) to ensure water resistance. This elegant, effective solution demonstrated Mido's approach: practical innovation rather than technological showmanship.</p>
+        <p>The system worked so well that Mido still uses cork gaskets in many watches today—technology from the 1930s that remains effective nearly a century later.</p>
+
+        <h2>Ocean Star: The Diver's Icon (1944)</h2>
+        <p>The Ocean Star appeared in 1944, establishing Mido's dive watch credentials. The name suggested adventure and reliability—qualities the watch delivered consistently. Over eight decades, Ocean Star has evolved while maintaining its core identity as an accessible, capable dive watch.</p>
+        <p>Modern Ocean Star models offer 200m water resistance, ceramic bezels, and Caliber 80 movements with 80-hour power reserves—specifications matching watches costing three times more.</p>
+
+        <div class="highlight">
+            <p><strong>Caliber 80:</strong> Mido's signature is the Caliber 80 movement family—based on ETA architecture but modified to deliver 80-hour power reserves. This means you can leave your watch unworn over a long weekend and find it still running Monday morning. Few competitors at Mido's price point offer this convenience.</p>
+        </div>
+
         <h2>Architectural Inspiration</h2>
-        <p>Mido's unique design philosophy centers on architecture. Each collection draws inspiration from iconic structures, translating architectural elements into watch design. The concept isn't merely aesthetic—it reflects Mido's belief that watches, like great buildings, should be designed to stand the test of time.</p>
-        <p>This architectural connection gives Mido collections a coherent identity that sets them apart from competitors who simply follow fashion trends.</p>
-        
-        <h2>The Collections</h2>
-        <p><strong>Baroncelli:</strong> Inspired by the Renzo Piano-designed Galleria Vittorio Emanuele II in Milan, the Baroncelli embodies classical elegance. These dress watches feature clean lines and timeless proportions.</p>
-        <p><strong>Multifort:</strong> Taking cues from the Sydney Harbour Bridge, Multifort watches combine sporty design with robust construction. The collection ranges from field watches to GMTs.</p>
-        <p><strong>Commander:</strong> Inspired by the Eiffel Tower's structural lattice work, Commander watches feature distinctive case construction that references the iron framework of Gustave Eiffel's masterpiece.</p>
-        <p><strong>Ocean Star:</strong> The Ocean Star dive watch collection draws from the Sydney Opera House's sculptural forms, offering serious dive capability in an elegant package.</p>
-        
-        <h2>Swatch Group Membership</h2>
-        <p>Mido has been part of the Swatch Group since 1983, positioning it within the world's largest watch conglomerate alongside brands like Omega, Longines, and Tissot. This relationship provides Mido access to shared resources and movement development while maintaining its distinct identity.</p>
-        <p>Within the Swatch Group hierarchy, Mido occupies the "affordable luxury" tier—above Tissot, below Longines—offering Swiss automatic movements at competitive prices.</p>
-        
-        <h2>The Caliber 80 Advantage</h2>
-        <p>Many modern Mido watches feature Caliber 80 movements with 80-hour power reserves—double the industry standard of roughly 40 hours. This practical advantage means you can leave your Mido unworn for a weekend and find it still running Monday morning.</p>
-        <p>This extended power reserve comes from the Swatch Group's Powermatic movement platform, demonstrating how group membership benefits Mido customers directly.</p>
-        
-        <h2>Value Proposition</h2>
-        <p>Mido's strength lies in offering Swiss automatic watches with sapphire crystals, solid finishing, and proven movements at prices that undercut many competitors. A Mido automatic often costs less than comparable Tissot or Hamilton models while offering similar or superior specifications.</p>
-        <p>For collectors seeking their first Swiss automatic or building a diverse collection without breaking the bank, Mido provides exceptional value.</p>
-        
-        <h2>Mido Today</h2>
-        <p>Mido continues to operate from Le Locle, producing watches that honor their architectural inspiration while incorporating modern technology. The brand may lack the prestige of its Swatch Group siblings, but for those who value substance over status, Mido delivers Swiss watchmaking excellence at accessible prices.</p>
+        <p>Mido's modern identity centers on architectural inspiration. Each collection draws from iconic structures:</p>
+        <p>• <strong>Multifort:</strong> Sydney Harbour Bridge (strength, engineering)<br>
+        • <strong>Commander:</strong> Eiffel Tower (elegance, structure)<br>
+        • <strong>Belluna:</strong> Rialto Bridge (romance, curves)<br>
+        • <strong>Baroncelli:</strong> Pantheon Rome (classical proportion)<br>
+        • <strong>Ocean Star:</strong> Aqua Tower Chicago (fluidity, waves)</p>
+        <p>This approach gives each collection distinct character while maintaining brand coherence.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1918</span>
+                <p>George Schaeren founds Mido in Zurich</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1934</span>
+                <p>Aquadura cork sealing system developed</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1944</span>
+                <p>Ocean Star collection launches</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1959</span>
+                <p>Ocean Star Powerwind sets precision records</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1983</span>
+                <p>Joins Swatch Group (then ASUAG)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2018</span>
+                <p>Centenary celebrated with special editions</p>
+            </div>
+        </div>
+
+        <h2>The Value Equation</h2>
+        <p>Mido's positioning within Swatch Group is deliberate: above Tissot, below Longines, but offering specifications that sometimes exceed both. A typical Mido includes:</p>
+        <p>• Swiss automatic movement with 80-hour power reserve<br>
+        • Sapphire crystal (often on both sides)<br>
+        • Solid construction with good water resistance<br>
+        • Prices typically $800-$2,500</p>
+        <p>Compare these specifications to similar-priced competitors, and Mido's value becomes obvious.</p>
+
+        <h2>Global Success, Low Profile</h2>
+        <p>Mido sells exceptionally well in markets like Latin America and Asia, where value-conscious buyers appreciate specifications over marketing. The brand's lower profile in North America and Europe actually benefits informed buyers—less demand means better availability and occasional discounts.</p>
+
+        <h2>Today's Mido</h2>
+        <p>Operating from Le Locle, Mido produces watches that punch far above their price point. The brand doesn't pursue celebrity endorsements or aggressive marketing; instead, it invests in movements, materials, and finishing.</p>
+        <p>For buyers who prioritize specifications over brand prestige, Mido represents perhaps the best value in Swiss watchmaking—a century of expertise delivered at prices that make sense.</p>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore Mido</h3>
+            <a href="directory-mido.html" class="cta-btn">View Directory</a>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
+        </div>
     </article>
-    <footer><p>&copy; 2025 Authentic Wrist. All rights reserved.</p></footer>
+
+    <footer>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
+    </footer>
 </body>
 </html>

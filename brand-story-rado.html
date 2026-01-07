@@ -1,82 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The History of Rado — Authentic Wrist</title>
-    <meta name="description" content="Discover the history of Rado, the Swiss master of high-tech ceramics and scratch-resistant materials in watchmaking.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Rado History — Master of Materials & Ceramic Pioneer | Authentic Wrist</title>
+    <meta name="description" content="Rado history from 1917 to today. The ceramic watch pioneer, scratch-proof innovation, and how a Swiss brand became the Master of Materials.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
-        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
         nav { display: flex; gap: 30px; }
-        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .article-hero { height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%); border-bottom: 1px solid var(--gold); }
-        .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; margin-bottom: 15px; }
-        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-        .article-meta { font-size: 0.85rem; color: var(--silver); }
-        .article-content { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 25px; color: var(--silver); }
-        .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; margin: 50px 0 25px; color: var(--cream); }
-        .lead-paragraph { font-size: 1.2rem; color: var(--cream); border-left: 3px solid var(--gold); padding-left: 25px; margin-bottom: 40px; }
-        footer { border-top: 1px solid var(--slate); padding: 40px; text-align: center; margin-top: 60px; }
-        footer p { color: var(--silver); font-size: 0.85rem; }
-        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .article-hero h1 { font-size: 2.5rem; } }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">Our Story</a><a href="search.html">Search</a></nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+        </nav>
     </header>
-    <section class="article-hero">
-        <div>
-            <div class="article-category">Brand Story</div>
-            <h1>The History of Rado</h1>
-            <div class="article-meta">January 2025 · 9 min read</div>
-        </div>
+
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>Rado</h1>
+        <p style="color: var(--silver);">Since 1917 — Master of Materials</p>
     </section>
-    <article class="article-content">
-        <p class="lead-paragraph">Rado transformed watchmaking by introducing materials no one thought possible in timepieces. From the first scratch-proof watch to high-tech plasma ceramics, Rado has consistently pioneered materials that other brands only later adopted.</p>
-        
-        <h2>Lengnau Beginnings</h2>
-        <p>Rado was founded in 1917 as Schlup & Co. in Lengnau, Switzerland, by brothers Fritz, Ernst, and Werner Schlup. Initially producing watch movements for other brands, the company didn't adopt the Rado name until 1957, when they began marketing complete watches.</p>
-        <p>The name "Rado" was chosen for its international appeal—easy to pronounce in any language and memorable across cultures.</p>
-        
-        <h2>The DiaStar: World's First Scratch-Proof Watch</h2>
-        <p>In 1962, Rado revolutionized the industry with the DiaStar—the world's first scratch-proof watch. Using hardmetal (tungsten carbide) for the case and synthetic sapphire crystal, the DiaStar resisted scratches that would mar conventional steel watches within days of wear.</p>
-        <p>The oval-shaped DiaStar became instantly recognizable and remained in production for decades. Its introduction established Rado's identity as a materials innovator, a position the brand has never relinquished.</p>
-        
-        <h2>High-Tech Ceramic Pioneer</h2>
-        <p>In 1986, Rado introduced high-tech ceramic to watchmaking with the Integral collection. This wasn't decorative ceramic like pottery—it was aerospace-grade material, incredibly hard, lightweight, hypoallergenic, and permanently colored throughout (not just surface coating).</p>
-        <p>Ceramic offered advantages over metal: it wouldn't scratch under normal wear, maintained its color indefinitely, felt warm on the skin, and was lighter than steel. Rado's ceramic expertise has since been adopted by numerous luxury brands, but Rado pioneered it.</p>
-        
-        <h2>Ceramos and Material Evolution</h2>
-        <p>Rado continued innovating with Ceramos—a combination of ceramic and metal alloy that offered the best properties of both materials. They developed ceramic in colors beyond black and white, eventually achieving the technically challenging feat of producing colored ceramics consistently.</p>
-        <p>Plasma high-tech ceramic, another Rado innovation, uses special gas treatment to give ceramic a metallic appearance while maintaining ceramic's scratch resistance. This created watches that looked like metal but wore like ceramic.</p>
-        
-        <h2>The True Collection</h2>
-        <p>The True collection represents Rado's design philosophy distilled to its essence. Clean lines, monochromatic color schemes, and cases made entirely from high-tech ceramic create watches of striking minimalism. Collaborations with designers and architects have produced limited editions that are collected as much for their design merit as their horological qualities.</p>
-        
-        <h2>Swatch Group Membership</h2>
-        <p>As part of the Swatch Group, Rado benefits from shared research and development while maintaining its focus on materials innovation. The group's resources have enabled continued development of new ceramic formulations and manufacturing techniques.</p>
-        
-        <h2>Design Partnerships</h2>
-        <p>Rado has collaborated with renowned designers and architects, including Jasper Morrison, Konstantin Grcic, and the students of prestigious design schools. These partnerships have produced watches that blur the line between timepiece and industrial design object.</p>
-        
-        <h2>Captain Cook Revival</h2>
-        <p>The Captain Cook collection, originally introduced in 1962 alongside the DiaStar, was revived in 2017. These vintage-inspired dive watches showed that Rado could honor heritage while incorporating modern materials. The Captain Cook proved Rado wasn't only about futuristic designs.</p>
-        
-        <h2>Rado Today</h2>
-        <p>Modern Rado continues to push materials boundaries. They remain the undisputed leader in ceramic watchmaking, with expertise no competitor has fully matched. For buyers who want something genuinely different—watches that feel different, wear different, and age differently than conventional timepieces—Rado offers a unique proposition in Swiss watchmaking.</p>
+
+    <article class="content">
+        <p>Rado built its reputation on a single obsession: materials. While other Swiss brands focused on movements and complications, Rado pioneered scratch-proof watches using hardmetals and high-tech ceramics. Today, the brand remains the undisputed leader in ceramic watchmaking—a material now used across the industry but perfected first by Rado.</p>
+
+        <h2>Lengnau Beginnings (1917)</h2>
+        <p>Brothers Fritz, Ernst, and Werner Schlup founded Schlup & Co. in Lengnau, Switzerland, in 1917. The company initially produced watch movements for other brands—a common path for Swiss watchmakers. The Rado brand name appeared in 1957, chosen for its ease of pronunciation across languages.</p>
+        <p>From the start, the Schlup brothers emphasized innovation over tradition. While competitors perfected century-old techniques, Rado looked forward.</p>
+
+        <h2>The DiaStar: First Scratch-Proof Watch (1962)</h2>
+        <p>Rado's defining moment came in 1962 with the DiaStar—the world's first scratch-proof watch. The case was made from hardmetal (tungsten carbide), and the crystal from synthetic sapphire. The combination created a watch that could resist daily wear indefinitely.</p>
+        <p>The DiaStar's oval case and integrated bracelet were controversial—this wasn't traditional Swiss design. But the watch proved enormously popular, establishing Rado's identity as a materials innovator.</p>
+
+        <div class="highlight">
+            <p><strong>What is Hardmetal?</strong> Tungsten carbide, or hardmetal, rates approximately 9 on the Mohs hardness scale (diamond is 10). It's created by sintering tungsten and carbon at extreme temperatures. The resulting material is nearly unscratchable in daily wear—a revolutionary concept in 1962.</p>
+        </div>
+
+        <h2>The Ceramic Revolution (1986)</h2>
+        <p>Rado's next breakthrough came in 1986: the first high-tech ceramic watch. Ceramic offered advantages over hardmetal—it was lighter, hypoallergenic, and could be produced in various colors. Most importantly, it was equally scratch-resistant.</p>
+        <p>High-tech ceramic is created by firing zirconium oxide powder at temperatures exceeding 1,400°C. The process is complex and wasteful—many pieces crack during firing—but the results are extraordinary: lightweight, warm to the touch, and virtually indestructible on the surface.</p>
+
+        <h2>Plasma High-Tech Ceramic (2011)</h2>
+        <p>Rado continued innovating with plasma ceramic in 2011. By treating ceramic with plasma gas at 20,000°C (hotter than the sun's surface), Rado achieved a metallic appearance without using any metal. The result looks like polished steel but retains all ceramic benefits.</p>
+        <p>This technology created new design possibilities—ceramic watches that could pass for metal to the untrained eye.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1917</span>
+                <p>Schlup & Co. founded in Lengnau</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1957</span>
+                <p>Rado brand name introduced</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1962</span>
+                <p>DiaStar—first scratch-proof watch</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1983</span>
+                <p>Joins Swatch Group (then ASUAG)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1986</span>
+                <p>First high-tech ceramic watch</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2011</span>
+                <p>Plasma high-tech ceramic debuts</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2017</span>
+                <p>Ceramos—ceramic and metal fusion</p>
+            </div>
+        </div>
+
+        <h2>The Collections Today</h2>
+        <p>Modern Rado organizes around several distinct lines:</p>
+        <p>• <strong>True:</strong> Pure ceramic design, minimalist aesthetic<br>
+        • <strong>Captain Cook:</strong> Heritage diver revived in ceramic and steel<br>
+        • <strong>Centrix:</strong> Ceramic center links with steel accents<br>
+        • <strong>DiaStar Original:</strong> Modern reinterpretation of 1962 icon<br>
+        • <strong>Ceramica:</strong> Square ceramic cases</p>
+
+        <h2>Design Philosophy</h2>
+        <p>Rado collaborates extensively with designers, viewing watches as wearable design objects. Partnerships with designers like Jasper Morrison and Konstantin Grcic have produced award-winning pieces that prioritize form and material expression.</p>
+        <p>The brand motto—"Master of Materials"—isn't marketing. It's a genuine description of Rado's core competency and obsession.</p>
+
+        <h2>Industry Influence</h2>
+        <p>Rado's ceramic innovations spread throughout the industry. Today, brands from Omega to Chanel use high-tech ceramic—technology Rado pioneered decades ago. The brand's material expertise influenced how the entire industry thinks about case construction.</p>
+
+        <h2>Today's Rado</h2>
+        <p>As part of the Swatch Group, Rado operates from Lengnau—the same Swiss town where the Schlup brothers began. Production focuses almost exclusively on ceramic and hardmetal pieces, with prices ranging from approximately $1,500 to $5,000.</p>
+        <p>For those who prioritize materials innovation, lightweight comfort, and scratch resistance, Rado offers something unique: watches designed for how life is actually lived, not just how it's photographed.</p>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore Rado</h3>
+            <a href="directory-rado.html" class="cta-btn">View Directory</a>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
+        </div>
     </article>
-    <footer><p>&copy; 2025 Authentic Wrist. All rights reserved.</p></footer>
+
+    <footer>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
+    </footer>
 </body>
 </html>
