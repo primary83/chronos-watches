@@ -42,6 +42,17 @@
         .ticker-track{display:flex;animation:ticker 30s linear infinite}
         .ticker-item{display:flex;align-items:center;gap:15px;padding:0 50px;white-space:nowrap;font-size:0.75rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:var(--silver)}
         .ticker-item svg{width:16px;height:16px;fill:var(--gold)}
+        .retailers{padding:120px 0;background:var(--charcoal)}
+        .section-header{text-align:center;margin-bottom:80px}
+        .section-tag{font-size:0.7rem;font-weight:500;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+        .section-title{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:300}
+        .retailers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+        .retailer-card{background:var(--obsidian);border:1px solid var(--slate);padding:40px 30px;text-align:center;text-decoration:none;color:var(--cream);transition:all 0.4s ease;position:relative;overflow:hidden}
+        .retailer-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform 0.4s ease}
+        .retailer-card:hover{border-color:var(--gold-dark);transform:translateY(-5px)}.retailer-card:hover::before{transform:scaleX(1)}
+        .retailer-logo{font-family:var(--font-display);font-size:1.5rem;font-weight:400;letter-spacing:0.2em;margin-bottom:10px;color:var(--cream)}
+        .retailer-desc{font-size:0.8rem;color:var(--silver);margin-bottom:15px}
+        .retailer-reward{font-size:0.7rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold)}
         .smartwatches{padding:100px 0;background:linear-gradient(135deg,var(--obsidian) 0%,var(--charcoal) 100%);position:relative;overflow:hidden}
         .smartwatches::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
         .smartwatches-header{text-align:center;margin-bottom:60px}
@@ -57,27 +68,16 @@
         .smartwatch-card h3{font-family:var(--font-display);font-size:1.1rem;font-weight:400;margin-bottom:8px;letter-spacing:0.05em}
         .smartwatch-card span{font-size:0.7rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase}
         .smartwatches-cta{text-align:center;display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
-        .retailers{padding:120px 0;background:var(--charcoal)}
-        .section-header{text-align:center;margin-bottom:80px}
-        .section-tag{font-size:0.7rem;font-weight:500;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-        .section-title{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:300}
-        .retailers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-        .retailer-card{background:var(--obsidian);border:1px solid var(--slate);padding:40px 30px;text-align:center;text-decoration:none;color:var(--cream);transition:all 0.4s ease;position:relative;overflow:hidden}
-        .retailer-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform 0.4s ease}
-        .retailer-card:hover{border-color:var(--gold-dark);transform:translateY(-5px)}.retailer-card:hover::before{transform:scaleX(1)}
-        .retailer-logo{font-family:var(--font-display);font-size:1.5rem;font-weight:400;letter-spacing:0.2em;margin-bottom:10px;color:var(--cream)}
-        .retailer-desc{font-size:0.8rem;color:var(--silver);margin-bottom:15px}
-        .retailer-reward{font-size:0.7rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold)}
-        .featured-articles{padding:120px 0;background:var(--obsidian)}
+        .featured-articles{padding:120px 0;background:var(--charcoal)}
         .featured-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px}
-        .featured-card{background:var(--charcoal);border:1px solid var(--slate);text-decoration:none;color:var(--cream);transition:all 0.4s ease;overflow:hidden}
+        .featured-card{background:var(--obsidian);border:1px solid var(--slate);text-decoration:none;color:var(--cream);transition:all 0.4s ease;overflow:hidden}
         .featured-card:hover{border-color:var(--gold);transform:translateY(-5px)}
         .featured-card-img{height:180px;background:linear-gradient(135deg,var(--slate) 0%,var(--charcoal) 100%);display:flex;align-items:center;justify-content:center;font-size:3rem}
         .featured-card-content{padding:25px}
         .featured-card-tag{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
         .featured-card h3{font-family:var(--font-display);font-size:1.2rem;font-weight:400;margin-bottom:10px}
         .featured-card p{font-size:0.85rem;color:var(--silver)}
-        .categories{padding:120px 0;background:var(--charcoal)}
+        .categories{padding:120px 0;background:var(--obsidian)}
         .categories-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
         .category-card{position:relative;aspect-ratio:3/4;overflow:hidden;cursor:pointer;text-decoration:none;color:var(--cream)}
         .category-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease}.category-card:hover img{transform:scale(1.08)}
@@ -130,6 +130,7 @@
         </nav>
     </header>
 
+    <!-- 1. HERO - Time is Priceless -->
     <section class="hero">
         <div class="hero-content">
             <span class="hero-tag">Curated Luxury Timepieces</span>
@@ -147,6 +148,7 @@
         </div>
     </section>
 
+    <!-- TICKER -->
     <div class="ticker">
         <div class="ticker-track">
             <div class="ticker-item"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>Authentic Timepieces</div>
@@ -160,7 +162,72 @@
         </div>
     </div>
 
-    <!-- Featured Articles Section - NEW -->
+    <!-- 2. SHOP BY STORE -->
+    <section class="retailers" id="retailers">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Partner Retailers</p>
+                <h2 class="section-title">Shop By Store</h2>
+            </div>
+            <div class="retailers-grid">
+                <a href="https://www.amazon.com/luxury-watches/b?node=6358540011" target="_blank" class="retailer-card"><div class="retailer-logo">AMAZON</div><p class="retailer-desc">Premium Watches & Accessories</p><span class="retailer-reward">Up to 4% Back</span></a>
+                <a href="https://www.jomashop.com/" target="_blank" class="retailer-card"><div class="retailer-logo">JOMASHOP</div><p class="retailer-desc">Certified Watch Dealer</p><span class="retailer-reward">Up to 5% Back</span></a>
+                <a href="https://www.chrono24.com/" target="_blank" class="retailer-card"><div class="retailer-logo">CHRONO24</div><p class="retailer-desc">Global Watch Marketplace</p><span class="retailer-reward">Up to 4% Back</span></a>
+                <a href="https://www.watchbox.com/" target="_blank" class="retailer-card"><div class="retailer-logo">WATCHBOX</div><p class="retailer-desc">Pre-Owned Luxury Watches</p><span class="retailer-reward">Up to 3% Back</span></a>
+                <a href="https://www.hodinkee.com/shop" target="_blank" class="retailer-card"><div class="retailer-logo">HODINKEE</div><p class="retailer-desc">Curated Timepieces</p><span class="retailer-reward">Up to 6% Back</span></a>
+                <a href="https://www.nordstrom.com/browse/men/accessories/watches" target="_blank" class="retailer-card"><div class="retailer-logo">NORDSTROM</div><p class="retailer-desc">Luxury Designer Brands</p><span class="retailer-reward">Up to 7% Back</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SHOP BY BRAND -->
+    <section class="retailers" id="brands" style="background:var(--obsidian);">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Official Brand Sites</p>
+                <h2 class="section-title">Shop By Brand</h2>
+            </div>
+            <div class="retailers-grid">
+                <a href="https://www.rolex.com/" target="_blank" class="retailer-card" style="background:var(--charcoal);"><div class="retailer-logo">ROLEX</div><p class="retailer-desc">Crown of Watchmaking</p><span class="retailer-reward">Official Site</span></a>
+                <a href="https://www.omegawatches.com/" target="_blank" class="retailer-card" style="background:var(--charcoal);"><div class="retailer-logo">OMEGA</div><p class="retailer-desc">Swiss Luxury Since 1848</p><span class="retailer-reward">Official Site</span></a>
+                <a href="https://www.tagheuer.com/" target="_blank" class="retailer-card" style="background:var(--charcoal);"><div class="retailer-logo">TAG HEUER</div><p class="retailer-desc">Swiss Avant-Garde</p><span class="retailer-reward">Official Site</span></a>
+                <a href="https://www.breitling.com/" target="_blank" class="retailer-card" style="background:var(--charcoal);"><div class="retailer-logo">BREITLING</div><p class="retailer-desc">Instruments for Professionals</p><span class="retailer-reward">Official Site</span></a>
+                <a href="https://www.cartier.com/en-us/watches" target="_blank" class="retailer-card" style="background:var(--charcoal);"><div class="retailer-logo">CARTIER</div><p class="retailer-desc">French Luxury Maison</p><span class="retailer-reward">Official Site</span></a>
+                <a href="https://www.iwc.com/" target="_blank" class="retailer-card" style="background:var(--charcoal);"><div class="retailer-logo">IWC</div><p class="retailer-desc">Schaffhausen Excellence</p><span class="retailer-reward">Official Site</span></a>
+                <a href="https://www.patek.com/" target="_blank" class="retailer-card" style="background:var(--charcoal);"><div class="retailer-logo">PATEK PHILIPPE</div><p class="retailer-desc">The Most Prestigious</p><span class="retailer-reward">Official Site</span></a>
+                <a href="https://www.audemarspiguet.com/" target="_blank" class="retailer-card" style="background:var(--charcoal);"><div class="retailer-logo">AUDEMARS PIGUET</div><p class="retailer-desc">Masters of Royal Oak</p><span class="retailer-reward">Official Site</span></a>
+                <a href="https://www.tudorwatch.com/" target="_blank" class="retailer-card" style="background:var(--charcoal);"><div class="retailer-logo">TUDOR</div><p class="retailer-desc">Born to Dare</p><span class="retailer-reward">Official Site</span></a>
+                <a href="https://www.zenith-watches.com/" target="_blank" class="retailer-card" style="background:var(--charcoal);"><div class="retailer-logo">ZENITH</div><p class="retailer-desc">Swiss Watchmaking Since 1865</p><span class="retailer-reward">Official Site</span></a>
+                <a href="https://www.longines.com/" target="_blank" class="retailer-card" style="background:var(--charcoal);"><div class="retailer-logo">LONGINES</div><p class="retailer-desc">Elegance is an Attitude</p><span class="retailer-reward">Official Site</span></a>
+                <a href="https://www.gucci.com/us/en/ca/jewelry-watches/watches-c-jewelry-watches-702702" target="_blank" class="retailer-card" style="background:var(--charcoal);"><div class="retailer-logo">GUCCI</div><p class="retailer-desc">Italian Fashion House</p><span class="retailer-reward">Official Site</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SMART WATCHES -->
+    <section class="smartwatches" id="smartwatches">
+        <div class="container">
+            <div class="smartwatches-header">
+                <p class="section-tag">Technology Meets Style</p>
+                <h2>Smart Watches</h2>
+                <p>Explore the latest smart watches from Apple, Samsung, Garmin, and more. Complete directories, brand stories, and expert comparisons.</p>
+            </div>
+            <div class="smartwatches-grid">
+                <a href="directory-apple.html" class="smartwatch-card"><div class="smartwatch-icon">⌚</div><h3>Apple Watch</h3><span>15+ Models</span></a>
+                <a href="directory-samsung.html" class="smartwatch-card"><div class="smartwatch-icon">⌚</div><h3>Samsung Galaxy</h3><span>12+ Models</span></a>
+                <a href="directory-garmin.html" class="smartwatch-card"><div class="smartwatch-icon">⌚</div><h3>Garmin</h3><span>30+ Models</span></a>
+                <a href="directory-fitbit.html" class="smartwatch-card"><div class="smartwatch-icon">⌚</div><h3>Fitbit</h3><span>10+ Models</span></a>
+                <a href="directory-google.html" class="smartwatch-card"><div class="smartwatch-icon">⌚</div><h3>Google Pixel</h3><span>5+ Models</span></a>
+                <a href="directory-whoop.html" class="smartwatch-card"><div class="smartwatch-icon">⌚</div><h3>Whoop</h3><span>Fitness Focus</span></a>
+            </div>
+            <div class="smartwatches-cta">
+                <a href="directory-smart-watches.html" class="btn btn-primary">View All Smart Watches →</a>
+                <a href="comparison-apple-watch-vs-samsung.html" class="btn btn-secondary">Apple vs Samsung</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FEATURED GUIDES (NEW) -->
     <section class="featured-articles">
         <div class="container">
             <div class="section-header">
@@ -204,46 +271,7 @@
         </div>
     </section>
 
-    <!-- Smart Watches Section -->
-    <section class="smartwatches" id="smartwatches">
-        <div class="container">
-            <div class="smartwatches-header">
-                <p class="section-tag">Technology Meets Style</p>
-                <h2>Smart Watches</h2>
-                <p>Explore the latest smart watches from Apple, Samsung, Garmin, and more. Complete directories, brand stories, and expert comparisons.</p>
-            </div>
-            <div class="smartwatches-grid">
-                <a href="directory-apple.html" class="smartwatch-card"><div class="smartwatch-icon">⌚</div><h3>Apple Watch</h3><span>15+ Models</span></a>
-                <a href="directory-samsung.html" class="smartwatch-card"><div class="smartwatch-icon">⌚</div><h3>Samsung Galaxy</h3><span>12+ Models</span></a>
-                <a href="directory-garmin.html" class="smartwatch-card"><div class="smartwatch-icon">⌚</div><h3>Garmin</h3><span>30+ Models</span></a>
-                <a href="directory-fitbit.html" class="smartwatch-card"><div class="smartwatch-icon">⌚</div><h3>Fitbit</h3><span>10+ Models</span></a>
-                <a href="directory-google.html" class="smartwatch-card"><div class="smartwatch-icon">⌚</div><h3>Google Pixel</h3><span>5+ Models</span></a>
-                <a href="directory-whoop.html" class="smartwatch-card"><div class="smartwatch-icon">⌚</div><h3>Whoop</h3><span>Fitness Focus</span></a>
-            </div>
-            <div class="smartwatches-cta">
-                <a href="directory-smart-watches.html" class="btn btn-primary">View All Smart Watches →</a>
-                <a href="comparison-apple-watch-vs-samsung.html" class="btn btn-secondary">Apple vs Samsung</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="retailers" id="retailers">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-tag">Partner Retailers</p>
-                <h2 class="section-title">Shop By Store</h2>
-            </div>
-            <div class="retailers-grid">
-                <a href="https://www.amazon.com/luxury-watches/b?node=6358540011" target="_blank" class="retailer-card"><div class="retailer-logo">AMAZON</div><p class="retailer-desc">Premium Watches & Accessories</p><span class="retailer-reward">Up to 4% Back</span></a>
-                <a href="https://www.jomashop.com/" target="_blank" class="retailer-card"><div class="retailer-logo">JOMASHOP</div><p class="retailer-desc">Certified Watch Dealer</p><span class="retailer-reward">Up to 5% Back</span></a>
-                <a href="https://www.chrono24.com/" target="_blank" class="retailer-card"><div class="retailer-logo">CHRONO24</div><p class="retailer-desc">Global Watch Marketplace</p><span class="retailer-reward">Up to 4% Back</span></a>
-                <a href="https://www.watchbox.com/" target="_blank" class="retailer-card"><div class="retailer-logo">WATCHBOX</div><p class="retailer-desc">Pre-Owned Luxury Watches</p><span class="retailer-reward">Up to 3% Back</span></a>
-                <a href="https://www.hodinkee.com/shop" target="_blank" class="retailer-card"><div class="retailer-logo">HODINKEE</div><p class="retailer-desc">Curated Timepieces</p><span class="retailer-reward">Up to 6% Back</span></a>
-                <a href="https://www.nordstrom.com/browse/men/accessories/watches" target="_blank" class="retailer-card"><div class="retailer-logo">NORDSTROM</div><p class="retailer-desc">Luxury Designer Brands</p><span class="retailer-reward">Up to 7% Back</span></a>
-            </div>
-        </div>
-    </section>
-
+    <!-- 6. CATEGORIES -->
     <section class="categories" id="collections">
         <div class="container">
             <div class="section-header">
@@ -259,6 +287,7 @@
         </div>
     </section>
 
+    <!-- 7. NEWSLETTER -->
     <section class="newsletter" id="newsletter">
         <div class="container">
             <div class="newsletter-wrapper">
@@ -273,10 +302,12 @@
         </div>
     </section>
 
+    <!-- DISCLOSURE -->
     <div class="disclosure">
         <p><strong>Affiliate Disclosure:</strong> Authentic Wrist is a participant in affiliate advertising programs including Amazon Associates, ShareASale, AWIN, Rakuten, and CJ Affiliate. This means we may earn a small commission when you click our links and make a purchase — at no extra cost to you. These commissions help us keep this site running.</p>
     </div>
 
+    <!-- 8. FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-top">
