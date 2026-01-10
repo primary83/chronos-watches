@@ -1,66 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The History of Zenith: Home of El Primero — Authentic Wrist</title>
-    <meta name="description" content="Creator of the legendary El Primero, the world's first automatic chronograph. Discover Zenith's story from Le Locle to horological legend.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Zenith History — Home of the El Primero | Authentic Wrist</title>
+    <meta name="description" content="Zenith history from 1865 to today. The legendary El Primero movement, the secret attic rescue, and why Zenith makes some of the world's most respected chronographs.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --gold-light: #E8D5A3; --gold-dark: #8B7355; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; --font-display: 'Cormorant Garamond', Georgia, serif; --font-body: 'Outfit', sans-serif; }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-body); background: var(--obsidian); color: var(--cream); line-height: 1.8; }
-        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
         nav { display: flex; gap: 30px; }
-        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .article-hero { height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(10,10,10,0.6), rgba(10,10,10,0.9)), url('https://images.unsplash.com/photo-1526045431048-f857369baa09?w=1600&q=80'); background-size: cover; background-position: center; }
-        .article-hero-content { max-width: 800px; padding: 0 20px; }
-        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-        .article-hero h1 { font-family: var(--font-display); font-size: 3.5rem; font-weight: 300; line-height: 1.2; margin-bottom: 20px; }
-        .article-meta { font-size: 0.85rem; color: var(--silver); }
-        .article-content { max-width: 800px; margin: 0 auto; padding: 80px 20px; }
-        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 30px; color: var(--silver); }
-        .article-content h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 400; margin: 60px 0 30px; color: var(--cream); }
-        .article-content h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; margin: 40px 0 20px; color: var(--cream); }
-        .lead-paragraph { font-size: 1.25rem; color: var(--cream); border-left: 2px solid var(--gold); padding-left: 30px; margin-bottom: 40px; }
-        blockquote { font-family: var(--font-display); font-size: 1.5rem; font-style: italic; color: var(--cream); border-left: 2px solid var(--gold); padding-left: 30px; margin: 50px 0; }
-        .timeline { margin: 50px 0; padding-left: 30px; border-left: 2px solid var(--slate); }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
         .timeline-item { margin-bottom: 30px; position: relative; }
-        .timeline-item::before { content: ''; position: absolute; left: -37px; top: 8px; width: 12px; height: 12px; background: var(--gold); border-radius: 50%; }
-        .timeline-year { font-size: 0.8rem; color: var(--gold); letter-spacing: 0.1em; margin-bottom: 5px; }
-        .timeline-text { color: var(--silver); }
-        .highlight-box { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 30px; margin: 40px 0; }
-        .highlight-box h4 { font-family: var(--font-display); font-size: 1.2rem; color: var(--gold); margin-bottom: 15px; }
-        .highlight-box ul { list-style: none; }
-        .highlight-box li { padding: 8px 0; color: var(--silver); border-bottom: 1px solid var(--slate); }
-        .highlight-box li:last-child { border-bottom: none; }
-        .brand-cta { background: var(--charcoal); border: 1px solid var(--gold); padding: 40px; margin: 50px 0; text-align: center; }
-        .brand-cta h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--cream); margin-bottom: 15px; }
-        .brand-cta p { margin-bottom: 25px; }
-        .brand-cta .btn { display: inline-block; padding: 15px 35px; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; background: var(--gold); color: var(--obsidian); transition: all 0.3s ease; }
-        .brand-cta .btn:hover { background: var(--cream); }
-        .related-articles { background: var(--charcoal); padding: 80px 40px; }
-        .related-articles h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 300; text-align: center; margin-bottom: 50px; }
-        .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        .related-card { background: var(--obsidian); border: 1px solid var(--slate); text-decoration: none; transition: all 0.3s ease; }
-        .related-card:hover { border-color: var(--gold); transform: translateY(-5px); }
-        .related-card img { width: 100%; height: 200px; object-fit: cover; }
-        .related-card-content { padding: 25px; }
-        .related-card-content h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--cream); margin-bottom: 10px; }
-        .related-card-content p { font-size: 0.85rem; color: var(--silver); }
-        footer { background: var(--obsidian); border-top: 1px solid var(--slate); padding: 60px 40px 30px; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 60px; }
-        .footer-brand p { font-size: 0.9rem; color: var(--silver); margin-top: 15px; }
-        .footer-column h4 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; }
-        .footer-column a { display: block; font-size: 0.9rem; color: var(--silver); text-decoration: none; margin-bottom: 12px; }
-        .footer-column a:hover { color: var(--gold); }
-        .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding-top: 30px; border-top: 1px solid var(--slate); text-align: center; font-size: 0.85rem; color: var(--silver); }
-        @media (max-width: 768px) { header { padding: 15px 20px; flex-direction: column; gap: 15px; } nav { gap: 15px; flex-wrap: wrap; justify-content: center; } .article-hero h1 { font-size: 2.5rem; } .footer-content { grid-template-columns: 1fr; gap: 40px; } }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
@@ -68,211 +38,93 @@
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
         <nav>
             <a href="index.html">Home</a>
-            <a href="blog.html">Blog</a>
-            <a href="about.html">Our Story</a>
-            <a href="search.html">Search</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
         </nav>
     </header>
 
-    <section class="article-hero">
-        <div class="article-hero-content">
-            <div class="article-category">Brand Stories</div>
-            <h1>The History of Zenith</h1>
-            <div class="article-meta">January 2025 · 14 min read</div>
-        </div>
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>Zenith</h1>
+        <p style="color: var(--silver);">Since 1865 — Home of the El Primero</p>
     </section>
 
-    <article class="article-content">
-        <p class="lead-paragraph">"Time to Reach Your Star." In 1969, while the world watched Apollo 11 land on the Moon, Zenith quietly unveiled a movement that would change watchmaking forever: El Primero, the world's first integrated automatic chronograph. Decades later, this legendary caliber continues to beat inside watches from Zenith and—famously—Rolex.</p>
+    <article class="content">
+        <p>Zenith's story centers on one movement: the El Primero. Launched in 1969 as the world's first automatic chronograph, the El Primero remains in production today—still beating at 36,000 vibrations per hour, still capable of measuring time to 1/10th of a second. It's the movement Rolex chose for the Daytona. It's the movement that defines Zenith.</p>
 
-        <h2>The Le Locle Manufacture</h2>
-        <p>In 1865, a 22-year-old watchmaker named Georges Favre-Jacot established a workshop in Le Locle, Switzerland. Unlike the cottage industry model common at the time—where watchmakers worked in home workshops—Favre-Jacot gathered all craftsmen under one roof. This consolidation allowed unprecedented quality control and efficiency.</p>
+        <h2>Georges Favre-Jacot's Vision (1865)</h2>
+        <p>At just 22 years old, Georges Favre-Jacot established a watch manufacture in Le Locle, Switzerland in 1865. His innovation wasn't mechanical but organizational: rather than using the traditional cottage industry model (where craftsmen worked from home), he brought all workers under one roof. This allowed standardization, quality control, and efficiency that smaller workshops couldn't match.</p>
+        <p>By 1900, Zenith employed over 1,000 workers and had won numerous precision awards. The company produced everything in-house—movements, cases, dials—making it one of the first true manufactures in the modern sense.</p>
 
-        <p>The company initially operated under various names before settling on "Zenith" in 1911—a name suggesting the highest point, the pinnacle of achievement. The star logo, representing the pursuit of excellence, became one of watchmaking's most recognized symbols.</p>
+        <h2>The El Primero (1969)</h2>
+        <p>In 1969, three companies raced to introduce the world's first automatic chronograph. Zenith won—launching the El Primero on January 10, 1969 (though some historians give the edge to Seiko or the Heuer-Breitling consortium, depending on which "first" you're measuring).</p>
+        <p>What matters isn't the race but the result. The El Primero beat at 36,000 vph—50% faster than standard movements—allowing it to measure elapsed time to 1/10th of a second. The high frequency also improved accuracy. It was an engineering tour de force.</p>
 
-        <h2>Building a Legend</h2>
-        <p>By the early 20th century, Zenith had established itself as a serious chronometer maker. The manufacture won numerous observatory prizes for accuracy and developed a reputation for technical excellence. Unlike brands that outsourced components, Zenith produced everything in-house—a practice that would prove crucial for its future.</p>
+        <div class="highlight">
+            <p><strong>The Secret Attic:</strong> When quartz devastated the Swiss watch industry in the 1970s, Zenith's management ordered the El Primero's tooling destroyed. Watchmaker Charles Vermot secretly hid the machines, plans, and parts in the factory attic. When mechanical watches revived in the 1980s, Vermot revealed his treasure. The El Primero lived.</p>
+        </div>
 
-        <p>The manufacture grew to encompass over 600 employees, producing movements for its own watches and supplying calibers to other brands. This vertical integration gave Zenith the engineering depth needed to attempt something revolutionary.</p>
+        <h2>The Rolex Connection</h2>
+        <p>In 1988, Rolex needed an automatic chronograph movement for the Daytona. Rather than develop one internally (which would take years), they chose the El Primero—modified to run at 28,800 vph and fitted with Rolex's own escapement and balance wheel.</p>
+        <p>From 1988 to 2000, every Rolex Daytona used a Zenith El Primero base. This validation from the world's most prestigious watch brand cemented the El Primero's legendary status. When Rolex finally developed an in-house chronograph movement, Zenith had already proven that the El Primero could meet the most demanding standards.</p>
+
+        <h2>The Defy Collection</h2>
+        <p>While the El Primero remains Zenith's heart, the Defy collection represents its future. The Defy El Primero 21 measures to 1/100th of a second using two escapements—one for timekeeping, one for the chronograph—beating at an incredible 360,000 vph. The Defy Lab replaced the traditional escapement entirely with a silicon oscillator.</p>
 
         <div class="timeline">
             <div class="timeline-item">
-                <div class="timeline-year">1865</div>
-                <div class="timeline-text">Georges Favre-Jacot establishes manufacture in Le Locle</div>
+                <span class="year">1865</span>
+                <p>Georges Favre-Jacot founds manufacture in Le Locle</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-year">1911</div>
-                <div class="timeline-text">Company officially named "Zenith"</div>
+                <span class="year">1900</span>
+                <p>Over 1,000 employees; wins Grand Prix at Paris Exposition</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-year">1969</div>
-                <div class="timeline-text">El Primero launched—first integrated automatic chronograph</div>
+                <span class="year">1969</span>
+                <p>El Primero launched—first automatic chronograph</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-year">1975</div>
-                <div class="timeline-text">Charles Vermot hides El Primero tooling during quartz crisis</div>
+                <span class="year">1975</span>
+                <p>Charles Vermot secretly saves El Primero tooling</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-year">1988</div>
-                <div class="timeline-text">Rolex selects El Primero for the Daytona</div>
+                <span class="year">1984</span>
+                <p>El Primero production resumes from hidden components</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-year">1999</div>
-                <div class="timeline-text">Acquired by LVMH Group</div>
+                <span class="year">1988</span>
+                <p>Rolex adopts El Primero for Daytona</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-year">2017</div>
-                <div class="timeline-text">Defy El Primero 21 measures 1/100th of a second</div>
+                <span class="year">1999</span>
+                <p>Acquired by LVMH</p>
             </div>
             <div class="timeline-item">
-                <div class="timeline-year">2019</div>
-                <div class="timeline-text">El Primero's 50th anniversary celebrated</div>
+                <span class="year">2017</span>
+                <p>Defy Lab with silicon oscillator introduced</p>
             </div>
         </div>
 
-        <h2>The Race to Automatic Chronograph</h2>
-        <p>By the late 1960s, the holy grail of watchmaking was clear: an automatic chronograph movement. The chronograph (stopwatch function) had existed since 1816, and automatic winding since the 1930s. But combining them—fitting an automatic rotor into the already complex chronograph mechanism—seemed nearly impossible.</p>
+        <h2>The Chronomaster</h2>
+        <p>The Chronomaster collection houses the El Primero in its purest form. The distinctive tri-color subdials (blue, gray, and silver) have become a Zenith signature, though the brand now offers cleaner dial options as well. The Chronomaster Original, with its pump pushers and vintage-inspired design, pays homage to the 1969 original.</p>
 
-        <p>Three groups raced toward this goal: a consortium of Heuer, Breitling, Hamilton, and Büren (developing Caliber 11), Seiko in Japan, and Zenith working alone. The race was as much about prestige as practicality—whoever succeeded first would claim a historic achievement.</p>
+        <h2>The Pilot's Watches</h2>
+        <p>Less known than the El Primero but equally historical, Zenith supplied cockpit instruments and pilot's watches to military air forces throughout the 20th century. The modern Pilot collection—particularly the Type 20—continues this heritage with large cases, cathedral hands, and oversized crowns.</p>
 
-        <h2>El Primero: The First</h2>
-        <p>On January 10, 1969, Zenith unveiled El Primero (Spanish for "the first"). The movement beat at 36,000 vibrations per hour—50% faster than typical movements—enabling accuracy to 1/10th of a second. It integrated the chronograph and automatic winding in a single, column-wheel architecture that many consider the finest ever made.</p>
+        <h2>Today's Zenith</h2>
+        <p>Under LVMH ownership since 1999, Zenith has focused increasingly on its core strength: high-frequency chronographs. The Chronomaster remains the flagship, the Defy pushes boundaries, and the Pilot collection serves heritage enthusiasts.</p>
+        <p>Zenith's position is unique: it's one of the few brands that genuinely manufactures its own movements (having done so since 1865), yet it remains more accessible than many competitors. The El Primero—saved from destruction by a loyal watchmaker—continues to beat at its legendary 36,000 vph, proving that some things are worth preserving.</p>
 
-        <blockquote>"We didn't just want to be first. We wanted to be best. El Primero was designed to be the ultimate chronograph, not just the first automatic one."<br><span style="font-size: 1rem; font-style: normal;">— Zenith engineer</span></blockquote>
-
-        <p>The movement's high frequency came with a trade-off: faster wear. But the precision benefits outweighed this concern, and the El Primero's accuracy exceeded most competitors. Zenith had achieved something remarkable—a movement that was both technically innovative and commercially viable.</p>
-
-        <div class="highlight-box">
-            <h4>El Primero Specifications</h4>
-            <ul>
-                <li><strong>Frequency:</strong> 36,000 vph (5 Hz)—enables 1/10th second timing</li>
-                <li><strong>Power Reserve:</strong> Approximately 50 hours</li>
-                <li><strong>Components:</strong> 278 parts in original version</li>
-                <li><strong>Functions:</strong> Hours, minutes, small seconds, chronograph with 30-minute counter</li>
-                <li><strong>Architecture:</strong> Column wheel, horizontal coupling</li>
-            </ul>
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore Zenith</h3>
+            <a href="directory-zenith.html" class="cta-btn">View Directory</a>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
         </div>
-
-        <h2>The Secret Savior</h2>
-        <p>The 1970s quartz crisis nearly destroyed mechanical watchmaking. As Swiss companies scrambled to produce quartz watches, Zenith's management ordered all mechanical tooling destroyed. The El Primero—just years old—faced extinction.</p>
-
-        <p>But one man disobeyed. Charles Vermot, a master watchmaker, secretly hid the El Primero's tools, dies, and technical drawings in the attic of the manufacture. For years, the components gathered dust while quartz dominated the market.</p>
-
-        <p>When the mechanical watch renaissance began in the mid-1980s, Zenith discovered Vermot's hidden treasure. The El Primero could be revived, and with it, Zenith's future.</p>
-
-        <h2>Rolex Comes Calling</h2>
-        <p>In 1988, Rolex made a surprising decision: for the first time, the Daytona chronograph would use an automatic movement. Even more surprisingly, they chose an outside caliber—the Zenith El Primero. Rolex modified the movement significantly (reducing frequency to 28,800 vph and adding their own finishing) but the foundation was Zenith's.</p>
-
-        <p>This partnership, lasting until 2000, brought enormous credibility to Zenith. If Rolex—the most self-sufficient manufacture—chose El Primero, it had to be exceptional. The association introduced Zenith to collectors who might otherwise have overlooked the brand.</p>
-
-        <h2>Key Collections</h2>
-
-        <h3>Chronomaster</h3>
-        <p>The flagship El Primero collection. These chronographs showcase the legendary movement in various configurations—from the iconic tri-color subdial design to open-heart versions exposing the high-frequency escapement. The Chronomaster is Zenith's most recognizable and historically significant line.</p>
-
-        <h3>Defy</h3>
-        <p>Zenith's modern, avant-garde collection. The Defy pushes El Primero technology to extremes—the Defy El Primero 21 operates at 360,000 vph, measuring 1/100th of a second. The collection also includes the Defy Skyline, a contemporary sports watch with integrated bracelet.</p>
-
-        <h3>Pilot</h3>
-        <p>Honoring Zenith's aviation heritage dating to the early 20th century. Louis Blériot wore a Zenith during his historic English Channel crossing in 1909. The collection includes faithful re-editions of historical models and modern interpretations with GMT and chronograph functions.</p>
-
-        <h3>Elite</h3>
-        <p>Zenith's ultra-thin dress watch line, powered by the refined Elite caliber. These understated timepieces prove that Zenith excels beyond chronographs, offering simple elegance for formal occasions.</p>
-
-        <div class="brand-cta">
-            <h3>Explore Zenith</h3>
-            <p>Discover the home of El Primero and 150+ years of horological innovation.</p>
-            <a href="https://www.zenith-watches.com" class="btn">Visit Official Site →</a>
-        </div>
-
-        <h2>The 21st Century El Primero</h2>
-        <p>Zenith hasn't rested on El Primero's laurels. The Defy El Primero 21, launched in 2017, pushes the movement's philosophy to its logical extreme: two escapements running at different frequencies. One keeps time at standard speed; the other powers the chronograph at 360,000 vph—measuring to 1/100th of a second with a central chronograph hand completing one rotation per second.</p>
-
-        <p>This technical tour de force proved that El Primero wasn't just historically significant—it was a platform for continued innovation. The 21's movement, visible through an open dial, mesmerizes with its high-speed operation.</p>
-
-        <h2>LVMH and the Future</h2>
-        <p>Since joining LVMH in 1999, Zenith has benefited from investment while maintaining its manufacture heritage. New facilities have expanded production capacity, and the brand has focused increasingly on its chronograph expertise—doubling down on what makes Zenith unique rather than chasing trends.</p>
-
-        <p>Recent years have seen Zenith embrace modern aesthetics while honoring heritage. The Defy Skyline brought integrated bracelet sports watch design to Zenith's lineup, while limited editions celebrate historical references. The balance between innovation and tradition seems stable.</p>
-
-        <div class="highlight-box">
-            <h4>What Defines Zenith</h4>
-            <ul>
-                <li><strong>El Primero:</strong> The world's first automatic chronograph, still in production</li>
-                <li><strong>High Frequency:</strong> 36,000 vph for 1/10th second precision</li>
-                <li><strong>Manufacture Heritage:</strong> In-house production since 1865</li>
-                <li><strong>The Star Logo:</strong> Representing the pursuit of excellence</li>
-                <li><strong>Aviation History:</strong> Watches on pioneering flights since 1909</li>
-                <li><strong>Rolex Connection:</strong> El Primero powered the Daytona for 12 years</li>
-            </ul>
-        </div>
-
-        <h2>The Zenith Collector</h2>
-        <p>Zenith attracts collectors who appreciate technical achievement over brand hype. The El Primero's legendary status among movement enthusiasts provides credentials that marketing cannot buy. These collectors understand that Zenith competes with brands charging significantly more, offering exceptional value at its price point.</p>
-
-        <p>The open-dial chronographs, exposing the El Primero's high-frequency escapement, appeal to those who appreciate visible mechanics. The movement's distinctive sound—faster than other watches due to its higher beat rate—provides an audible connection to horological history.</p>
-
-        <h2>Legacy of the First</h2>
-        <p>More than five decades after its debut, El Primero remains one of watchmaking's most significant achievements. Charles Vermot's secret preservation saved not just a movement, but a manufacture's identity. Today, that movement continues to evolve while staying true to its revolutionary origins.</p>
-
-        <p>For collectors who value technical substance, historical significance, and genuine innovation, Zenith offers something rare: a manufacture that achieved true "firsts" and continues to build on that foundation. In an industry often criticized for incremental changes marketed as breakthroughs, Zenith's El Primero represents authentic revolution.</p>
     </article>
 
-    <section class="related-articles">
-        <h2>More Brand Stories</h2>
-        <div class="related-grid">
-            <a href="brand-story-tag-heuer.html" class="related-card">
-                <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&q=80" alt="TAG Heuer">
-                <div class="related-card-content">
-                    <h3>The History of TAG Heuer</h3>
-                    <p>Swiss precision meets motorsport heritage.</p>
-                </div>
-            </a>
-            <a href="brand-story-rolex.html" class="related-card">
-                <img src="https://images.unsplash.com/photo-1623998021446-45cd9b269056?w=600&q=80" alt="Rolex">
-                <div class="related-card-content">
-                    <h3>The History of Rolex</h3>
-                    <p>The crown of watchmaking since 1905.</p>
-                </div>
-            </a>
-            <a href="brand-story-breitling.html" class="related-card">
-                <img src="https://images.unsplash.com/photo-1594576722512-582bcd46fba3?w=600&q=80" alt="Breitling">
-                <div class="related-card-content">
-                    <h3>The History of Breitling</h3>
-                    <p>Instruments for professionals since 1884.</p>
-                </div>
-            </a>
-        </div>
-    </section>
-
     <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-                <p>Your curated destination for authentic luxury timepieces.</p>
-            </div>
-            <div class="footer-column">
-                <h4>Explore</h4>
-                <a href="index.html#new">New Arrivals</a>
-                <a href="index.html#collections">Collections</a>
-                <a href="index.html#brands">Brands</a>
-            </div>
-            <div class="footer-column">
-                <h4>Learn</h4>
-                <a href="blog.html">Blog</a>
-                <a href="blog.html">Buying Guides</a>
-                <a href="blog.html">Brand Stories</a>
-            </div>
-            <div class="footer-column">
-                <h4>About</h4>
-                <a href="about.html">Our Story</a>
-                <a href="contact.html">Contact</a>
-                <a href="privacy.html">Privacy</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2025 Authentic Wrist. All rights reserved.</p>
-        </div>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
     </footer>
 </body>
 </html>

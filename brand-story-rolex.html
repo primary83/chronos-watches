@@ -1,73 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The History of Rolex — Authentic Wrist</title>
-    <meta name="description" content="Discover Rolex, the crown of watchmaking since 1905.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Rolex History — The Crown of Watchmaking | Authentic Wrist</title>
+    <meta name="description" content="Rolex history from 1905 to today. Hans Wilsdorf's vision, the Oyster case, Perpetual rotor, and how Rolex became the most recognized luxury watch brand in the world.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
-        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
         nav { display: flex; gap: 30px; }
-        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .article-hero { height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%); border-bottom: 1px solid var(--gold); }
-        .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; margin-bottom: 15px; }
-        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-        .article-meta { font-size: 0.85rem; color: var(--silver); }
-        .article-content { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 25px; color: var(--silver); }
-        .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; margin: 45px 0 20px; color: var(--cream); }
-        .lead-paragraph { font-size: 1.15rem; color: var(--cream); border-left: 3px solid var(--gold); padding-left: 25px; margin-bottom: 35px; }
-        .highlight-box { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
-        .highlight-box h4 { color: var(--gold); margin-bottom: 15px; }
-        .highlight-box ul { list-style: none; }
-        .highlight-box li { padding: 8px 0; color: var(--silver); border-bottom: 1px solid var(--slate); }
-        .highlight-box li:last-child { border-bottom: none; }
-        footer { border-top: 1px solid var(--slate); padding: 40px; text-align: center; }
-        footer p { color: var(--silver); font-size: 0.85rem; }
-        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .article-hero h1 { font-size: 2.2rem; } }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">Our Story</a><a href="search.html">Search</a></nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+        </nav>
     </header>
-    <section class="article-hero">
-        <div>
-            <div class="article-category">Brand Story</div>
-            <h1>The History of Rolex</h1>
-            <div class="article-meta">December 2024 · 12 min read</div>
-        </div>
+
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>Rolex</h1>
+        <p style="color: var(--silver);">Since 1905 — The Crown of Watchmaking</p>
     </section>
-    <article class="article-content">
-        <p class="lead-paragraph">The crown jewel of watchmaking. From the first waterproof Oyster to the legendary Submariner, Rolex has defined what a luxury watch should be for over a century.</p>
-        <h2>Hans Wilsdorf Vision</h2>
-        <p>Hans Wilsdorf founded Rolex in London in 1905 with a radical vision: wristwatches could be both elegant and precise. At a time when pocket watches dominated, he bet on the future of wristwatches.</p>
-        <h2>The Oyster Revolution</h2>
-        <p>In 1926, Rolex introduced the Oyster—the worlds first waterproof wristwatch. Mercedes Gleitze wore one while swimming the English Channel, proving its durability to the world.</p>
-        <h2>Icons of Excellence</h2>
-        <p>The Submariner (1953), GMT-Master (1955), Day-Date (1956), and Daytona (1963) each became icons in their own right, defining entire categories of watchmaking.</p>
-        <div class="highlight-box">
-            <h4>Key Collections</h4>
-            <ul>
-                <li><strong>Submariner:</strong> The dive watch icon</li>
-                <li><strong>Daytona:</strong> Racing chronograph legend</li>
-                <li><strong>Datejust:</strong> The everyday classic</li>
-                <li><strong>Day-Date:</strong> The Presidents watch</li>
-                <li><strong>GMT-Master II:</strong> Pilots favorite</li>
-            </ul>
+
+    <article class="content">
+        <p>Rolex is more than a watch brand—it's a cultural symbol of success, achievement, and excellence. From the depths of the Mariana Trench to the summit of Everest, Rolex has accompanied humanity's greatest achievements. Yet the company that became synonymous with luxury watches started with a 24-year-old German immigrant in London with a vision.</p>
+
+        <h2>Hans Wilsdorf's Vision (1905)</h2>
+        <p>Hans Wilsdorf arrived in London in 1903, working for a watch importing firm. At 24, he founded Wilsdorf & Davis with his brother-in-law, initially importing Swiss movements and placing them in cases made by English craftsmen. But Wilsdorf had bigger ambitions.</p>
+        <p>At a time when wristwatches were considered jewelry for women and unreliable at best, Wilsdorf believed the wristwatch would replace the pocket watch. He dedicated himself to proving that small movements could be both accurate and durable—a radical notion in 1905.</p>
+
+        <h2>The Name "Rolex" (1908)</h2>
+        <p>Wilsdorf wanted a name that was short, easy to pronounce in any language, and would look elegant on a watch dial. After trying hundreds of combinations, he settled on "Rolex"—a word that meant nothing but sounded like a watch being wound. In 1908, he registered the trademark.</p>
+
+        <div class="highlight">
+            <p><strong>First Chronometer Wristwatch:</strong> In 1910, a Rolex became the first wristwatch to receive the Swiss Certificate of Chronometric Precision. In 1914, a Rolex earned a Class A precision certificate from the Kew Observatory—a distinction previously reserved for marine chronometers.</p>
         </div>
-        <p>Today, Rolex remains privately owned by the Hans Wilsdorf Foundation, continuing his legacy of innovation and excellence.</p>
+
+        <h2>The Oyster Case (1926)</h2>
+        <p>The breakthrough that would define Rolex came in 1926: the Oyster case. This hermetically sealed case—with a screw-down crown and caseback—made the first truly waterproof and dustproof wristwatch. It was revolutionary.</p>
+        <p>To prove it worked, Wilsdorf gave an Oyster to Mercedes Gleitze, who wore it during her swim across the English Channel in 1927. The watch emerged perfectly functional after over 10 hours in the water. Wilsdorf took out a front-page advertisement in the Daily Mail, and the Rolex legend was born.</p>
+
+        <h2>The Perpetual Movement (1931)</h2>
+        <p>Five years later, Rolex introduced the Perpetual rotor—the first self-winding mechanism with a 360-degree rotor. Unlike earlier "bumper" automatics with limited rotor travel, the Perpetual rotor could rotate indefinitely in either direction. Combined with the Oyster case, Rolex had created the template for the modern automatic watch.</p>
+
+        <h2>The Professional Watches</h2>
+        <p>After World War II, Rolex developed a series of "tool watches" for professionals that became icons:</p>
+        <p><strong>Datejust (1945):</strong> First watch with automatically changing date display<br>
+        <strong>Turn-O-Graph (1953):</strong> First rotating bezel<br>
+        <strong>Submariner (1953):</strong> The definitive dive watch, water-resistant to 100m<br>
+        <strong>GMT-Master (1954):</strong> Developed with Pan Am for pilots crossing time zones<br>
+        <strong>Day-Date (1956):</strong> First watch displaying day and date, available only in precious metals<br>
+        <strong>Milgauss (1956):</strong> Antimagnetic watch for scientists<br>
+        <strong>Cosmograph Daytona (1963):</strong> The racing chronograph<br>
+        <strong>Sea-Dweller (1967):</strong> Deep-sea diving to 610m</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1905</span>
+                <p>Hans Wilsdorf founds Wilsdorf & Davis in London</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1908</span>
+                <p>"Rolex" trademark registered</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1926</span>
+                <p>Oyster waterproof case introduced</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1931</span>
+                <p>Perpetual self-winding movement patented</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1945</span>
+                <p>Datejust launched—first automatic date watch</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1953</span>
+                <p>Submariner and Explorer introduced</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1960</span>
+                <p>Deep Sea Special descends to Mariana Trench</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2023</span>
+                <p>Rolex produces approximately 1 million watches annually</p>
+            </div>
+        </div>
+
+        <h2>Conquest of the Extremes</h2>
+        <p>Rolex has been present at humanity's most extreme achievements. In 1953, Sir Edmund Hillary and Tenzing Norgay summited Everest wearing Rolex Oyster Perpetuals. In 1960, the Deep Sea Special descended to the bottom of the Mariana Trench strapped to the Trieste bathyscaphe—and emerged working perfectly from 10,916 meters depth.</p>
+        <p>These weren't marketing stunts but genuine tests. When Jacques Piccard surfaced from the deepest point on Earth, his telegram to Rolex read simply: "Am happy to announce that your watch works as well at 11,000 meters as on the surface."</p>
+
+        <h2>The Hans Wilsdorf Foundation</h2>
+        <p>When Wilsdorf's wife died in 1944, he created the Hans Wilsdorf Foundation, eventually transferring all his Rolex shares to it. Since his death in 1960, Rolex has been owned entirely by this charitable foundation. The company pays no dividends to shareholders—profits are reinvested or donated to charity. This structure explains Rolex's long-term thinking and its ability to resist short-term pressures.</p>
+
+        <h2>Today's Rolex</h2>
+        <p>Rolex remains the world's most recognized luxury watch brand, producing approximately one million watches per year—entirely in Switzerland. The company is vertically integrated to an unprecedented degree: Rolex makes its own gold alloys, manufactures its own movements, produces its own dials, and even operates its own gem-setting facilities.</p>
+        <p>From the entry-level Oyster Perpetual to the platinum Day-Date, every Rolex is Superlative Chronometer certified, guaranteeing accuracy of -2/+2 seconds per day. The waiting lists, the resale premiums, the cultural cachet—all trace back to one man's belief that a wristwatch could be precise, durable, and elegant.</p>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore Rolex</h3>
+            <a href="directory-rolex.html" class="cta-btn">View Directory</a>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
+        </div>
     </article>
-    <footer><p>&copy; 2025 Authentic Wrist. All rights reserved.</p></footer>
+
+    <footer>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
+    </footer>
 </body>
 </html>

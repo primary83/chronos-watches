@@ -1,73 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The History of IWC Schaffhausen — Authentic Wrist</title>
-    <meta name="description" content="Discover IWC Schaffhausen, where American engineering met Swiss craftsmanship since 1868.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>IWC History — Schaffhausen Excellence Since 1868 | Authentic Wrist</title>
+    <meta name="description" content="IWC Schaffhausen history from 1868 to today. The Portugieser, Pilot's watches, engineering excellence, and the American who built a Swiss watch empire.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
-        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
         nav { display: flex; gap: 30px; }
-        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .article-hero { height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%); border-bottom: 1px solid var(--gold); }
-        .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; margin-bottom: 15px; }
-        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-        .article-meta { font-size: 0.85rem; color: var(--silver); }
-        .article-content { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 25px; color: var(--silver); }
-        .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; margin: 45px 0 20px; color: var(--cream); }
-        .lead-paragraph { font-size: 1.15rem; color: var(--cream); border-left: 3px solid var(--gold); padding-left: 25px; margin-bottom: 35px; }
-        .highlight-box { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
-        .highlight-box h4 { color: var(--gold); margin-bottom: 15px; }
-        .highlight-box ul { list-style: none; }
-        .highlight-box li { padding: 8px 0; color: var(--silver); border-bottom: 1px solid var(--slate); }
-        .highlight-box li:last-child { border-bottom: none; }
-        footer { border-top: 1px solid var(--slate); padding: 40px; text-align: center; }
-        footer p { color: var(--silver); font-size: 0.85rem; }
-        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .article-hero h1 { font-size: 2.2rem; } }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">Our Story</a><a href="search.html">Search</a></nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+        </nav>
     </header>
-    <section class="article-hero">
-        <div>
-            <div class="article-category">Brand Story</div>
-            <h1>The History of IWC Schaffhausen</h1>
-            <div class="article-meta">January 2025 · 10 min read</div>
-        </div>
+
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>IWC Schaffhausen</h1>
+        <p style="color: var(--silver);">Since 1868 — Engineering Excellence</p>
     </section>
-    <article class="article-content">
-        <p class="lead-paragraph">International Watch Company—founded by an American in Switzerland. IWC Schaffhausen has blended engineering pragmatism with Swiss craftsmanship since 1868, creating some of the most robust and technically advanced timepieces.</p>
-        <h2>An American in Switzerland</h2>
-        <p>Florentine Ariosto Jones, a Boston watchmaker, founded IWC in 1868 in Schaffhausen—chosen for its hydroelectric power from the Rhine. His goal: combine American manufacturing efficiency with Swiss craftsmanship.</p>
-        <h2>Pilot Watch Legacy</h2>
-        <p>IWC's pilot watches became legendary in the 20th century. The Big Pilot, with its distinctive onion crown and massive case, remains an icon of aviation watchmaking. The Mark series has equipped military pilots worldwide.</p>
-        <h2>Engineering Excellence</h2>
-        <p>IWC is known for its robust, engineer-focused approach. The Ingenieur collection showcased antimagnetic technology, while the Portuguese line brought pocket watch precision to the wrist.</p>
-        <div class="highlight-box">
-            <h4>Key Collections</h4>
-            <ul>
-                <li><strong>Big Pilot:</strong> The iconic aviation watch</li>
-                <li><strong>Portugieser:</strong> Elegant large-dial classics</li>
-                <li><strong>Ingenieur:</strong> Technical sports watches</li>
-                <li><strong>Aquatimer:</strong> Professional dive watches</li>
-                <li><strong>Portofino:</strong> Understated dress watches</li>
-            </ul>
+
+    <article class="content">
+        <p>IWC is the anomaly of Swiss watchmaking—a company founded by an American, located in German-speaking Switzerland far from the traditional watchmaking regions, and built on engineering principles rather than artisanal traditions. This unique heritage has given IWC a character all its own: robust, functional, and timelessly masculine.</p>
+
+        <h2>The American in Schaffhausen (1868)</h2>
+        <p>Florentine Ariosto Jones was a Boston watchmaker with an audacious plan: combine Swiss craftsmanship with American manufacturing methods to produce high-quality watches at competitive prices. In 1868, he established the International Watch Company in Schaffhausen, far from Switzerland's French-speaking watch valley.</p>
+        <p>Jones chose Schaffhausen for its hydroelectric power (the Rhine Falls provided energy) and its proximity to skilled German engineers. While his business model ultimately failed—Swiss labor costs were higher than expected—the company survived, eventually thriving under new ownership.</p>
+
+        <h2>The Portugieser (1939)</h2>
+        <p>In 1939, two Portuguese importers asked IWC for wristwatches with marine chronometer accuracy. The only movements precise enough were pocket watch calibers. IWC's solution: put the large pocket watch movement in a large wristwatch case. The Portugieser was born.</p>
+        <p>With its clean dial, slim bezel, and 42mm+ diameter (enormous for 1939), the Portugieser established a template that wouldn't become mainstream for 60 years. Today, the Portugieser remains IWC's most elegant collection, available with chronographs, perpetual calendars, and minute repeaters.</p>
+
+        <div class="highlight">
+            <p><strong>Ahead of Its Time:</strong> The original Portugieser's 42mm case was considered huge in 1939. Today's watch market has caught up—proving that IWC was simply decades ahead of fashion.</p>
         </div>
-        <p>Today, as part of the Richemont Group, IWC continues to create timepieces that balance technical innovation with timeless design—true to the spirit of its American founder.</p>
+
+        <h2>The Pilot's Watches</h2>
+        <p>IWC's connection to aviation began in the 1930s with cockpit instruments and "Fliegeruhren" (pilot's watches) for military use. The Big Pilot (1940) featured an enormous case, oversized crown for gloved hands, and antimagnetic soft-iron cage. These weren't style exercises—they were instruments designed for wartime pilots.</p>
+        <p>The modern Pilot's Watch collection (particularly the Big Pilot's Watch) continues this heritage. The large crown, the propeller logo, the legible dial—everything serves function first. It's military heritage without pretense.</p>
+
+        <h2>The Ingenieur and Technical Innovation</h2>
+        <p>IWC's engineering DNA shows most clearly in the Ingenieur collection. The original 1955 Ingenieur featured a soft-iron cage for antimagnetic protection, targeting engineers and technicians who worked around electrical equipment. The design was clean and functional—a tool watch for white-collar professionals.</p>
+        <p>IWC pioneered numerous technical innovations: the Da Vinci perpetual calendar (1985) with four-digit year display that automatically accounts for century leap years, requiring no adjustment until 2500.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1868</span>
+                <p>F.A. Jones founds International Watch Company in Schaffhausen</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1939</span>
+                <p>Portugieser created for Portuguese importers</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1940</span>
+                <p>Big Pilot's Watch developed for German Air Force</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1955</span>
+                <p>Ingenieur with antimagnetic protection launched</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1967</span>
+                <p>Aquatimer dive watch introduced</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1985</span>
+                <p>Da Vinci perpetual calendar—doesn't need adjustment until 2500</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2000</span>
+                <p>Acquired by Richemont Group</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2018</span>
+                <p>150th anniversary; new manufacture movements</p>
+            </div>
+        </div>
+
+        <h2>The Aquatimer</h2>
+        <p>Introduced in 1967, the Aquatimer established IWC's dive watch credentials. Its innovations included an internal rotating bezel (operated by an external crown) and pioneering use of titanium. The current collection offers professional dive capability with IWC's characteristic clean design.</p>
+
+        <h2>Gerald Genta and Design Evolution</h2>
+        <p>In the 1970s, legendary designer Gerald Genta created watches for IWC, including versions of the Ingenieur that anticipated the integrated-bracelet luxury sports watch trend. His influence helped shape IWC's aesthetic: bold but not flashy, masculine but refined.</p>
+
+        <h2>Today's IWC</h2>
+        <p>Under Richemont ownership since 2000, IWC has invested heavily in manufacture movements and expanded its production facility in Schaffhausen. The core collections remain Portugieser, Pilot's Watches, Portofino (elegant dress watches), Aquatimer, and Ingenieur.</p>
+        <p>IWC's identity is distinctly masculine and engineering-focused. These are serious watches for serious people—without the flash of sportier brands or the delicacy of dress watch specialists. The American founder's pragmatic vision, filtered through 150 years of Swiss refinement, created something unique in watchmaking.</p>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore IWC</h3>
+            <a href="directory-iwc.html" class="cta-btn">View Directory</a>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
+        </div>
     </article>
-    <footer><p>&copy; 2025 Authentic Wrist. All rights reserved.</p></footer>
+
+    <footer>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
+    </footer>
 </body>
 </html>
