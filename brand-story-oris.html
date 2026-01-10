@@ -1,72 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The History of Oris: Real Watches for Real People — Authentic Wrist</title>
-    <meta name="description" content="Discover Oris, the independent Swiss watchmaker offering genuine mechanical watches at accessible prices.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Oris History — Real Watches for Real People | Authentic Wrist</title>
+    <meta name="description" content="Oris history from 1904 to today. Independent Swiss watchmaking, environmental activism, and why Oris offers exceptional value for mechanical watch enthusiasts.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
-        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
         nav { display: flex; gap: 30px; }
-        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .article-hero { height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%); border-bottom: 1px solid var(--gold); }
-        .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; margin-bottom: 15px; }
-        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-        .article-meta { font-size: 0.85rem; color: var(--silver); }
-        .article-content { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 25px; color: var(--silver); }
-        .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; margin: 45px 0 20px; color: var(--cream); }
-        .lead-paragraph { font-size: 1.15rem; color: var(--cream); border-left: 3px solid var(--gold); padding-left: 25px; margin-bottom: 35px; }
-        .highlight-box { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
-        .highlight-box h4 { color: var(--gold); margin-bottom: 15px; }
-        .highlight-box ul { list-style: none; }
-        .highlight-box li { padding: 8px 0; color: var(--silver); border-bottom: 1px solid var(--slate); }
-        .highlight-box li:last-child { border-bottom: none; }
-        footer { border-top: 1px solid var(--slate); padding: 40px; text-align: center; }
-        footer p { color: var(--silver); font-size: 0.85rem; }
-        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .article-hero h1 { font-size: 2.2rem; } }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">Our Story</a><a href="search.html">Search</a></nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+        </nav>
     </header>
-    <section class="article-hero">
-        <div>
-            <div class="article-category">Brand Story</div>
-            <h1>The History of Oris</h1>
-            <div class="article-meta">January 2025 · 10 min read</div>
-        </div>
+
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>Oris</h1>
+        <p style="color: var(--silver);">Since 1904 — Real Watches for Real People</p>
     </section>
-    <article class="article-content">
-        <p class="lead-paragraph">"Real watches for real people." In a world of unattainable luxury, Oris offers something different: genuine Swiss mechanical watches at prices enthusiasts can afford. Founded in 1904, this fiercely independent brand proves value and quality aren't mutually exclusive.</p>
-        <h2>Hölstein Origins</h2>
-        <p>Oris was founded in 1904 in the village of Hölstein in northwestern Switzerland. The name comes from a nearby brook. For decades, Oris grew as a respected mid-range manufacturer, producing reliable timepieces for working professionals.</p>
-        <h2>Independence and Identity</h2>
-        <p>In 1982, management bought Oris from its parent company, making it one of the few truly independent Swiss watch brands. A key decision: Oris would make ONLY mechanical watches—no quartz.</p>
-        <h2>The Red Rotor</h2>
-        <p>Oris's signature is the red rotor visible through exhibition case backs. It's a simple touch, but it became instantly recognizable.</p>
-        <div class="highlight-box">
-            <h4>Key Collections</h4>
-            <ul>
-                <li><strong>Aquis:</strong> Professional dive watches</li>
-                <li><strong>Big Crown:</strong> Vintage-inspired pilot watches</li>
-                <li><strong>Divers Sixty-Five:</strong> Retro dive watch revival</li>
-                <li><strong>ProPilot:</strong> Modern aviation instruments</li>
-            </ul>
+
+    <article class="content">
+        <p>Oris stands apart in Swiss watchmaking: independent, focused exclusively on mechanical watches, and committed to environmental causes. While conglomerates dominate the industry, Oris remains privately owned, making decisions based on craft rather than shareholders. The result is exceptional value—genuine Swiss mechanical watches at prices that don't require financing.</p>
+
+        <h2>Hölstein Origins (1904)</h2>
+        <p>Paul Cattin and Georges Christian founded Oris in 1904 in Hölstein, a village in northwest Switzerland. The name came from a nearby brook. From modest beginnings, Oris grew rapidly: by the 1960s, the company employed over 800 people and produced over 1.2 million watches annually.</p>
+        <p>Oris built its reputation on reliable, affordable mechanical watches—timepieces for working people rather than aristocrats. This democratic philosophy has defined the brand ever since.</p>
+
+        <h2>The Pointer Date</h2>
+        <p>Oris's signature complication is the pointer date: a red-tipped central hand that indicates the date on a scale around the dial's periphery. Introduced in the 1930s, the pointer date remains a distinctive Oris feature—immediately recognizable and more elegant than window dates.</p>
+
+        <div class="highlight">
+            <p><strong>Independence Regained:</strong> After being forced into the ASUAG/SSIH group during the quartz crisis, Oris management bought back the company in 1982 for one Swiss franc—plus assumption of debts. This management buyout restored Oris's independence, and the company has remained privately held ever since.</p>
         </div>
-        <p>For watch enthusiasts seeking Swiss mechanical quality without luxury-tier prices, Oris represents honest value.</p>
+
+        <h2>Mechanical Only</h2>
+        <p>In 1982, newly independent Oris made a bold declaration: the company would produce only mechanical watches. No quartz, no batteries, only watches powered by springs and gears. At the time—during the quartz crisis—this seemed like commercial suicide. It proved visionary.</p>
+        <p>As mechanical watches regained prestige, Oris was positioned perfectly. The company hadn't diluted its brand with quartz offerings. Every Oris was, and is, a real mechanical watch.</p>
+
+        <h2>Dive Watch Excellence</h2>
+        <p>Oris has become synonymous with accessible dive watches. The Aquis, introduced in 2012, offers Swiss automatic movements, ceramic bezels, and 300m water resistance at prices typically under $2,500. The Divers Sixty-Five revives 1960s aesthetics with modern specifications.</p>
+        <p>Professional divers appreciate Oris for substance over flash. These are serious tool watches—ISO 6425 certified, with functional rotating bezels and proper lume—at prices that allow actual use without anxiety.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1904</span>
+                <p>Oris founded in Hölstein, Switzerland</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1938</span>
+                <p>Pointer date complication introduced</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1965</span>
+                <p>Divers Sixty-Five original model launched</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1982</span>
+                <p>Management buyout; mechanical-only commitment</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2012</span>
+                <p>Aquis dive watch collection launched</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2014</span>
+                <p>Ocean conservation partnerships begin</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2019</span>
+                <p>Calibre 400 in-house movement debuts (5-day power reserve)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2022</span>
+                <p>Calibre 401 (date) and 403 (small seconds) expand in-house lineup</p>
+            </div>
+        </div>
+
+        <h2>Environmental Activism</h2>
+        <p>Oris has committed to environmental causes with unusual depth. The company partners with ocean conservation organizations, producing limited editions where proceeds support marine protection. But it goes beyond fundraising: Oris has eliminated plastic from its packaging, uses recycled materials, and actively advocates for ocean health.</p>
+        <p>The "Change for the Better" initiative extends to partnerships with coral restoration projects, whale research, and clean water initiatives. For environmentally conscious buyers, Oris offers a way to purchase a Swiss mechanical watch while supporting conservation.</p>
+
+        <h2>Calibre 400: In-House Movement</h2>
+        <p>In 2019, Oris launched the Calibre 400—its first in-house movement in decades. The 400 offers five-day power reserve, enhanced anti-magnetic properties, and a 10-year warranty. At prices around $3,500, it represents extraordinary value for a Swiss manufacture movement.</p>
+        <p>The Calibre 400 announcement signaled Oris's ambition: no longer content to be "just" an excellent value proposition, the company now competes technically with brands charging much more.</p>
+
+        <h2>Current Collections</h2>
+        <p><strong>Aquis:</strong> Modern dive watches, professional capability<br>
+        <strong>Divers Sixty-Five:</strong> Vintage-inspired dive aesthetics<br>
+        <strong>Big Crown:</strong> Pilot and aviation heritage<br>
+        <strong>Artelier:</strong> Dress watches with complications<br>
+        <strong>ProPilot:</strong> Modern aviation instruments</p>
+
+        <h2>Today's Oris</h2>
+        <p>Oris offers something rare: an independent Swiss brand producing mechanical-only watches at accessible prices. No conglomerate ownership, no quartz dilution, no pretense—just well-made watches for people who appreciate mechanical timekeeping.</p>
+        <p>"Real Watches for Real People" isn't just a slogan. An Oris Aquis or Divers Sixty-Five represents genuine Swiss watchmaking—automatic movement, quality finishing, proper specifications—at prices that make daily wear guilt-free. That's increasingly rare, and increasingly valuable.</p>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore Oris</h3>
+            <a href="directory-oris.html" class="cta-btn">View Directory</a>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
+        </div>
     </article>
-    <footer><p>&copy; 2025 Authentic Wrist. All rights reserved.</p></footer>
+
+    <footer>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
+    </footer>
 </body>
 </html>

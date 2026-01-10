@@ -1,72 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The History of Tissot: Innovators by Tradition — Authentic Wrist</title>
-    <meta name="description" content="Discover Tissot, the Swiss brand offering premium quality at accessible prices since 1853.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Tissot History — Innovators by Tradition | Authentic Wrist</title>
+    <meta name="description" content="Tissot history from 1853 to today. Swiss watchmaking heritage, sports timing innovation, and why Tissot offers the best value in Swiss watches.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
-        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
         nav { display: flex; gap: 30px; }
-        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .article-hero { height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%); border-bottom: 1px solid var(--gold); }
-        .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; margin-bottom: 15px; }
-        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-        .article-meta { font-size: 0.85rem; color: var(--silver); }
-        .article-content { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 25px; color: var(--silver); }
-        .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; margin: 45px 0 20px; color: var(--cream); }
-        .lead-paragraph { font-size: 1.15rem; color: var(--cream); border-left: 3px solid var(--gold); padding-left: 25px; margin-bottom: 35px; }
-        .highlight-box { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
-        .highlight-box h4 { color: var(--gold); margin-bottom: 15px; }
-        .highlight-box ul { list-style: none; }
-        .highlight-box li { padding: 8px 0; color: var(--silver); border-bottom: 1px solid var(--slate); }
-        .highlight-box li:last-child { border-bottom: none; }
-        footer { border-top: 1px solid var(--slate); padding: 40px; text-align: center; }
-        footer p { color: var(--silver); font-size: 0.85rem; }
-        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .article-hero h1 { font-size: 2.2rem; } }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">Our Story</a><a href="search.html">Search</a></nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+        </nav>
     </header>
-    <section class="article-hero">
-        <div>
-            <div class="article-category">Brand Story</div>
-            <h1>The History of Tissot</h1>
-            <div class="article-meta">January 2025 · 10 min read</div>
-        </div>
+
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>Tissot</h1>
+        <p style="color: var(--silver);">Since 1853 — Innovators by Tradition</p>
     </section>
-    <article class="article-content">
-        <p class="lead-paragraph">"Innovators by Tradition." Since 1853, Tissot has been making Swiss quality accessible. As part of the Swatch Group, Tissot brings genuine Swiss watchmaking to millions.</p>
-        <h2>Le Locle Origins</h2>
-        <p>Charles-Félicien Tissot and his son founded Tissot in 1853 in Le Locle, Switzerland. From the beginning, they looked beyond Swiss borders, establishing early exports to America and Russia.</p>
-        <h2>A History of Firsts</h2>
-        <p>Tissot has accumulated impressive innovations: the first mass-produced pocket watch (1853), first anti-magnetic watch (1930), first plastic watch (1971), and first tactile watch with touch-screen crystal (1999).</p>
-        <h2>The PRX Phenomenon</h2>
-        <p>In 2021, Tissot reissued the PRX—a 1970s design with integrated bracelet. Priced under $700, it brought the luxury sports watch aesthetic to a new audience.</p>
-        <div class="highlight-box">
-            <h4>Key Collections</h4>
-            <ul>
-                <li><strong>PRX:</strong> The iconic 1970s integrated bracelet</li>
-                <li><strong>Gentleman:</strong> Versatile everyday dress watch</li>
-                <li><strong>T-Touch:</strong> Touch-screen technology pioneer</li>
-                <li><strong>Seastar:</strong> Capable dive watches</li>
-            </ul>
+
+    <article class="content">
+        <p>Tissot occupies a unique position in watchmaking: genuine Swiss heritage at accessible prices. As the Swatch Group's largest brand by volume, Tissot has the scale to deliver quality that smaller brands cannot match at similar price points. Yet it's also a 170-year-old manufacture with a history of genuine innovation. "Innovators by Tradition" isn't just marketing—it's documented history.</p>
+
+        <h2>Le Locle Origins (1853)</h2>
+        <p>Charles-Félicien Tissot and his son Charles-Émile established their workshop in Le Locle, Switzerland in 1853. Le Locle was already a watchmaking center, home to dozens of ateliers. The Tissots distinguished themselves through quality and innovation.</p>
+        <p>By 1858, Tissot had established a presence in Russia—the brand's first export market and the beginning of global expansion. The company's watches earned a reputation for reliability, leading to sales throughout Europe and eventually worldwide.</p>
+
+        <h2>First Mass-Produced Pocket Watch (1858)</h2>
+        <p>Tissot was among the first Swiss companies to embrace industrial production methods. While competitors clung to traditional handcraft, Tissot invested in machinery that could produce high-quality watches at scale. This philosophy—quality through technology rather than exclusivity—remains central to the brand today.</p>
+
+        <div class="highlight">
+            <p><strong>Global First:</strong> In 1930, Tissot produced the first anti-magnetic watch, a genuine innovation for anyone working around electrical equipment. The company has continued to pioneer: first plastic watch (1971), first tactile watch with touch-sensitive sapphire (1999), first solar-powered tactile watch (2014).</p>
         </div>
-        <p>In a world where entry-level luxury keeps climbing, Tissot proves Swiss quality doesn't require a four-figure budget.</p>
+
+        <h2>The T-Touch Revolution (1999)</h2>
+        <p>The Tissot T-Touch, introduced in 1999, was the world's first watch with a touch-sensitive sapphire crystal. By touching different zones on the crystal, wearers could access altimeter, barometer, compass, thermometer, and chronograph functions. It was essentially a smartwatch—15 years before the Apple Watch.</p>
+        <p>The T-Touch became Tissot's signature, spawning an entire collection of tactile watches that remain popular with outdoor enthusiasts who want analog reliability with digital functionality.</p>
+
+        <h2>Sports Timing Heritage</h2>
+        <p>Tissot has served as official timekeeper for major sports since 1938, when it first timed skiing events. Today, Tissot provides timing for basketball (NBA, FIBA), cycling (Tour de France), motorsports (MotoGP), fencing, and more. The brand's sports partnerships aren't just marketing—they require developing actual timing technology.</p>
+        <p>The Tissot PRX, inspired by 1970s sports watches, has become a cult favorite among collectors seeking vintage aesthetics at modern prices. Its integrated bracelet design competes visually with watches costing five times as much.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1853</span>
+                <p>Charles-Félicien and Charles-Émile Tissot found company in Le Locle</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1930</span>
+                <p>First anti-magnetic watch produced</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1938</span>
+                <p>First sports timing partnership (skiing)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1971</span>
+                <p>Astrolon—first plastic watch</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1985</span>
+                <p>Tissot joins Swatch Group</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1999</span>
+                <p>T-Touch—first tactile watch</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2011</span>
+                <p>Powermatic 80 movement debuts (80-hour power reserve)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2022</span>
+                <p>PRX Powermatic 80 becomes collector phenomenon</p>
+            </div>
+        </div>
+
+        <h2>The Powermatic 80</h2>
+        <p>In 2011, Tissot introduced the Powermatic 80 movement, offering 80 hours of power reserve—roughly three times the industry standard. This wasn't haute horlogerie innovation; it was practical engineering that benefits everyday wearers. You can take your watch off Friday evening and it's still running Monday morning.</p>
+        <p>The Powermatic 80's anti-magnetic silicon hairspring and long power reserve would cost significantly more from other brands. Tissot's scale makes it affordable.</p>
+
+        <h2>Current Collections</h2>
+        <p><strong>PRX:</strong> 1970s-inspired integrated bracelet design—the hottest affordable Swiss watch<br>
+        <strong>Gentleman:</strong> Classic dress watches with Powermatic movements<br>
+        <strong>Seastar:</strong> Dive watches up to 2000m<br>
+        <strong>T-Touch:</strong> Tactile multi-function watches<br>
+        <strong>Le Locle/Chemin des Tourelles:</strong> Heritage dress pieces</p>
+
+        <h2>Today's Tissot</h2>
+        <p>Tissot's position as the Swatch Group's volume brand gives it advantages smaller brands can't match: access to ETA/Powermatic movements, manufacturing scale, global distribution, and sports partnerships. For buyers seeking genuine Swiss watchmaking under $1,000, Tissot is often the rational choice.</p>
+        <p>The brand proves that accessible pricing doesn't require compromise. A Tissot PRX Powermatic 80 offers an integrated bracelet design, 80-hour power reserve, and Swiss automatic movement for around $600—specifications that would cost $2,000+ from many competitors. That's not cutting corners; it's efficiency through scale.</p>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore Tissot</h3>
+            <a href="directory-tissot.html" class="cta-btn">View Directory</a>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
+        </div>
     </article>
-    <footer><p>&copy; 2025 Authentic Wrist. All rights reserved.</p></footer>
+
+    <footer>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
+    </footer>
 </body>
 </html>

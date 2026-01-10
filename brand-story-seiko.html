@@ -1,79 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The History of Seiko — Authentic Wrist</title>
-    <meta name="description" content="Discover Seiko, Japan's watchmaking pioneer since 1881.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Seiko History — Always One Step Ahead | Authentic Wrist</title>
+    <meta name="description" content="Seiko history from 1881 to today. The quartz revolution, first automatic chronograph, and how a Japanese company changed watchmaking forever.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
-        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
         nav { display: flex; gap: 30px; }
-        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .article-hero { height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%); border-bottom: 1px solid var(--gold); }
-        .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; margin-bottom: 15px; }
-        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-        .article-meta { font-size: 0.85rem; color: var(--silver); }
-        .article-content { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 25px; color: var(--silver); }
-        .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; margin: 45px 0 20px; color: var(--cream); }
-        .lead-paragraph { font-size: 1.15rem; color: var(--cream); border-left: 3px solid var(--gold); padding-left: 25px; margin-bottom: 35px; }
-        .highlight-box { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
-        .highlight-box h4 { color: var(--gold); margin-bottom: 15px; }
-        .highlight-box ul { list-style: none; }
-        .highlight-box li { padding: 8px 0; color: var(--silver); border-bottom: 1px solid var(--slate); }
-        .highlight-box li:last-child { border-bottom: none; }
-        footer { border-top: 1px solid var(--slate); padding: 40px; text-align: center; }
-        footer p { color: var(--silver); font-size: 0.85rem; }
-        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .article-hero h1 { font-size: 2.2rem; } }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">Our Story</a><a href="search.html">Search</a></nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+        </nav>
     </header>
-    <section class="article-hero">
-        <div>
-            <div class="article-category">Brand Story</div>
-            <h1>The History of Seiko</h1>
-            <div class="article-meta">December 2024 · 12 min read</div>
-        </div>
+
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>Seiko</h1>
+        <p style="color: var(--silver);">Since 1881 — Always One Step Ahead</p>
     </section>
-    <article class="article-content">
-        <p class="lead-paragraph">Japan's watchmaking pioneer. From creating the country's first wristwatch to revolutionizing the industry with quartz technology, Seiko has shaped horological history for over 140 years.</p>
-        <h2>The Founding Vision</h2>
-        <p>Kintaro Hattori founded his watch and jewelry shop in Tokyo's Ginza district in 1881, at just 21 years old. His vision was ambitious: to make Japan a leader in precision timekeeping. In 1892, he established Seikosha (meaning "House of Exquisite Workmanship"), beginning domestic watch production.</p>
-        <p>The company produced Japan's first wristwatch in 1913, called the Laurel. This marked the beginning of Seiko's journey as a true watchmaker rather than just an importer of foreign timepieces.</p>
-        <h2>The Quartz Revolution</h2>
-        <p>On December 25, 1969, Seiko changed the watch industry forever. The Seiko Quartz Astron 35SQ became the world's first quartz wristwatch, accurate to within five seconds per month—a hundred times more precise than the best mechanical watches of the era.</p>
-        <p>This innovation triggered the "Quartz Crisis" that devastated the Swiss watch industry. Seiko had proven that a Japanese company could not only compete with but surpass traditional Swiss watchmaking in precision.</p>
-        <h2>The Spring Drive Innovation</h2>
-        <p>Not content with quartz dominance, Seiko spent 28 years developing the Spring Drive movement—a revolutionary hybrid that combines mechanical watchmaking with electronic precision. Introduced in 1999, it uses a mainspring for power but regulates time electronically, achieving accuracy of one second per day with the smooth sweeping hand of a mechanical watch.</p>
-        <div class="highlight-box">
-            <h4>Key Collections</h4>
-            <ul>
-                <li><strong>Presage:</strong> Japanese craftsmanship and elegant dials</li>
-                <li><strong>Prospex:</strong> Professional sports watches for land, sea, and sky</li>
-                <li><strong>Astron:</strong> GPS solar technology</li>
-                <li><strong>Seiko 5 Sports:</strong> Affordable automatic excellence</li>
-                <li><strong>King Seiko:</strong> Revived heritage dress watches</li>
-            </ul>
+
+    <article class="content">
+        <p>No company has disrupted watchmaking more than Seiko. The Japanese giant created the quartz watch that nearly destroyed the Swiss industry, produced the world's first automatic chronograph, and continues to offer some of the best value in horology. From $50 divers to $500,000 haute horlogerie, Seiko covers more ground than any other watch company.</p>
+
+        <h2>Kintaro Hattori's Vision (1881)</h2>
+        <p>Kintaro Hattori opened a watch and jewelry shop in Tokyo in 1881, at age 21. He began by selling and repairing imported pocket watches, but his ambition was larger: to manufacture watches in Japan. In 1892, he established the Seikosha factory, and by 1895, Seiko produced its first pocket watch—the Timekeeper.</p>
+        <p>The company name means "exquisite" or "success" in Japanese—and Hattori achieved both. By the early 20th century, Seiko was Japan's dominant watchmaker.</p>
+
+        <h2>First Japanese Wristwatch (1913)</h2>
+        <p>Seiko produced Japan's first wristwatch, the Laurel, in 1913. While European manufacturers still focused on pocket watches, Seiko recognized the wristwatch's potential early. This forward-thinking approach would define the company.</p>
+
+        <div class="highlight">
+            <p><strong>Surviving Disaster:</strong> The 1923 Great Kanto Earthquake destroyed Seiko's Tokyo factory. Hattori rebuilt quickly, using the disaster as an opportunity to modernize. Within a year, production resumed—a pattern of resilience that would repeat throughout Seiko's history.</p>
         </div>
-        <h2>Vertical Integration</h2>
-        <p>Unlike most watch companies, Seiko manufactures nearly everything in-house—from hairsprings and escapements to cases, dials, and even the tools used to make watches. This vertical integration allows for exceptional quality control and innovation that few brands can match.</p>
-        <h2>A Legacy of Firsts</h2>
-        <p>Seiko's history is marked by groundbreaking innovations: the first TV watch (1982), the first computerized watch (1984), the first GPS solar watch (2012), and countless patents in movement technology. Today, Seiko continues to innovate while honoring its heritage, offering exceptional value across all price points.</p>
-        <p>From affordable Seiko 5 automatics to the highest-end Grand Seiko timepieces, the brand proves that Japanese watchmaking stands equal to—and in many ways surpasses—its Swiss counterparts.</p>
+
+        <h2>The Automatic Chronograph Race (1969)</h2>
+        <p>On May 5, 1969, Seiko introduced the world's first automatic chronograph movement—the caliber 6139. It beat the Swiss consortium (Heuer, Breitling, Hamilton) to market by a matter of months. The debate over "who was first" continues, but Seiko's 6139 was undeniably the first vertical clutch automatic chronograph, a design that proved more reliable than the Swiss column wheel approach.</p>
+        <p>The "Pogue" Seiko 6139—named for astronaut William Pogue, who wore one on Skylab—became a collector icon, proving Seiko could compete at the highest levels.</p>
+
+        <h2>The Quartz Revolution (1969)</h2>
+        <p>On Christmas Day 1969, Seiko launched the Astron—the world's first quartz wristwatch. It cost as much as a car, but it changed everything. The Astron was accurate to ±5 seconds per month, compared to ±5 seconds per day for the best mechanical watches.</p>
+        <p>Seiko chose not to patent the technology exclusively, allowing other manufacturers to license it. This decision accelerated the "Quartz Crisis" that devastated Swiss watchmaking in the 1970s. Hundreds of Swiss brands disappeared. Seiko's market share soared.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1881</span>
+                <p>Kintaro Hattori opens watch shop in Tokyo</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1913</span>
+                <p>Laurel—Japan's first wristwatch</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1960</span>
+                <p>Grand Seiko launched to challenge Swiss supremacy</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1965</span>
+                <p>62MAS—Japan's first dive watch (150m)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1969</span>
+                <p>First automatic chronograph (6139) and first quartz watch (Astron)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1975</span>
+                <p>First titanium dive watch; Tuna 600m professional diver</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1988</span>
+                <p>Kinetic movement (body motion generates electricity)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1999</span>
+                <p>Spring Drive combines mechanical and quartz</p>
+            </div>
+        </div>
+
+        <h2>The Dive Watch Legend</h2>
+        <p>Seiko's dive watches have achieved cult status among collectors. The 1965 62MAS was Japan's first dive watch. The 1975 "Tuna" (named for its shape) pioneered titanium cases and achieved 600m depth rating. The SKX007—produced from 1996 to 2019—became arguably the most popular dive watch ever made, offering ISO-certified 200m water resistance for around $200.</p>
+        <p>Professional saturation divers trust Seiko. Tuna variants have been used on actual commercial diving operations—not because of marketing partnerships, but because they work.</p>
+
+        <h2>The Presage and Prospex Lines</h2>
+        <p>Modern Seiko organizes its watches into distinct families:</p>
+        <p><strong>Prospex:</strong> Professional sports watches—divers, pilots, field watches<br>
+        <strong>Presage:</strong> Dress watches featuring traditional Japanese crafts (enamel, urushi lacquer)<br>
+        <strong>Seiko 5:</strong> Affordable automatics—the gateway to mechanical watches<br>
+        <strong>Astron:</strong> GPS solar—perpetual accuracy anywhere on Earth</p>
+
+        <h2>Today's Seiko</h2>
+        <p>Seiko remains vertically integrated to an unusual degree: the company manufactures its own movements, cases, dials, crystals, and even the machinery used to make them. This control enables both the $50 Seiko 5 and the six-figure Credor complications.</p>
+        <p>For collectors, Seiko offers an unmatched value proposition. The company's obsession with technology, its willingness to experiment, and its manufacturing depth produce watches that punch far above their price points. Whether you want a beater diver, a dress watch, or haute horlogerie, Seiko makes something relevant—and probably has for decades.</p>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore Seiko</h3>
+            <a href="directory-seiko.html" class="cta-btn">View Directory</a>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
+        </div>
     </article>
-    <footer><p>&copy; 2025 Authentic Wrist. All rights reserved.</p></footer>
+
+    <footer>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
+    </footer>
 </body>
 </html>
