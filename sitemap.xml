@@ -58,6 +58,12 @@
   <url><loc>https://authenticwrist.com/brand-story-zenith.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-panerai.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-longines.html</loc><priority>0.8</priority></url>
+  <!-- Batch 2: Japanese & Accessible Swiss -->
+  <url><loc>https://authenticwrist.com/brand-story-grand-seiko.html</loc><priority>0.8</priority></url>
+  <url><loc>https://authenticwrist.com/brand-story-seiko.html</loc><priority>0.8</priority></url>
+  <url><loc>https://authenticwrist.com/brand-story-tissot.html</loc><priority>0.8</priority></url>
+  <url><loc>https://authenticwrist.com/brand-story-hamilton.html</loc><priority>0.8</priority></url>
+  <url><loc>https://authenticwrist.com/brand-story-oris.html</loc><priority>0.8</priority></url>
 
   <!-- Previous Brand Stories - Haute Horlogerie -->
   <url><loc>https://authenticwrist.com/brand-story-blancpain.html</loc><priority>0.8</priority></url>
