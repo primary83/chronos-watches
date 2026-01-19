@@ -3,261 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us — AUTHENTIC WRIST</title>
-    <meta name="description" content="Get in touch with the AUTHENTIC WRIST team. We're here to help with questions about luxury watches, our content, or partnership inquiries.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Contact Us — Authentic Wrist</title>
+    <meta name="description" content="Get in touch with Authentic Wrist. Questions about watches, partnerships, or feedback — we'd love to hear from you.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --gold: #C9A962;
             --gold-light: #E8D5A3;
+            --gold-dark: #8B7355;
             --obsidian: #0A0A0A;
             --charcoal: #1A1A1A;
             --slate: #2A2A2A;
             --silver: #C0C0C0;
             --cream: #F5F3EF;
-            --font-display: 'Cormorant Garamond', Georgia, serif;
-            --font-body: 'Outfit', sans-serif;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: var(--font-body);
+            font-family: 'Outfit', sans-serif;
             background: var(--obsidian);
             color: var(--cream);
-            line-height: 1.8;
+            line-height: 1.6;
+            min-height: 100vh;
         }
-
+        
+        /* Header */
         header {
             padding: 20px 40px;
+            border-bottom: 1px solid var(--slate);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid var(--slate);
         }
-
         .logo {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            font-weight: 400;
-            letter-spacing: 0.3em;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
             color: var(--gold);
             text-decoration: none;
+            letter-spacing: 0.2em;
         }
-
-        nav {
-            display: flex;
-            gap: 30px;
-        }
-
+        nav { display: flex; gap: 30px; }
         nav a {
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--cream);
+            color: var(--silver);
             text-decoration: none;
-            transition: color 0.3s ease;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.3s;
         }
+        nav a:hover { color: var(--gold); }
 
-        nav a:hover {
-            color: var(--gold);
-        }
-
-        .page-hero {
-            padding: 80px 40px;
+        /* Hero Section */
+        .hero {
+            padding: 80px 40px 60px;
             text-align: center;
             border-bottom: 1px solid var(--slate);
         }
-
-        .page-hero h1 {
-            font-family: var(--font-display);
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
             font-size: clamp(2.5rem, 5vw, 3.5rem);
             font-weight: 300;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            color: var(--cream);
         }
-
-        .page-hero p {
+        .hero p {
             color: var(--silver);
+            max-width: 600px;
+            margin: 0 auto;
             font-size: 1.1rem;
         }
 
-        .content {
-            max-width: 900px;
+        /* Main Content */
+        .contact-container {
+            max-width: 1200px;
             margin: 0 auto;
             padding: 80px 40px;
-        }
-
-        .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 80px;
         }
 
+        /* Contact Info */
         .contact-info h2 {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
             font-weight: 400;
             color: var(--gold);
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
-
         .contact-info p {
             color: var(--silver);
-            margin-bottom: 30px;
-            font-size: 1.05rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
         }
-
-        .contact-method {
-            margin-bottom: 30px;
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: var(--charcoal);
+            border-left: 3px solid var(--gold);
         }
-
-        .contact-method h3 {
-            font-family: var(--font-display);
+        .info-item svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--gold);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .info-item h3 {
+            font-family: 'Cormorant Garamond', serif;
             font-size: 1.2rem;
             color: var(--cream);
-            margin-bottom: 8px;
+            margin-bottom: 5px;
+        }
+        .info-item p {
+            margin: 0;
+            font-size: 0.95rem;
         }
 
-        .contact-method p {
-            color: var(--silver);
-            margin-bottom: 0;
-        }
-
-        .contact-method a {
-            color: var(--gold);
-            text-decoration: none;
-        }
-
-        .contact-method a:hover {
-            text-decoration: underline;
-        }
-
+        /* Contact Form */
         .contact-form h2 {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
             font-weight: 400;
             color: var(--gold);
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
-
         .form-group {
             margin-bottom: 25px;
         }
-
         .form-group label {
             display: block;
-            font-size: 0.75rem;
-            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--silver);
+            font-size: 0.85rem;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: var(--silver);
-            margin-bottom: 10px;
         }
-
         .form-group input,
-        .form-group select,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
-            padding: 15px;
-            font-family: var(--font-body);
-            font-size: 1rem;
+            padding: 15px 20px;
             background: var(--charcoal);
             border: 1px solid var(--slate);
             color: var(--cream);
-            transition: border-color 0.3s ease;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
         }
-
         .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
+        .form-group textarea:focus,
+        .form-group select:focus {
             outline: none;
             border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(201, 169, 98, 0.1);
         }
-
         .form-group textarea {
             min-height: 150px;
             resize: vertical;
         }
-
         .form-group select {
             cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23C9A962' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
         }
-
+        .form-group select option {
+            background: var(--charcoal);
+            color: var(--cream);
+        }
         .submit-btn {
             width: 100%;
-            padding: 18px;
-            font-family: var(--font-body);
-            font-size: 0.8rem;
-            font-weight: 500;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
+            padding: 18px 40px;
             background: var(--gold);
             color: var(--obsidian);
             border: none;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: all 0.3s;
         }
-
         .submit-btn:hover {
             background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(201, 169, 98, 0.3);
         }
 
-        .response-time {
+        /* Response Time Note */
+        .response-note {
+            margin-top: 20px;
+            padding: 15px;
             background: var(--charcoal);
             border: 1px solid var(--slate);
-            padding: 20px;
-            margin-top: 30px;
             text-align: center;
         }
-
-        .response-time p {
+        .response-note p {
             color: var(--silver);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             margin: 0;
         }
-
-        .response-time strong {
-            color: var(--gold);
+        .response-note svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--gold);
+            vertical-align: middle;
+            margin-right: 8px;
         }
 
+        /* Footer */
         footer {
-            padding: 40px;
             text-align: center;
+            padding: 40px;
             border-top: 1px solid var(--slate);
-        }
-
-        footer p {
-            font-size: 0.85rem;
             color: var(--silver);
+            font-size: 0.85rem;
         }
-
         footer a {
             color: var(--gold);
             text-decoration: none;
         }
 
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .contact-grid {
+        /* Responsive */
+        @media (max-width: 900px) {
+            .contact-container {
                 grid-template-columns: 1fr;
-                gap: 50px;
+                gap: 60px;
+                padding: 60px 20px;
             }
+        }
+        @media (max-width: 768px) {
+            header { padding: 20px; }
+            nav { display: none; }
+            .hero { padding: 60px 20px 40px; }
         }
     </style>
 </head>
@@ -266,88 +250,85 @@
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
         <nav>
             <a href="index.html">Home</a>
+            <a href="deals.html">Deals</a>
+            <a href="directories.html">Directories</a>
             <a href="blog.html">Blog</a>
-            <a href="about.html">Our Story</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
         </nav>
     </header>
 
-    <section class="page-hero">
+    <section class="hero">
         <h1>Contact Us</h1>
-        <p>We'd love to hear from you</p>
+        <p>Have a question about watches, interested in partnerships, or just want to share your thoughts? We'd love to hear from you.</p>
     </section>
 
-    <div class="content">
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h2>Get in Touch</h2>
-                <p>Have questions about luxury watches? Want to suggest a brand or article topic? Interested in partnership opportunities? We're here to help.</p>
-
-                <div class="contact-method">
-                    <h3>Email</h3>
-                    <p><a href="mailto:hello@authenticwrist.com">hello@authenticwrist.com</a></p>
-                </div>
-
-                <div class="contact-method">
-                    <h3>General Inquiries</h3>
-                    <p>Questions about our content, watch recommendations, or website features.</p>
-                </div>
-
-                <div class="contact-method">
-                    <h3>Partnership Inquiries</h3>
-                    <p>Interested in working with AUTHENTIC WRIST? Brands, retailers, and media partners welcome.</p>
-                </div>
-
-                <div class="contact-method">
-                    <h3>Content Suggestions</h3>
-                    <p>Have an idea for an article or guide you'd like us to write? Let us know!</p>
-                </div>
-
-                <div class="response-time">
-                    <p>Typical response time: <strong>24-48 hours</strong></p>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Whether you're looking for watch recommendations, have questions about our guides, or want to explore partnership opportunities, our team is here to help.</p>
+            
+            <div class="info-item">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <div>
+                    <h3>Email Us</h3>
+                    <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d0b3bfbea4b1b3a490b1a5a4b8b5bea4b9b3a7a2b9a3a4feb3bfbd">[email&#160;protected]</a></p>
                 </div>
             </div>
-
-            <div class="contact-form">
-                <h2>Send a Message</h2>
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required placeholder="John Smith">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required placeholder="john@example.com">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <select id="subject" name="subject" required>
-                            <option value="">Select a topic...</option>
-                            <option value="general">General Inquiry</option>
-                            <option value="watches">Watch Questions</option>
-                            <option value="content">Content Suggestion</option>
-                            <option value="partnership">Partnership Inquiry</option>
-                            <option value="technical">Website Issue</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+            
+            <div class="info-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <div>
+                    <h3>What We Help With</h3>
+                    <p>Watch recommendations, buying advice, brand information, partnership inquiries, and general questions.</p>
+                </div>
             </div>
+            
+            <div class="info-item">
+                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                <div>
+                    <h3>Response Time</h3>
+                    <p>We typically respond within 24-48 hours during business days.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send a Message</h2>
+            <form action="https://formspree.io/f/xlggbnww" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Smith">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a topic...</option>
+                        <option value="Watch Recommendation">Watch Recommendation</option>
+                        <option value="Buying Advice">Buying Advice</option>
+                        <option value="Partnership Inquiry">Partnership Inquiry</option>
+                        <option value="Feedback">Website Feedback</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" required placeholder="Tell us how we can help you..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+                
+                <div class="response-note">
+                    <p><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>Your message will be sent securely. We respect your privacy.</p>
+                </div>
+            </form>
         </div>
     </div>
 
     <footer>
-        <p>© 2025 AUTHENTIC WRIST. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
-    </footer>
-</body>
-</html>
+        <p>© 2026 Authentic Wrist. All rights reserved. | <a hr
