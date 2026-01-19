@@ -1,81 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The History of Victorinox Swiss Army Watches — Authentic Wrist</title>
-    <meta name="description" content="Discover the history of Victorinox Swiss Army watches, from the makers of the legendary Swiss Army Knife, built for reliability and adventure.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Victorinox History — From Swiss Army Knife to Swiss Watches | Authentic Wrist</title>
+    <meta name="description" content="Victorinox watch history from 1884 to today. How the maker of the original Swiss Army Knife built a reputation for reliable, adventure-ready timepieces.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
-        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
         nav { display: flex; gap: 30px; }
-        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .article-hero { height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%); border-bottom: 1px solid var(--gold); }
-        .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; margin-bottom: 15px; }
-        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-        .article-meta { font-size: 0.85rem; color: var(--silver); }
-        .article-content { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 25px; color: var(--silver); }
-        .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; margin: 50px 0 25px; color: var(--cream); }
-        .lead-paragraph { font-size: 1.2rem; color: var(--cream); border-left: 3px solid var(--gold); padding-left: 25px; margin-bottom: 40px; }
-        footer { border-top: 1px solid var(--slate); padding: 40px; text-align: center; margin-top: 60px; }
-        footer p { color: var(--silver); font-size: 0.85rem; }
-        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .article-hero h1 { font-size: 2.5rem; } }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">Our Story</a><a href="search.html">Search</a></nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+        </nav>
     </header>
-    <section class="article-hero">
-        <div>
-            <div class="article-category">Brand Story</div>
-            <h1>The History of Victorinox Swiss Army</h1>
-            <div class="article-meta">January 2025 · 9 min read</div>
-        </div>
+
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>Victorinox</h1>
+        <p style="color: var(--silver);">Since 1884 — Maker of the Original Swiss Army Knife</p>
     </section>
-    <article class="article-content">
-        <p class="lead-paragraph">The Swiss Army Knife is arguably the world's most recognized tool. Victorinox extended that reputation for reliability into watches, creating timepieces built with the same philosophy: practical, durable, and ready for anything.</p>
-        
-        <h2>Karl Elsener's Vision</h2>
-        <p>Victorinox was founded in 1884 by Karl Elsener in Ibach, Switzerland. In 1891, Elsener began supplying knives to the Swiss Army, and in 1897 he patented the iconic Swiss Army Knife with its distinctive design. The name Victorinox combines Victoria (his mother's name) with "inox" (French for stainless steel).</p>
-        <p>For over a century, Victorinox built its reputation on the Swiss Army Knife's legendary reliability.</p>
-        
-        <h2>Watch Division Launch</h2>
-        <p>In 1989, Victorinox entered the watch market with Swiss Army Brand watches. The goal was straightforward: create watches that embodied the same values as the Swiss Army Knife—durability, functionality, and Swiss quality at accessible prices.</p>
-        <p>The watches found immediate success among buyers who trusted the Victorinox name and wanted timepieces as reliable as their pocket knives.</p>
-        
-        <h2>Wenger Acquisition</h2>
-        <p>In 2005, Victorinox acquired Wenger, the other Swiss company that had supplied knives to the Swiss Army. This consolidated Swiss Army branding under Victorinox ownership and expanded their watch offerings.</p>
-        
-        <h2>I.N.O.X. Collection</h2>
-        <p>The I.N.O.X. collection represents Victorinox's most rugged watches. These timepieces underwent 130 homologation tests for resistance to impacts, pressure, temperature extremes, and various other hazards. The testing protocol went far beyond industry standards, proving Victorinox's commitment to durability.</p>
-        <p>I.N.O.X. watches can survive being run over by a 64-ton tank—demonstrated publicly, not merely claimed in marketing materials.</p>
-        
-        <h2>Maverick</h2>
-        <p>The Maverick collection offers sporty designs suitable for water activities. With solid water resistance and practical features, Maverick watches serve active lifestyles while maintaining Victorinox's value-focused positioning.</p>
-        
-        <h2>Alliance</h2>
-        <p>The Alliance collection provides dressier options for professional settings. These refined watches demonstrate that Victorinox can produce elegant timepieces alongside their rugged tool watches.</p>
-        
-        <h2>Fieldforce</h2>
-        <p>The Fieldforce collection targets outdoor enthusiasts with features appropriate for hiking, camping, and adventure travel. These watches complement the Swiss Army Knife in field conditions.</p>
-        
-        <h2>Value Proposition</h2>
-        <p>Victorinox Swiss Army watches offer genuine Swiss quality at prices well below luxury brands. The same reliability that made the Swiss Army Knife a global standard extends to their timepieces—functional tools that work as promised.</p>
-        
-        <h2>Victorinox Today</h2>
-        <p>Victorinox continues producing Swiss watches that honor their tool-making heritage. For buyers seeking reliable timepieces without luxury pretensions—watches that work—Victorinox delivers Swiss practicality at accessible prices.</p>
+
+    <article class="content">
+        <p>Before Victorinox made watches, it made the most iconic tool in the world: the Swiss Army Knife. That heritage—of precision engineering, practical design, and legendary durability—carries directly into Victorinox watches. When a brand has been trusted by the Swiss Army since 1891, the transition to trusted timepieces feels natural. These are watches built for people who use their gear, not display it.</p>
+
+        <h2>Karl Elsener's Workshop (1884)</h2>
+        <p>Karl Elsener opened a cutlery workshop in Ibach, Switzerland in 1884. His ambition was to manufacture knives locally rather than import them from Germany. By 1891, he had won the contract to supply the Swiss Army with its soldier's knife—the beginning of an icon.</p>
+        <p>The original Swiss Army Knife combined multiple tools in one compact package: blade, can opener, screwdriver, and more. It was practical problem-solving in metal form. This philosophy—multiple functions, reliable construction, no-nonsense design—would eventually define Victorinox watches.</p>
+
+        <h2>The Name "Victorinox"</h2>
+        <p>The company name combines two elements: "Victoria" (Karl Elsener's mother, who died in 1909) and "inox" (short for "acier inoxydable," the French term for stainless steel, which Victorinox began using in 1921). The name literally means "Victoria's stainless steel"—a tribute to family and material innovation.</p>
+
+        <div class="highlight">
+            <p><strong>Swiss Army Legacy:</strong> Victorinox has supplied the Swiss Army continuously since 1891. The brand has produced over 500 million knives, and the Swiss Army Knife appears in the permanent collection of the Museum of Modern Art. When NASA needed a reliable tool for astronauts, they chose Victorinox. This heritage of trust transfers directly to the watch division.</p>
+        </div>
+
+        <h2>Entry into Watches (1989)</h2>
+        <p>Victorinox entered the watch market in 1989 through a licensing agreement. The timing made sense: the brand already represented Swiss quality and practical durability. A Victorinox watch promised the same values as a Victorinox knife—reliability you could depend on.</p>
+        <p>In 2001, Victorinox acquired Wenger, another Swiss Army Knife manufacturer and watch brand. This brought watch manufacturing capabilities in-house and strengthened Victorinox's horological offerings.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1884</span>
+                <p>Karl Elsener opens cutlery workshop in Ibach</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1891</span>
+                <p>First contract to supply Swiss Army with knives</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1897</span>
+                <p>Swiss Officer's Knife patented—the modern Swiss Army Knife</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1989</span>
+                <p>Victorinox enters watch market</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2001</span>
+                <p>Acquires Wenger (merged brands in 2013)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2005</span>
+                <p>I.N.O.X. development begins—130+ durability tests</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2014</span>
+                <p>I.N.O.X. launches after 8 years of testing</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2018</span>
+                <p>I.N.O.X. Professional Diver certified to 200m</p>
+            </div>
+        </div>
+
+        <h2>The I.N.O.X. — Tested to Extremes</h2>
+        <p>The I.N.O.X. (named for stainless steel, like the company) represents Victorinox's most serious watch. Before production, prototypes were subjected to 130+ tests, including:</p>
+        <p>• Survival in a washing machine (multiple cycles)<br>
+        • Run over by a 64-ton tank<br>
+        • Frozen and thawed repeatedly<br>
+        • Dropped from 10 meters onto concrete<br>
+        • Chemical exposure tests<br>
+        • Extended vibration testing</p>
+        <p>The resulting watch survives conditions that would destroy most competitors. It's not about luxury—it's about reliability in the field.</p>
+
+        <h2>Brand Philosophy</h2>
+        <p>Victorinox watches carry forward the Swiss Army Knife ethos: tools for real life. The designs are purposeful rather than flashy. Materials prioritize durability over decoration. Features serve function, not just specification sheets.</p>
+        <p>This positions Victorinox differently than traditional Swiss watch brands. While others court collectors with heritage and complications, Victorinox courts users with reliability and practicality.</p>
+
+        <h2>Current Collections</h2>
+        <p><strong>I.N.O.X.:</strong> The ultra-durable line, 130+ tests, multiple materials<br>
+        <strong>Maverick:</strong> Sport and dive watches, bold designs<br>
+        <strong>Fieldforce:</strong> Military-inspired field watches<br>
+        <strong>Alliance:</strong> Classic dress watches, Swiss elegance<br>
+        <strong>Journey 1884:</strong> Heritage-inspired pieces honoring the founding year<br>
+        <strong>Airboss:</strong> Aviation-inspired chronographs<br>
+        <strong>Dive Master:</strong> Serious dive watches, professional specifications</p>
+
+        <h2>The Warranty Promise</h2>
+        <p>Victorinox backs its watches with substantial warranties and lifetime service support. The company that stands behind knives expected to last generations applies the same philosophy to its timepieces. When issues arise, Victorinox resolves them—a commitment that builds trust over time.</p>
+
+        <h2>Today's Victorinox Watches</h2>
+        <p>Victorinox occupies the accessible Swiss segment—quality timepieces typically priced between $300 and $1,500. The brand competes with Tissot, Hamilton, and Certina, offering Swiss manufacturing and genuine tool-watch durability.</p>
+        <p>For buyers who want Swiss quality without luxury pretension, Victorinox makes sense. The watches are designed to be used, not admired from behind a display case. Scratch the case? It was designed to handle it. Take it hiking, diving, traveling? It was designed for exactly that.</p>
+        <p>The same company that equips the Swiss Army equips you. There's honest simplicity in that proposition—no marketing mythology required.</p>
+
+        <h2>Why Choose Victorinox Over Traditional Swiss Brands?</h2>
+        <p>At Victorinox's price point ($300-1,500), buyers face choices: Swiss heritage brands like Tissot and Hamilton, Japanese quality from Seiko and Orient, or Victorinox's tool-watch approach. Each offers different value propositions.</p>
+
+        <p>Victorinox's advantage is its unique heritage and tested durability. No other brand at this price point can claim genuine military supply contracts spanning 130+ years. No other brand subjects watches to 130+ destruction tests before production. For buyers who value proven toughness over horological pedigree, Victorinox makes a compelling case.</p>
+
+        <p>There's also the brand ecosystem to consider. If you already carry a Swiss Army Knife—and millions of people do—there's satisfying coherence in wearing a Victorinox watch. The products share design philosophy and quality standards. Your knife opens bottles at parties; your watch tells time reliably. Both are tools, both are Swiss, both just work.</p>
+
+        <h2>Victorinox for Specific Lifestyles</h2>
+        <p>Victorinox watches particularly suit certain lifestyles. Outdoor enthusiasts appreciate the I.N.O.X.'s resilience—you can take it hiking, kayaking, or camping without concern. Frequent travelers value the reliability and modest value (no anxiety about theft). Active professionals who might damage a delicate dress watch find Victorinox appropriate for their work environments.</p>
+
+        <p>The brand also works for buyers who want Swiss quality without Swiss luxury pretension. A Victorinox on your wrist says "I value practical quality" rather than "I spent a month's salary on status." In professional environments where ostentation is inappropriate—healthcare, education, non-profits—Victorinox signals competence without excess.</p>
+
+        <h2>Building a Collection with Victorinox</h2>
+        <p>For new watch enthusiasts building their first collection, Victorinox serves well as a durable daily wearer that preserves budget for other purchases. The I.N.O.X. handles rough use while you save for a nicer weekend watch. Or the Alliance dresses up for events while a more casual piece handles everyday duty. Victorinox's accessible pricing enables collection-building strategies.</p>
+
+        <p>More established collectors sometimes add Victorinox specifically for its intended purpose: abuse. Rather than worry about scratching a valuable piece during travel or physical activities, they wear the Victorinox and leave precious watches in the safe. It's the watch equivalent of a beater car—functional, unpretentious, and expendable if necessary.</p>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore Victorinox</h3>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
+            <a href="directories.html" class="cta-btn">All Directories</a>
+        </div>
     </article>
-    <footer><p>&copy; 2025 Authentic Wrist. All rights reserved.</p></footer>
+
+    <footer>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
+    </footer>
 </body>
 </html>

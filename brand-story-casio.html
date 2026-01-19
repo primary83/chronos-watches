@@ -1,85 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The History of Casio & G-Shock — Authentic Wrist</title>
-    <meta name="description" content="Discover the history of Casio and the legendary G-Shock, the watch that redefined durability and became a cultural icon.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Casio History — Shock the World | Authentic Wrist</title>
+    <meta name="description" content="Casio history from 1946 to today. G-Shock toughness, calculator watches, and how a Japanese electronics company created the world's most durable timepieces.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C9A962; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
+        :root { --gold: #C9A962; --gold-light: #E8D5A3; --obsidian: #0A0A0A; --charcoal: #1A1A1A; --slate: #2A2A2A; --silver: #C0C0C0; --cream: #F5F3EF; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; background: var(--obsidian); color: var(--cream); line-height: 1.8; }
-        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--slate); }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.2em; color: var(--gold); text-decoration: none; }
+        header { padding: 20px 40px; border-bottom: 1px solid var(--slate); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); text-decoration: none; letter-spacing: 0.2em; }
         nav { display: flex; gap: 30px; }
-        nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+        nav a { color: var(--silver); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
         nav a:hover { color: var(--gold); }
-        .article-hero { height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%); border-bottom: 1px solid var(--gold); }
-        .article-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; margin-bottom: 15px; }
-        .article-category { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-        .article-meta { font-size: 0.85rem; color: var(--silver); }
-        .article-content { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .article-content p { font-size: 1.05rem; line-height: 2; margin-bottom: 25px; color: var(--silver); }
-        .article-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; margin: 50px 0 25px; color: var(--cream); }
-        .lead-paragraph { font-size: 1.2rem; color: var(--cream); border-left: 3px solid var(--gold); padding-left: 25px; margin-bottom: 40px; }
-        footer { border-top: 1px solid var(--slate); padding: 40px; text-align: center; margin-top: 60px; }
-        footer p { color: var(--silver); font-size: 0.85rem; }
-        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .article-hero h1 { font-size: 2.5rem; } }
+        .hero { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 20px; }
+        .hero .subtitle { color: var(--gold); font-size: 1rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+        .content { max-width: 800px; margin: 0 auto; padding: 0 40px 80px; }
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--gold); margin: 50px 0 20px; }
+        .content p { margin-bottom: 20px; color: var(--silver); font-size: 1.05rem; }
+        .timeline { border-left: 2px solid var(--gold); padding-left: 30px; margin: 40px 0; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -36px; top: 5px; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; }
+        .timeline-item .year { color: var(--gold); font-weight: 600; }
+        .highlight { background: var(--charcoal); border-left: 3px solid var(--gold); padding: 25px; margin: 30px 0; }
+        .cta-box { background: var(--charcoal); padding: 40px; margin: 50px 0; text-align: center; border: 1px solid var(--slate); }
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
+        @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">Our Story</a><a href="search.html">Search</a></nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+        </nav>
     </header>
-    <section class="article-hero">
-        <div>
-            <div class="article-category">Brand Story</div>
-            <h1>The History of Casio & G-Shock</h1>
-            <div class="article-meta">January 2025 · 11 min read</div>
-        </div>
+
+    <section class="hero">
+        <div class="subtitle">Brand Story</div>
+        <h1>Casio</h1>
+        <p style="color: var(--silver);">Since 1946 — Shock the World</p>
     </section>
-    <article class="article-content">
-        <p class="lead-paragraph">What began as a quest to create a watch that wouldn't break when dropped became one of the most iconic timepiece lines in history. The G-Shock didn't just survive drops—it survived being run over by trucks, frozen in ice, and thrown from buildings. It became indestructible.</p>
-        
-        <h2>Casio: From Calculators to Watches</h2>
-        <p>Casio Computer Co., Ltd. was founded in 1946 by Tadao Kashio in Tokyo, Japan. The company initially focused on calculators, producing the world's first compact all-electric calculator in 1957. This expertise in miniaturized electronics would prove crucial when Casio entered the watch market.</p>
-        <p>In 1974, Casio introduced its first digital watch, the Casiotron. It was one of the world's first watches with an automatic calendar, setting the stage for Casio's reputation as a digital watch innovator.</p>
-        
-        <h2>The Birth of G-Shock: Project Team Tough</h2>
-        <p>In 1981, Casio engineer Kikuo Ibe dropped his father's watch and watched it shatter on the ground. That moment sparked a mission: create a watch that would never break. Ibe assembled a three-person team and set out to develop what seemed impossible—a shock-resistant digital watch.</p>
-        <p>The team established the "Triple 10" concept: the watch must survive a 10-meter drop, have 10-bar (100 meters) water resistance, and offer 10-year battery life. For two years, they tested over 200 prototypes, throwing them from the third-floor bathroom window of their office building.</p>
-        
-        <h2>The Hollow Structure Solution</h2>
-        <p>The breakthrough came when Ibe observed a girl bouncing a rubber ball in a park. He realized that if the module could float inside the watch case like the ball's center, it could survive impacts. This led to the revolutionary hollow structure design—a module suspended within a cushioned cavity, protected by a shock-resistant outer case.</p>
-        <p>In April 1983, the first G-Shock, the DW-5000C, was released. It looked unlike any watch before it—bulky, angular, and unapologetically rugged. Initial reception in Japan was lukewarm, but everything changed when G-Shock reached America.</p>
-        
-        <h2>American Success and Cultural Icon</h2>
-        <p>G-Shock found its audience among American skaters, surfers, and hip-hop artists who needed watches tough enough for their lifestyles. A legendary TV commercial showed a G-Shock being used as a hockey puck, surviving slap shots. Sales exploded.</p>
-        <p>By the 1990s, G-Shock had transcended its tool watch origins to become a fashion statement. Limited editions, collaborations with artists and designers, and an ever-expanding range of colors and styles made G-Shock a streetwear essential.</p>
-        
-        <h2>Technological Evolution</h2>
-        <p>G-Shock continuously evolved its technology. Tough Solar, introduced in 1998, brought solar-powered charging. Multi-Band 6 enabled automatic time synchronization via radio signals from atomic clocks worldwide. The Master of G series introduced specialized models for aviation (Gravitymaster), diving (Frogman), and land exploration (Mudmaster).</p>
-        <p>Bluetooth connectivity and smartphone integration arrived in 2012, keeping G-Shock relevant in the smartwatch era while maintaining its core identity as an indestructible timekeeper.</p>
-        
-        <h2>The Metal Evolution: GM and MR-G</h2>
-        <p>While the original G-Shock used resin cases, Casio eventually developed full-metal G-Shocks that maintained the shock-resistant properties. The MR-G line, introduced in 1996, represents the pinnacle of G-Shock—titanium construction, sapphire crystals, and prices that rival Swiss luxury watches.</p>
-        <p>These premium G-Shocks proved that the concept could scale upward without losing its soul. A $4,000 MR-G is still, at its core, the same indestructible tool watch philosophy.</p>
-        
-        <h2>Cultural Impact</h2>
-        <p>G-Shock's influence extends far beyond horology. It's been worn by everyone from Navy SEALs to fashion models, from astronauts to musicians. The brand has collaborated with Supreme, BAPE, Stussy, and countless other streetwear labels. It appears regularly in films, music videos, and on the wrists of celebrities.</p>
-        <p>More than 100 million G-Shocks have been sold since 1983, making it one of the best-selling watch lines in history.</p>
-        
-        <h2>Beyond G-Shock: Casio's Watch Portfolio</h2>
-        <p>While G-Shock dominates, Casio produces other notable watch lines. The Edifice collection offers motorsport-inspired chronographs. Pro Trek serves outdoor enthusiasts with altimeters, barometers, and compasses. The classic F-91W, introduced in 1989, remains one of the best-selling watches ever made—simple, reliable, and under $20.</p>
-        
-        <h2>G-Shock Today</h2>
-        <p>Four decades after that first prototype was thrown from a window, G-Shock remains the benchmark for tough watches. The lineup spans from affordable classics to premium limited editions, but every model carries the same DNA: a watch you can trust in any situation, an icon of durability that turned a broken watch into a billion-dollar legacy.</p>
+
+    <article class="content">
+        <p>Casio isn't a watch company that made electronics—it's an electronics company that revolutionized watches. From the calculator watch that defined 1980s geek chic to the G-Shock that survived being run over by trucks, Casio has consistently proven that innovation matters more than tradition. The company's watches have been worn by everyone from astronauts to Navy SEALs, hip-hop artists to presidents.</p>
+
+        <h2>The Kashio Brothers (1946)</h2>
+        <p>Casio was founded in 1946 by Tadao Kashio (the company name is a phonetic rendering of "Kashio"). The original product wasn't watches—it was a finger-mounted cigarette holder that let smokers use every last bit of tobacco during postwar shortages. Practical problem-solving has been in Casio's DNA from day one.</p>
+        <p>In 1957, Casio introduced Japan's first fully electric compact calculator, establishing the company as a technology innovator. The leap to watches wouldn't come until 1974, but when it did, Casio brought its engineering mindset to timekeeping.</p>
+
+        <h2>The Casiotron (1974)</h2>
+        <p>Casio's first watch, the Casiotron, was notable for being one of the first watches with an automatic calendar that could account for different month lengths. While others focused on accuracy, Casio focused on functionality—what else could a watch do besides tell time?</p>
+        <p>This question would drive Casio's entire watch philosophy: pack in as many useful features as possible.</p>
+
+        <div class="highlight">
+            <p><strong>The Calculator Watch (1980s):</strong> Casio's calculator watches became cultural icons—symbols of the nerdy engineer aesthetic. The Databank series could store phone numbers and appointments. These weren't just watches; they were proto-smartphones worn on the wrist. Today, they're collected as vintage icons and worn ironically (and unironically) by fashion-forward celebrities.</p>
+        </div>
+
+        <h2>G-Shock: The Triple 10 Concept (1983)</h2>
+        <p>In 1981, Casio engineer Kikuo Ibe dropped his father's watch and watched it shatter. The experience sparked an obsession: could you build an unbreakable watch? Ibe set out to create a watch that could survive a 10-meter drop, resist 10 bar (100 meters) of water pressure, and have a 10-year battery life.</p>
+        <p>The "Triple 10" concept seemed impossible. After two years and over 200 failed prototypes, Ibe found inspiration watching a child bounce a rubber ball. What if the watch module floated inside its case, suspended and protected? The hollow structure concept was born.</p>
+        <p>The first G-Shock, the DW-5000C, launched in 1983. Casio famously demonstrated its toughness in TV commercials by dropping G-Shocks from buildings and running them over with trucks. The watches survived. A legend was born.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1946</span>
+                <p>Kashio brothers found Casio in Tokyo</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1957</span>
+                <p>Japan's first fully electric compact calculator</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1974</span>
+                <p>Casiotron—first Casio watch with automatic calendar</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1983</span>
+                <p>G-Shock DW-5000C launches—the "unbreakable" watch</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1989</span>
+                <p>Baby-G introduced for women</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">1994</span>
+                <p>G-Shock reaches 10 million units sold</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2000</span>
+                <p>First G-Shock with GPS capability</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2012</span>
+                <p>MT-G series—premium G-Shock line</p>
+            </div>
+            <div class="timeline-item">
+                <span class="year">2017</span>
+                <p>G-Shock sells 100 million units worldwide</p>
+            </div>
+        </div>
+
+        <h2>Cultural Phenomenon</h2>
+        <p>G-Shock's durability made it popular with military and law enforcement, but its cultural explosion came from hip-hop. In the 1990s, artists like Wu-Tang Clan and A Tribe Called Quest adopted G-Shocks as street style essentials. The watches were tough, functional, and unpretentious—values that resonated with hip-hop culture.</p>
+        <p>Today, G-Shock collaborations span fashion (Kith, A Bathing Ape), sports (surfing, skateboarding), and luxury (all-gold MR-G models costing $5,000+). The brand has transcended its tool-watch origins to become a fashion statement.</p>
+
+        <h2>Military Adoption</h2>
+        <p>G-Shocks have been standard issue for special forces units worldwide. Navy SEALs, British SAS, and other elite units trust G-Shocks in combat situations. The DW-6600 and its successors have seen action in every major conflict since the Gulf War.</p>
+        <p>NASA has certified certain G-Shock models for space missions. The watches have accompanied astronauts on space shuttle missions and to the International Space Station.</p>
+
+        <h2>Current Collections</h2>
+        <p><strong>G-Shock Classic:</strong> The iconic square DW-5600 line, faithful to the 1983 original<br>
+        <strong>G-Shock Analog-Digital:</strong> GA-100 and GA-2100 "CasiOak" series<br>
+        <strong>MR-G:</strong> Premium G-Shocks with titanium and sapphire, made in Japan<br>
+        <strong>MT-G:</strong> Metal-clad G-Shocks bridging tough and refined<br>
+        <strong>Baby-G:</strong> Smaller G-Shocks designed for women<br>
+        <strong>Pro Trek:</strong> Outdoor watches with altimeter, barometer, compass<br>
+        <strong>Oceanus:</strong> Premium analog watches with radio wave/GPS sync<br>
+        <strong>Edifice:</strong> Motorsport-inspired chronographs</p>
+
+        <h2>The CasiOak Phenomenon (2019)</h2>
+        <p>In 2019, Casio introduced the GA-2100—immediately nicknamed "CasiOak" for its resemblance to the Audemars Piguet Royal Oak. With its octagonal bezel and integrated bracelet design, it offered high-fashion aesthetics at under $100. The watch became a sensation, with waiting lists and resale premiums reminiscent of luxury watch hype.</p>
+        <p>The GA-2100's success proved that Casio could play the fashion game too. Subsequent limited editions sell out instantly, and the aftermarket for rare colorways rivals that of some Swiss watches.</p>
+
+        <h2>Today's Casio</h2>
+        <p>Casio sells tens of millions of watches annually—more than any Swiss brand. While the Swiss focus on craftsmanship and heritage, Casio focuses on technology and value. A $50 G-Shock offers features that luxury watches don't have at any price: shock resistance, 200m water resistance, world time, alarms, countdown timers, and illumination.</p>
+        <p>The brand's democratizing philosophy means anyone can own a watch that withstands professional abuse. From construction workers to surgeons, skateboarders to soldiers, Casio watches serve people who need reliability without pretension. In an industry obsessed with heritage, Casio proves innovation never goes out of style.</p>
+
+        <h2>Why Casio Matters to Watch Collectors</h2>
+        <p>Serious watch collectors often dismiss Casio as a fashion brand or cheap alternative to "real" watches. This misses the point entirely. Casio represents a different philosophy—one that prioritizes function, innovation, and accessibility over tradition, prestige, and exclusivity. For many enthusiasts, a G-Shock sits proudly alongside Swiss mechanicals, each serving different purposes.</p>
+
+        <p>The G-Shock, in particular, has transcended its tool watch origins to become a cultural icon. Limited edition collaborations sell out instantly and command premiums on the secondary market. The "CasiOak" GA-2100 sparked waiting lists reminiscent of luxury watch hype. Casio has proven that demand and desirability aren't exclusive to Swiss brands.</p>
+
+        <p>There's also the practical consideration: Casio makes the perfect "beater" watch—something you can wear while doing yard work, traveling to unfamiliar places, or engaging in activities where a valuable watch would cause anxiety. Many collectors rotate between their Rolex for special occasions and their G-Shock for everything else. Both have their place.</p>
+
+        <h2>Casio's Impact on Watchmaking</h2>
+        <p>Casio's influence extends beyond its own products. The G-Shock forced other brands to take durability seriously—suddenly, shock resistance wasn't just for military watches. The calculator watch pioneered wearable technology decades before smartwatches existed. Casio proved that watches could be gadgets as well as instruments.</p>
+
+        <p>The brand's price positioning also kept pressure on competitors. When a perfectly functional, feature-rich watch costs $50-100, luxury brands must justify their premiums with quality, heritage, and craftsmanship. Casio establishes the baseline against which all other watches are measured for pure functionality.</p>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px;">Explore Casio</h3>
+            <a href="blog.html" class="cta-btn">More Brand Stories</a>
+            <a href="directories.html" class="cta-btn">All Directories</a>
+        </div>
     </article>
-    <footer><p>&copy; 2025 Authentic Wrist. All rights reserved.</p></footer>
+
+    <footer>
+        <p>© 2026 Authentic Wrist. All rights reserved.</p>
+    </footer>
 </body>
 </html>
