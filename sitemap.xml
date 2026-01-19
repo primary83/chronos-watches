@@ -16,7 +16,6 @@
   <url><loc>https://authenticwrist.com/directory-pilot.html</loc><priority>0.9</priority></url>
   <url><loc>https://authenticwrist.com/directory-fashion.html</loc><priority>0.9</priority></url>
   <url><loc>https://authenticwrist.com/directory-smart-watches.html</loc><priority>0.9</priority></url>
-
   <!-- Brand Directories - 28 total -->
   <url><loc>https://authenticwrist.com/directory-rolex.html</loc><priority>0.9</priority></url>
   <url><loc>https://authenticwrist.com/directory-omega.html</loc><priority>0.9</priority></url>
@@ -46,9 +45,17 @@
   <url><loc>https://authenticwrist.com/directory-fitbit.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/directory-google.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/directory-whoop.html</loc><priority>0.8</priority></url>
-
   <!-- NEW: Iconic Brand Stories - 10 articles -->
   <url><loc>https://authenticwrist.com/brand-story-rolex.html</loc><priority>0.8</priority></url>
+  <!-- NEW January 2026 Content - 8 articles -->
+  <url><loc>https://authenticwrist.com/blog-valentines-day-watches-2026.html</loc><priority>0.8</priority></url>
+  <url><loc>https://authenticwrist.com/comparison-submariner-vs-seamaster.html</loc><priority>0.8</priority></url>
+  <url><loc>https://authenticwrist.com/comparison-tissot-prx-vs-seiko-presage.html</loc><priority>0.8</priority></url>
+  <url><loc>https://authenticwrist.com/brand-story-casio.html</loc><priority>0.8</priority></url>
+  <url><loc>https://authenticwrist.com/brand-story-orient.html</loc><priority>0.8</priority></url>
+  <url><loc>https://authenticwrist.com/brand-story-sinn.html</loc><priority>0.8</priority></url>
+  <url><loc>https://authenticwrist.com/brand-story-movado.html</loc><priority>0.8</priority></url>
+  <url><loc>https://authenticwrist.com/brand-story-victorinox.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-omega.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-tag-heuer.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-breitling.html</loc><priority>0.8</priority></url>
@@ -64,7 +71,6 @@
   <url><loc>https://authenticwrist.com/brand-story-tissot.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-hamilton.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-oris.html</loc><priority>0.8</priority></url>
-
   <!-- Previous Brand Stories - Haute Horlogerie -->
   <url><loc>https://authenticwrist.com/brand-story-blancpain.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-breguet.html</loc><priority>0.8</priority></url>
@@ -76,7 +82,6 @@
   <url><loc>https://authenticwrist.com/brand-story-bulgari.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-girard-perregaux.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-ulysse-nardin.html</loc><priority>0.8</priority></url>
-
   <!-- Previous Brand Stories - Accessible -->
   <url><loc>https://authenticwrist.com/brand-story-nomos.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-junghans.html</loc><priority>0.8</priority></url>
@@ -85,7 +90,6 @@
   <url><loc>https://authenticwrist.com/brand-story-citizen.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-bulova.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-frederique-constant.html</loc><priority>0.8</priority></url>
-
   <!-- Previous Brand Stories - Swiss Independents -->
   <url><loc>https://authenticwrist.com/brand-story-rado.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-mido.html</loc><priority>0.8</priority></url>
@@ -94,7 +98,6 @@
   <url><loc>https://authenticwrist.com/brand-story-maurice-lacroix.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-glashutte-original.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-h-moser-cie.html</loc><priority>0.8</priority></url>
-
   <!-- Smart Watch Brand Stories -->
   <url><loc>https://authenticwrist.com/brand-story-apple-watch.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-samsung-galaxy-watch.html</loc><priority>0.8</priority></url>
@@ -102,26 +105,21 @@
   <url><loc>https://authenticwrist.com/brand-story-fitbit.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-google-pixel-watch.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/brand-story-whoop.html</loc><priority>0.8</priority></url>
-
   <!-- Women's Guides -->
   <url><loc>https://authenticwrist.com/blog-best-womens-luxury-watches.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/blog-best-small-watches-petite-wrists.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/blog-best-jewelry-watches.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/blog-womens-watch-sizing-guide.html</loc><priority>0.8</priority></url>
-
   <!-- Seasonal Content -->
   <url><loc>https://authenticwrist.com/blog-best-watches-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/blog-best-graduation-watches.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/blog-best-summer-beach-watches.html</loc><priority>0.8</priority></url>
-
   <!-- NEW Comparisons -->
   <url><loc>https://authenticwrist.com/comparison-datejust-vs-aqua-terra.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/comparison-black-bay-vs-seamaster.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/comparison-speedmaster-vs-el-primero.html</loc><priority>0.8</priority></url>
-
   <!-- Existing Comparisons -->
   <url><loc>https://authenticwrist.com/comparison-rolex-vs-omega-complete.html</loc><priority>0.8</priority></url>
-  <url><loc>https://authenticwrist.com/comparison-submariner-vs-seamaster.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/comparison-speedmaster-vs-daytona.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/comparison-apple-watch-vs-samsung.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/comparison-garmin-vs-apple-watch.html</loc><priority>0.8</priority></url>
@@ -145,7 +143,6 @@
   <url><loc>https://authenticwrist.com/comparison-leather-vs-metal-bracelet.html</loc><priority>0.7</priority></url>
   <url><loc>https://authenticwrist.com/comparison-chronometer-vs-standard.html</loc><priority>0.7</priority></url>
   <url><loc>https://authenticwrist.com/comparison-in-house-vs-eta.html</loc><priority>0.7</priority></url>
-
   <!-- Buying Guides -->
   <url><loc>https://authenticwrist.com/blog-best-dive-watches.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/blog-best-dress-watches.html</loc><priority>0.8</priority></url>
@@ -166,14 +163,12 @@
   <url><loc>https://authenticwrist.com/blog-grey-market-vs-authorized-dealer.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/blog-how-to-spot-fake-watch.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/blog-pre-owned-watch-buying-guide.html</loc><priority>0.8</priority></url>
-
   <!-- Reference -->
   <url><loc>https://authenticwrist.com/watch-glossary.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/blog-watch-sizes-guide.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/blog-movement-types-explained.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/blog-water-resistance-explained.html</loc><priority>0.8</priority></url>
   <url><loc>https://authenticwrist.com/blog-watch-complications-guide.html</loc><priority>0.8</priority></url>
-
   <!-- Watch Care -->
   <url><loc>https://authenticwrist.com/blog-how-to-clean-watch.html</loc><priority>0.7</priority></url>
   <url><loc>https://authenticwrist.com/blog-watch-service-guide.html</loc><priority>0.7</priority></url>
