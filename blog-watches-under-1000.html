@@ -57,7 +57,7 @@
         .footer-column a:hover { color: var(--gold); }
         .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding-top: 30px; border-top: 1px solid var(--slate); text-align: center; font-size: 0.85rem; color: var(--silver); }
         @media (max-width: 768px) { header { padding: 15px 20px; flex-direction: column; gap: 15px; } nav { gap: 15px; flex-wrap: wrap; justify-content: center; } .article-hero h1 { font-size: 2.2rem; } .watch-card { grid-template-columns: 1fr; } .footer-content { grid-template-columns: 1fr; gap: 40px; } }
-    </style>
+    .skip-nav{position:absolute;top:-100px;left:0;background:var(--gold);color:var(--obsidian);padding:10px 20px;z-index:10000;font-size:0.85rem;text-decoration:none;transition:top 0.3s}.skip-nav:focus{top:0}.back-to-top-btn{position:fixed;bottom:30px;right:30px;width:45px;height:45px;background:rgba(201,169,98,0.15);border:1px solid var(--gold);color:var(--gold);font-size:1.2rem;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:999;transition:all 0.3s;backdrop-filter:blur(10px)}.back-to-top-btn:hover{background:var(--gold);color:var(--obsidian)}</style>
     <link rel="canonical" href="https://authenticwrist.com/blog-watches-under-1000.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Best Watches Under $1,000 — Authentic Wrist">
@@ -92,17 +92,30 @@
   }
 }
     </script>
+    <script>(function(){var b=document.querySelector('.back-to-top-btn');if(b){window.addEventListener('scroll',function(){b.style.display=window.scrollY>500?'flex':'none'})}})();</script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://authenticwrist.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://authenticwrist.com/blog.html"},{"@type":"ListItem","position":3,"name":"Best Watches Under $1,000"}]}
+    </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
         <nav>
-            <a href="index.html#new">New Arrivals</a>
-            <a href="index.html#collections">Collections</a>
-            <a href="index.html#brands">Brands</a>
-            <a href="blog.html">Blog</a>
+            <a href="index.html" data-page="index">Home</a>
+            <a href="directories.html" data-page="directories">Directories</a>
+            <a href="blog.html" data-page="blog">Guides</a>
+            <a href="deals.html" data-page="deals">Deals</a>
+            <a href="compare.html" data-page="compare">Compare</a>
+            <a href="quiz.html" data-page="quiz">Watch Finder</a>
+            <a href="wrist-size.html" data-page="wrist-size">Size Visualizer</a>
+            <a href="collection.html" data-page="collection">Collection</a>
+            <a href="value-calculator.html" data-page="value-calculator">Value Calculator</a>
+            <a href="search.html" data-page="search">Search</a>
         </nav>
     </header>
+    <main id="main-content">
+    <div style="padding:12px 40px;font-size:0.8rem;color:var(--silver,#C0C0C0);border-bottom:1px solid var(--slate,#2A2A2A)"><a href="index.html" style="color:var(--gold,#C9A962);text-decoration:none">Home</a> / <a href="blog.html" style="color:var(--gold,#C9A962);text-decoration:none">Guides</a> / <span>Best Watches Under $1,000</span></div>
 
     <section class="article-hero">
         <div class="article-hero-content">
@@ -136,7 +149,7 @@
         <h3>Best Dive Watch</h3>
 
         <div class="watch-card">
-            <img src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=300&q=80" alt="Orient Kamasu">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=300&q=80" alt="Orient Kamasu">
             <div>
                 <div class="brand">Orient</div>
                 <h4>Kamasu</h4>
@@ -152,7 +165,7 @@
         <h3>Best Dress Watch</h3>
 
         <div class="watch-card">
-            <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=300&q=80" alt="Orient Bambino">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=300&q=80" alt="Orient Bambino">
             <div>
                 <div class="brand">Orient</div>
                 <h4>Bambino Version 2</h4>
@@ -166,7 +179,7 @@
         <h3>Best Field Watch</h3>
 
         <div class="watch-card">
-            <img src="https://images.unsplash.com/photo-1587925358603-c2eea5305bbc?w=300&q=80" alt="Hamilton Khaki">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1587925358603-c2eea5305bbc?w=300&q=80" alt="Hamilton Khaki">
             <div>
                 <div class="brand">Hamilton</div>
                 <h4>Khaki Field Mechanical</h4>
@@ -180,7 +193,7 @@
         <h3>Best Chronograph</h3>
 
         <div class="watch-card">
-            <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=300&q=80" alt="Seiko Speedtimer">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=300&q=80" alt="Seiko Speedtimer">
             <div>
                 <div class="brand">Seiko</div>
                 <h4>Prospex Speedtimer Solar</h4>
@@ -202,21 +215,21 @@
         <h2>Continue Reading</h2>
         <div class="related-grid">
             <a href="blog-first-luxury-watch-guide.html" class="related-card">
-                <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="First watch">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=600&q=80" alt="First watch">
                 <div class="related-card-content">
                     <h3>Buying Your First Luxury Watch</h3>
                     <p>A complete guide for first-time collectors.</p>
                 </div>
             </a>
             <a href="blog-watch-straps-guide.html" class="related-card">
-                <img src="https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=600&q=80" alt="Straps">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=600&q=80" alt="Straps">
                 <div class="related-card-content">
                     <h3>Watch Straps & Bracelets Guide</h3>
                     <p>Transform your watch with the perfect strap.</p>
                 </div>
             </a>
             <a href="blog-watches-for-small-wrists.html" class="related-card">
-                <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600&q=80" alt="Small wrists">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600&q=80" alt="Small wrists">
                 <div class="related-card-content">
                     <h3>Best Watches for Small Wrists</h3>
                     <p>Perfectly proportioned timepieces.</p>
@@ -225,6 +238,8 @@
         </div>
     </section>
 
+        <div style="max-width:800px;margin:30px auto;padding:20px 25px;background:var(--charcoal,#1A1A1A);border:1px solid var(--slate,#2A2A2A);text-align:center"><div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold,#C9A962);margin-bottom:10px">Interactive Tools</div><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><a href="compare.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Compare</a><a href="quiz.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Watch Finder</a><a href="wrist-size.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Size Visualizer</a><a href="collection.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Collection</a><a href="value-calculator.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Value Calculator</a></div></div>
+    </main>
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
@@ -252,5 +267,6 @@
             <p>© 2025 Authentic Wrist. All rights reserved.</p>
         </div>
     </footer>
+<button class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#9650;</button>
 </body>
 </html>

@@ -30,7 +30,7 @@
         .article-card-meta{font-size:0.75rem;color:var(--gold-dark)}
         footer{text-align:center;padding:40px;border-top:1px solid var(--slate);color:var(--silver);font-size:0.85rem}
         @media(max-width:768px){header,.hero,.articles{padding-left:20px;padding-right:20px}nav{display:none}.filters{gap:10px}.filter-btn{padding:8px 15px;font-size:0.7rem}}
-    </style>
+    .skip-nav{position:absolute;top:-100px;left:0;background:var(--gold);color:var(--obsidian);padding:10px 20px;z-index:10000;font-size:0.85rem;text-decoration:none;transition:top 0.3s}.skip-nav:focus{top:0}.back-to-top-btn{position:fixed;bottom:30px;right:30px;width:45px;height:45px;background:rgba(201,169,98,0.15);border:1px solid var(--gold);color:var(--gold);font-size:1.2rem;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:999;transition:all 0.3s;backdrop-filter:blur(10px)}.back-to-top-btn:hover{background:var(--gold);color:var(--obsidian)}</style>
     <link rel="canonical" href="https://authenticwrist.com/blog.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Watch Guides & Articles — 300 Expert Reviews | Authentic Wrist">
@@ -67,15 +67,23 @@
     </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="deals.html">Deals</a>
-            <a href="directories.html">Directories</a>
-            <a href="blog.html">Blog</a>
+            <a href="index.html" data-page="index">Home</a>
+            <a href="directories.html" data-page="directories">Directories</a>
+            <a href="blog.html" data-page="blog" class="active">Guides</a>
+            <a href="deals.html" data-page="deals">Deals</a>
+            <a href="compare.html" data-page="compare">Compare</a>
+            <a href="quiz.html" data-page="quiz">Watch Finder</a>
+            <a href="wrist-size.html" data-page="wrist-size">Size Visualizer</a>
+            <a href="collection.html" data-page="collection">Collection</a>
+            <a href="value-calculator.html" data-page="value-calculator">Value Calculator</a>
+            <a href="search.html" data-page="search">Search</a>
         </nav>
     </header>
+    <main id="main-content">
     <section class="hero">
         <h1>Watch Guides & Articles</h1>
         <p>300 expert guides covering brand stories, buying advice, comparisons, and watch care. From Rolex to Apple Watch.</p>
@@ -313,6 +321,7 @@
 <a href="blog-polishing-scratches.html" class="article-card" data-category="watch-care"><div class="article-card-header"><div class="article-card-category">Watch Care</div></div><div class="article-card-content"><h3>Polishing Scratches</h3><p>DIY or professional.</p><div class="article-card-meta">January 2026</div></div></a>
     </div>
 
+        </main>
     <footer>
         <p>© 2026 Authentic Wrist. All rights reserved.</p>
     </footer>
@@ -320,5 +329,7 @@
     <script>
         document.querySelectorAll('.filter-btn').forEach(btn=>{btn.addEventListener('click',function(){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));this.classList.add('active');const filter=this.dataset.filter;document.querySelectorAll('.article-card').forEach(card=>{if(filter==='all'||card.dataset.category===filter){card.style.display='block'}else{card.style.display='none'}})})});
     </script>
+    <script>(function(){var b=document.querySelector('.back-to-top-btn');if(b){window.addEventListener('scroll',function(){b.style.display=window.scrollY>500?'flex':'none'})}})();</script>
+<button class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#9650;</button>
 </body>
 </html>

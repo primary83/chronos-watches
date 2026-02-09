@@ -72,7 +72,7 @@
             .hero .tagline{font-size:1.1rem}
             .section-title{font-size:2rem}
         }
-    </style>
+    .skip-nav{position:absolute;top:-100px;left:0;background:var(--gold);color:var(--obsidian);padding:10px 20px;z-index:10000;font-size:0.85rem;text-decoration:none;transition:top 0.3s}.skip-nav:focus{top:0}.back-to-top-btn{position:fixed;bottom:30px;right:30px;width:45px;height:45px;background:rgba(201,169,98,0.15);border:1px solid var(--gold);color:var(--gold);font-size:1.2rem;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:999;transition:all 0.3s;backdrop-filter:blur(10px)}.back-to-top-btn:hover{background:var(--gold);color:var(--obsidian)}</style>
     <meta property="og:type" content="article">
     <meta property="og:title" content="Authentic Wrist — Independent Luxury Watch Guide">
     <meta property="og:description" content="Independent editorial guide to luxury timepieces. Expert reviews, buying guides, and trusted retailer recommendations. We research watches — you make informed decisions.">
@@ -106,18 +106,26 @@
   }
 }
     </script>
+    <script>(function(){var b=document.querySelector('.back-to-top-btn');if(b){window.addEventListener('scroll',function(){b.style.display=window.scrollY>500?'flex':'none'})}})();</script>
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="blog.html">Guides</a>
-            <a href="deals.html">Deals</a>
-            <a href="about.html">About</a>
-            <a href="search.html">Search</a>
+            <a href="index.html" data-page="index">Home</a>
+            <a href="directories.html" data-page="directories">Directories</a>
+            <a href="blog.html" data-page="blog">Guides</a>
+            <a href="deals.html" data-page="deals">Deals</a>
+            <a href="compare.html" data-page="compare">Compare</a>
+            <a href="quiz.html" data-page="quiz">Watch Finder</a>
+            <a href="wrist-size.html" data-page="wrist-size">Size Visualizer</a>
+            <a href="collection.html" data-page="collection">Collection</a>
+            <a href="value-calculator.html" data-page="value-calculator">Value Calculator</a>
+            <a href="search.html" data-page="search">Search</a>
         </nav>
     </header>
+    <main id="main-content">
     
     <section class="hero">
         <h1>Time, Informed</h1>
@@ -197,9 +205,11 @@
         </div>
     </section>
     
+        </main>
     <footer>
         <p>&copy; 2026 Authentic Wrist. All rights reserved.</p>
         <p><a href="about.html">About Us</a> · <a href="blog.html">All Guides</a> · <a href="search.html">Search</a></p>
     </footer>
+<button class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#9650;</button>
 </body>
 </html>

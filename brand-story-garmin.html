@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Garmin Story — From Aviation GPS to Athlete's Best Friend | Authentic Wrist</title>
+    <title>The Garmin Story — From Aviation GPS to Athlete's Best Friendd | Authentic Wrist</title>
     <meta name="description" content="The complete history of Garmin watches. From aviation GPS pioneers to the world's most trusted sports watch brand, discover how Garmin conquered the athlete's wrist.">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +51,7 @@
             nav { gap: 15px; }
             .timeline-item { flex-direction: column; gap: 5px; }
         }
-    </style>
+    .skip-nav{position:absolute;top:-100px;left:0;background:var(--gold);color:var(--obsidian);padding:10px 20px;z-index:10000;font-size:0.85rem;text-decoration:none;transition:top 0.3s}.skip-nav:focus{top:0}.back-to-top-btn{position:fixed;bottom:30px;right:30px;width:45px;height:45px;background:rgba(201,169,98,0.15);border:1px solid var(--gold);color:var(--gold);font-size:1.2rem;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:999;transition:all 0.3s;backdrop-filter:blur(10px)}.back-to-top-btn:hover{background:var(--gold);color:var(--obsidian)}</style>
     <link rel="canonical" href="https://authenticwrist.com/brand-story-garmin.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="The Garmin Story — From Aviation GPS to Athlete's Best Friend | Authentic Wrist">
@@ -86,17 +86,29 @@
   }
 }
     </script>
+    <script>(function(){var b=document.querySelector('.back-to-top-btn');if(b){window.addEventListener('scroll',function(){b.style.display=window.scrollY>500?'flex':'none'})}})();</script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://authenticwrist.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://authenticwrist.com/blog.html"},{"@type":"ListItem","position":3,"name":"The Garmin Story — From Aviation GPS to Athlete's Best Frien"}]}
+    </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="blog.html">Guides</a>
-            <a href="directories.html">Directories</a>
-            <a href="deals.html">Deals</a>
+            <a href="index.html" data-page="index">Home</a>
+            <a href="directories.html" data-page="directories">Directories</a>
+            <a href="blog.html" data-page="blog">Guides</a>
+            <a href="deals.html" data-page="deals">Deals</a>
+            <a href="compare.html" data-page="compare">Compare</a>
+            <a href="quiz.html" data-page="quiz">Watch Finder</a>
+            <a href="wrist-size.html" data-page="wrist-size">Size Visualizer</a>
+            <a href="collection.html" data-page="collection">Collection</a>
+            <a href="value-calculator.html" data-page="value-calculator">Value Calculator</a>
+            <a href="search.html" data-page="search">Search</a>
         </nav>
     </header>
+    <main id="main-content">
 
     <div class="breadcrumb">
         <a href="index.html">Home</a> → <a href="directories.html">Directories</a> → <a href="directory-garmin.html">Garmin</a> → Brand Story
@@ -228,6 +240,8 @@
 
     </article>
 
+        <div style="max-width:800px;margin:30px auto;padding:20px 25px;background:var(--charcoal,#1A1A1A);border:1px solid var(--slate,#2A2A2A);text-align:center"><div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold,#C9A962);margin-bottom:10px">Interactive Tools</div><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><a href="compare.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Compare</a><a href="quiz.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Watch Finder</a><a href="wrist-size.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Size Visualizer</a><a href="collection.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Collection</a><a href="value-calculator.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Value Calculator</a></div></div>
+    </main>
     <footer>
         <p>© 2026 Authentic Wrist. All rights reserved.</p>
         <p style="margin-top: 10px;">
@@ -236,5 +250,6 @@
             <a href="brand-story-fitbit.html">Fitbit Story</a>
         </p>
     </footer>
+<button class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#9650;</button>
 </body>
 </html>

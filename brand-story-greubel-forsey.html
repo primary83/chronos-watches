@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>:root{--gold:#C9A962;--obsidian:#0A0A0A;--charcoal:#1A1A1A;--slate:#2A2A2A;--silver:#C0C0C0;--cream:#F5F3EF}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Outfit',sans-serif;background:var(--obsidian);color:var(--cream);line-height:1.8}header{padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--slate)}.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:.2em;color:var(--gold);text-decoration:none}nav{display:flex;gap:30px}nav a{font-size:.75rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--cream);text-decoration:none}nav a:hover{color:var(--gold)}.article-hero{height:450px;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,#1a1a1a 0%,#0a0a0a 50%,#1a1a1a 100%);border-bottom:1px solid var(--gold)}.article-hero h1{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;margin-bottom:15px}.article-category{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}.article-meta{font-size:.85rem;color:var(--silver)}.article-content{max-width:800px;margin:0 auto;padding:60px 20px}.article-content p{font-size:1.05rem;line-height:2;margin-bottom:25px;color:var(--silver)}.article-content h2{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:400;margin:50px 0 25px;color:var(--cream)}.lead-paragraph{font-size:1.2rem;color:var(--cream);border-left:3px solid var(--gold);padding-left:25px;margin-bottom:40px}footer{border-top:1px solid var(--slate);padding:40px;text-align:center;margin-top:60px}footer p{color:var(--silver);font-size:.85rem}@media(max-width:768px){header{flex-direction:column;gap:15px}.article-hero h1{font-size:2.5rem}}</style>
+    <style>:root{--gold:#C9A962;--obsidian:#0A0A0A;--charcoal:#1A1A1A;--slate:#2A2A2A;--silver:#C0C0C0;--cream:#F5F3EF}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Outfit',sans-serif;background:var(--obsidian);color:var(--cream);line-height:1.8}header{padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--slate)}.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:.2em;color:var(--gold);text-decoration:none}nav{display:flex;gap:30px}nav a{font-size:.75rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--cream);text-decoration:none}nav a:hover{color:var(--gold)}.article-hero{height:450px;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,#1a1a1a 0%,#0a0a0a 50%,#1a1a1a 100%);border-bottom:1px solid var(--gold)}.article-hero h1{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;margin-bottom:15px}.article-category{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}.article-meta{font-size:.85rem;color:var(--silver)}.article-content{max-width:800px;margin:0 auto;padding:60px 20px}.article-content p{font-size:1.05rem;line-height:2;margin-bottom:25px;color:var(--silver)}.article-content h2{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:400;margin:50px 0 25px;color:var(--cream)}.lead-paragraph{font-size:1.2rem;color:var(--cream);border-left:3px solid var(--gold);padding-left:25px;margin-bottom:40px}footer{border-top:1px solid var(--slate);padding:40px;text-align:center;margin-top:60px}footer p{color:var(--silver);font-size:.85rem}@media(max-width:768px){header{flex-direction:column;gap:15px}.article-hero h1{font-size:2.5rem}}.skip-nav{position:absolute;top:-100px;left:0;background:var(--gold);color:var(--obsidian);padding:10px 20px;z-index:10000;font-size:0.85rem;text-decoration:none;transition:top 0.3s}.skip-nav:focus{top:0}.back-to-top-btn{position:fixed;bottom:30px;right:30px;width:45px;height:45px;background:rgba(201,169,98,0.15);border:1px solid var(--gold);color:var(--gold);font-size:1.2rem;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:999;transition:all 0.3s;backdrop-filter:blur(10px)}.back-to-top-btn:hover{background:var(--gold);color:var(--obsidian)}</style>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -39,9 +39,27 @@
   }
 }
     </script>
+    <script>(function(){var b=document.querySelector('.back-to-top-btn');if(b){window.addEventListener('scroll',function(){b.style.display=window.scrollY>500?'flex':'none'})}})();</script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://authenticwrist.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://authenticwrist.com/blog.html"},{"@type":"ListItem","position":3,"name":"The History of Greubel Forsey"}]}
+    </script>
 </head>
 <body>
-    <header><a href="index.html" class="logo">AUTHENTIC WRIST</a><nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">Our Story</a><a href="search.html">Search</a></nav></header>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
+    <header><a href="index.html" class="logo">AUTHENTIC WRIST</a><nav>
+            <a href="index.html" data-page="index">Home</a>
+            <a href="directories.html" data-page="directories">Directories</a>
+            <a href="blog.html" data-page="blog">Guides</a>
+            <a href="deals.html" data-page="deals">Deals</a>
+            <a href="compare.html" data-page="compare">Compare</a>
+            <a href="quiz.html" data-page="quiz">Watch Finder</a>
+            <a href="wrist-size.html" data-page="wrist-size">Size Visualizer</a>
+            <a href="collection.html" data-page="collection">Collection</a>
+            <a href="value-calculator.html" data-page="value-calculator">Value Calculator</a>
+            <a href="search.html" data-page="search">Search</a>
+        </nav></header>
+    <main id="main-content">
+    <div style="padding:12px 40px;font-size:0.8rem;color:var(--silver,#C0C0C0);border-bottom:1px solid var(--slate,#2A2A2A)"><a href="index.html" style="color:var(--gold,#C9A962);text-decoration:none">Home</a> / <a href="blog.html" style="color:var(--gold,#C9A962);text-decoration:none">Guides</a> / <span>The History of Greubel Forsey</span></div>
     <section class="article-hero"><div><div class="article-category">Brand Story</div><h1>The History of Greubel Forsey</h1><div class="article-meta">January 2025 · 10 min read</div></div></section>
     <article class="article-content">
         <p class="lead-paragraph">Greubel Forsey represents the absolute pinnacle of contemporary mechanical watchmaking. Their multi-axis tourbillons, obsessive hand-finishing, and six-figure price tags place them among the most exclusive manufacturers in existence.</p>
@@ -80,6 +98,9 @@
         <h2>Greubel Forsey Today</h2>
         <p>For collectors seeking the ultimate expression of mechanical watchmaking—where finishing, complexity, and exclusivity reach peaks matched by almost no one—Greubel Forsey represents the summit.</p>
     </article>
+        <div style="max-width:800px;margin:30px auto;padding:20px 25px;background:var(--charcoal,#1A1A1A);border:1px solid var(--slate,#2A2A2A);text-align:center"><div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold,#C9A962);margin-bottom:10px">Interactive Tools</div><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><a href="compare.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Compare</a><a href="quiz.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Watch Finder</a><a href="wrist-size.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Size Visualizer</a><a href="collection.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Collection</a><a href="value-calculator.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Value Calculator</a></div></div>
+    </main>
     <footer><p>&copy; 2025 Authentic Wrist. All rights reserved.</p></footer>
+<button class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#9650;</button>
 </body>
 </html>

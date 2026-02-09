@@ -122,7 +122,7 @@
             header, .hero, .content { padding-left: 20px; padding-right: 20px; }
             nav { display: none; }
         }
-    </style>
+    .skip-nav{position:absolute;top:-100px;left:0;background:var(--gold);color:var(--obsidian);padding:10px 20px;z-index:10000;font-size:0.85rem;text-decoration:none;transition:top 0.3s}.skip-nav:focus{top:0}</style>
     <link rel="canonical" href="https://authenticwrist.com/terms.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Terms of Service — Authentic Wrist">
@@ -159,15 +159,23 @@
     </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="deals.html">Deals</a>
-            <a href="directories.html">Directories</a>
-            <a href="blog.html">Blog</a>
+            <a href="index.html" data-page="index">Home</a>
+            <a href="directories.html" data-page="directories">Directories</a>
+            <a href="blog.html" data-page="blog">Guides</a>
+            <a href="deals.html" data-page="deals">Deals</a>
+            <a href="compare.html" data-page="compare">Compare</a>
+            <a href="quiz.html" data-page="quiz">Watch Finder</a>
+            <a href="wrist-size.html" data-page="wrist-size">Size Visualizer</a>
+            <a href="collection.html" data-page="collection">Collection</a>
+            <a href="value-calculator.html" data-page="value-calculator">Value Calculator</a>
+            <a href="search.html" data-page="search">Search</a>
         </nav>
     </header>
+    <main id="main-content">
 
     <section class="hero">
         <h1>Terms of Service</h1>
@@ -243,5 +251,6 @@
         Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4d2e2223392c2e390d2c383925282339242e3a3f243e39632e2220">[email&#160;protected]</a></p>
     </div>
 
+        </main>
     <footer>
         <p>© 2026 Authentic Wrist. All rights reserved. | <a href="

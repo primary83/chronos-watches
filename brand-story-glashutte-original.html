@@ -31,7 +31,7 @@
         .cta-btn { display: inline-block; background: var(--gold); color: var(--obsidian); padding: 15px 35px; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin: 10px; }
         footer { text-align: center; padding: 40px; border-top: 1px solid var(--slate); color: var(--silver); font-size: 0.85rem; }
         @media (max-width: 768px) { header, .hero, .content { padding-left: 20px; padding-right: 20px; } nav { display: none; } }
-    </style>
+    .skip-nav{position:absolute;top:-100px;left:0;background:var(--gold);color:var(--obsidian);padding:10px 20px;z-index:10000;font-size:0.85rem;text-decoration:none;transition:top 0.3s}.skip-nav:focus{top:0}.back-to-top-btn{position:fixed;bottom:30px;right:30px;width:45px;height:45px;background:rgba(201,169,98,0.15);border:1px solid var(--gold);color:var(--gold);font-size:1.2rem;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:999;transition:all 0.3s;backdrop-filter:blur(10px)}.back-to-top-btn:hover{background:var(--gold);color:var(--obsidian)}</style>
     <link rel="canonical" href="https://authenticwrist.com/brand-story-glashutte-original.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Glashütte Original History — The Other German Masterpiece | Authentic Wrist">
@@ -66,16 +66,30 @@
   }
 }
     </script>
+    <script>(function(){var b=document.querySelector('.back-to-top-btn');if(b){window.addEventListener('scroll',function(){b.style.display=window.scrollY>500?'flex':'none'})}})();</script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://authenticwrist.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://authenticwrist.com/blog.html"},{"@type":"ListItem","position":3,"name":"Glashütte Original History — The Other German Masterpiece"}]}
+    </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="blog.html">Guides</a>
-            <a href="directories.html">Directories</a>
+            <a href="index.html" data-page="index">Home</a>
+            <a href="directories.html" data-page="directories">Directories</a>
+            <a href="blog.html" data-page="blog">Guides</a>
+            <a href="deals.html" data-page="deals">Deals</a>
+            <a href="compare.html" data-page="compare">Compare</a>
+            <a href="quiz.html" data-page="quiz">Watch Finder</a>
+            <a href="wrist-size.html" data-page="wrist-size">Size Visualizer</a>
+            <a href="collection.html" data-page="collection">Collection</a>
+            <a href="value-calculator.html" data-page="value-calculator">Value Calculator</a>
+            <a href="search.html" data-page="search">Search</a>
         </nav>
     </header>
+    <main id="main-content">
+    <div style="padding:12px 40px;font-size:0.8rem;color:var(--silver,#C0C0C0);border-bottom:1px solid var(--slate,#2A2A2A)"><a href="index.html" style="color:var(--gold,#C9A962);text-decoration:none">Home</a> / <a href="blog.html" style="color:var(--gold,#C9A962);text-decoration:none">Guides</a> / <span>Glashütte Original History — The Other German Masterpiece</span></div>
 
     <section class="hero">
         <div class="subtitle">Brand Story</div>
@@ -160,8 +174,11 @@
         </div>
     </article>
 
+        <div style="max-width:800px;margin:30px auto;padding:20px 25px;background:var(--charcoal,#1A1A1A);border:1px solid var(--slate,#2A2A2A);text-align:center"><div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold,#C9A962);margin-bottom:10px">Interactive Tools</div><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><a href="compare.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Compare</a><a href="quiz.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Watch Finder</a><a href="wrist-size.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Size Visualizer</a><a href="collection.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Collection</a><a href="value-calculator.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Value Calculator</a></div></div>
+    </main>
     <footer>
         <p>© 2026 Authentic Wrist. All rights reserved.</p>
     </footer>
+<button class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#9650;</button>
 </body>
 </html>
