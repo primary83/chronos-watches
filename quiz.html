@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Finder Quiz — Find Your Perfect Watch | Authentic Wrist</title>
+    <meta name="description" content="Answer 6 simple questions and we'll recommend the perfect watch for your style, budget, and lifestyle. Personalized watch recommendations from Authentic Wrist.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://authenticwrist.com/quiz.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Watch Finder Quiz — Find Your Perfect Watch | Authentic Wrist">
+    <meta property="og:description" content="Answer 6 simple questions and we'll recommend the perfect watch for your style, budget, and lifestyle.">
+    <meta property="og:url" content="https://authenticwrist.com/quiz.html">
+    <meta property="og:site_name" content="Authentic Wrist">
+    <meta property="og:image" content="https://authenticwrist.com/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Watch Finder Quiz",
+      "description": "Answer 6 simple questions and get personalized watch recommendations.",
+      "url": "https://authenticwrist.com/quiz.html",
+      "applicationCategory": "ShoppingApplication",
+      "publisher": { "@type": "Organization", "name": "Authentic Wrist" }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--gold:#C9A962;--gold-light:#E8D5A3;--gold-dark:#8B7355;--obsidian:#0A0A0A;--charcoal:#1A1A1A;--slate:#2A2A2A;--silver:#C0C0C0;--cream:#F5F3EF}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Outfit',sans-serif;background:var(--obsidian);color:var(--cream);line-height:1.6;min-height:100vh}
+        header{padding:20px 40px;border-bottom:1px solid var(--slate);display:flex;justify-content:space-between;align-items:center}
+        .logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);text-decoration:none;letter-spacing:0.2em}
+        nav{display:flex;gap:30px}nav a{color:var(--silver);text-decoration:none;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.3s}nav a:hover,nav a.active{color:var(--gold)}
+        .tool-nav{display:flex;justify-content:center;gap:15px;padding:20px;flex-wrap:wrap}
+        .tool-nav a{padding:10px 25px;border:1px solid var(--slate);color:var(--silver);text-decoration:none;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s}
+        .tool-nav a:hover,.tool-nav a.active{border-color:var(--gold);color:var(--gold)}
+        .quiz-container{max-width:700px;margin:0 auto;padding:40px 20px 80px}
+        .progress-bar{width:100%;height:3px;background:var(--slate);margin-bottom:50px;position:relative}
+        .progress-fill{height:100%;background:var(--gold);transition:width 0.5s ease}
+        .progress-text{text-align:center;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--silver);margin-bottom:10px}
+        .question{display:none;animation:fadeIn 0.4s ease}
+        .question.active{display:block}
+        .question h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:300;text-align:center;margin-bottom:10px}
+        .question p{text-align:center;color:var(--silver);font-size:0.9rem;margin-bottom:40px}
+        .options{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+        .option{background:var(--charcoal);border:2px solid var(--slate);padding:25px 20px;text-align:center;cursor:pointer;transition:all 0.3s;position:relative}
+        .option:hover{border-color:var(--gold-dark);transform:translateY(-2px)}
+        .option.selected{border-color:var(--gold);background:rgba(201,169,98,0.08)}
+        .option .icon{font-size:2rem;margin-bottom:10px;display:block}
+        .option .label{font-size:0.9rem;font-weight:500;margin-bottom:5px}
+        .option .desc{font-size:0.75rem;color:var(--silver)}
+        .nav-btns{display:flex;justify-content:space-between;margin-top:40px}
+        .nav-btn{padding:14px 35px;font-family:'Outfit',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;border:none}
+        .nav-btn.back{background:transparent;color:var(--silver);border:1px solid var(--slate)}.nav-btn.back:hover{border-color:var(--gold);color:var(--gold)}
+        .nav-btn.next{background:var(--gold);color:var(--obsidian)}.nav-btn.next:hover{background:var(--gold-light)}
+        .nav-btn:disabled{opacity:0.3;cursor:not-allowed}
+        .results-container{display:none;animation:fadeIn 0.5s ease}
+        .results-container.visible{display:block}
+        .results-header-section{text-align:center;margin-bottom:50px}
+        .results-header-section h2{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;margin-bottom:10px}
+        .results-header-section p{color:var(--silver)}
+        .rec-card{background:var(--charcoal);border:1px solid var(--slate);padding:35px;margin-bottom:25px;position:relative;overflow:hidden}
+        .rec-card.top-pick::before{content:'TOP PICK';position:absolute;top:15px;right:-30px;background:var(--gold);color:var(--obsidian);font-size:0.6rem;font-weight:600;letter-spacing:0.1em;padding:5px 40px;transform:rotate(45deg)}
+        .rec-card .rec-rank{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+        .rec-card .rec-brand{font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--silver)}
+        .rec-card .rec-model{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;margin:5px 0}
+        .rec-card .rec-price{color:var(--gold);font-size:1.1rem;font-weight:500;margin:10px 0}
+        .rec-card .rec-why{color:var(--silver);font-size:0.9rem;line-height:1.7;margin:15px 0}
+        .rec-card .rec-specs{display:flex;gap:20px;flex-wrap:wrap;margin:15px 0}
+        .rec-card .rec-spec{font-size:0.75rem;color:var(--silver);padding:5px 12px;border:1px solid var(--slate);display:inline-block}
+        .rec-card .rec-links{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+        .rec-card .rec-link{padding:10px 25px;border:1px solid var(--slate);color:var(--cream);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s}
+        .rec-card .rec-link:hover{border-color:var(--gold);color:var(--gold)}
+        .rec-card .rec-link.primary{background:var(--gold);color:var(--obsidian);border-color:var(--gold)}.rec-card .rec-link.primary:hover{background:var(--gold-light)}
+        .retake-btn{display:block;margin:40px auto;padding:14px 40px;background:transparent;border:1px solid var(--slate);color:var(--silver);font-family:'Outfit',sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;transition:all 0.3s}
+        .retake-btn:hover{border-color:var(--gold);color:var(--gold)}
+        footer{text-align:center;padding:40px;border-top:1px solid var(--slate);color:var(--silver);font-size:0.85rem}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+        @media(max-width:768px){header{padding:15px 20px}nav{display:none}.options{grid-template-columns:1fr}.rec-card .rec-specs{gap:10px}}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">AUTHENTIC WRIST</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+            <a href="compare.html">Compare</a>
+            <a href="quiz.html" class="active">Watch Finder</a>
+            <a href="search.html">Search</a>
+        </nav>
+    </header>
+
+    <div class="tool-nav">
+        <a href="compare.html">Compare Watches</a>
+        <a href="quiz.html" class="active">Watch Finder Quiz</a>
+    </div>
+
+    <div class="quiz-container">
+        <div id="quizSection">
+            <div class="progress-text" id="progressText">Question 1 of 6</div>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:16.6%"></div></div>
+
+            <!-- Q1: Budget -->
+            <div class="question active" id="q1">
+                <h2>What's your budget?</h2>
+                <p>Select the range you're comfortable with.</p>
+                <div class="options">
+                    <div class="option" onclick="selectOption(1,'budget','under500')">
+                        <span class="icon">💰</span>
+                        <div class="label">Under $500</div>
+                        <div class="desc">Great watches at accessible prices</div>
+                    </div>
+                    <div class="option" onclick="selectOption(1,'budget','500-2000')">
+                        <span class="icon">⚡</span>
+                        <div class="label">$500 – $2,000</div>
+                        <div class="desc">Serious watchmaking, great value</div>
+                    </div>
+                    <div class="option" onclick="selectOption(1,'budget','2000-5000')">
+                        <span class="icon">✨</span>
+                        <div class="label">$2,000 – $5,000</div>
+                        <div class="desc">Entry-level luxury territory</div>
+                    </div>
+                    <div class="option" onclick="selectOption(1,'budget','5000+')">
+                        <span class="icon">👑</span>
+                        <div class="label">$5,000+</div>
+                        <div class="desc">Premium and haute horlogerie</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q2: Style -->
+            <div class="question" id="q2">
+                <h2>What's your primary style?</h2>
+                <p>How would you describe your everyday look?</p>
+                <div class="options">
+                    <div class="option" onclick="selectOption(2,'style','classic')">
+                        <span class="icon">🎩</span>
+                        <div class="label">Classic / Business</div>
+                        <div class="desc">Suits, dress shirts, polished looks</div>
+                    </div>
+                    <div class="option" onclick="selectOption(2,'style','sporty')">
+                        <span class="icon">🏃</span>
+                        <div class="label">Sporty / Active</div>
+                        <div class="desc">Athletic wear, outdoor adventures</div>
+                    </div>
+                    <div class="option" onclick="selectOption(2,'style','casual')">
+                        <span class="icon">😎</span>
+                        <div class="label">Casual / Everyday</div>
+                        <div class="desc">Jeans and t-shirts, relaxed vibes</div>
+                    </div>
+                    <div class="option" onclick="selectOption(2,'style','versatile')">
+                        <span class="icon">🔄</span>
+                        <div class="label">Versatile / All-Around</div>
+                        <div class="desc">Need one watch for everything</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q3: Occasion -->
+            <div class="question" id="q3">
+                <h2>Main occasion for wearing?</h2>
+                <p>When will you wear this watch the most?</p>
+                <div class="options">
+                    <div class="option" onclick="selectOption(3,'occasion','daily')">
+                        <span class="icon">☀️</span>
+                        <div class="label">Daily Wear</div>
+                        <div class="desc">Office, errands, everyday life</div>
+                    </div>
+                    <div class="option" onclick="selectOption(3,'occasion','formal')">
+                        <span class="icon">🤵</span>
+                        <div class="label">Formal Events</div>
+                        <div class="desc">Weddings, galas, business meetings</div>
+                    </div>
+                    <div class="option" onclick="selectOption(3,'occasion','outdoor')">
+                        <span class="icon">🌊</span>
+                        <div class="label">Outdoor / Water</div>
+                        <div class="desc">Swimming, hiking, diving</div>
+                    </div>
+                    <div class="option" onclick="selectOption(3,'occasion','travel')">
+                        <span class="icon">✈️</span>
+                        <div class="label">Travel</div>
+                        <div class="desc">Multiple time zones, on the go</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q4: Size Preference -->
+            <div class="question" id="q4">
+                <h2>What size do you prefer?</h2>
+                <p>Based on your wrist and personal taste.</p>
+                <div class="options">
+                    <div class="option" onclick="selectOption(4,'size','small')">
+                        <span class="icon">◯</span>
+                        <div class="label">Compact (under 38mm)</div>
+                        <div class="desc">Understated, elegant, slim wrists</div>
+                    </div>
+                    <div class="option" onclick="selectOption(4,'size','medium')">
+                        <span class="icon">⬤</span>
+                        <div class="label">Medium (38–41mm)</div>
+                        <div class="desc">Versatile, fits most wrists</div>
+                    </div>
+                    <div class="option" onclick="selectOption(4,'size','large')">
+                        <span class="icon">⬛</span>
+                        <div class="label">Large (42mm+)</div>
+                        <div class="desc">Bold presence, larger wrists</div>
+                    </div>
+                    <div class="option" onclick="selectOption(4,'size','nopreference')">
+                        <span class="icon">🤷</span>
+                        <div class="label">No Preference</div>
+                        <div class="desc">Open to any size</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q5: Movement -->
+            <div class="question" id="q5">
+                <h2>Movement preference?</h2>
+                <p>What powers your ideal watch?</p>
+                <div class="options">
+                    <div class="option" onclick="selectOption(5,'movement','automatic')">
+                        <span class="icon">⚙️</span>
+                        <div class="label">Automatic</div>
+                        <div class="desc">Self-winding, traditional craftsmanship</div>
+                    </div>
+                    <div class="option" onclick="selectOption(5,'movement','manual')">
+                        <span class="icon">🔧</span>
+                        <div class="label">Manual Wind</div>
+                        <div class="desc">Daily ritual, purist's choice</div>
+                    </div>
+                    <div class="option" onclick="selectOption(5,'movement','quartz')">
+                        <span class="icon">🔋</span>
+                        <div class="label">Quartz</div>
+                        <div class="desc">Accurate, low maintenance</div>
+                    </div>
+                    <div class="option" onclick="selectOption(5,'movement','any')">
+                        <span class="icon">✅</span>
+                        <div class="label">No Preference</div>
+                        <div class="desc">Whatever works best for the watch</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q6: Priority -->
+            <div class="question" id="q6">
+                <h2>What matters most to you?</h2>
+                <p>Pick the one that resonates the most.</p>
+                <div class="options">
+                    <div class="option" onclick="selectOption(6,'priority','prestige')">
+                        <span class="icon">🏆</span>
+                        <div class="label">Brand Prestige</div>
+                        <div class="desc">Recognized name, status symbol</div>
+                    </div>
+                    <div class="option" onclick="selectOption(6,'priority','value')">
+                        <span class="icon">💎</span>
+                        <div class="label">Value for Money</div>
+                        <div class="desc">Best specs and quality per dollar</div>
+                    </div>
+                    <div class="option" onclick="selectOption(6,'priority','design')">
+                        <span class="icon">🎨</span>
+                        <div class="label">Unique Design</div>
+                        <div class="desc">Stand out, conversation starter</div>
+                    </div>
+                    <div class="option" onclick="selectOption(6,'priority','durability')">
+                        <span class="icon">🛡️</span>
+                        <div class="label">Durability</div>
+                        <div class="desc">Tough, reliable, built to last</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-btns">
+                <button class="nav-btn back" id="backBtn" onclick="prevQuestion()" style="visibility:hidden">Back</button>
+                <button class="nav-btn next" id="nextBtn" onclick="nextQuestion()" disabled>Next</button>
+            </div>
+        </div>
+
+        <div class="results-container" id="resultsContainer"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Authentic Wrist. Curated luxury timepieces.</p>
+        <p style="margin-top:10px;font-size:0.75rem;color:#666;">Affiliate Disclosure: We may earn commissions from retailer links.</p>
+    </footer>
+
+<script>
+const answers = {};
+let currentQ = 1;
+const totalQ = 6;
+
+const recommendations = [
+  // Under $500
+  {brand:"Orient",model:"Kamasu",price:"$250 – $350",why:"The best automatic dive watch under $500. Sapphire crystal, 200m water resistance, and a reliable in-house movement. Incredible value.",specs:["41.8mm","Automatic","200m WR","Sapphire"],tags:{budget:["under500"],style:["sporty","casual","versatile"],occasion:["daily","outdoor"],size:["medium","large","nopreference"],movement:["automatic","any"],priority:["value","durability"]},links:{amazon:"https://www.amazon.com/s?k=Orient+Kamasu",jomashop:"https://www.jomashop.com/orient-kamasu.html",chrono24:"https://www.chrono24.com/orient/kamasu--mod4147.htm"},guide:"blog-best-watches-under-500.html"},
+  {brand:"Citizen",model:"Promaster Diver",price:"$250 – $380",why:"A proven dive watch with Eco-Drive solar technology. Never needs a battery change. Tough, reliable, and perfect for active lifestyles.",specs:["41mm","Automatic","200m WR","Solar"],tags:{budget:["under500"],style:["sporty","casual"],occasion:["outdoor","daily"],size:["medium","nopreference"],movement:["automatic","quartz","any"],priority:["durability","value"]},links:{amazon:"https://www.amazon.com/s?k=Citizen+Promaster+Diver",jomashop:"https://www.jomashop.com/citizen-promaster.html",chrono24:"https://www.chrono24.com/citizen/promaster--mod195.htm"},guide:"blog-best-dive-watches.html"},
+  {brand:"Hamilton",model:"Khaki Field Mechanical",price:"$450 – $550",why:"A military-inspired classic with an 80-hour power reserve. Clean design that works with everything from jeans to a blazer.",specs:["38mm","Manual Wind","50m WR","Sapphire"],tags:{budget:["under500","500-2000"],style:["casual","classic","versatile"],occasion:["daily","travel"],size:["small","medium","nopreference"],movement:["manual","automatic","any"],priority:["value","design","durability"]},links:{amazon:"https://www.amazon.com/s?k=Hamilton+Khaki+Field+Mechanical",jomashop:"https://www.jomashop.com/hamilton-khaki-field.html",chrono24:"https://www.chrono24.com/hamilton/khaki-field--mod83.htm"},guide:"blog-best-field-watches.html"},
+  // $500-$2000
+  {brand:"Tissot",model:"PRX Powermatic 80",price:"$575 – $700",why:"The hottest watch under $1,000. Retro-modern design with an integrated bracelet. 80-hour power reserve and sapphire crystal at an unbeatable price.",specs:["40mm","Automatic","100m WR","80hr PR"],tags:{budget:["500-2000"],style:["casual","classic","versatile"],occasion:["daily","formal"],size:["medium","nopreference"],movement:["automatic","any"],priority:["value","design"]},links:{amazon:"https://www.amazon.com/s?k=Tissot+PRX+Powermatic+80",jomashop:"https://www.jomashop.com/tissot-prx.html",chrono24:"https://www.chrono24.com/tissot/prx--mod4290.htm"},guide:"blog-best-watches-under-1000.html"},
+  {brand:"Seiko",model:"Presage Sharp Edged",price:"$900 – $1,200",why:"Japanese artistry at its finest. The textured dial is hand-finished and the movement is proven reliable. A dress watch that punches way above its price.",specs:["39.3mm","Automatic","100m WR","70hr PR"],tags:{budget:["500-2000"],style:["classic","versatile"],occasion:["daily","formal"],size:["small","medium","nopreference"],movement:["automatic","any"],priority:["value","design"]},links:{amazon:"https://www.amazon.com/s?k=Seiko+Presage+Sharp+Edged+SPB167",jomashop:"https://www.jomashop.com/seiko-presage.html",chrono24:"https://www.chrono24.com/seiko/presage--mod3012.htm"},guide:"blog-best-dress-watches.html"},
+  {brand:"Seiko",model:"Prospex 1965 Diver",price:"$1,000 – $1,400",why:"Heritage design meets modern reliability. One of the best-looking dive watches at any price. The sunburst blue dial is stunning.",specs:["40.5mm","Automatic","200m WR","Sapphire"],tags:{budget:["500-2000"],style:["sporty","casual","versatile"],occasion:["daily","outdoor"],size:["medium","nopreference"],movement:["automatic","any"],priority:["value","design","durability"]},links:{amazon:"https://www.amazon.com/s?k=Seiko+Prospex+SPB313",jomashop:"https://www.jomashop.com/seiko-prospex.html",chrono24:"https://www.chrono24.com/seiko/prospex--mod739.htm"},guide:"blog-best-dive-watches.html"},
+  {brand:"Oris",model:"Aquis Date",price:"$1,800 – $2,200",why:"Swiss-made dive watch from an independent brand. Ceramic bezel, 300m water resistance, and the kind of build quality you'd expect at twice the price.",specs:["41.5mm","Automatic","300m WR","Ceramic"],tags:{budget:["500-2000","2000-5000"],style:["sporty","casual","versatile"],occasion:["daily","outdoor"],size:["medium","large","nopreference"],movement:["automatic","any"],priority:["value","durability"]},links:{amazon:"https://www.amazon.com/s?k=Oris+Aquis",jomashop:"https://www.jomashop.com/oris-aquis.html",chrono24:"https://www.chrono24.com/oris/aquis--mod805.htm"},guide:"blog-best-dive-watches-under-1000.html"},
+  // $2000-$5000
+  {brand:"Longines",model:"Spirit Zulu Time",price:"$2,400 – $3,000",why:"A true GMT watch with a ceramic bezel and 72-hour power reserve. Tracks two time zones effortlessly. Possibly the best value GMT on the market.",specs:["42mm","Automatic","100m WR","GMT"],tags:{budget:["2000-5000"],style:["sporty","versatile","casual"],occasion:["travel","daily"],size:["medium","large","nopreference"],movement:["automatic","any"],priority:["value","durability"]},links:{amazon:"https://www.amazon.com/s?k=Longines+Spirit+Zulu+Time",jomashop:"https://www.jomashop.com/longines-spirit.html",chrono24:"https://www.chrono24.com/longines/spirit--mod4421.htm"},guide:"blog-best-gmt-watches.html"},
+  {brand:"TAG Heuer",model:"Aquaracer Professional 300",price:"$2,500 – $3,200",why:"A serious dive watch from a prestigious Swiss brand. Ceramic bezel, 300m water resistance, and strong wrist presence.",specs:["43mm","Automatic","300m WR","Ceramic"],tags:{budget:["2000-5000"],style:["sporty","casual"],occasion:["outdoor","daily"],size:["large","nopreference"],movement:["automatic","any"],priority:["prestige","durability"]},links:{amazon:"https://www.amazon.com/s?k=TAG+Heuer+Aquaracer",jomashop:"https://www.jomashop.com/tag-heuer-aquaracer.html",chrono24:"https://www.chrono24.com/tagheuer/aquaracer--mod23.htm"},guide:"blog-best-dive-watches.html"},
+  {brand:"Cartier",model:"Tank Must",price:"$2,900 – $3,500",why:"One of the most iconic watch designs ever created. Over 100 years of history on your wrist. Nothing says refined elegance quite like a Cartier Tank.",specs:["33.7mm","Quartz","30m WR","Iconic"],tags:{budget:["2000-5000"],style:["classic","versatile"],occasion:["formal","daily"],size:["small","nopreference"],movement:["quartz","any"],priority:["prestige","design"]},links:{amazon:"https://www.amazon.com/s?k=Cartier+Tank+Must",jomashop:"https://www.jomashop.com/cartier-tank.html",chrono24:"https://www.chrono24.com/cartier/tank--mod30.htm"},guide:"blog-best-dress-watches.html"},
+  {brand:"Tudor",model:"Black Bay",price:"$3,200 – $4,000",why:"Rolex's sibling brand with in-house movements and 70-hour power reserve. Heritage dive watch design with modern reliability. The smart choice for Rolex quality at a fraction of the price.",specs:["41mm","Automatic","200m WR","70hr PR"],tags:{budget:["2000-5000"],style:["sporty","casual","versatile"],occasion:["daily","outdoor"],size:["medium","large","nopreference"],movement:["automatic","any"],priority:["value","prestige","durability"]},links:{amazon:"https://www.amazon.com/s?k=Tudor+Black+Bay",jomashop:"https://www.jomashop.com/tudor-black-bay.html",chrono24:"https://www.chrono24.com/tudor/black-bay--mod1498.htm"},guide:"blog-best-dive-watches.html"},
+  {brand:"Tudor",model:"Pelagos 39",price:"$4,000 – $4,800",why:"Full titanium construction makes it incredibly light and comfortable. Ceramic bezel, COSC certified, and 200m water resistance. The ultimate daily diver.",specs:["39mm","Automatic","200m WR","Titanium"],tags:{budget:["2000-5000"],style:["sporty","versatile"],occasion:["daily","outdoor"],size:["small","medium","nopreference"],movement:["automatic","any"],priority:["durability","value"]},links:{amazon:"https://www.amazon.com/s?k=Tudor+Pelagos+39",jomashop:"https://www.jomashop.com/tudor-pelagos-watch.html",chrono24:"https://www.chrono24.com/tudor/pelagos--mod1612.htm"},guide:"blog-best-dive-watches.html"},
+  // $5000+
+  {brand:"Omega",model:"Seamaster Diver 300M",price:"$4,500 – $5,500",why:"James Bond's watch. Co-Axial escapement for superior accuracy and longevity. Ceramic bezel and dial. One of the most iconic dive watches ever made.",specs:["42mm","Co-Axial","300m WR","Ceramic"],tags:{budget:["5000+","2000-5000"],style:["sporty","casual","versatile"],occasion:["daily","outdoor"],size:["medium","large","nopreference"],movement:["automatic","any"],priority:["prestige","durability","value"]},links:{amazon:"https://www.amazon.com/s?k=Omega+Seamaster+300",jomashop:"https://www.jomashop.com/omega-seamaster-diver.html",chrono24:"https://www.chrono24.com/omega/seamaster-diver-300-m--mod190.htm"},guide:"comparison-seamaster-vs-submariner.html"},
+  {brand:"Omega",model:"Speedmaster Moonwatch",price:"$5,500 – $7,000",why:"The first watch worn on the Moon. A chronograph icon with decades of heritage. Manual wind caliber 3861 with Co-Axial technology.",specs:["42mm","Manual","50m WR","Moonwatch"],tags:{budget:["5000+"],style:["classic","casual","versatile"],occasion:["daily","formal"],size:["medium","large","nopreference"],movement:["manual","automatic","any"],priority:["prestige","design"]},links:{amazon:"https://www.amazon.com/s?k=Omega+Speedmaster+Moonwatch",jomashop:"https://www.jomashop.com/omega-speedmaster.html",chrono24:"https://www.chrono24.com/omega/speedmaster-moonwatch-professional--mod614.htm"},guide:"comparison-speedmaster-vs-daytona.html"},
+  {brand:"Omega",model:"Aqua Terra 150M",price:"$4,800 – $5,800",why:"The perfect one-watch collection. Elegant enough for a suit, tough enough for the weekend. Teak-pattern dial and Master Chronometer certification.",specs:["41mm","Co-Axial","150m WR","Teak Dial"],tags:{budget:["5000+","2000-5000"],style:["classic","versatile"],occasion:["daily","formal","travel"],size:["medium","nopreference"],movement:["automatic","any"],priority:["value","prestige","design"]},links:{amazon:"https://www.amazon.com/s?k=Omega+Aqua+Terra",jomashop:"https://www.jomashop.com/omega-aqua-terra.html",chrono24:"https://www.chrono24.com/omega/seamaster-aqua-terra--mod28.htm"},guide:"comparison-datejust-vs-aqua-terra.html"},
+  {brand:"Grand Seiko",model:"Snowflake SBGA211",price:"$5,500 – $6,500",why:"Spring Drive technology — the smoothest sweep in watchmaking. The snowflake dial is mesmerizing up close. Titanium case keeps it featherlight. Japanese perfection.",specs:["41mm","Spring Drive","100m WR","Titanium"],tags:{budget:["5000+"],style:["classic","versatile"],occasion:["daily","formal"],size:["medium","large","nopreference"],movement:["automatic","any"],priority:["design","value"]},links:{amazon:"https://www.amazon.com/s?k=Grand+Seiko+Snowflake+SBGA211",jomashop:"https://www.jomashop.com/grand-seiko.html",chrono24:"https://www.chrono24.com/grandseiko/ref-sbga211.htm"},guide:"brand-story-grand-seiko.html"},
+  {brand:"IWC",model:"Pilot's Watch Mark XX",price:"$4,500 – $5,500",why:"120-hour power reserve means you can leave it off for 5 days and it keeps ticking. Clean pilot watch design with incredible legibility. Understated luxury.",specs:["40mm","Automatic","100m WR","120hr PR"],tags:{budget:["5000+","2000-5000"],style:["casual","versatile","classic"],occasion:["daily","travel"],size:["medium","nopreference"],movement:["automatic","any"],priority:["durability","value","design"]},links:{amazon:"https://www.amazon.com/s?k=IWC+Pilot+Mark+XX",jomashop:"https://www.jomashop.com/iwc-pilot.html",chrono24:"https://www.chrono24.com/iwc/pilots-watch--mod735.htm"},guide:"blog-best-pilot-watches.html"},
+  {brand:"Rolex",model:"Submariner Date",price:"$9,500 – $10,500",why:"The most recognized luxury watch in the world. 300m water resistance, ceramic bezel, 70-hour power reserve. The benchmark all dive watches are measured against.",specs:["41mm","Automatic","300m WR","Ceramic"],tags:{budget:["5000+"],style:["sporty","casual","versatile"],occasion:["daily","outdoor"],size:["medium","large","nopreference"],movement:["automatic","any"],priority:["prestige","durability"]},links:{amazon:"https://www.amazon.com/s?k=Rolex+Submariner",jomashop:"https://www.jomashop.com/rolex-submariner-watch.html",chrono24:"https://www.chrono24.com/rolex/submariner--mod18.htm"},guide:"brand-story-rolex.html"},
+  {brand:"Rolex",model:"Datejust 41",price:"$10,000 – $12,000",why:"The quintessential luxury dress watch. Fluted bezel, Jubilee bracelet, cyclops date. Goes from boardroom to dinner with effortless elegance.",specs:["41mm","Automatic","100m WR","Fluted Bezel"],tags:{budget:["5000+"],style:["classic","versatile"],occasion:["formal","daily"],size:["medium","large","nopreference"],movement:["automatic","any"],priority:["prestige","design"]},links:{amazon:"https://www.amazon.com/s?k=Rolex+Datejust+41",jomashop:"https://www.jomashop.com/rolex-datejust-watches.html",chrono24:"https://www.chrono24.com/rolex/datejust-41--mod736.htm"},guide:"brand-story-rolex.html"},
+];
+
+function selectOption(qNum, key, value){
+  answers[key] = value;
+  // Visual selection
+  const options = document.querySelectorAll(`#q${qNum} .option`);
+  options.forEach(o => o.classList.remove('selected'));
+  event.currentTarget.classList.add('selected');
+  document.getElementById('nextBtn').disabled = false;
+  // Auto-advance after short delay
+  if(qNum < totalQ){
+    setTimeout(() => nextQuestion(), 300);
+  } else {
+    setTimeout(() => showResults(), 300);
+  }
+}
+
+function nextQuestion(){
+  if(currentQ >= totalQ){showResults();return;}
+  document.getElementById('q'+currentQ).classList.remove('active');
+  currentQ++;
+  document.getElementById('q'+currentQ).classList.add('active');
+  updateProgress();
+  document.getElementById('nextBtn').disabled = true;
+  document.getElementById('backBtn').style.visibility = 'visible';
+  if(currentQ === totalQ) document.getElementById('nextBtn').textContent = 'See Results';
+}
+
+function prevQuestion(){
+  if(currentQ <= 1) return;
+  document.getElementById('q'+currentQ).classList.remove('active');
+  currentQ--;
+  document.getElementById('q'+currentQ).classList.add('active');
+  updateProgress();
+  if(currentQ === 1) document.getElementById('backBtn').style.visibility = 'hidden';
+  document.getElementById('nextBtn').textContent = 'Next';
+  document.getElementById('nextBtn').disabled = false;
+}
+
+function updateProgress(){
+  document.getElementById('progressText').textContent = `Question ${currentQ} of ${totalQ}`;
+  document.getElementById('progressFill').style.width = ((currentQ/totalQ)*100)+'%';
+}
+
+function showResults(){
+  document.getElementById('quizSection').style.display = 'none';
+  // Score each recommendation
+  const scored = recommendations.map(rec => {
+    let score = 0;
+    Object.keys(answers).forEach(key => {
+      if(rec.tags[key] && rec.tags[key].includes(answers[key])) score += 1;
+    });
+    return {...rec, score};
+  });
+  scored.sort((a,b) => b.score - a.score);
+  const top = scored.slice(0,3);
+
+  let html = `<div class="results-header-section"><h2>Your Perfect Watches</h2><p>Based on your answers, here are our top recommendations.</p></div>`;
+  top.forEach((rec,i) => {
+    const rank = i === 0 ? 'Best Match' : i === 1 ? 'Runner Up' : 'Also Consider';
+    html += `<div class="rec-card${i===0?' top-pick':''}">
+      <div class="rec-rank">${rank}</div>
+      <div class="rec-brand">${rec.brand}</div>
+      <div class="rec-model">${rec.model}</div>
+      <div class="rec-price">${rec.price}</div>
+      <div class="rec-specs">${rec.specs.map(s=>`<span class="rec-spec">${s}</span>`).join('')}</div>
+      <div class="rec-why">${rec.why}</div>
+      <div class="rec-links">
+        <a href="${rec.links.jomashop}" target="_blank" rel="nofollow noopener" class="rec-link primary">Shop Jomashop</a>
+        <a href="${rec.links.amazon}" target="_blank" rel="nofollow noopener" class="rec-link">Amazon</a>
+        <a href="${rec.links.chrono24}" target="_blank" rel="nofollow noopener" class="rec-link">Chrono24</a>
+        <a href="${rec.guide}" class="rec-link">Read Guide</a>
+      </div>
+    </div>`;
+  });
+  html += `<button class="retake-btn" onclick="retakeQuiz()">Retake Quiz</button>`;
+
+  const container = document.getElementById('resultsContainer');
+  container.innerHTML = html;
+  container.classList.add('visible');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function retakeQuiz(){
+  Object.keys(answers).forEach(k => delete answers[k]);
+  currentQ = 1;
+  document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+  document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
+  document.getElementById('q1').classList.add('active');
+  document.getElementById('quizSection').style.display = 'block';
+  document.getElementById('resultsContainer').classList.remove('visible');
+  document.getElementById('resultsContainer').innerHTML = '';
+  document.getElementById('backBtn').style.visibility = 'hidden';
+  document.getElementById('nextBtn').textContent = 'Next';
+  document.getElementById('nextBtn').disabled = true;
+  updateProgress();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
