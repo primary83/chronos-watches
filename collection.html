@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Watch Collection &amp; Wishlist — Save Your Favorite Watches | Authentic Wrist</title>
+    <meta name="description" content="Build and manage your personal watch collection and wishlist. Track watches you own and save timepieces you dream about. All data stored locally in your browser.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://authenticwrist.com/collection.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="My Watch Collection &amp; Wishlist | Authentic Wrist">
+    <meta property="og:description" content="Build and manage your personal watch collection and wishlist. Track watches you own and save timepieces you dream about.">
+    <meta property="og:url" content="https://authenticwrist.com/collection.html">
+    <meta property="og:site_name" content="Authentic Wrist">
+    <meta property="og:image" content="https://authenticwrist.com/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Watch Collection & Wishlist",
+      "description": "Build and manage your personal watch collection and wishlist.",
+      "url": "https://authenticwrist.com/collection.html",
+      "applicationCategory": "ShoppingApplication",
+      "publisher": { "@type": "Organization", "name": "Authentic Wrist" }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--gold:#C9A962;--gold-light:#E8D5A3;--gold-dark:#8B7355;--obsidian:#0A0A0A;--charcoal:#1A1A1A;--slate:#2A2A2A;--silver:#C0C0C0;--cream:#F5F3EF;--white:#FFFFFF;--green:#4CAF50;--red:#e74c3c}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Outfit',sans-serif;background:var(--obsidian);color:var(--cream);line-height:1.6;min-height:100vh}
+        header{padding:20px 40px;border-bottom:1px solid var(--slate);display:flex;justify-content:space-between;align-items:center}
+        .logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);text-decoration:none;letter-spacing:0.2em}
+        nav{display:flex;gap:30px}nav a{color:var(--silver);text-decoration:none;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.3s}nav a:hover{color:var(--gold)}nav a.active{color:var(--gold)}
+        .hero{text-align:center;padding:60px 40px 40px;max-width:800px;margin:0 auto}
+        .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;margin-bottom:15px}
+        .hero p{color:var(--silver);font-size:1rem;max-width:600px;margin:0 auto}
+        .tool-nav{display:flex;justify-content:center;gap:15px;padding:20px;flex-wrap:wrap}
+        .tool-nav a{padding:10px 25px;border:1px solid var(--slate);color:var(--silver);text-decoration:none;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s}
+        .tool-nav a:hover,.tool-nav a.active{border-color:var(--gold);color:var(--gold)}
+        .container{max-width:1200px;margin:0 auto;padding:40px}
+        .tabs{display:flex;gap:0;margin-bottom:40px;border-bottom:1px solid var(--slate)}
+        .tab{padding:15px 30px;font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--silver);background:transparent;border:none;cursor:pointer;position:relative;transition:color 0.3s;font-family:'Outfit',sans-serif}
+        .tab:hover{color:var(--cream)}
+        .tab.active{color:var(--gold)}
+        .tab.active::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:2px;background:var(--gold)}
+        .tab .count{font-size:0.65rem;background:var(--slate);color:var(--silver);padding:2px 8px;border-radius:10px;margin-left:8px}
+        .tab.active .count{background:rgba(201,169,98,0.2);color:var(--gold)}
+        .add-form{background:var(--charcoal);border:1px solid var(--slate);padding:30px;margin-bottom:40px}
+        .add-form h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;margin-bottom:20px;color:var(--gold)}
+        .form-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:15px;margin-bottom:20px}
+        .form-grid label{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--silver);display:block;margin-bottom:5px}
+        .form-grid input,.form-grid select,.form-grid textarea{width:100%;padding:10px 12px;background:var(--obsidian);border:1px solid var(--slate);color:var(--cream);font-family:'Outfit',sans-serif;font-size:0.85rem;outline:none;transition:border-color 0.3s}
+        .form-grid input:focus,.form-grid select:focus,.form-grid textarea:focus{border-color:var(--gold)}
+        .form-grid select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23C9A962'%3E%3Cpath d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;cursor:pointer}
+        .notes-field{grid-column:1/-1}
+        .notes-field textarea{resize:vertical;min-height:60px}
+        .btn{padding:12px 30px;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;border:1px solid var(--gold);background:transparent;color:var(--gold);cursor:pointer;font-family:'Outfit',sans-serif;transition:all 0.3s}
+        .btn:hover{background:var(--gold);color:var(--obsidian)}
+        .btn-danger{border-color:var(--red);color:var(--red)}.btn-danger:hover{background:var(--red);color:var(--white)}
+        .btn-sm{padding:8px 16px;font-size:0.65rem}
+        .actions-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px}
+        .stats{display:flex;gap:25px}
+        .stat{text-align:center}
+        .stat-val{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold)}
+        .stat-label{font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--silver)}
+        .watch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+        .watch-card{background:var(--charcoal);border:1px solid var(--slate);padding:25px;position:relative;transition:border-color 0.3s}
+        .watch-card:hover{border-color:rgba(201,169,98,0.3)}
+        .watch-card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:15px}
+        .watch-brand{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--silver)}
+        .watch-model{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;margin-top:3px}
+        .watch-actions{display:flex;gap:8px}
+        .icon-btn{width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid var(--slate);background:transparent;color:var(--silver);cursor:pointer;font-size:0.8rem;transition:all 0.3s}
+        .icon-btn:hover{border-color:var(--gold);color:var(--gold)}
+        .icon-btn.delete:hover{border-color:var(--red);color:var(--red)}
+        .watch-specs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+        .spec-tag{font-size:0.6rem;letter-spacing:0.05em;padding:4px 10px;border:1px solid var(--slate);color:var(--silver)}
+        .watch-price{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold);margin-bottom:8px}
+        .watch-notes{font-size:0.8rem;color:var(--silver);font-style:italic;margin-bottom:8px;border-left:2px solid var(--slate);padding-left:10px}
+        .watch-date{font-size:0.6rem;color:var(--gold-dark)}
+        .empty-state{text-align:center;padding:80px 40px}
+        .empty-icon{font-size:4rem;margin-bottom:20px;opacity:0.3}
+        .empty-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;margin-bottom:10px}
+        .empty-desc{color:var(--silver);font-size:0.9rem;max-width:400px;margin:0 auto 25px}
+        .export-bar{display:flex;gap:10px;flex-wrap:wrap}
+        footer{border-top:1px solid var(--slate);padding:30px 40px;text-align:center;color:var(--silver);font-size:0.75rem;margin-top:80px}
+        footer a{color:var(--gold);text-decoration:none}
+        @media(max-width:768px){
+            header{padding:15px 20px;flex-direction:column;gap:15px}
+            nav{flex-wrap:wrap;justify-content:center;gap:15px}
+            .container{padding:20px}
+            .form-grid{grid-template-columns:1fr}
+            .watch-grid{grid-template-columns:1fr}
+            .tabs{overflow-x:auto}
+            .actions-bar{flex-direction:column;align-items:stretch}
+            .stats{justify-content:center}
+            .export-bar{justify-content:center}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">AUTHENTIC WRIST</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="compare.html">Compare</a>
+            <a href="quiz.html">Watch Finder</a>
+            <a href="wrist-size.html">Size Visualizer</a>
+            <a href="collection.html" class="active">Collection</a>
+            <a href="value-calculator.html">Value Calculator</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>My Watch Collection</h1>
+        <p>Build and manage your personal watch collection and wishlist. Track the watches you own and save the timepieces you dream about.</p>
+    </section>
+
+    <div class="tool-nav">
+        <a href="compare.html">Compare</a>
+        <a href="quiz.html">Watch Finder</a>
+        <a href="wrist-size.html">Size Visualizer</a>
+        <a href="collection.html" class="active">Collection</a>
+        <a href="value-calculator.html">Value Calculator</a>
+    </div>
+
+    <div class="container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab active" data-tab="collection" onclick="switchTab('collection')">My Collection <span class="count" id="collCount">0</span></button>
+            <button class="tab" data-tab="wishlist" onclick="switchTab('wishlist')">Wishlist <span class="count" id="wishCount">0</span></button>
+        </div>
+
+        <!-- Add Watch Form -->
+        <div class="add-form">
+            <h3>Add a Watch</h3>
+            <div class="form-grid">
+                <div>
+                    <label>Brand</label>
+                    <select id="addBrand">
+                        <option value="">Select Brand</option>
+                        <option>A. Lange &amp; S&#246;hne</option><option>Audemars Piguet</option><option>Bell &amp; Ross</option><option>Blancpain</option><option>Breitling</option><option>Bulgari</option><option>Cartier</option><option>Chopard</option><option>Girard-Perregaux</option><option>Grand Seiko</option><option>Hamilton</option><option>Hublot</option><option>IWC</option><option>Jaeger-LeCoultre</option><option>Junghans</option><option>Longines</option><option>Montblanc</option><option>Nomos</option><option>Omega</option><option>Oris</option><option>Panerai</option><option>Patek Philippe</option><option>Piaget</option><option>Rado</option><option>Richard Mille</option><option>Rolex</option><option>Seiko</option><option>TAG Heuer</option><option>Tissot</option><option>Tudor</option><option>Vacheron Constantin</option><option>Zenith</option><option>Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Model</label>
+                    <input type="text" id="addModel" placeholder="e.g. Submariner Date">
+                </div>
+                <div>
+                    <label>Reference</label>
+                    <input type="text" id="addRef" placeholder="e.g. 126610LN">
+                </div>
+                <div>
+                    <label>Price Paid / Estimated Value</label>
+                    <input type="text" id="addPrice" placeholder="e.g. $8,500">
+                </div>
+                <div>
+                    <label>Case Size</label>
+                    <input type="text" id="addSize" placeholder="e.g. 41mm">
+                </div>
+                <div>
+                    <label>Movement</label>
+                    <select id="addMovement">
+                        <option value="">Select Type</option>
+                        <option>Automatic</option><option>Manual Wind</option><option>Quartz</option><option>Spring Drive</option><option>Solar</option><option>Kinetic</option>
+                    </select>
+                </div>
+                <div class="notes-field">
+                    <label>Notes</label>
+                    <textarea id="addNotes" placeholder="Any personal notes about this watch..."></textarea>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px">
+                <button class="btn" onclick="addWatch('collection')">Add to Collection</button>
+                <button class="btn" onclick="addWatch('wishlist')" style="border-color:var(--silver);color:var(--silver)">Add to Wishlist</button>
+            </div>
+        </div>
+
+        <!-- Stats & Actions -->
+        <div class="actions-bar">
+            <div class="stats">
+                <div class="stat"><div class="stat-val" id="totalWatches">0</div><div class="stat-label">Total Watches</div></div>
+                <div class="stat"><div class="stat-val" id="totalValue">$0</div><div class="stat-label">Est. Value</div></div>
+                <div class="stat"><div class="stat-val" id="topBrand">—</div><div class="stat-label">Top Brand</div></div>
+            </div>
+            <div class="export-bar">
+                <button class="btn btn-sm" onclick="exportData()">Export JSON</button>
+                <label class="btn btn-sm" style="cursor:pointer">Import JSON<input type="file" accept=".json" onchange="importData(event)" style="display:none"></label>
+                <button class="btn btn-sm btn-danger" onclick="clearAll()">Clear All</button>
+            </div>
+        </div>
+
+        <!-- Watch Grid -->
+        <div id="watchGrid" class="watch-grid"></div>
+        <div id="emptyState" class="empty-state" style="display:none">
+            <div class="empty-icon">&#9201;</div>
+            <div class="empty-title">No watches yet</div>
+            <div class="empty-desc">Start building your collection by adding watches above. Your data is saved locally in your browser.</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 <a href="index.html">Authentic Wrist</a>. Your collection data is stored locally and never leaves your browser.</p>
+    </footer>
+
+    <script>
+    let currentTab='collection';
+    function getData(){return JSON.parse(localStorage.getItem('aw_watches')||'{"collection":[],"wishlist":[]}')}
+    function saveData(d){localStorage.setItem('aw_watches',JSON.stringify(d))}
+
+    function switchTab(tab){
+        currentTab=tab;
+        document.querySelectorAll('.tab').forEach(t=>{t.classList.toggle('active',t.dataset.tab===tab)});
+        renderWatches();
+    }
+
+    function addWatch(list){
+        const brand=document.getElementById('addBrand').value;
+        const model=document.getElementById('addModel').value.trim();
+        if(!brand||!model){alert('Please select a brand and enter a model name.');return}
+        const watch={
+            id:Date.now(),
+            brand:brand,
+            model:model,
+            ref:document.getElementById('addRef').value.trim(),
+            price:document.getElementById('addPrice').value.trim(),
+            size:document.getElementById('addSize').value.trim(),
+            movement:document.getElementById('addMovement').value,
+            notes:document.getElementById('addNotes').value.trim(),
+            added:new Date().toISOString().slice(0,10)
+        };
+        const data=getData();
+        data[list].push(watch);
+        saveData(data);
+        // clear form
+        document.getElementById('addBrand').value='';
+        document.getElementById('addModel').value='';
+        document.getElementById('addRef').value='';
+        document.getElementById('addPrice').value='';
+        document.getElementById('addSize').value='';
+        document.getElementById('addMovement').value='';
+        document.getElementById('addNotes').value='';
+        currentTab=list;
+        document.querySelectorAll('.tab').forEach(t=>{t.classList.toggle('active',t.dataset.tab===list)});
+        renderWatches();
+    }
+
+    function removeWatch(id){
+        if(!confirm('Remove this watch?'))return;
+        const data=getData();
+        data[currentTab]=data[currentTab].filter(w=>w.id!==id);
+        saveData(data);
+        renderWatches();
+    }
+
+    function moveWatch(id){
+        const data=getData();
+        const target=currentTab==='collection'?'wishlist':'collection';
+        const idx=data[currentTab].findIndex(w=>w.id===id);
+        if(idx===-1)return;
+        const watch=data[currentTab].splice(idx,1)[0];
+        data[target].push(watch);
+        saveData(data);
+        renderWatches();
+    }
+
+    function renderWatches(){
+        const data=getData();
+        const list=data[currentTab]||[];
+        document.getElementById('collCount').textContent=data.collection.length;
+        document.getElementById('wishCount').textContent=data.wishlist.length;
+        // stats
+        const all=[...data.collection,...data.wishlist];
+        document.getElementById('totalWatches').textContent=all.length;
+        let totalVal=0;
+        all.forEach(w=>{
+            const n=parseFloat((w.price||'').replace(/[^0-9.]/g,''));
+            if(!isNaN(n))totalVal+=n;
+        });
+        document.getElementById('totalValue').textContent='$'+totalVal.toLocaleString();
+        // top brand
+        const brands={};
+        all.forEach(w=>{brands[w.brand]=(brands[w.brand]||0)+1});
+        const sorted=Object.entries(brands).sort((a,b)=>b[1]-a[1]);
+        document.getElementById('topBrand').textContent=sorted.length?sorted[0][0]:'—';
+
+        const grid=document.getElementById('watchGrid');
+        const empty=document.getElementById('emptyState');
+        if(!list.length){grid.innerHTML='';empty.style.display='block';return}
+        empty.style.display='none';
+        const moveLabel=currentTab==='collection'?'Move to Wishlist':'Move to Collection';
+        const moveIcon=currentTab==='collection'?'&#9829;':'&#10003;';
+        grid.innerHTML=list.map(w=>`
+            <div class="watch-card">
+                <div class="watch-card-header">
+                    <div>
+                        <div class="watch-brand">${esc(w.brand)}</div>
+                        <div class="watch-model">${esc(w.model)}</div>
+                    </div>
+                    <div class="watch-actions">
+                        <button class="icon-btn" title="${moveLabel}" onclick="moveWatch(${w.id})">${moveIcon}</button>
+                        <button class="icon-btn delete" title="Remove" onclick="removeWatch(${w.id})">&#10005;</button>
+                    </div>
+                </div>
+                <div class="watch-specs">
+                    ${w.ref?`<span class="spec-tag">${esc(w.ref)}</span>`:''}
+                    ${w.size?`<span class="spec-tag">${esc(w.size)}</span>`:''}
+                    ${w.movement?`<span class="spec-tag">${esc(w.movement)}</span>`:''}
+                </div>
+                ${w.price?`<div class="watch-price">${esc(w.price)}</div>`:''}
+                ${w.notes?`<div class="watch-notes">${esc(w.notes)}</div>`:''}
+                <div class="watch-date">Added ${w.added}</div>
+            </div>
+        `).join('');
+    }
+
+    function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
+
+    function exportData(){
+        const data=getData();
+        const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+        const a=document.createElement('a');
+        a.href=URL.createObjectURL(blob);
+        a.download='authentic-wrist-collection.json';
+        a.click();
+    }
+
+    function importData(e){
+        const file=e.target.files[0];
+        if(!file)return;
+        const reader=new FileReader();
+        reader.onload=function(ev){
+            try{
+                const imported=JSON.parse(ev.target.result);
+                if(imported.collection&&imported.wishlist){
+                    if(confirm('This will replace your current collection. Continue?')){
+                        saveData(imported);
+                        renderWatches();
+                    }
+                }else{alert('Invalid file format.')}
+            }catch(err){alert('Could not read file.')}
+        };
+        reader.readAsText(file);
+        e.target.value='';
+    }
+
+    function clearAll(){
+        if(!confirm('Remove all watches from your collection and wishlist?'))return;
+        saveData({collection:[],wishlist:[]});
+        renderWatches();
+    }
+
+    renderWatches();
+    </script>
+</body>
+</html>

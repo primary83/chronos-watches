@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Value Calculator — Estimate Your Watch's Worth | Authentic Wrist</title>
+    <meta name="description" content="Estimate the current market value of your luxury watch. Get depreciation curves, value retention scores, and market insights for Rolex, Omega, Patek Philippe, and more.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://authenticwrist.com/value-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Watch Value Calculator — Estimate Your Watch's Worth | Authentic Wrist">
+    <meta property="og:description" content="Estimate the current market value of your luxury watch based on brand, model, age, and condition.">
+    <meta property="og:url" content="https://authenticwrist.com/value-calculator.html">
+    <meta property="og:site_name" content="Authentic Wrist">
+    <meta property="og:image" content="https://authenticwrist.com/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Watch Value Calculator",
+      "description": "Estimate the current market value of your luxury watch based on brand, model, age, and condition.",
+      "url": "https://authenticwrist.com/value-calculator.html",
+      "applicationCategory": "FinanceApplication",
+      "publisher": { "@type": "Organization", "name": "Authentic Wrist" }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--gold:#C9A962;--gold-light:#E8D5A3;--gold-dark:#8B7355;--obsidian:#0A0A0A;--charcoal:#1A1A1A;--slate:#2A2A2A;--silver:#C0C0C0;--cream:#F5F3EF;--white:#FFFFFF;--green:#4CAF50;--red:#e74c3c}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Outfit',sans-serif;background:var(--obsidian);color:var(--cream);line-height:1.6;min-height:100vh}
+        header{padding:20px 40px;border-bottom:1px solid var(--slate);display:flex;justify-content:space-between;align-items:center}
+        .logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);text-decoration:none;letter-spacing:0.2em}
+        nav{display:flex;gap:30px}nav a{color:var(--silver);text-decoration:none;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.3s}nav a:hover{color:var(--gold)}nav a.active{color:var(--gold)}
+        .hero{text-align:center;padding:60px 40px 40px;max-width:800px;margin:0 auto}
+        .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;margin-bottom:15px}
+        .hero p{color:var(--silver);font-size:1rem;max-width:600px;margin:0 auto}
+        .tool-nav{display:flex;justify-content:center;gap:15px;padding:20px;flex-wrap:wrap}
+        .tool-nav a{padding:10px 25px;border:1px solid var(--slate);color:var(--silver);text-decoration:none;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s}
+        .tool-nav a:hover,.tool-nav a.active{border-color:var(--gold);color:var(--gold)}
+        .container{max-width:1000px;margin:0 auto;padding:40px}
+        .calc-form{background:var(--charcoal);border:1px solid var(--slate);padding:35px;margin-bottom:40px}
+        .calc-form h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;margin-bottom:25px;color:var(--gold)}
+        .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+        .form-group label{display:block;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--silver);margin-bottom:6px}
+        .form-group input,.form-group select{width:100%;padding:12px 14px;background:var(--obsidian);border:1px solid var(--slate);color:var(--cream);font-family:'Outfit',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.3s}
+        .form-group input:focus,.form-group select:focus{border-color:var(--gold)}
+        .form-group select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23C9A962'%3E%3Cpath d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;cursor:pointer}
+        .condition-selector{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:20px}
+        .condition-opt{padding:10px;text-align:center;border:1px solid var(--slate);cursor:pointer;transition:all 0.3s;font-size:0.7rem;letter-spacing:0.05em}
+        .condition-opt:hover{border-color:rgba(201,169,98,0.4)}
+        .condition-opt.active{border-color:var(--gold);color:var(--gold);background:rgba(201,169,98,0.05)}
+        .condition-opt .label{font-weight:500;margin-bottom:3px}
+        .condition-opt .desc{font-size:0.55rem;color:var(--silver)}
+        .btn{padding:14px 40px;font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;border:1px solid var(--gold);background:transparent;color:var(--gold);cursor:pointer;font-family:'Outfit',sans-serif;transition:all 0.3s;width:100%}
+        .btn:hover{background:var(--gold);color:var(--obsidian)}
+        /* Results */
+        .results{display:none}
+        .result-card{background:var(--charcoal);border:1px solid var(--slate);padding:35px;margin-bottom:25px;text-align:center}
+        .result-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--silver);margin-bottom:10px}
+        .result-value{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:300;color:var(--gold)}
+        .result-range{font-size:0.85rem;color:var(--silver);margin-top:8px}
+        .result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:25px}
+        .metric{background:var(--charcoal);border:1px solid var(--slate);padding:25px;text-align:center}
+        .metric-val{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--cream);margin-bottom:5px}
+        .metric-label{font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--silver)}
+        .retention-bar{background:var(--charcoal);border:1px solid var(--slate);padding:25px;margin-bottom:25px}
+        .retention-bar h4{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--silver);margin-bottom:15px}
+        .bar-track{width:100%;height:20px;background:var(--obsidian);border:1px solid var(--slate);position:relative;margin-bottom:8px}
+        .bar-fill{height:100%;transition:width 0.8s ease}
+        .bar-labels{display:flex;justify-content:space-between;font-size:0.6rem;color:var(--silver)}
+        .insights{background:var(--charcoal);border:1px solid var(--slate);padding:25px;margin-bottom:25px}
+        .insights h4{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:15px}
+        .insight-item{display:flex;gap:10px;margin-bottom:12px;font-size:0.85rem;color:var(--silver)}
+        .insight-icon{width:20px;text-align:center;flex-shrink:0}
+        .disclaimer{font-size:0.7rem;color:var(--gold-dark);text-align:center;padding:20px;border:1px solid var(--slate);background:rgba(201,169,98,0.03)}
+        footer{border-top:1px solid var(--slate);padding:30px 40px;text-align:center;color:var(--silver);font-size:0.75rem;margin-top:80px}
+        footer a{color:var(--gold);text-decoration:none}
+        @media(max-width:768px){
+            header{padding:15px 20px;flex-direction:column;gap:15px}
+            nav{flex-wrap:wrap;justify-content:center;gap:15px}
+            .container{padding:20px}
+            .form-row{grid-template-columns:1fr}
+            .condition-selector{grid-template-columns:repeat(3,1fr)}
+            .result-grid{grid-template-columns:1fr}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">AUTHENTIC WRIST</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="compare.html">Compare</a>
+            <a href="quiz.html">Watch Finder</a>
+            <a href="wrist-size.html">Size Visualizer</a>
+            <a href="collection.html">Collection</a>
+            <a href="value-calculator.html" class="active">Value Calculator</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Watch Value Calculator</h1>
+        <p>Estimate the current market value of your luxury watch based on brand, model, age, and condition. Get depreciation insights and value retention analysis.</p>
+    </section>
+
+    <div class="tool-nav">
+        <a href="compare.html">Compare</a>
+        <a href="quiz.html">Watch Finder</a>
+        <a href="wrist-size.html">Size Visualizer</a>
+        <a href="collection.html">Collection</a>
+        <a href="value-calculator.html" class="active">Value Calculator</a>
+    </div>
+
+    <div class="container">
+        <div class="calc-form">
+            <h3>Enter Your Watch Details</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Brand</label>
+                    <select id="brand" onchange="updateModels()">
+                        <option value="">Select Brand</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Model</label>
+                    <select id="model">
+                        <option value="">Select Model</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Year of Purchase</label>
+                    <select id="year">
+                        <option value="">Select Year</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Original Purchase Price (USD)</label>
+                    <input type="text" id="purchasePrice" placeholder="e.g. 8500">
+                </div>
+            </div>
+            <div>
+                <label style="display:block;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--silver);margin-bottom:10px">Condition</label>
+                <div class="condition-selector" id="conditionSel">
+                    <div class="condition-opt" data-val="5" onclick="selectCondition(this)"><div class="label">Mint</div><div class="desc">Unworn, complete set</div></div>
+                    <div class="condition-opt active" data-val="4" onclick="selectCondition(this)"><div class="label">Excellent</div><div class="desc">Minimal wear, no scratches</div></div>
+                    <div class="condition-opt" data-val="3" onclick="selectCondition(this)"><div class="label">Good</div><div class="desc">Normal wear, light marks</div></div>
+                    <div class="condition-opt" data-val="2" onclick="selectCondition(this)"><div class="label">Fair</div><div class="desc">Visible wear, scratches</div></div>
+                    <div class="condition-opt" data-val="1" onclick="selectCondition(this)"><div class="label">Poor</div><div class="desc">Heavy wear, damage</div></div>
+                </div>
+            </div>
+            <div class="form-row" style="margin-bottom:25px">
+                <div class="form-group">
+                    <label>Box &amp; Papers</label>
+                    <select id="boxPapers">
+                        <option value="full">Full Set (Box + Papers)</option>
+                        <option value="box">Box Only</option>
+                        <option value="papers">Papers Only</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Service History</label>
+                    <select id="service">
+                        <option value="recent">Recently Serviced (< 2 years)</option>
+                        <option value="moderate">Serviced 2-5 years ago</option>
+                        <option value="none">No service history</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn" onclick="calculate()">Calculate Value</button>
+        </div>
+
+        <div class="results" id="results">
+            <div class="result-card">
+                <div class="result-label">Estimated Current Market Value</div>
+                <div class="result-value" id="estValue">—</div>
+                <div class="result-range" id="estRange"></div>
+            </div>
+
+            <div class="result-grid">
+                <div class="metric"><div class="metric-val" id="retPct">—</div><div class="metric-label">Value Retention</div></div>
+                <div class="metric"><div class="metric-val" id="depAmt">—</div><div class="metric-label">Total Depreciation</div></div>
+                <div class="metric"><div class="metric-val" id="annDep">—</div><div class="metric-label">Annual Depreciation</div></div>
+            </div>
+
+            <div class="retention-bar">
+                <h4>Value Retention Score</h4>
+                <div class="bar-track"><div class="bar-fill" id="retBar" style="width:0"></div></div>
+                <div class="bar-labels"><span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%+</span></div>
+            </div>
+
+            <div class="insights" id="insightsBox">
+                <h4>Market Insights</h4>
+                <div id="insightsList"></div>
+            </div>
+
+            <div class="disclaimer">
+                This calculator provides rough estimates for educational purposes only. Actual market values vary based on supply, demand, specific variations, service history, and market conditions. For accurate valuations, consult a certified appraiser or check recent sales on Chrono24 and WatchCharts.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 <a href="index.html">Authentic Wrist</a>. All estimates are for informational purposes only.</p>
+    </footer>
+
+    <script>
+    // Brand data with retention rates, models, and MSRP ranges
+    const brandData={
+        'Rolex':{retention:0.95,premium:1.15,tier:'top',models:{
+            'Submariner Date':10250,'Submariner No Date':8950,'Daytona':15100,'GMT-Master II':11550,
+            'Datejust 41':9550,'Explorer':7550,'Explorer II':9650,'Air-King':7400,
+            'Sky-Dweller':15450,'Yacht-Master 40':13750,'Day-Date 40':39550,'Sea-Dweller':13150,
+            'Milgauss':8100,'Cellini Moonphase':26950
+        }},
+        'Omega':{retention:0.55,premium:1.0,tier:'mid',models:{
+            'Speedmaster Moonwatch':6900,'Seamaster 300M':5650,'Aqua Terra':5700,
+            'Planet Ocean 600M':7100,'Seamaster Diver 300M':5250,'De Ville Prestige':3500,
+            'Constellation':6200,'Speedmaster Racing':6050
+        }},
+        'Patek Philippe':{retention:1.05,premium:1.3,tier:'holy',models:{
+            'Nautilus 5711':35000,'Aquanaut 5167':28800,'Calatrava 5227':35000,
+            'Annual Calendar 5205':48500,'World Time 5231':55000,'Perpetual Calendar 5320':95000
+        }},
+        'Audemars Piguet':{retention:0.90,premium:1.2,tier:'holy',models:{
+            'Royal Oak 15500':24200,'Royal Oak Chrono':38500,'Royal Oak Offshore':32500,
+            'Code 11.59':30500,'Royal Oak Jumbo 16202':42000
+        }},
+        'Tudor':{retention:0.60,premium:1.0,tier:'entry',models:{
+            'Black Bay 58':3825,'Black Bay':3650,'Pelagos':4575,'Black Bay GMT':4125,
+            'Black Bay Chrono':5075,'Ranger':3225,'1926':2200
+        }},
+        'TAG Heuer':{retention:0.40,premium:1.0,tier:'entry',models:{
+            'Carrera Chronograph':5750,'Monaco':6950,'Aquaracer':2750,
+            'Autavia':4550,'Formula 1':1750
+        }},
+        'IWC':{retention:0.50,premium:1.0,tier:'mid',models:{
+            'Portugieser Chronograph':9150,'Big Pilot':13500,'Pilot Mark XX':5150,
+            'Portofino':5700,'Aquatimer':6900
+        }},
+        'Cartier':{retention:0.60,premium:1.0,tier:'mid',models:{
+            'Santos Medium':7250,'Tank Must':3050,'Tank Francaise':4800,
+            'Ballon Bleu':6050,'Pasha':8200,'Panthere':5000
+        }},
+        'Grand Seiko':{retention:0.55,premium:1.0,tier:'mid',models:{
+            'Snowflake SBGA211':5800,'SLGH005 White Birch':9200,'SBGW231':3200,
+            'SBGA413':6300,'SBGJ237 GMT':5700
+        }},
+        'Breitling':{retention:0.45,premium:1.0,tier:'mid',models:{
+            'Navitimer B01':9100,'Chronomat':7400,'Superocean':4550,
+            'Avenger':4850,'Premier':6200
+        }},
+        'Jaeger-LeCoultre':{retention:0.50,premium:1.0,tier:'mid',models:{
+            'Reverso Classic':7350,'Master Ultra Thin Moon':12600,'Master Control Date':8400,
+            'Polaris':8850,'Reverso Tribute':10400
+        }},
+        'Panerai':{retention:0.45,premium:1.0,tier:'mid',models:{
+            'Luminor Marina':8900,'Luminor Due':7900,'Submersible':10700,'Radiomir':7500
+        }},
+        'Vacheron Constantin':{retention:0.75,premium:1.15,tier:'holy',models:{
+            'Overseas 4500V':25500,'Patrimony':21600,'Fiftysix':14200,'Historiques':33000
+        }},
+        'A. Lange & S\u00F6hne':{retention:0.70,premium:1.1,tier:'top',models:{
+            'Saxonia Thin':18500,'Lange 1':45000,'1815':26000,'Odysseus':35000
+        }},
+        'Hublot':{retention:0.45,premium:1.0,tier:'mid',models:{
+            'Big Bang Unico':21500,'Classic Fusion':8800,'Spirit of Big Bang':17000
+        }},
+        'Zenith':{retention:0.40,premium:1.0,tier:'mid',models:{
+            'Chronomaster Original':8100,'Defy Skyline':7700,'Pilot Type 20':6800,
+            'El Primero':7200
+        }},
+        'Longines':{retention:0.35,premium:1.0,tier:'value',models:{
+            'Spirit Zulu Time':3100,'HydroConquest':1450,'Master Collection':2500,
+            'Conquest Heritage':2200,'Record':1700
+        }},
+        'Seiko':{retention:0.45,premium:1.0,tier:'value',models:{
+            'Presage Sharp Edged':925,'Prospex SPB':1200,'King Seiko':1100,
+            'Astron':1800,'Presage Cocktail Time':525
+        }},
+        'Tissot':{retention:0.30,premium:1.0,tier:'value',models:{
+            'PRX Powermatic 80':650,'Gentleman':525,'Seastar':650,'Le Locle':475
+        }},
+        'Hamilton':{retention:0.35,premium:1.0,tier:'value',models:{
+            'Khaki Field Mechanical':495,'Khaki Field Auto':675,'Khaki Aviation':895,
+            'Jazzmaster':850,'Ventura':1095
+        }},
+        'Chopard':{retention:0.50,premium:1.0,tier:'mid',models:{
+            'Alpine Eagle 41':12600,'L.U.C':15000,'Happy Sport':8200
+        }},
+        'Blancpain':{retention:0.55,premium:1.0,tier:'top',models:{
+            'Fifty Fathoms':15400,'Villeret':11000,'Fifty Fathoms Bathyscaphe':11900
+        }},
+        'Nomos':{retention:0.45,premium:1.0,tier:'entry',models:{
+            'Tangente':1840,'Club Campus':1460,'Metro':3200,'Ludwig':2900,'Orion':2100
+        }},
+        'Junghans':{retention:0.35,premium:1.0,tier:'value',models:{
+            'Max Bill Automatic':1295,'Max Bill Chronoscope':2350,'Meister':1600
+        }}
+    };
+
+    // Populate brand select
+    const brandSel=document.getElementById('brand');
+    Object.keys(brandData).sort().forEach(b=>{
+        const opt=document.createElement('option');opt.value=b;opt.textContent=b;brandSel.appendChild(opt);
+    });
+
+    // Populate year select
+    const yearSel=document.getElementById('year');
+    const curYear=new Date().getFullYear();
+    for(let y=curYear;y>=1970;y--){
+        const opt=document.createElement('option');opt.value=y;opt.textContent=y;yearSel.appendChild(opt);
+    }
+
+    function updateModels(){
+        const brand=document.getElementById('brand').value;
+        const modelSel=document.getElementById('model');
+        modelSel.innerHTML='<option value="">Select Model</option>';
+        if(!brand||!brandData[brand])return;
+        Object.keys(brandData[brand].models).forEach(m=>{
+            const opt=document.createElement('option');opt.value=m;opt.textContent=m;modelSel.appendChild(opt);
+        });
+    }
+
+    let selectedCondition=4;
+    function selectCondition(el){
+        document.querySelectorAll('.condition-opt').forEach(o=>o.classList.remove('active'));
+        el.classList.add('active');
+        selectedCondition=parseInt(el.dataset.val);
+    }
+
+    function calculate(){
+        const brand=document.getElementById('brand').value;
+        const model=document.getElementById('model').value;
+        const year=parseInt(document.getElementById('year').value);
+        const priceInput=document.getElementById('purchasePrice').value.replace(/[^0-9.]/g,'');
+        const boxPapers=document.getElementById('boxPapers').value;
+        const service=document.getElementById('service').value;
+
+        if(!brand){alert('Please select a brand.');return}
+        if(!year){alert('Please select the year of purchase.');return}
+
+        const bd=brandData[brand];
+        const msrp=model&&bd.models[model]?bd.models[model]:null;
+        const purchasePrice=parseFloat(priceInput)||msrp||5000;
+        const age=curYear-year;
+
+        // Base retention calculation
+        let baseRetention=bd.retention;
+
+        // Age-based depreciation curve (steeper in first 2 years, then gradual)
+        let ageFactor;
+        if(age<=0)ageFactor=1.0;
+        else if(age===1)ageFactor=1-(1-baseRetention)*0.5;
+        else if(age===2)ageFactor=baseRetention+0.02;
+        else if(age<=5)ageFactor=baseRetention-((age-2)*0.02);
+        else if(age<=10)ageFactor=baseRetention-0.06-((age-5)*0.015);
+        else if(age<=20)ageFactor=baseRetention-0.135-((age-10)*0.01);
+        else ageFactor=Math.max(baseRetention-0.235-((age-20)*0.005),0.15);
+
+        // Vintage premium for watches >25 years old
+        if(age>25)ageFactor*=1.1;
+        if(age>40)ageFactor*=1.15;
+
+        // Holy trinity and Rolex market premium
+        if(bd.tier==='holy')ageFactor*=bd.premium;
+        else if(bd.tier==='top'&&age>=5)ageFactor*=1.05;
+
+        // Condition multiplier
+        const condMult=[0,0.70,0.82,0.92,1.0,1.08][selectedCondition];
+
+        // Box & papers multiplier
+        const bpMult={full:1.0,box:0.93,papers:0.95,none:0.88}[boxPapers];
+
+        // Service multiplier
+        const svcMult={recent:1.05,moderate:1.0,none:0.93}[service];
+
+        // Calculate estimated value
+        let estVal=purchasePrice*ageFactor*condMult*bpMult*svcMult;
+
+        // Floor: watches rarely go below 15% of original for quality brands
+        estVal=Math.max(estVal,purchasePrice*0.15);
+
+        // Cap appreciation at 3x for realistic estimates
+        estVal=Math.min(estVal,purchasePrice*3);
+
+        const retPct=(estVal/purchasePrice)*100;
+        const depAmt=purchasePrice-estVal;
+        const annualDep=age>0?depAmt/age:0;
+
+        // Value range (+/- 12%)
+        const low=Math.round(estVal*0.88);
+        const high=Math.round(estVal*1.12);
+
+        // Display results
+        document.getElementById('results').style.display='block';
+        document.getElementById('estValue').textContent='$'+Math.round(estVal).toLocaleString();
+        document.getElementById('estRange').textContent='Range: $'+low.toLocaleString()+' \u2014 $'+high.toLocaleString();
+        document.getElementById('retPct').textContent=retPct.toFixed(0)+'%';
+        document.getElementById('depAmt').textContent=(depAmt>=0?'-':'+')+' $'+Math.abs(Math.round(depAmt)).toLocaleString();
+        document.getElementById('annDep').textContent=(annualDep>=0?'-':'+')+' $'+Math.abs(Math.round(annualDep)).toLocaleString()+'/yr';
+
+        // Retention bar
+        const barPct=Math.min(retPct,120);
+        const barEl=document.getElementById('retBar');
+        barEl.style.width=barPct+'%';
+        if(retPct>=100)barEl.style.background='linear-gradient(90deg,var(--green),#2e7d32)';
+        else if(retPct>=70)barEl.style.background='linear-gradient(90deg,var(--gold),var(--gold-dark))';
+        else if(retPct>=50)barEl.style.background='linear-gradient(90deg,#ff9800,#f57c00)';
+        else barEl.style.background='linear-gradient(90deg,var(--red),#c62828)';
+
+        // Insights
+        const insights=[];
+        if(retPct>=100)insights.push({icon:'\u2191',text:brand+' '+model+' watches have appreciated in value. This is common for highly sought-after models with limited production.'});
+        else if(retPct>=80)insights.push({icon:'\u2713',text:'Strong value retention. '+brand+' watches in this category hold their value well compared to the industry average.'});
+        else if(retPct>=60)insights.push({icon:'\u2192',text:'Average depreciation for this segment. The watch has held a reasonable portion of its value.'});
+        else insights.push({icon:'\u2193',text:'Significant depreciation, which is common for this price segment. Consider this a cost of ownership rather than an investment.'});
+
+        if(bd.tier==='holy')insights.push({icon:'\u2B50',text:brand+' is part of the \"Holy Trinity\" of watchmaking. These brands consistently command premium prices in the secondary market.'});
+        if(bd.tier==='top')insights.push({icon:'\u2B50',text:brand+' is among the most sought-after brands. Strong brand recognition supports value retention.'});
+
+        if(boxPapers==='none')insights.push({icon:'\u26A0',text:'Missing box and papers reduces value by approximately 10-12%. Consider sourcing replacement documentation if possible.'});
+        if(service==='none')insights.push({icon:'\u{1F527}',text:'Having the watch serviced by an authorized service center can increase resale value by 5-7%.'});
+        if(age>20)insights.push({icon:'\u{1F3DB}',text:'Vintage watches (20+ years) can carry a premium due to collector demand, especially if they have unique dial variations or patina.'});
+        if(selectedCondition>=4)insights.push({icon:'\u2728',text:'Excellent or mint condition significantly supports value. Proper storage and regular maintenance help preserve condition.'});
+
+        document.getElementById('insightsList').innerHTML=insights.map(i=>`<div class="insight-item"><div class="insight-icon">${i.icon}</div><div>${i.text}</div></div>`).join('');
+
+        // Scroll to results
+        document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+    }
+    </script>
+</body>
+</html>
