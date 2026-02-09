@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Size Visualizer — See How Any Watch Fits Your Wrist | Authentic Wrist</title>
+    <meta name="description" content="See exactly how any watch will look on your wrist before you buy. Enter your wrist size and preview watches from Rolex, Omega, Tudor, Seiko and more at actual scale.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://authenticwrist.com/wrist-size.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Watch Size Visualizer — See How Any Watch Fits Your Wrist">
+    <meta property="og:description" content="See exactly how any watch will look on your wrist before you buy. Enter your wrist size and preview watches at actual scale.">
+    <meta property="og:url" content="https://authenticwrist.com/wrist-size.html">
+    <meta property="og:site_name" content="Authentic Wrist">
+    <meta property="og:image" content="https://authenticwrist.com/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebApplication","name":"Watch Size Visualizer","description":"See how any watch will look on your wrist before buying.","url":"https://authenticwrist.com/wrist-size.html","applicationCategory":"ShoppingApplication","publisher":{"@type":"Organization","name":"Authentic Wrist"}}
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--gold:#C9A962;--gold-light:#E8D5A3;--gold-dark:#8B7355;--obsidian:#0A0A0A;--charcoal:#1A1A1A;--slate:#2A2A2A;--silver:#C0C0C0;--cream:#F5F3EF;--green:#4CAF50;--amber:#FFA726;--red:#e74c3c}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Outfit',sans-serif;background:var(--obsidian);color:var(--cream);line-height:1.6}
+        header{padding:20px 40px;border-bottom:1px solid var(--slate);display:flex;justify-content:space-between;align-items:center}
+        .logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);text-decoration:none;letter-spacing:0.2em}
+        nav{display:flex;gap:30px}nav a{color:var(--silver);text-decoration:none;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.3s}nav a:hover,nav a.active{color:var(--gold)}
+        .hero{text-align:center;padding:50px 40px 30px;max-width:800px;margin:0 auto}
+        .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:300;margin-bottom:12px}
+        .hero p{color:var(--silver);font-size:0.95rem}
+        .container{max-width:1100px;margin:0 auto;padding:30px 40px 80px}
+        .controls{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:40px}
+        .control-group{background:var(--charcoal);border:1px solid var(--slate);padding:25px}
+        .control-group label{display:block;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+        .control-group select,.control-group input{width:100%;padding:12px 15px;background:var(--obsidian);border:1px solid var(--slate);color:var(--cream);font-family:'Outfit',sans-serif;font-size:0.9rem;outline:none;appearance:none;-webkit-appearance:none}
+        .control-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23C9A962'%3E%3Cpath d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;cursor:pointer}
+        .control-group input:focus,.control-group select:focus{border-color:var(--gold)}
+        .wrist-input-row{display:flex;gap:10px;align-items:center}
+        .wrist-input-row input{flex:1}
+        .unit-toggle{display:flex;border:1px solid var(--slate);overflow:hidden}
+        .unit-toggle button{padding:12px 16px;background:var(--obsidian);color:var(--silver);border:none;font-family:'Outfit',sans-serif;font-size:0.75rem;cursor:pointer;letter-spacing:0.05em;transition:all 0.3s}
+        .unit-toggle button.active{background:var(--gold);color:var(--obsidian)}
+
+        .visualizer{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+        .wrist-view{position:relative;background:var(--charcoal);border:1px solid var(--slate);padding:40px;display:flex;flex-direction:column;align-items:center}
+        .wrist-view h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;color:var(--gold);margin-bottom:25px;text-align:center}
+        .wrist-canvas-wrap{position:relative;width:300px;height:300px;display:flex;align-items:center;justify-content:center}
+        canvas#wristCanvas{border-radius:50%}
+
+        .fit-verdict{margin-top:25px;text-align:center;padding:20px;border:1px solid var(--slate);width:100%}
+        .fit-verdict .fit-label{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--silver);margin-bottom:5px}
+        .fit-verdict .fit-result{font-size:1.1rem;font-weight:500}
+        .fit-verdict .fit-result.perfect{color:var(--green)}
+        .fit-verdict .fit-result.good{color:var(--gold)}
+        .fit-verdict .fit-result.large{color:var(--amber)}
+        .fit-verdict .fit-result.too-large{color:var(--red)}
+        .fit-desc{font-size:0.8rem;color:var(--silver);margin-top:8px}
+
+        .details-panel{display:flex;flex-direction:column;gap:20px}
+        .watch-info{background:var(--charcoal);border:1px solid var(--slate);padding:30px}
+        .watch-info h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;color:var(--gold);margin-bottom:20px}
+        .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+        .spec-item{display:flex;flex-direction:column}
+        .spec-item .spec-name{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--silver)}
+        .spec-item .spec-val{font-size:0.9rem;color:var(--cream);margin-top:2px}
+
+        .size-guide-box{background:var(--charcoal);border:1px solid var(--slate);padding:30px}
+        .size-guide-box h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;color:var(--gold);margin-bottom:15px}
+        .size-guide-box p{font-size:0.85rem;color:var(--silver);line-height:1.7;margin-bottom:12px}
+        .size-chart{width:100%;border-collapse:collapse;margin-top:15px}
+        .size-chart th{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-align:left;padding:8px;border-bottom:1px solid var(--slate)}
+        .size-chart td{font-size:0.8rem;color:var(--silver);padding:8px;border-bottom:1px solid rgba(42,42,42,0.5)}
+        .size-chart tr.recommended td{color:var(--gold);font-weight:500}
+
+        .shop-section{background:var(--charcoal);border:1px solid var(--slate);padding:25px;text-align:center}
+        .shop-section h4{font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:15px}
+        .shop-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+        .shop-btn{padding:10px 22px;border:1px solid var(--slate);color:var(--cream);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s}
+        .shop-btn:hover{border-color:var(--gold);color:var(--gold)}
+
+        .measure-tip{background:linear-gradient(135deg,var(--charcoal),var(--obsidian));border:1px solid var(--gold-dark);padding:25px;margin-top:40px;text-align:center}
+        .measure-tip h4{font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+        .measure-tip p{font-size:0.85rem;color:var(--silver);line-height:1.7}
+
+        footer{text-align:center;padding:40px;border-top:1px solid var(--slate);color:var(--silver);font-size:0.85rem}
+        @media(max-width:1024px){.controls{grid-template-columns:1fr}.visualizer{grid-template-columns:1fr}}
+        @media(max-width:768px){header{padding:15px 20px}nav{display:none}.container{padding:20px}.wrist-canvas-wrap{width:250px;height:250px}.spec-grid{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">AUTHENTIC WRIST</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Guides</a>
+            <a href="directories.html">Directories</a>
+            <a href="compare.html">Compare</a>
+            <a href="quiz.html">Watch Finder</a>
+            <a href="wrist-size.html" class="active">Size Visualizer</a>
+            <a href="search.html">Search</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Watch Size Visualizer</h1>
+        <p>See how any watch will look on your wrist before you buy. Enter your wrist circumference and select a watch to see a proportional preview.</p>
+    </section>
+
+    <div class="container">
+        <div class="controls">
+            <div class="control-group">
+                <label>Your Wrist Circumference</label>
+                <div class="wrist-input-row">
+                    <input type="number" id="wristSize" value="7.0" min="5" max="10" step="0.1" oninput="render()">
+                    <div class="unit-toggle">
+                        <button class="active" id="btnInch" onclick="setUnit('inch')">IN</button>
+                        <button id="btnCm" onclick="setUnit('cm')">CM</button>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label>Select Watch</label>
+                <select id="watchSelect" onchange="render()"></select>
+            </div>
+            <div class="control-group">
+                <label>Dial Color Preview</label>
+                <select id="dialColor" onchange="render()">
+                    <option value="#111111">Black</option>
+                    <option value="#1a3a5c">Blue</option>
+                    <option value="#F5F3EF">White/Silver</option>
+                    <option value="#1a4a2a">Green</option>
+                    <option value="#3a2a1a">Brown</option>
+                    <option value="#4a4a4a">Grey</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="visualizer">
+            <div class="wrist-view">
+                <h3>Wrist Preview (Top View)</h3>
+                <div class="wrist-canvas-wrap">
+                    <canvas id="wristCanvas" width="300" height="300"></canvas>
+                </div>
+                <div class="fit-verdict" id="fitVerdict"></div>
+            </div>
+
+            <div class="details-panel">
+                <div class="watch-info" id="watchInfo">
+                    <h3>Watch Specifications</h3>
+                    <div class="spec-grid" id="specGrid"></div>
+                </div>
+
+                <div class="size-guide-box">
+                    <h3>Size Guide</h3>
+                    <p>The ideal watch-to-wrist ratio is when the watch case covers about 60-75% of your wrist width. The lugs should not extend beyond your wrist.</p>
+                    <table class="size-chart">
+                        <tr><th>Wrist Size</th><th>Recommended Case</th><th>Max Case</th></tr>
+                        <tr><td>6.0" (15cm)</td><td>34 – 38mm</td><td>40mm</td></tr>
+                        <tr><td>6.5" (16.5cm)</td><td>36 – 40mm</td><td>42mm</td></tr>
+                        <tr><td>7.0" (17.8cm)</td><td>38 – 42mm</td><td>44mm</td></tr>
+                        <tr><td>7.5" (19cm)</td><td>40 – 44mm</td><td>46mm</td></tr>
+                        <tr><td>8.0"+ (20cm+)</td><td>42 – 46mm</td><td>48mm+</td></tr>
+                    </table>
+                </div>
+
+                <div class="shop-section" id="shopSection" style="display:none">
+                    <h4>Shop This Watch</h4>
+                    <div class="shop-btns" id="shopBtns"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="measure-tip">
+            <h4>How to Measure Your Wrist</h4>
+            <p>Wrap a flexible tape measure (or a strip of paper) around your wrist just above the wrist bone. Keep it snug but not tight. If using paper, mark where it overlaps and measure the length with a ruler. Most men's wrists are 6.5" – 7.5" (16.5 – 19cm). Most women's wrists are 5.5" – 6.5" (14 – 16.5cm).</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Authentic Wrist. Curated luxury timepieces.</p>
+        <p style="margin-top:10px;font-size:0.75rem;color:#666;">Affiliate Disclosure: We may earn commissions from retailer links.</p>
+    </footer>
+
+<script>
+const watchDB = [
+  {brand:"Rolex",model:"Submariner Date",size:41,thickness:12.5,lug:48,lugW:20,wr:"300m",movement:"Auto",caliber:"Cal. 3235",pr:"70hr",material:"Oystersteel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Rolex+Submariner",jomashop:"https://www.jomashop.com/rolex-submariner-watch.html",chrono24:"https://www.chrono24.com/rolex/submariner--mod18.htm"}},
+  {brand:"Rolex",model:"Datejust 41",size:41,thickness:12,lug:47.5,lugW:20,wr:"100m",movement:"Auto",caliber:"Cal. 3235",pr:"70hr",material:"Steel/Gold",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Rolex+Datejust+41",jomashop:"https://www.jomashop.com/rolex-datejust-watches.html",chrono24:"https://www.chrono24.com/rolex/datejust-41--mod736.htm"}},
+  {brand:"Rolex",model:"Daytona",size:40,thickness:12.2,lug:47,lugW:20,wr:"100m",movement:"Auto",caliber:"Cal. 4131",pr:"72hr",material:"Oystersteel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Rolex+Daytona",jomashop:"https://www.jomashop.com/rolex-daytona-watch.html",chrono24:"https://www.chrono24.com/rolex/daytona--mod7.htm"}},
+  {brand:"Rolex",model:"GMT-Master II",size:40,thickness:12,lug:47.5,lugW:20,wr:"100m",movement:"Auto",caliber:"Cal. 3285",pr:"70hr",material:"Oystersteel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Rolex+GMT+Master+II",jomashop:"https://www.jomashop.com/rolex-gmt-master-ii.html",chrono24:"https://www.chrono24.com/rolex/gmt-master-ii--mod12.htm"}},
+  {brand:"Omega",model:"Seamaster 300M",size:42,thickness:13.5,lug:50,lugW:20,wr:"300m",movement:"Auto",caliber:"Co-Axial 8800",pr:"55hr",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Omega+Seamaster+300",jomashop:"https://www.jomashop.com/omega-seamaster-diver.html",chrono24:"https://www.chrono24.com/omega/seamaster-diver-300-m--mod190.htm"}},
+  {brand:"Omega",model:"Speedmaster Moonwatch",size:42,thickness:13.2,lug:47,lugW:20,wr:"50m",movement:"Manual",caliber:"Co-Axial 3861",pr:"50hr",material:"Steel",crystal:"Hesalite/Sapphire",links:{amazon:"https://www.amazon.com/s?k=Omega+Speedmaster+Moonwatch",jomashop:"https://www.jomashop.com/omega-speedmaster.html",chrono24:"https://www.chrono24.com/omega/speedmaster-moonwatch-professional--mod614.htm"}},
+  {brand:"Omega",model:"Aqua Terra 41mm",size:41,thickness:13.2,lug:48,lugW:20,wr:"150m",movement:"Auto",caliber:"Co-Axial 8900",pr:"60hr",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Omega+Aqua+Terra",jomashop:"https://www.jomashop.com/omega-aqua-terra.html",chrono24:"https://www.chrono24.com/omega/seamaster-aqua-terra--mod28.htm"}},
+  {brand:"Tudor",model:"Black Bay 41",size:41,thickness:12.7,lug:50,lugW:22,wr:"200m",movement:"Auto",caliber:"MT5602",pr:"70hr",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Tudor+Black+Bay",jomashop:"https://www.jomashop.com/tudor-black-bay.html",chrono24:"https://www.chrono24.com/tudor/black-bay--mod1498.htm"}},
+  {brand:"Tudor",model:"Pelagos 39",size:39,thickness:11.7,lug:47,lugW:20,wr:"200m",movement:"Auto",caliber:"MT5400",pr:"70hr",material:"Titanium",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Tudor+Pelagos+39",jomashop:"https://www.jomashop.com/tudor-pelagos-watch.html",chrono24:"https://www.chrono24.com/tudor/pelagos--mod1612.htm"}},
+  {brand:"TAG Heuer",model:"Carrera 39mm",size:39,thickness:14,lug:46,lugW:20,wr:"100m",movement:"Auto",caliber:"TH20-00",pr:"80hr",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=TAG+Heuer+Carrera",jomashop:"https://www.jomashop.com/tag-heuer-carrera.html",chrono24:"https://www.chrono24.com/tagheuer/carrera--mod22.htm"}},
+  {brand:"TAG Heuer",model:"Aquaracer 43mm",size:43,thickness:12,lug:51,lugW:21,wr:"300m",movement:"Auto",caliber:"Calibre 5",pr:"38hr",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=TAG+Heuer+Aquaracer",jomashop:"https://www.jomashop.com/tag-heuer-aquaracer.html",chrono24:"https://www.chrono24.com/tagheuer/aquaracer--mod23.htm"}},
+  {brand:"Grand Seiko",model:"Snowflake SBGA211",size:41,thickness:12.5,lug:48,lugW:20,wr:"100m",movement:"Spring Drive",caliber:"9R65",pr:"72hr",material:"Titanium",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Grand+Seiko+Snowflake",jomashop:"https://www.jomashop.com/grand-seiko.html",chrono24:"https://www.chrono24.com/grandseiko/ref-sbga211.htm"}},
+  {brand:"Seiko",model:"Presage Sharp Edged",size:39.3,thickness:11.1,lug:47,lugW:20,wr:"100m",movement:"Auto",caliber:"6R35",pr:"70hr",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Seiko+Presage+SPB167",jomashop:"https://www.jomashop.com/seiko-presage.html",chrono24:"https://www.chrono24.com/seiko/presage--mod3012.htm"}},
+  {brand:"Seiko",model:"Prospex Diver SPB313",size:40.5,thickness:13.2,lug:48,lugW:20,wr:"200m",movement:"Auto",caliber:"6R35",pr:"70hr",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Seiko+Prospex+SPB313",jomashop:"https://www.jomashop.com/seiko-prospex.html",chrono24:"https://www.chrono24.com/seiko/prospex--mod739.htm"}},
+  {brand:"Breitling",model:"Navitimer 41mm",size:41,thickness:13.6,lug:48,lugW:20,wr:"30m",movement:"Auto",caliber:"B01",pr:"70hr",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Breitling+Navitimer",jomashop:"https://www.jomashop.com/breitling-navitimer.html",chrono24:"https://www.chrono24.com/breitling/navitimer--mod21.htm"}},
+  {brand:"Cartier",model:"Santos Medium",size:35.1,thickness:8.83,lug:42,lugW:18,wr:"100m",movement:"Auto",caliber:"1847 MC",pr:"42hr",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Cartier+Santos",jomashop:"https://www.jomashop.com/cartier-santos.html",chrono24:"https://www.chrono24.com/cartier/santos--mod1015.htm"}},
+  {brand:"Cartier",model:"Tank Must",size:33.7,thickness:6.6,lug:38,lugW:16,wr:"30m",movement:"Quartz",caliber:"Quartz",pr:"Battery",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Cartier+Tank+Must",jomashop:"https://www.jomashop.com/cartier-tank.html",chrono24:"https://www.chrono24.com/cartier/tank--mod30.htm"}},
+  {brand:"IWC",model:"Portugieser 40mm",size:40.4,thickness:12.4,lug:47,lugW:20,wr:"30m",movement:"Auto",caliber:"82200",pr:"60hr",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=IWC+Portugieser",jomashop:"https://www.jomashop.com/iwc-portugieser.html",chrono24:"https://www.chrono24.com/iwc/portugieser--mod130.htm"}},
+  {brand:"IWC",model:"Pilot Mark XX",size:40,thickness:10.8,lug:47,lugW:20,wr:"100m",movement:"Auto",caliber:"32111",pr:"120hr",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=IWC+Pilot+Mark+XX",jomashop:"https://www.jomashop.com/iwc-pilot.html",chrono24:"https://www.chrono24.com/iwc/pilots-watch--mod735.htm"}},
+  {brand:"Longines",model:"Spirit Zulu Time",size:42,thickness:13.9,lug:49,lugW:22,wr:"100m",movement:"Auto",caliber:"L844.4",pr:"72hr",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Longines+Spirit+Zulu+Time",jomashop:"https://www.jomashop.com/longines-spirit.html",chrono24:"https://www.chrono24.com/longines/spirit--mod4421.htm"}},
+  {brand:"Tissot",model:"PRX Powermatic 80",size:40,thickness:10.93,lug:46,lugW:18,wr:"100m",movement:"Auto",caliber:"Powermatic 80",pr:"80hr",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Tissot+PRX+Powermatic+80",jomashop:"https://www.jomashop.com/tissot-prx.html",chrono24:"https://www.chrono24.com/tissot/prx--mod4290.htm"}},
+  {brand:"Hamilton",model:"Khaki Field 38mm",size:38,thickness:9.5,lug:46,lugW:20,wr:"50m",movement:"Manual",caliber:"H-50",pr:"80hr",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Hamilton+Khaki+Field+Mechanical",jomashop:"https://www.jomashop.com/hamilton-khaki-field.html",chrono24:"https://www.chrono24.com/hamilton/khaki-field--mod83.htm"}},
+  {brand:"Oris",model:"Aquis 41.5mm",size:41.5,thickness:13,lug:49,lugW:20,wr:"300m",movement:"Auto",caliber:"SW 200-1",pr:"38hr",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Oris+Aquis",jomashop:"https://www.jomashop.com/oris-aquis.html",chrono24:"https://www.chrono24.com/oris/aquis--mod805.htm"}},
+  {brand:"Panerai",model:"Luminor Marina 44mm",size:44,thickness:15.6,lug:53,lugW:24,wr:"300m",movement:"Auto",caliber:"P.9010",pr:"72hr",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Panerai+Luminor+Marina",jomashop:"https://www.jomashop.com/panerai-luminor.html",chrono24:"https://www.chrono24.com/panerai/luminor--mod49.htm"}},
+  {brand:"Orient",model:"Kamasu",size:41.8,thickness:12.8,lug:48,lugW:22,wr:"200m",movement:"Auto",caliber:"F6922",pr:"40hr",material:"Steel",crystal:"Sapphire",links:{amazon:"https://www.amazon.com/s?k=Orient+Kamasu",jomashop:"https://www.jomashop.com/orient-kamasu.html",chrono24:"https://www.chrono24.com/orient/kamasu--mod4147.htm"}},
+  {brand:"Citizen",model:"Promaster Diver",size:41,thickness:13,lug:48,lugW:20,wr:"200m",movement:"Auto",caliber:"8204",pr:"40hr",material:"Steel",crystal:"Mineral",links:{amazon:"https://www.amazon.com/s?k=Citizen+Promaster+Diver",jomashop:"https://www.jomashop.com/citizen-promaster.html",chrono24:"https://www.chrono24.com/citizen/promaster--mod195.htm"}},
+];
+
+let unit = 'inch';
+function setUnit(u){
+  const inp = document.getElementById('wristSize');
+  const oldVal = parseFloat(inp.value);
+  if(u === 'cm' && unit === 'inch'){
+    inp.value = (oldVal * 2.54).toFixed(1);
+    inp.min = 12; inp.max = 25; inp.step = 0.5;
+  } else if(u === 'inch' && unit === 'cm'){
+    inp.value = (oldVal / 2.54).toFixed(1);
+    inp.min = 5; inp.max = 10; inp.step = 0.1;
+  }
+  unit = u;
+  document.getElementById('btnInch').classList.toggle('active', u==='inch');
+  document.getElementById('btnCm').classList.toggle('active', u==='cm');
+  render();
+}
+
+function populateSelect(){
+  const sel = document.getElementById('watchSelect');
+  const brands = {};
+  watchDB.forEach(w => { if(!brands[w.brand]) brands[w.brand]=[]; brands[w.brand].push(w); });
+  Object.keys(brands).sort().forEach(b => {
+    const g = document.createElement('optgroup'); g.label = b;
+    brands[b].forEach((w,i) => {
+      const o = document.createElement('option');
+      o.value = watchDB.indexOf(w);
+      o.textContent = `${w.model} (${w.size}mm)`;
+      g.appendChild(o);
+    });
+    sel.appendChild(g);
+  });
+}
+
+function render(){
+  const wristInch = unit === 'inch' ? parseFloat(document.getElementById('wristSize').value) : parseFloat(document.getElementById('wristSize').value) / 2.54;
+  const wIdx = parseInt(document.getElementById('watchSelect').value);
+  const watch = watchDB[wIdx];
+  const dialColor = document.getElementById('dialColor').value;
+  if(!watch || isNaN(wristInch)) return;
+
+  // Wrist width from circumference (approximate ellipse: width ~= circ / PI * 1.1 for top view)
+  const wristWidthMM = (wristInch * 25.4) / Math.PI * 1.05;
+  const caseMM = watch.size;
+  const lugMM = watch.lug;
+  const ratio = caseMM / wristWidthMM;
+
+  // Canvas drawing
+  const canvas = document.getElementById('wristCanvas');
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const cx = W/2, cy = H/2;
+  ctx.clearRect(0,0,W,H);
+
+  // Scale: wrist fills ~80% of canvas width
+  const scale = (W * 0.8) / wristWidthMM;
+  const wristPxW = wristWidthMM * scale;
+  const wristPxH = wristPxW * 0.75; // elliptical wrist
+  const casePx = caseMM * scale;
+  const lugPx = lugMM * scale;
+
+  // Draw wrist (ellipse)
+  ctx.save();
+  ctx.beginPath();
+  ctx.ellipse(cx, cy, wristPxW/2, wristPxH/2, 0, 0, Math.PI*2);
+  ctx.fillStyle = '#2a1f14';
+  ctx.fill();
+  ctx.strokeStyle = '#4a3828';
+  ctx.lineWidth = 1;
+  ctx.stroke();
+  ctx.restore();
+
+  // Draw watch case
+  const watchY = cy - wristPxH/2 + casePx * 0.08;
+
+  // Lugs
+  ctx.save();
+  ctx.fillStyle = '#888';
+  ctx.fillRect(cx - lugPx/2, watchY - casePx*0.08, lugPx, casePx*0.16);
+  ctx.fillRect(cx - lugPx/2, watchY + casePx - casePx*0.08, lugPx, casePx*0.16);
+  ctx.restore();
+
+  // Bezel ring
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(cx, watchY + casePx/2, casePx/2 + 2, 0, Math.PI*2);
+  ctx.fillStyle = '#666';
+  ctx.fill();
+  ctx.restore();
+
+  // Case
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(cx, watchY + casePx/2, casePx/2, 0, Math.PI*2);
+  ctx.fillStyle = '#888';
+  ctx.fill();
+  ctx.restore();
+
+  // Dial
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(cx, watchY + casePx/2, casePx/2 * 0.85, 0, Math.PI*2);
+  ctx.fillStyle = dialColor;
+  ctx.fill();
+  ctx.restore();
+
+  // Hour markers
+  ctx.save();
+  for(let i=0;i<12;i++){
+    const angle = (i * 30 - 90) * Math.PI/180;
+    const r1 = casePx/2 * 0.72;
+    const r2 = casePx/2 * 0.82;
+    const x1 = cx + Math.cos(angle)*r1;
+    const y1 = watchY + casePx/2 + Math.sin(angle)*r1;
+    const x2 = cx + Math.cos(angle)*r2;
+    const y2 = watchY + casePx/2 + Math.sin(angle)*r2;
+    ctx.beginPath();
+    ctx.moveTo(x1,y1);
+    ctx.lineTo(x2,y2);
+    ctx.strokeStyle = dialColor === '#F5F3EF' ? '#333' : '#ddd';
+    ctx.lineWidth = i%3===0 ? 2 : 1;
+    ctx.stroke();
+  }
+  ctx.restore();
+
+  // Hands (10:10 position)
+  const handColor = dialColor === '#F5F3EF' ? '#222' : '#eee';
+  // Hour hand (10 o'clock = -60 degrees from 12)
+  drawHand(ctx, cx, watchY+casePx/2, -60, casePx/2*0.45, 2.5, handColor);
+  // Minute hand (2 o'clock = 60 degrees from 12)
+  drawHand(ctx, cx, watchY+casePx/2, 60, casePx/2*0.65, 1.5, handColor);
+  // Center dot
+  ctx.beginPath();
+  ctx.arc(cx, watchY+casePx/2, 2, 0, Math.PI*2);
+  ctx.fillStyle = handColor;
+  ctx.fill();
+
+  // Crown
+  ctx.save();
+  ctx.fillStyle = '#777';
+  ctx.fillRect(cx + casePx/2 + 1, watchY + casePx/2 - 4, 6, 8);
+  ctx.restore();
+
+  // Lug overhang indicators
+  if(lugPx > wristPxW){
+    // Draw red indicators for lug overhang
+    ctx.save();
+    ctx.strokeStyle = 'rgba(231,76,60,0.6)';
+    ctx.setLineDash([4,4]);
+    ctx.lineWidth = 2;
+    // Left overhang line
+    ctx.beginPath();
+    ctx.moveTo(cx - wristPxW/2, watchY - 20);
+    ctx.lineTo(cx - wristPxW/2, watchY + casePx + 20);
+    ctx.stroke();
+    // Right overhang line
+    ctx.beginPath();
+    ctx.moveTo(cx + wristPxW/2, watchY - 20);
+    ctx.lineTo(cx + wristPxW/2, watchY + casePx + 20);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  // Fit verdict
+  const verdict = document.getElementById('fitVerdict');
+  let fitClass, fitText, fitDesc;
+  if(ratio <= 0.65){
+    fitClass='perfect'; fitText='Perfect Fit'; fitDesc=`${caseMM}mm covers ${(ratio*100).toFixed(0)}% of your wrist. Balanced and proportional.`;
+  } else if(ratio <= 0.75){
+    fitClass='good'; fitText='Good Fit'; fitDesc=`${caseMM}mm covers ${(ratio*100).toFixed(0)}% of your wrist. Slightly sporty presence.`;
+  } else if(ratio <= 0.85){
+    fitClass='large'; fitText='Bold Fit'; fitDesc=`${caseMM}mm covers ${(ratio*100).toFixed(0)}% of your wrist. Noticeable wrist presence.`;
+  } else {
+    fitClass='too-large'; fitText='Oversized'; fitDesc=`${caseMM}mm covers ${(ratio*100).toFixed(0)}% of your wrist. May look too large. Consider a smaller option.`;
+  }
+  if(lugPx > wristPxW){
+    fitClass='too-large'; fitText='Lugs Overhang'; fitDesc=`The ${lugMM}mm lug-to-lug exceeds your wrist width. This watch will overhang and feel uncomfortable.`;
+  }
+  verdict.innerHTML = `<div class="fit-label">Fit Assessment</div><div class="fit-result ${fitClass}">${fitText}</div><div class="fit-desc">${fitDesc}</div>`;
+
+  // Specs panel
+  document.getElementById('specGrid').innerHTML = `
+    <div class="spec-item"><span class="spec-name">Case Size</span><span class="spec-val">${watch.size}mm</span></div>
+    <div class="spec-item"><span class="spec-name">Thickness</span><span class="spec-val">${watch.thickness}mm</span></div>
+    <div class="spec-item"><span class="spec-name">Lug-to-Lug</span><span class="spec-val">${watch.lug}mm</span></div>
+    <div class="spec-item"><span class="spec-name">Lug Width</span><span class="spec-val">${watch.lugW}mm</span></div>
+    <div class="spec-item"><span class="spec-name">Water Resistance</span><span class="spec-val">${watch.wr}</span></div>
+    <div class="spec-item"><span class="spec-name">Movement</span><span class="spec-val">${watch.movement}</span></div>
+    <div class="spec-item"><span class="spec-name">Caliber</span><span class="spec-val">${watch.caliber}</span></div>
+    <div class="spec-item"><span class="spec-name">Power Reserve</span><span class="spec-val">${watch.pr}</span></div>
+    <div class="spec-item"><span class="spec-name">Material</span><span class="spec-val">${watch.material}</span></div>
+    <div class="spec-item"><span class="spec-name">Crystal</span><span class="spec-val">${watch.crystal}</span></div>
+    <div class="spec-item"><span class="spec-name">Your Wrist Width</span><span class="spec-val">~${wristWidthMM.toFixed(0)}mm</span></div>
+    <div class="spec-item"><span class="spec-name">Wrist Coverage</span><span class="spec-val">${(ratio*100).toFixed(0)}%</span></div>
+  `;
+
+  // Shop links
+  const shop = document.getElementById('shopSection');
+  shop.style.display = 'block';
+  document.getElementById('shopBtns').innerHTML = `
+    <a href="${watch.links.amazon}" target="_blank" rel="nofollow noopener" class="shop-btn">Amazon</a>
+    <a href="${watch.links.jomashop}" target="_blank" rel="nofollow noopener" class="shop-btn">Jomashop</a>
+    <a href="${watch.links.chrono24}" target="_blank" rel="nofollow noopener" class="shop-btn">Chrono24</a>
+  `;
+}
+
+function drawHand(ctx, cx, cy, angleDeg, length, width, color){
+  const angle = (angleDeg - 90) * Math.PI / 180;
+  ctx.save();
+  ctx.beginPath();
+  ctx.moveTo(cx, cy);
+  ctx.lineTo(cx + Math.cos(angle)*length, cy + Math.sin(angle)*length);
+  ctx.strokeStyle = color;
+  ctx.lineWidth = width;
+  ctx.lineCap = 'round';
+  ctx.stroke();
+  ctx.restore();
+}
+
+populateSelect();
+render();
+</script>
+</body>
+</html>
