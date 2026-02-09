@@ -137,6 +137,7 @@
             </div>
         </div>
 
+        <p id="sameWatchMsg" style="display:none;text-align:center;color:var(--red);font-size:0.85rem;margin-bottom:15px;">Please select two different watches to compare.</p>
         <button class="compare-btn" id="compareBtn" onclick="compareWatches()" disabled>Compare Watches</button>
 
         <div class="results" id="results"></div>
@@ -247,7 +248,15 @@ function updatePreview(num){
   }
   const w1 = document.getElementById('watch1').value;
   const w2 = document.getElementById('watch2').value;
-  document.getElementById('compareBtn').disabled = !(w1 && w2 && w1 !== w2);
+  const btn = document.getElementById('compareBtn');
+  const msg = document.getElementById('sameWatchMsg');
+  if(w1 && w2 && w1 === w2){
+    btn.disabled = true;
+    msg.style.display = 'block';
+  } else {
+    msg.style.display = 'none';
+    btn.disabled = !(w1 && w2);
+  }
 }
 
 function compareWatches(id1, id2){
