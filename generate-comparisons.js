@@ -1,0 +1,104 @@
+#!/usr/bin/env node
+/**
+ * Generate/rewrite all comparison pages under 1500 words with full content.
+ * Each page gets 1,500-2,000+ words of unique article content.
+ */
+const fs = require('fs');
+const path = require('path');
+
+const DIR = __dirname;
+
+// Template parts
+const SHARE_BAR_TOP = `
+<div class="aw-share-bar aw-share-bar-top">
+    <span class="aw-share-label">Share</span>
+    <a href="#" title="Share on Facebook" aria-label="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'_blank','width=600,height=400');return false"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="#" title="Share on X" aria-label="Share on X" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="#" title="Share on Pinterest" aria-label="Share on Pinterest" onclick="window.open('https://pinterest.com/pin/create/button/?url='+encodeURIComponent(location.href)+'&description='+encodeURIComponent(document.title),'_blank','width=600,height=500');return false"><svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg></a>
+    <a href="#" title="Share on Reddit" aria-label="Share on Reddit" onclick="window.open('https://www.reddit.com/submit?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false"><svg viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg></a>
+    <a href="#" title="Share via Email" aria-label="Share via Email" onclick="location.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent('Check out this article: '+location.href);return false"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+</div>`;
+
+const SHARE_BAR_BOTTOM = SHARE_BAR_TOP.replace('aw-share-bar-top', 'aw-share-bar-bottom').replace('>Share<', '>Share This Article<');
+
+function buildPage(data) {
+    const brandLinks = data.brandSlugs.map(s => {
+        const name = s.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+        return `<a href="brand-story-${s}.html" style="display:inline-block;padding:8px 18px;margin:4px;border:1px solid var(--gold,#C9A962);color:var(--gold,#C9A962);text-decoration:none;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">${name} Brand Story</a>`;
+    }).join('');
+
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${data.title} | AuthenticWrist.com</title>
+    <meta name="description" content="${data.metaDesc}">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Raleway:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <style>:root{--bg-dark:#0a0a0f;--bg-card:#12121a;--gold:#c4a35a;--gold-light:#d4b86a;--text-primary:#f5f5f5;--text-secondary:#a0a0a0;--text-muted:#666;--border:rgba(196,163,90,0.2)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Raleway',sans-serif;background:var(--bg-dark);color:var(--text-primary);line-height:1.8}.article-header{padding:80px 20px 60px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(196,163,90,0.05) 0%,transparent 100%)}.article-category{color:var(--gold);font-size:0.85rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:20px}.article-header h1{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:500;max-width:800px;margin:0 auto 20px;line-height:1.2}.article-meta{color:var(--text-muted);font-size:0.9rem}.article-content{max-width:800px;margin:0 auto;padding:60px 20px}.article-content p{margin-bottom:24px;color:var(--text-secondary);font-size:1.1rem}.article-content h2{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold);margin:50px 0 25px;padding-bottom:10px;border-bottom:1px solid var(--border)}.article-content h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--text-primary);margin:35px 0 15px}.comparison-box{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:30px 0}.brand-box{background:var(--bg-card);border:1px solid var(--border);padding:25px}.brand-box h4{color:var(--gold);font-size:1.3rem;margin-bottom:15px;text-align:center;font-family:'Cormorant Garamond',serif}.brand-box ul{list-style:none}.brand-box li{padding:8px 0;border-bottom:1px solid var(--border);color:var(--text-secondary);font-size:0.95rem}.brand-box li:last-child{border-bottom:none}.comparison-table{width:100%;border-collapse:collapse;margin:30px 0}.comparison-table th,.comparison-table td{padding:15px;text-align:left;border-bottom:1px solid var(--border)}.comparison-table th{background:var(--bg-card);color:var(--gold);font-weight:500}.comparison-table td{color:var(--text-secondary)}.winner{color:var(--gold);font-weight:600}.pro-tip{background:rgba(196,163,90,0.1);border:1px solid var(--gold);padding:25px;margin:30px 0;border-radius:4px}.pro-tip h4{color:var(--gold);margin-bottom:10px;font-size:1rem;text-transform:uppercase;letter-spacing:2px}.pro-tip p{margin-bottom:0;color:var(--text-secondary)}.article-content ul{margin:20px 0 30px 20px;color:var(--text-secondary)}.article-content li{margin-bottom:12px;padding-left:10px}.verdict{background:var(--bg-card);padding:30px;margin:40px 0;text-align:center;border:1px solid var(--border)}.verdict h3{color:var(--gold);margin-bottom:15px}.cta-button{display:inline-block;background:linear-gradient(135deg,#c4a35a 0%,#d4b86a 50%,#a48940 100%);color:var(--bg-dark);padding:15px 40px;text-decoration:none;font-weight:600;letter-spacing:1px;margin-top:20px;transition:transform 0.3s,box-shadow 0.3s}.cta-button:hover{transform:translateY(-2px);box-shadow:0 5px 20px rgba(196,163,90,0.3)}.back-link{display:inline-block;color:var(--gold);text-decoration:none;margin-bottom:30px;font-size:0.9rem;letter-spacing:1px}.back-link:hover{text-decoration:underline}@media(max-width:600px){.article-header h1{font-size:2rem}.comparison-box{grid-template-columns:1fr}}
+.skip-nav{position:absolute;top:-100px;left:0;background:var(--gold);color:var(--obsidian);padding:10px 20px;z-index:10000;font-size:0.85rem;text-decoration:none;transition:top 0.3s}.skip-nav:focus{top:0}.back-to-top-btn{position:fixed;bottom:30px;right:30px;width:45px;height:45px;background:rgba(201,169,98,0.15);border:1px solid var(--gold);color:var(--gold);font-size:1.2rem;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:999;transition:all 0.3s;backdrop-filter:blur(10px)}.back-to-top-btn:hover{background:var(--gold);color:var(--obsidian)}header.site-nav{padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--slate,#2A2A2A)}header.site-nav .logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:.2em;color:var(--gold,#C9A962);text-decoration:none}header.site-nav nav{display:flex;gap:20px;flex-wrap:wrap}header.site-nav nav a{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--silver,#C0C0C0);text-decoration:none;transition:color .3s}header.site-nav nav a:hover,header.site-nav nav a.active{color:var(--gold,#C9A962)}@media(max-width:768px){header.site-nav{flex-direction:column;gap:15px;padding:15px 20px}header.site-nav nav{justify-content:center}}
+.aw-share-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:18px 0;margin:20px 0}.aw-share-bar .aw-share-label{font-family:'Cormorant Garamond',Georgia,serif;font-size:0.95rem;color:var(--gold,var(--gold-light,#c4a35a));letter-spacing:0.1em;text-transform:uppercase;margin-right:6px}.aw-share-bar a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid rgba(196,163,90,0.35);color:rgba(196,163,90,0.8);text-decoration:none;transition:all 0.3s;background:transparent}.aw-share-bar a:hover{background:rgba(196,163,90,0.15);color:#d4b86a;border-color:#d4b86a}.aw-share-bar a svg{width:18px;height:18px;fill:currentColor}.aw-share-bar-bottom{border-top:1px solid rgba(196,163,90,0.2);margin-top:40px;padding-top:8px}
+</style>
+    <link rel="canonical" href="https://authenticwrist.com/${data.filename}">
+    <meta property="og:type" content="article"><meta property="og:title" content="${data.title}"><meta property="og:description" content="${data.metaDesc}"><meta property="og:url" content="https://authenticwrist.com/${data.filename}"><meta property="og:site_name" content="Authentic Wrist"><meta property="og:image" content="https://authenticwrist.com/og-image.png">
+    <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${data.title}"><meta name="twitter:description" content="${data.metaDesc}">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"${data.headline}","description":"${data.metaDesc}","url":"https://authenticwrist.com/${data.filename}","datePublished":"2026-02-28","dateModified":"2026-02-28","articleSection":"Watch Comparisons","author":{"@type":"Organization","name":"Authentic Wrist"},"publisher":{"@type":"Organization","name":"Authentic Wrist","url":"https://authenticwrist.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://authenticwrist.com/${data.filename}"}}</script>
+    <script>(function(){var b=document.querySelector('.back-to-top-btn');if(b){window.addEventListener('scroll',function(){b.style.display=window.scrollY>500?'flex':'none'})}})();</script>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://authenticwrist.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://authenticwrist.com/blog.html"},{"@type":"ListItem","position":3,"name":"${data.breadcrumb}"}]}</script>
+</head>
+<body>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
+    <header class="site-nav"><a href="index.html" class="logo">AUTHENTIC WRIST</a><nav><a href="index.html" data-page="index">Home</a><a href="directories.html" data-page="directories">Directories</a><a href="blog.html" data-page="blog">Guides</a><a href="deals.html" data-page="deals">Deals</a><a href="compare.html" data-page="compare">Compare</a><a href="quiz.html" data-page="quiz">Watch Finder</a><a href="wizard.html" data-page="wizard">Watch Wizard</a><a href="wrist-size.html" data-page="wrist-size">Size Visualizer</a><a href="collection.html" data-page="collection">Collection</a><a href="value-calculator.html" data-page="value-calculator">Value Calculator</a><a href="search.html" data-page="search">Search</a></nav></header>
+
+<header class="article-header">
+    <p class="article-category">Comparison Guide</p>
+    <h1>${data.h1}</h1>
+    <p class="article-meta">Updated February 2026 &middot; ${data.readTime} min read</p>
+</header>
+    <main id="main-content">
+    <div style="padding:12px 40px;font-size:0.8rem;color:var(--silver,#C0C0C0);border-bottom:1px solid var(--slate,#2A2A2A)"><a href="index.html" style="color:var(--gold,#C9A962);text-decoration:none">Home</a> / <a href="blog.html" style="color:var(--gold,#C9A962);text-decoration:none">Guides</a> / <span>${data.breadcrumb}</span></div>
+
+<article class="article-content">
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+
+    ${data.intro}
+${SHARE_BAR_TOP}
+
+    ${data.body}
+${SHARE_BAR_BOTTOM}
+</article>
+
+    <div style="max-width:800px;margin:30px auto;padding:20px 25px;background:var(--charcoal,#1A1A1A);border:1px solid var(--slate,#2A2A2A);text-align:center"><div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold,#C9A962);margin-bottom:10px">Interactive Tools</div><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><a href="compare.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Compare</a><a href="quiz.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Watch Finder</a><a href="wizard.html" data-page="wizard">Watch Wizard</a><a href="wrist-size.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Size Visualizer</a><a href="collection.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Collection</a><a href="value-calculator.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Value Calculator</a></div></div>
+
+    <div style="padding:40px;background:var(--charcoal,#1A1A1A);border-top:1px solid var(--slate,#2A2A2A);margin-top:30px">
+        <div style="max-width:1400px;margin:0 auto">
+            <h3 style="font-family:var(--font-display,'Cormorant Garamond',Georgia,serif);font-size:1.3rem;font-weight:400;color:var(--gold,#C9A962);margin-bottom:15px;letter-spacing:0.05em">Explore These Brands</h3>
+            <div style="display:flex;flex-wrap:wrap;gap:0">${brandLinks}</div>
+        </div>
+    </div>
+    </main>
+<button class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#9650;</button>
+</body>
+</html>`;
+}
+
+// Export buildPage for use by batch scripts
+module.exports = { buildPage };
+
+// If run directly, process comparison-content-data.js
+if (require.main === module) {
+    const pages = require('./comparison-content-data.js');
+    let written = 0;
+    pages.forEach(data => {
+        const filepath = path.join(DIR, data.filename);
+        const html = buildPage(data);
+        fs.writeFileSync(filepath, html, 'utf8');
+        let text = data.intro + ' ' + data.body;
+        text = text.replace(/<[^>]+>/g, ' ').replace(/&\w+;/g, ' ');
+        const words = text.trim().split(/\s+/).filter(w => w.length > 0).length;
+        console.log(`  OK: ${data.filename} (${words} words)`);
+        written++;
+    });
+    console.log(`\nDone! Wrote ${written} pages.`);
+}
