@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found — AUTHENTIC WRIST</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Return to Authentic Wrist for curated luxury watch content.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZWXJTJKTK2"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZWXJTJKTK2');</script>
+    <style>
+        :root{--gold:#C9A962;--gold-light:#E8D5A3;--gold-dark:#8B7355;--obsidian:#0A0A0A;--charcoal:#1A1A1A;--slate:#2A2A2A;--silver:#C0C0C0;--cream:#F5F3EF;--white:#FFFFFF;--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'Outfit',sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-body);background:var(--obsidian);color:var(--cream);overflow-x:hidden;line-height:1.6}
+        ::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:var(--charcoal)}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px}
+        .container{max-width:1400px;margin:0 auto;padding:0 40px}
+        header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,0.98);backdrop-filter:blur(20px)}
+        .logo{font-family:var(--font-display);font-size:1.8rem;font-weight:400;letter-spacing:0.3em;color:var(--gold);text-decoration:none}.logo span{font-weight:300;color:var(--cream)}
+        nav{display:flex;gap:40px;align-items:center}nav a{font-family:var(--font-body);font-size:0.75rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream);text-decoration:none;position:relative;padding:5px 0;transition:color 0.3s ease}
+        nav a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease}nav a:hover{color:var(--gold)}nav a:hover::after{width:100%}
+        .mobile-menu-btn{display:none;flex-direction:column;justify-content:center;gap:6px;background:none;border:none;cursor:pointer;padding:10px;z-index:1001}
+        .mobile-menu-btn span{display:block;width:28px;height:2px;background:var(--cream);transition:all 0.3s ease}
+        .mobile-menu-btn.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px)}.mobile-menu-btn.active span:nth-child(2){opacity:0}.mobile-menu-btn.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px)}
+        .error-section{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:140px 40px 80px}
+        .error-content{max-width:700px}
+        .error-code{font-family:var(--font-display);font-size:clamp(6rem,15vw,12rem);font-weight:300;color:var(--gold);line-height:1;margin-bottom:10px;opacity:0.8}
+        .error-title{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;margin-bottom:20px}
+        .error-description{font-size:1rem;color:var(--silver);line-height:1.8;margin-bottom:50px}
+        .error-links{display:flex;flex-wrap:wrap;gap:15px;justify-content:center}
+        .error-links a{display:inline-block;padding:14px 30px;font-family:var(--font-body);font-size:0.75rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;transition:all 0.3s ease;border:1px solid var(--slate)}
+        .error-links a.primary{background:var(--gold);color:var(--obsidian);border-color:var(--gold)}
+        .error-links a.primary:hover{background:var(--gold-light)}
+        .error-links a.secondary{color:var(--cream);background:transparent}
+        .error-links a.secondary:hover{border-color:var(--gold);color:var(--gold)}
+        .divider{width:60px;height:1px;background:var(--gold);margin:30px auto}
+        footer{padding:60px 40px 40px;background:var(--obsidian);border-top:1px solid var(--slate)}
+        .footer-bottom{text-align:center}
+        .footer-copyright{font-size:0.75rem;color:var(--silver);letter-spacing:0.1em}
+        @media(max-width:1024px){nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,0.98);flex-direction:column;justify-content:center;gap:25px;z-index:1000}nav.active{display:flex}.mobile-menu-btn{display:flex}}
+        @media(max-width:768px){.error-links{flex-direction:column;align-items:center}}
+    </style>
+</head>
+<body>
+    <header id="header">
+        <a href="index.html" class="logo">AUTHENTIC WRIST <span>|</span></a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="mainNav">
+            <a href="index.html" data-page="index">Home</a>
+            <a href="directories.html" data-page="directories">Directories</a>
+            <a href="blog.html" data-page="blog">Guides</a>
+            <a href="deals.html" data-page="deals">Deals</a>
+            <a href="compare.html" data-page="compare">Compare</a>
+            <a href="quiz.html" data-page="quiz">Watch Finder</a>
+            <a href="wizard.html" data-page="wizard">Watch Wizard</a>
+            <a href="wrist-size.html" data-page="wrist-size">Size Visualizer</a>
+            <a href="collection.html" data-page="collection">Collection</a>
+            <a href="value-calculator.html" data-page="value-calculator">Value Calculator</a>
+            <a href="search.html" data-page="search">Search</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="error-section">
+            <div class="error-content">
+                <div class="error-code">404</div>
+                <h1 class="error-title">Page Not Found</h1>
+                <div class="divider"></div>
+                <p class="error-description">The timepiece you're looking for seems to have slipped away. The page may have been moved, removed, or the URL might be incorrect. Let us guide you back to our collection.</p>
+                <div class="error-links">
+                    <a href="index.html" class="primary">Return Home</a>
+                    <a href="blog.html" class="secondary">Browse Guides</a>
+                    <a href="deals.html" class="secondary">View Deals</a>
+                    <a href="compare.html" class="secondary">Compare Watches</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Authentic Wrist. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn=document.getElementById('mobileMenuBtn');const mainNav=document.getElementById('mainNav');
+        if(mobileMenuBtn&&mainNav){mobileMenuBtn.addEventListener('click',function(){mobileMenuBtn.classList.toggle('active');mainNav.classList.toggle('active')});mainNav.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{mobileMenuBtn.classList.remove('active');mainNav.classList.remove('active')})})}
+    </script>
+</body>
+</html>

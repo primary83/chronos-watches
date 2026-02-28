@@ -150,6 +150,9 @@
   }
 ]
     </script>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZWXJTJKTK2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZWXJTJKTK2');</script>
 </head>
 <body>
     <a href="#main-content" class="skip-nav">Skip to content</a>
@@ -243,9 +246,9 @@
                 <h2 class="section-title">Shop By Store</h2>
             </div>
             <div class="retailers-grid">
-                <a href="https://www.amazon.com/luxury-watches/b?node=6358540011" target="_blank" class="retailer-card"><div class="retailer-logo">AMAZON</div><p class="retailer-desc">Premium Watches & Accessories</p><span class="retailer-reward">Up to 4% Back</span></a>
-                <a href="https://www.jomashop.com/" target="_blank" class="retailer-card"><div class="retailer-logo">JOMASHOP</div><p class="retailer-desc">Certified Watch Dealer</p><span class="retailer-reward">Up to 5% Back</span></a>
-                <a href="https://www.chrono24.com/" target="_blank" class="retailer-card"><div class="retailer-logo">CHRONO24</div><p class="retailer-desc">Global Watch Marketplace</p><span class="retailer-reward">Up to 4% Back</span></a>
+                <a href="https://www.amazon.com/luxury-watches/b?node=6358540011" target="_blank" class="retailer-card" rel="noopener noreferrer sponsored"><div class="retailer-logo">AMAZON</div><p class="retailer-desc">Premium Watches & Accessories</p><span class="retailer-reward">Up to 4% Back</span></a>
+                <a href="https://www.jomashop.com/" target="_blank" class="retailer-card" rel="noopener noreferrer sponsored"><div class="retailer-logo">JOMASHOP</div><p class="retailer-desc">Certified Watch Dealer</p><span class="retailer-reward">Up to 5% Back</span></a>
+                <a href="https://www.chrono24.com/" target="_blank" class="retailer-card" rel="noopener noreferrer sponsored"><div class="retailer-logo">CHRONO24</div><p class="retailer-desc">Global Watch Marketplace</p><span class="retailer-reward">Up to 4% Back</span></a>
                 <a href="https://www.watchbox.com/" target="_blank" class="retailer-card"><div class="retailer-logo">WATCHBOX</div><p class="retailer-desc">Pre-Owned Luxury Watches</p><span class="retailer-reward">Up to 3% Back</span></a>
                 <a href="https://www.hodinkee.com/shop" target="_blank" class="retailer-card"><div class="retailer-logo">HODINKEE</div><p class="retailer-desc">Curated Timepieces</p><span class="retailer-reward">Up to 6% Back</span></a>
                 <a href="https://www.nordstrom.com/browse/men/accessories/watches" target="_blank" class="retailer-card"><div class="retailer-logo">NORDSTROM</div><p class="retailer-desc">Luxury Designer Brands</p><span class="retailer-reward">Up to 7% Back</span></a>
@@ -369,7 +372,7 @@
                     <p class="section-tag">Stay Connected</p>
                     <h2 class="newsletter-title">Join the Authentic Wrist Circle</h2>
                     <p class="newsletter-description">Subscribe to receive exclusive deals, price drop alerts on sought-after timepieces, and expert insights delivered straight to your inbox.</p>
-                    <form class="newsletter-form"><input type="email" placeholder="Enter your email address"><button type="submit">Subscribe</button></form>
+                    <form class="newsletter-form" action="https://formspree.io/f/xlggbnww" method="POST"><input type="email" name="email" placeholder="Enter your email address" required><input type="hidden" name="_subject" value="New AuthenticWrist Subscriber"><button type="submit">Subscribe</button></form>
                 </div>
             </div>
         </div>
@@ -431,7 +434,7 @@
         const observerOptions={threshold:0.1,rootMargin:'0px 0px -50px 0px'};
         const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.opacity='1';entry.target.style.transform='translateY(0)'}})},observerOptions);
         document.querySelectorAll('.section-header,.retailer-card,.category-card,.smartwatch-card,.featured-card').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(30px)';el.style.transition='opacity 0.6s ease, transform 0.6s ease';observer.observe(el)});
-        document.querySelector('.newsletter-form').addEventListener('submit',(e)=>{e.preventDefault();alert('Thank you for subscribing!')});
+        document.querySelector('.newsletter-form').addEventListener('submit',function(e){e.preventDefault();var f=this;fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(r=>{if(r.ok){f.innerHTML='<p style="color:var(--gold);font-size:1rem;">Thank you for subscribing!</p>'}else{alert('Something went wrong. Please try again.')}}).catch(()=>alert('Something went wrong. Please try again.'))});
 
         // Watch of the Day
         (function(){

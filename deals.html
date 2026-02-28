@@ -160,6 +160,9 @@
   }
 }
     </script>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZWXJTJKTK2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZWXJTJKTK2');</script>
 </head>
 <body>
     <a href="#main-content" class="skip-nav">Skip to content</a>
@@ -220,7 +223,7 @@
                     <span class="dotd-discount">41% OFF</span>
                     <div class="dotd-context">Typical retail: <strong>$7,100</strong></div>
                     <div class="dotd-why">"41% below typical retail — outstanding value on a 600m professional diver"</div>
-                    <a href="https://www.jomashop.com" target="_blank" rel="noopener noreferrer" class="dotd-cta">View Deal at Jomashop &rarr;</a>
+                    <a href="https://www.jomashop.com" target="_blank" rel="noopener noreferrer sponsored" class="dotd-cta">View Deal at Jomashop &rarr;</a>
                 </div>
             </div>
         </div>
@@ -307,8 +310,9 @@
                 <p class="section-tag">Never Miss a Deal</p>
                 <h2>Get the Best Watch Deals Weekly</h2>
                 <p>Join thousands of collectors. We'll send you the top deals, price drops, and limited-time offers every week — no spam, unsubscribe anytime.</p>
-                <form class="email-form" id="emailForm">
-                    <input type="email" placeholder="Enter your email address" required>
+                <form class="email-form" id="emailForm" action="https://formspree.io/f/xlggbnww" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email address" required>
+                    <input type="hidden" name="_subject" value="New AuthenticWrist Subscriber">
                     <button type="submit">Subscribe</button>
                 </form>
                 <div class="email-success" id="emailSuccess">Thanks! You'll hear from us soon.</div>
@@ -537,8 +541,11 @@
     // =====================
     document.getElementById('emailForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        this.style.display = 'none';
-        document.getElementById('emailSuccess').style.display = 'block';
+        var f = this;
+        fetch(f.action, {method:'POST', body: new FormData(f), headers:{'Accept':'application/json'}}).then(function(r) {
+            if (r.ok) { f.style.display = 'none'; document.getElementById('emailSuccess').style.display = 'block'; }
+            else { alert('Something went wrong. Please try again.'); }
+        }).catch(function() { alert('Something went wrong. Please try again.'); });
     });
 
     // =====================
