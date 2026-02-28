@@ -1,6 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Watch Finishing Techniques Explained | AuthenticWrist.com</title><meta name="description" content="Geneva stripes, perlage, blued screws explained. Understanding watch finishing."><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet"><style>:root{--bg-dark:#0a0a0f;--bg-card:#12121a;--gold:#c4a35a;--text-primary:#f5f5f5;--text-secondary:#a0a0a0;--border:rgba(196,163,90,0.2)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Raleway',sans-serif;background:var(--bg-dark);color:var(--text-primary);line-height:1.8}.article-header{padding:80px 20px 60px;text-align:center;border-bottom:1px solid var(--border)}.article-category{color:var(--gold);font-size:.85rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:20px}.article-header h1{font-family:'Cormorant Garamond',serif;font-size:2.5rem;max-width:800px;margin:0 auto 20px}.article-content{max-width:800px;margin:0 auto;padding:60px 20px}.article-content p{margin-bottom:24px;color:var(--text-secondary);font-size:1.1rem}.article-content h2{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold);margin:50px 0 25px;border-bottom:1px solid var(--border);padding-bottom:10px}.article-content h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--text-primary);margin:30px 0 15px}.article-content ul{margin:20px 0 30px 20px;color:var(--text-secondary)}.article-content li{margin-bottom:12px}.back-link{color:var(--gold);text-decoration:none;margin-bottom:30px;display:inline-block}.skip-nav{position:absolute;top:-100px;left:0;background:var(--gold);color:var(--obsidian);padding:10px 20px;z-index:10000;font-size:0.85rem;text-decoration:none;transition:top 0.3s}.skip-nav:focus{top:0}.back-to-top-btn{position:fixed;bottom:30px;right:30px;width:45px;height:45px;background:rgba(201,169,98,0.15);border:1px solid var(--gold);color:var(--gold);font-size:1.2rem;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:999;transition:all 0.3s;backdrop-filter:blur(10px)}.back-to-top-btn:hover{background:var(--gold);color:var(--obsidian)}header.site-nav{padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--slate,#2A2A2A)}header.site-nav .logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:.2em;color:var(--gold,#C9A962);text-decoration:none}header.site-nav nav{display:flex;gap:20px;flex-wrap:wrap}header.site-nav nav a{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--silver,#C0C0C0);text-decoration:none;transition:color .3s}header.site-nav nav a:hover,header.site-nav nav a.active{color:var(--gold,#C9A962)}@media(max-width:768px){header.site-nav{flex-direction:column;gap:15px;padding:15px 20px}header.site-nav nav{justify-content:center}}
+#!/usr/bin/env node
+/**
+ * Add social share buttons to all content pages:
+ * - blog-*.html
+ * - comparison-*.html
+ * - brand-story-*.html
+ * - guide-*.html
+ * - gift-guide-*.html
+ *
+ * Places share bars after the title/hero and at the bottom of the article,
+ * with inline CSS matching the dark/gold luxury aesthetic.
+ */
+
+const fs = require('fs');
+const path = require('path');
+const glob = require('path');
+
+const DIR = __dirname;
+
+// Gather all target files
+const allFiles = fs.readdirSync(DIR).filter(f => {
+    return (
+        f.startsWith('blog-') ||
+        f.startsWith('comparison-') ||
+        f.startsWith('brand-story-') ||
+        f.startsWith('guide-') ||
+        f.startsWith('gift-guide-')
+    ) && f.endsWith('.html');
+});
+
+// Skip empty placeholder files (< 200 bytes)
+const targetFiles = allFiles.filter(f => {
+    const stat = fs.statSync(path.join(DIR, f));
+    return stat.size > 200;
+});
+
+console.log(`Found ${allFiles.length} total content files, ${targetFiles.length} with real content.`);
+
+// --- Share button CSS (injected once into <style> or as inline block) ---
+const SHARE_CSS = `
 /* Social Share Buttons */
 .aw-share-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:18px 0;margin:20px 0}
 .aw-share-bar .aw-share-label{font-family:'Cormorant Garamond',Georgia,serif;font-size:0.95rem;color:var(--gold,var(--gold-light,#c4a35a));letter-spacing:0.1em;text-transform:uppercase;margin-right:6px}
@@ -8,65 +45,10 @@
 .aw-share-bar a:hover{background:rgba(196,163,90,0.15);color:#d4b86a;border-color:#d4b86a}
 .aw-share-bar a svg{width:18px;height:18px;fill:currentColor}
 .aw-share-bar-bottom{border-top:1px solid rgba(196,163,90,0.2);margin-top:40px;padding-top:8px}
-</style>    <link rel="canonical" href="https://authenticwrist.com/guide-watch-finishing.html">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Watch Finishing Techniques Explained | AuthenticWrist.com">
-    <meta property="og:description" content="Geneva stripes, perlage, blued screws explained. Understanding watch finishing.">
-    <meta property="og:url" content="https://authenticwrist.com/guide-watch-finishing.html">
-    <meta property="og:site_name" content="Authentic Wrist">
-    <meta property="og:image" content="https://authenticwrist.com/og-image.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Watch Finishing Techniques Explained | AuthenticWrist.com">
-    <meta name="twitter:description" content="Geneva stripes, perlage, blued screws explained. Understanding watch finishing.">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Watch Finishing Techniques Explained",
-  "description": "Geneva stripes, perlage, blued screws explained. Understanding watch finishing.",
-  "url": "https://authenticwrist.com/guide-watch-finishing.html",
-  "datePublished": "2025-11-01",
-  "dateModified": "2026-02-08",
-  "author": {
-    "@type": "Organization",
-    "name": "Authentic Wrist"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Authentic Wrist",
-    "url": "https://authenticwrist.com"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://authenticwrist.com/guide-watch-finishing.html"
-  }
-}
-    </script>
-    <script>(function(){var b=document.querySelector('.back-to-top-btn');if(b){window.addEventListener('scroll',function(){b.style.display=window.scrollY>500?'flex':'none'})}})();</script>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-</head>
-<body>
-    <a href="#main-content" class="skip-nav">Skip to content</a>
-    <header class="site-nav">
-        <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav>
-            <a href="index.html" data-page="index">Home</a>
-            <a href="directories.html" data-page="directories">Directories</a>
-            <a href="blog.html" data-page="blog">Guides</a>
-            <a href="deals.html" data-page="deals">Deals</a>
-            <a href="compare.html" data-page="compare">Compare</a>
-            <a href="quiz.html" data-page="quiz">Watch Finder</a>
-            <a href="wizard.html" data-page="wizard">Watch Wizard</a>
-            <a href="wrist-size.html" data-page="wrist-size">Size Visualizer</a>
-            <a href="collection.html" data-page="collection">Collection</a>
-            <a href="value-calculator.html" data-page="value-calculator">Value Calculator</a>
-            <a href="search.html" data-page="search">Search</a>
-        </nav>
-    </header><header class="article-header"><p class="article-category">Reference Guide</p><h1>Watch Finishing Techniques Explained</h1><p style="color:#666">Updated January 2026</p></header>
-    <main id="main-content">
-<article class="article-content"><a href="index.html" class="back-link">← Back to Home</a>
-<p>Movement finishing transforms functional components into art. These decorative techniques serve no mechanical purpose—they're pure craftsmanship signaling quality.</p>
+`;
 
+// --- Share button HTML (uses JS to fill in dynamic URL/title) ---
+const SHARE_HTML_TOP = `
 <div class="aw-share-bar aw-share-bar-top">
     <span class="aw-share-label">Share</span>
     <a href="#" class="aw-share-fb" title="Share on Facebook" aria-label="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'_blank','width=600,height=400');return false">
@@ -84,20 +66,9 @@
     <a href="#" class="aw-share-email" title="Share via Email" aria-label="Share via Email" onclick="location.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent('Check out this article: '+location.href);return false">
         <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
     </a>
-</div>
+</div>`;
 
-<h2>Movement Finishing</h2>
-<h3>Côtes de Genève (Geneva Stripes)</h3><p>Parallel wavy lines on bridges. Most common decorative finish. Quality varies from machine to hand-finished.</p>
-<h3>Perlage (Circular Graining)</h3><p>Overlapping circular patterns on base plates. Usually hidden under bridges.</p>
-<h3>Anglage (Beveling)</h3><p>Polished chamfers on bridge edges at 45°. Hand-anglage is time-consuming and expensive.</p>
-<h3>Blued Screws</h3><p>Screws heated to ~290°C creating blue oxide. Classic hallmark of fine finishing.</p>
-<h2>Case Finishing</h2>
-<h3>Polishing vs Brushing</h3><p><strong>Polishing:</strong> Mirror-like, dressier, shows scratches. <strong>Brushing:</strong> Satin texture, sportier, hides scratches.</p>
-<h3>Zaratsu Polishing</h3><p>Grand Seiko's signature distortion-free mirror surfaces. Creates hard edges between finishes.</p>
-<h2>Quality Hierarchy</h2>
-<ul><li><strong>Basic:</strong> Machine-applied (entry Swiss/Japanese)</li><li><strong>Good:</strong> Machine with hand touch-up (mid-tier Swiss)</li><li><strong>Excellent:</strong> Primarily hand-finished (premium Swiss, Grand Seiko)</li><li><strong>Exceptional:</strong> Entirely hand-finished (haute horlogerie)</li></ul>
-
-
+const SHARE_HTML_BOTTOM = `
 <div class="aw-share-bar aw-share-bar-bottom">
     <span class="aw-share-label">Share This Article</span>
     <a href="#" class="aw-share-fb" title="Share on Facebook" aria-label="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'_blank','width=600,height=400');return false">
@@ -115,7 +86,70 @@
     <a href="#" class="aw-share-email" title="Share via Email" aria-label="Share via Email" onclick="location.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent('Check out this article: '+location.href);return false">
         <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
     </a>
-</div>
-</article>    </main>
-<button class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#9650;</button>
-</body></html>
+</div>`;
+
+
+let modified = 0;
+let skipped = 0;
+let errors = [];
+
+targetFiles.forEach(filename => {
+    const filepath = path.join(DIR, filename);
+    let html = fs.readFileSync(filepath, 'utf8');
+
+    // Skip if already has share buttons
+    if (html.includes('aw-share-bar')) {
+        skipped++;
+        console.log(`  SKIP (already has share buttons): ${filename}`);
+        return;
+    }
+
+    // --- 1. Inject CSS before closing </style> tag ---
+    const lastStyleClose = html.lastIndexOf('</style>');
+    if (lastStyleClose === -1) {
+        errors.push(`${filename}: no </style> tag found`);
+        return;
+    }
+    html = html.substring(0, lastStyleClose) + SHARE_CSS + html.substring(lastStyleClose);
+
+    // --- 2. Inject TOP share bar after first <p> inside article ---
+    // Find the article opening tag
+    let articleMatch = html.match(/<article\s+class="(?:article-content|content)"[^>]*>/);
+    if (!articleMatch) {
+        errors.push(`${filename}: no <article> tag found`);
+        return;
+    }
+    const articleStart = html.indexOf(articleMatch[0]) + articleMatch[0].length;
+
+    // Find the first <p> after article start, then insert after it
+    // But first check for back-link anchor — skip past it
+    let insertPos = articleStart;
+    const afterArticle = html.substring(articleStart);
+
+    // Find first paragraph that has real content (not just a back link)
+    const firstContentP = afterArticle.match(/<p[\s>][^]*?<\/p>/);
+    if (firstContentP) {
+        const pEnd = afterArticle.indexOf(firstContentP[0]) + firstContentP[0].length;
+        insertPos = articleStart + pEnd;
+    }
+
+    html = html.substring(0, insertPos) + '\n' + SHARE_HTML_TOP + '\n' + html.substring(insertPos);
+
+    // --- 3. Inject BOTTOM share bar before </article> ---
+    const articleClose = html.lastIndexOf('</article>');
+    if (articleClose === -1) {
+        errors.push(`${filename}: no </article> closing tag`);
+        return;
+    }
+    html = html.substring(0, articleClose) + '\n' + SHARE_HTML_BOTTOM + '\n' + html.substring(articleClose);
+
+    fs.writeFileSync(filepath, html, 'utf8');
+    modified++;
+    console.log(`  OK: ${filename}`);
+});
+
+console.log(`\nDone! Modified: ${modified}, Skipped: ${skipped}, Errors: ${errors.length}`);
+if (errors.length > 0) {
+    console.log('Errors:');
+    errors.forEach(e => console.log('  ' + e));
+}
