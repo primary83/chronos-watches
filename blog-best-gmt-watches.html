@@ -42,6 +42,12 @@
 .aw-share-bar a:hover{background:rgba(196,163,90,0.15);color:#d4b86a;border-color:#d4b86a}
 .aw-share-bar a svg{width:18px;height:18px;fill:currentColor}
 .aw-share-bar-bottom{border-top:1px solid rgba(196,163,90,0.2);margin-top:40px;padding-top:8px}
+
+.mobile-menu-btn{display:none;flex-direction:column;justify-content:center;gap:6px;background:none;border:none;cursor:pointer;padding:10px;z-index:1001}
+.mobile-menu-btn span{display:block;width:28px;height:2px;background:var(--cream,#F5F3EF);transition:all 0.3s ease}
+.mobile-menu-btn.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px)}.mobile-menu-btn.active span:nth-child(2){opacity:0}.mobile-menu-btn.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px)}
+
+@media(max-width:768px){header{padding:15px 20px!important}.mobile-menu-btn{display:flex}nav{display:none!important;position:absolute;top:100%;left:0;right:0;background:rgba(10,10,10,0.98);backdrop-filter:blur(20px);flex-direction:column;padding:0;gap:0;border-top:1px solid var(--slate,#2A2A2A);border-bottom:1px solid var(--slate,#2A2A2A);z-index:999}nav.active{display:flex!important}nav a{padding:18px 20px;border-bottom:1px solid var(--slate,#2A2A2A);text-align:center;width:100%;font-size:0.85rem}nav a:last-child{border-bottom:none}nav a::after{display:none}}
 </style>
     <link rel="canonical" href="https://authenticwrist.com/blog-best-gmt-watches.html">
     <meta property="og:type" content="article">
@@ -90,7 +96,7 @@
     <a href="#main-content" class="skip-nav">Skip to content</a>
     <header class="site-nav">
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav>
+        <nav id="mainNav">
             <a href="index.html" data-page="index">Home</a>
             <a href="directories.html" data-page="directories">Directories</a>
             <a href="blog.html" data-page="blog">Guides</a>
@@ -405,8 +411,11 @@
 
     <div style="max-width:800px;margin:30px auto;padding:20px 25px;background:var(--charcoal,#1A1A1A);border:1px solid var(--slate,#2A2A2A);text-align:center"><div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold,#C9A962);margin-bottom:10px">Interactive Tools</div><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><a href="compare.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Compare</a><a href="quiz.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Watch Finder</a>
             <a href="wizard.html" data-page="wizard">Watch Wizard</a>
-            <a href="wrist-size.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Size Visualizer</a><a href="collection.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Collection</a><a href="value-calculator.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Value Calculator</a></div></div>
+            <a href="wrist-size.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Size Visualizer</a><a href="collection.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Collection</a><a href="value-calculator.html" style="padding:8px 18px;border:1px solid var(--slate,#2A2A2A);color:var(--silver,#C0C0C0);text-decoration:none;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s">Value Calculator</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div></div>
     </main>
 <button class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#9650;</button>
+<script>(function(){var b=document.getElementById('mobileMenuBtn'),n=document.getElementById('mainNav');if(b&&n){b.addEventListener('click',function(e){e.stopPropagation();b.classList.toggle('active');n.classList.toggle('active')});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){b.classList.remove('active');n.classList.remove('active')})});document.addEventListener('click',function(e){if(!b.contains(e.target)&&!n.contains(e.target)){b.classList.remove('active');n.classList.remove('active')}})}})();</script>
 </body>
 </html>

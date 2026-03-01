@@ -64,6 +64,12 @@
 .aw-share-bar a:hover{background:rgba(196,163,90,0.15);color:#d4b86a;border-color:#d4b86a}
 .aw-share-bar a svg{width:18px;height:18px;fill:currentColor}
 .aw-share-bar-bottom{border-top:1px solid rgba(196,163,90,0.2);margin-top:40px;padding-top:8px}
+
+.mobile-menu-btn{display:none;flex-direction:column;justify-content:center;gap:6px;background:none;border:none;cursor:pointer;padding:10px;z-index:1001}
+.mobile-menu-btn span{display:block;width:28px;height:2px;background:var(--cream,#F5F3EF);transition:all 0.3s ease}
+.mobile-menu-btn.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px)}.mobile-menu-btn.active span:nth-child(2){opacity:0}.mobile-menu-btn.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px)}
+
+@media(max-width:768px){header{padding:15px 20px!important}.mobile-menu-btn{display:flex}nav{display:none!important;position:absolute;top:100%;left:0;right:0;background:rgba(10,10,10,0.98);backdrop-filter:blur(20px);flex-direction:column;padding:0;gap:0;border-top:1px solid var(--slate,#2A2A2A);border-bottom:1px solid var(--slate,#2A2A2A);z-index:999}nav.active{display:flex!important}nav a{padding:18px 20px;border-bottom:1px solid var(--slate,#2A2A2A);text-align:center;width:100%;font-size:0.85rem}nav a:last-child{border-bottom:none}nav a::after{display:none}}
 </style>
     <link rel="canonical" href="https://authenticwrist.com/blog-best-smartwatch-under-300.html">
     <meta property="og:type" content="article">
@@ -111,7 +117,7 @@
     <a href="#main-content" class="skip-nav">Skip to content</a>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
-        <nav>
+        <nav id="mainNav">
             <a href="index.html" data-page="index">Home</a>
             <a href="directories.html" data-page="directories">Directories</a>
             <a href="blog.html" data-page="blog">Guides</a>
@@ -348,8 +354,11 @@
             <a href="blog-best-smartwatch-under-200.html">Under $200</a> · 
             <a href="blog-best-smartwatch-under-500.html">Under $500</a> · 
             <a href="blog-best-smartwatch-women.html">Best for Women</a>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
         </p>
     </footer>
 <button class="back-to-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#9650;</button>
+<script>(function(){var b=document.getElementById('mobileMenuBtn'),n=document.getElementById('mainNav');if(b&&n){b.addEventListener('click',function(e){e.stopPropagation();b.classList.toggle('active');n.classList.toggle('active')});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){b.classList.remove('active');n.classList.remove('active')})});document.addEventListener('click',function(e){if(!b.contains(e.target)&&!n.contains(e.target)){b.classList.remove('active');n.classList.remove('active')}})}})();</script>
 </body>
 </html>
