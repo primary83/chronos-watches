@@ -23,7 +23,7 @@
         .mobile-menu-btn.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px)}.mobile-menu-btn.active span:nth-child(2){opacity:0}.mobile-menu-btn.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px)}
 
         /* Hero */
-        .deals-hero{padding:120px 0 40px;max-height:300px;text-align:center;background:linear-gradient(135deg,var(--obsidian) 0%,var(--charcoal) 100%);position:relative;overflow:hidden}
+        .deals-hero{padding:120px 0 40px;text-align:center;background:linear-gradient(135deg,var(--obsidian) 0%,var(--charcoal) 100%);position:relative}
         .deals-hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,169,98,0.12) 0%,transparent 60%)}
         .hero-tag{font-size:.7rem;font-weight:500;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:inline-flex;align-items:center;gap:15px}
         .hero-tag::before,.hero-tag::after{content:'';width:40px;height:1px;background:var(--gold)}
@@ -38,9 +38,8 @@
         /* Deal of the Day */
         .dotd-section{padding:60px 0;background:linear-gradient(135deg,rgba(201,169,98,0.08) 0%,var(--charcoal) 50%,rgba(201,169,98,0.05) 100%);border-top:2px solid var(--gold);border-bottom:1px solid var(--slate)}
         .dotd-badge{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--obsidian);padding:8px 24px;font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;margin-bottom:30px}
-        .dotd-card{display:grid;grid-template-columns:300px 1fr;gap:40px;background:var(--obsidian);border:2px solid var(--gold);padding:40px;position:relative;overflow:hidden}
+        .dotd-card{background:var(--obsidian);border:2px solid var(--gold);padding:40px;position:relative;overflow:hidden}
         .dotd-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light),var(--gold))}
-        .dotd-image{background:linear-gradient(135deg,var(--slate) 0%,var(--charcoal) 100%);display:flex;align-items:center;justify-content:center;font-size:5rem;min-height:280px;border:1px solid var(--slate)}
         .dotd-content{display:flex;flex-direction:column;justify-content:center}
         .dotd-brand{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
         .dotd-model{font-family:var(--font-display);font-size:2rem;font-weight:400;margin-bottom:8px}
@@ -136,8 +135,8 @@
         .back-to-top-btn{position:fixed;bottom:30px;right:30px;width:45px;height:45px;background:rgba(201,169,98,0.15);border:1px solid var(--gold);color:var(--gold);font-size:1.2rem;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:999;transition:all .3s;backdrop-filter:blur(10px)}.back-to-top-btn:hover{background:var(--gold);color:var(--obsidian)}
 
         /* Responsive */
-        @media(max-width:1024px){.dotd-card{grid-template-columns:1fr}.dotd-image{min-height:200px}.filters-row{gap:15px}.hero-stats{gap:30px}}
-        @media(max-width:768px){header{padding:15px 20px!important}nav{display:none!important;position:absolute;top:100%;left:0;right:0;background:rgba(10,10,10,0.98);backdrop-filter:blur(20px);flex-direction:column;padding:0;gap:0;border-top:1px solid var(--slate);border-bottom:1px solid var(--slate);z-index:999}nav.active{display:flex!important}nav a{padding:18px 20px;border-bottom:1px solid var(--slate);text-align:center;width:100%;font-size:0.85rem}nav a:last-child{border-bottom:none}nav a::after{display:none}.mobile-menu-btn{display:flex}.container{padding:0 20px}.deals-hero{padding:100px 20px 30px;max-height:none}.hero-stats{flex-wrap:wrap;gap:20px}.dotd-card{padding:25px}.filters-row-bottom{flex-direction:column;gap:12px}.deals-grid{grid-template-columns:1fr}.email-form{flex-direction:column}.email-form button{width:100%}.footer-top{grid-template-columns:1fr;gap:40px}.footer-bottom{flex-direction:column;gap:20px}}
+        @media(max-width:1024px){.filters-row{gap:15px}.hero-stats{gap:30px}}
+        @media(max-width:768px){header{padding:15px 20px!important}nav{display:none!important;position:absolute;top:100%;left:0;right:0;background:rgba(10,10,10,0.98);backdrop-filter:blur(20px);flex-direction:column;padding:0;gap:0;border-top:1px solid var(--slate);border-bottom:1px solid var(--slate);z-index:999}nav.active{display:flex!important}nav a{padding:18px 20px;border-bottom:1px solid var(--slate);text-align:center;width:100%;font-size:0.85rem}nav a:last-child{border-bottom:none}nav a::after{display:none}.mobile-menu-btn{display:flex}.container{padding:0 20px}.deals-hero{padding:100px 20px 30px}.hero-stats{flex-wrap:wrap;gap:20px}.dotd-card{padding:25px}.filters-row-bottom{flex-direction:column;gap:12px}.deals-grid{grid-template-columns:1fr}.email-form{flex-direction:column}.email-form button{width:100%}.footer-top{grid-template-columns:1fr;gap:40px}.footer-bottom{flex-direction:column;gap:20px}}
     </style>
     <link rel="canonical" href="https://authenticwrist.com/deals.html">
     <meta property="og:type" content="article">
@@ -217,7 +216,6 @@
         <div class="container">
             <span class="dotd-badge">&#9733; Deal of the Day</span>
             <div class="dotd-card">
-                <div class="dotd-image">&#9201;</div>
                 <div class="dotd-content">
                     <div class="dotd-brand">Omega</div>
                     <div class="dotd-model">Seamaster Planet Ocean 600M</div>
