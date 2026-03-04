@@ -160,6 +160,11 @@
         .tvs-tooltip{display:none;position:absolute;top:58px;right:0;width:220px;padding:12px;background:var(--obsidian);border:1px solid var(--gold-dark);font-size:.7rem;color:var(--silver);line-height:1.5;z-index:10}
         .tvs-badge:hover .tvs-tooltip{display:block}
 
+        /* TVS Explainer */
+        .tvs-explainer{display:flex;align-items:center;gap:10px;padding:10px 16px;background:rgba(201,169,98,0.08);border:1px solid var(--gold-dark);border-radius:6px;margin-bottom:20px;font-size:.78rem;color:var(--silver);line-height:1.5}
+        .tvs-explainer-icon{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:rgba(201,169,98,0.2);border:2px solid var(--gold);flex-shrink:0;font-family:var(--font-display);font-size:.9rem;font-weight:600;color:var(--cream)}
+        .tvs-explainer strong{color:var(--gold)}
+
         /* Hidden Gems */
         .hidden-gems{padding:70px 0;background:linear-gradient(135deg,var(--obsidian) 0%,var(--charcoal) 50%,var(--obsidian) 100%);border-top:1px solid var(--slate)}
         .hg-header{text-align:center;margin-bottom:40px}
@@ -293,7 +298,7 @@
             </div>
             <div class="last-updated">
                 <span class="pulse"></span>
-                <span>Deals verified February 2026</span>
+                <span>Deals verified March 2026</span>
             </div>
         </div>
     </section>
@@ -400,6 +405,10 @@
     <!-- DEALS GRID -->
     <section class="deals-grid-section">
         <div class="container">
+            <div class="tvs-explainer">
+                <span class="tvs-explainer-icon">TV</span>
+                <span><strong>TVS = True Value Score</strong> — our proprietary rating combining market pricing, resale stability, and seller trust (0–100). Look for the badge on each deal card.</span>
+            </div>
             <div class="deals-grid" id="dealsGrid"></div>
             <div class="no-results" id="noResults">
                 <h3>No deals match your filters</h3>
