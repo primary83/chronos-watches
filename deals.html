@@ -134,9 +134,96 @@
         .skip-nav{position:absolute;top:-100px;left:0;background:var(--gold);color:var(--obsidian);padding:10px 20px;z-index:10000;font-size:.85rem;text-decoration:none;transition:top .3s}.skip-nav:focus{top:0}
         .back-to-top-btn{position:fixed;bottom:30px;right:30px;width:45px;height:45px;background:rgba(201,169,98,0.15);border:1px solid var(--gold);color:var(--gold);font-size:1.2rem;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:999;transition:all .3s;backdrop-filter:blur(10px)}.back-to-top-btn:hover{background:var(--gold);color:var(--obsidian)}
 
+        /* Market Pulse */
+        .market-pulse{padding:50px 0;background:var(--charcoal);border-top:1px solid var(--slate);border-bottom:1px solid var(--slate)}
+        .mp-header{text-align:center;margin-bottom:35px}
+        .mp-header .section-tag{font-size:.65rem;font-weight:500;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+        .mp-header h2{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:300}
+        .mp-header p{font-size:.8rem;color:var(--silver);margin-top:5px}
+        .mp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+        .mp-card{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:var(--obsidian);border:1px solid var(--slate);transition:border-color .3s ease}
+        .mp-card:hover{border-color:var(--gold-dark)}
+        .mp-card-left{display:flex;flex-direction:column;gap:2px}
+        .mp-brand{font-size:.8rem;font-weight:500;letter-spacing:.05em;color:var(--cream)}
+        .mp-insight{font-size:.7rem;color:var(--silver);font-style:italic}
+        .mp-card-right{display:flex;align-items:center;gap:10px}
+        .mp-arrow{font-size:1rem;line-height:1}.mp-pct{font-size:.85rem;font-weight:600;font-family:var(--font-body);letter-spacing:.02em}
+        .mp-down{color:var(--success)}.mp-up{color:var(--danger)}.mp-stable{color:var(--silver)}
+
+        /* True Value Score */
+        .tvs-badge{position:absolute;bottom:12px;right:12px;z-index:2;display:flex;flex-direction:column;align-items:center;width:50px;height:50px;border-radius:50%;justify-content:center;cursor:help}
+        .tvs-badge-gold{background:rgba(201,169,98,0.2);border:2px solid var(--gold)}
+        .tvs-badge-silver{background:rgba(192,192,192,0.15);border:2px solid var(--silver)}
+        .tvs-badge-bronze{background:rgba(205,127,50,0.15);border:2px solid #cd7f32}
+        .tvs-num{font-family:var(--font-display);font-size:1.05rem;font-weight:600;line-height:1;color:var(--cream)}
+        .tvs-label{font-size:.35rem;letter-spacing:.08em;text-transform:uppercase;color:var(--silver);margin-top:1px}
+        .tvs-tooltip{display:none;position:absolute;top:58px;right:0;width:220px;padding:12px;background:var(--obsidian);border:1px solid var(--gold-dark);font-size:.7rem;color:var(--silver);line-height:1.5;z-index:10}
+        .tvs-badge:hover .tvs-tooltip{display:block}
+
+        /* Hidden Gems */
+        .hidden-gems{padding:70px 0;background:linear-gradient(135deg,var(--obsidian) 0%,var(--charcoal) 50%,var(--obsidian) 100%);border-top:1px solid var(--slate)}
+        .hg-header{text-align:center;margin-bottom:40px}
+        .hg-header .section-tag{font-size:.65rem;font-weight:500;letter-spacing:.4em;text-transform:uppercase;color:#50c8a0;margin-bottom:10px}
+        .hg-header h2{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:300}
+        .hg-header p{font-size:.85rem;color:var(--silver);margin-top:8px}
+        .hg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:25px}
+        .hg-card{background:var(--charcoal);border:1px solid rgba(80,200,160,0.25);padding:28px;transition:all .4s ease;display:flex;flex-direction:column}
+        .hg-card:hover{border-color:rgba(80,200,160,0.6);transform:translateY(-4px);box-shadow:0 15px 35px rgba(0,0,0,0.3)}
+        .hg-card-brand{font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:#50c8a0;margin-bottom:4px}
+        .hg-card-model{font-family:var(--font-display);font-size:1.2rem;font-weight:400;margin-bottom:12px}
+        .hg-card-why{font-size:.8rem;color:var(--silver);line-height:1.7;margin-bottom:15px;font-style:italic;border-left:2px solid rgba(80,200,160,0.4);padding-left:14px}
+        .hg-card-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:15px;border-top:1px solid var(--slate)}
+        .hg-price{font-family:var(--font-display);font-size:1.4rem;color:#50c8a0}
+        .hg-stars{font-size:.85rem;color:var(--gold);letter-spacing:2px}
+        .hg-cta{padding:10px 22px;font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;background:transparent;border:1px solid #50c8a0;color:#50c8a0;text-decoration:none;transition:all .3s ease}
+        .hg-cta:hover{background:#50c8a0;color:var(--obsidian)}
+
+        /* Ownership Cost Calculator */
+        .own-toggle{font-size:.72rem;color:var(--gold);cursor:pointer;background:none;border:none;font-family:var(--font-body);letter-spacing:.05em;padding:8px 0 0;display:inline-flex;align-items:center;gap:5px;transition:color .3s}
+        .own-toggle:hover{color:var(--gold-light)}
+        .own-panel{display:none;margin-top:12px;padding:15px;background:rgba(10,10,10,0.6);border:1px solid var(--slate);animation:fadeInUp .3s ease}
+        .own-panel.open{display:block}
+        .own-row{display:flex;justify-content:space-between;padding:5px 0;font-size:.75rem;color:var(--silver)}
+        .own-row strong{color:var(--cream)}
+        .own-row.own-total{border-top:1px solid var(--gold-dark);margin-top:6px;padding-top:10px;font-size:.85rem}
+        .own-row.own-total strong{color:var(--gold)}
+        .own-bar{height:6px;background:var(--slate);margin-top:10px;display:flex;overflow:hidden;border-radius:3px}
+        .own-bar span{height:100%}
+        .own-bar-purchase{background:var(--gold)}
+        .own-bar-service{background:var(--gold-dark)}
+        .own-bar-insurance{background:var(--silver)}
+        .own-bar-resale{background:var(--success)}
+        .own-legend{display:flex;gap:12px;margin-top:6px;flex-wrap:wrap}
+        .own-legend span{font-size:.6rem;color:var(--silver);display:flex;align-items:center;gap:4px}
+        .own-legend span::before{content:'';width:8px;height:8px;border-radius:2px;display:inline-block}
+        .own-leg-purchase::before{background:var(--gold)}.own-leg-service::before{background:var(--gold-dark)}
+        .own-leg-insurance::before{background:var(--silver)}.own-leg-resale::before{background:var(--success)}
+
+        /* Price Alert Modal */
+        .alert-bell{position:absolute;bottom:12px;left:12px;z-index:3;width:30px;height:30px;background:rgba(201,169,98,0.15);border:1px solid var(--gold-dark);color:var(--gold);font-size:.85rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s}
+        .alert-bell:hover{background:var(--gold);color:var(--obsidian)}
+        .alert-fab{position:fixed;bottom:90px;right:30px;padding:12px 20px;background:var(--gold);color:var(--obsidian);border:none;font-family:var(--font-body);font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;z-index:998;display:flex;align-items:center;gap:8px;transition:all .3s;box-shadow:0 4px 20px rgba(201,169,98,0.3)}
+        .alert-fab:hover{background:var(--gold-light);transform:translateY(-2px)}
+        .modal-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.8);z-index:2000;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+        .modal-overlay.open{display:flex}
+        .modal{background:var(--charcoal);border:1px solid var(--slate);max-width:460px;width:90%;padding:40px;position:relative;max-height:90vh;overflow-y:auto}
+        .modal-close{position:absolute;top:15px;right:20px;background:none;border:none;color:var(--silver);font-size:1.5rem;cursor:pointer;transition:color .3s}.modal-close:hover{color:var(--gold)}
+        .modal h3{font-family:var(--font-display);font-size:1.5rem;font-weight:300;margin-bottom:5px}
+        .modal .modal-watch{font-size:.75rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:15px}
+        .modal p{font-size:.85rem;color:var(--silver);margin-bottom:20px}
+        .modal-brands{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+        .modal-brand-chk{display:flex;align-items:center;gap:6px;padding:6px 14px;border:1px solid var(--slate);cursor:pointer;transition:all .3s;font-size:.72rem;color:var(--silver)}
+        .modal-brand-chk:hover{border-color:var(--gold);color:var(--gold)}
+        .modal-brand-chk.checked{background:var(--gold);border-color:var(--gold);color:var(--obsidian)}
+        .modal-input{width:100%;background:transparent;border:1px solid var(--slate);padding:14px 18px;font-family:var(--font-body);font-size:.85rem;color:var(--cream);outline:none;margin-bottom:12px;transition:border-color .3s}
+        .modal-input:focus{border-color:var(--gold)}
+        .modal-submit{width:100%;padding:14px;background:var(--gold);color:var(--obsidian);border:none;font-family:var(--font-body);font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;transition:all .3s}
+        .modal-submit:hover{background:var(--gold-light)}
+        .modal-fine{font-size:.7rem;color:var(--silver);text-align:center;margin-top:10px}
+
         /* Responsive */
         @media(max-width:1024px){.filters-row{gap:15px}.hero-stats{gap:30px}}
-        @media(max-width:768px){header{padding:15px 20px!important}nav{display:none!important;position:absolute;top:100%;left:0;right:0;background:rgba(10,10,10,0.98);backdrop-filter:blur(20px);flex-direction:column;padding:0;gap:0;border-top:1px solid var(--slate);border-bottom:1px solid var(--slate);z-index:999}nav.active{display:flex!important}nav a{padding:18px 20px;border-bottom:1px solid var(--slate);text-align:center;width:100%;font-size:0.85rem}nav a:last-child{border-bottom:none}nav a::after{display:none}.mobile-menu-btn{display:flex}.container{padding:0 20px}.deals-hero{padding:100px 20px 30px}.hero-stats{flex-wrap:wrap;gap:20px}.dotd-card{padding:25px}.filters-row-bottom{flex-direction:column;gap:12px}.deals-grid{grid-template-columns:1fr}.email-form{flex-direction:column}.email-form button{width:100%}.footer-top{grid-template-columns:1fr;gap:40px}.footer-bottom{flex-direction:column;gap:20px}}
+        @media(max-width:768px){header{padding:15px 20px!important}nav{display:none!important;position:absolute;top:100%;left:0;right:0;background:rgba(10,10,10,0.98);backdrop-filter:blur(20px);flex-direction:column;padding:0;gap:0;border-top:1px solid var(--slate);border-bottom:1px solid var(--slate);z-index:999}nav.active{display:flex!important}nav a{padding:18px 20px;border-bottom:1px solid var(--slate);text-align:center;width:100%;font-size:0.85rem}nav a:last-child{border-bottom:none}nav a::after{display:none}.mobile-menu-btn{display:flex}.container{padding:0 20px}.deals-hero{padding:100px 20px 30px}.hero-stats{flex-wrap:wrap;gap:20px}.dotd-card{padding:25px}.filters-row-bottom{flex-direction:column;gap:12px}.deals-grid{grid-template-columns:1fr}.email-form{flex-direction:column}.email-form button{width:100%}.footer-top{grid-template-columns:1fr;gap:40px}.footer-bottom{flex-direction:column;gap:20px}.mp-grid{grid-template-columns:1fr}.hg-grid{grid-template-columns:1fr}.alert-fab{bottom:20px;right:20px;font-size:.65rem;padding:10px 16px}}
     </style>
     <link rel="canonical" href="https://authenticwrist.com/deals.html">
     <meta property="og:type" content="article">
@@ -208,6 +295,18 @@
                 <span class="pulse"></span>
                 <span>Deals verified February 2026</span>
             </div>
+        </div>
+    </section>
+
+    <!-- MARKET PULSE -->
+    <section class="market-pulse">
+        <div class="container">
+            <div class="mp-header">
+                <p class="section-tag">Market Pulse</p>
+                <h2>Brand Price Trends</h2>
+                <p>Average pre-owned market movement — updated weekly</p>
+            </div>
+            <div class="mp-grid" id="mpGrid"></div>
         </div>
     </section>
 
@@ -309,6 +408,18 @@
         </div>
     </section>
 
+    <!-- HIDDEN GEMS -->
+    <section class="hidden-gems">
+        <div class="container">
+            <div class="hg-header">
+                <p class="section-tag">Hidden Gems</p>
+                <h2>Under-the-Radar Picks</h2>
+                <p>Expert-curated watches that punch well above their price point</p>
+            </div>
+            <div class="hg-grid" id="hgGrid"></div>
+        </div>
+    </section>
+
     <!-- EMAIL CAPTURE -->
     <section class="email-section">
         <div class="container">
@@ -332,6 +443,23 @@
     </section>
 
     </main>
+
+    <!-- PRICE ALERT FAB -->
+    <button class="alert-fab" id="alertFab">&#128276; Set Price Alerts</button>
+
+    <!-- PRICE ALERT MODAL -->
+    <div class="modal-overlay" id="alertModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <h3>Price Drop Alerts</h3>
+            <div class="modal-watch" id="modalWatch"></div>
+            <p>Choose brands to track and we'll notify you when prices drop.</p>
+            <div class="modal-brands" id="modalBrands"></div>
+            <input type="email" class="modal-input" id="alertEmail" placeholder="Your email address">
+            <button class="modal-submit" id="alertSubmit">Set Alerts</button>
+            <p class="modal-fine">Powered by Formspree. Unsubscribe anytime.</p>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <footer>
@@ -474,13 +602,34 @@
         return brand.toLowerCase().replace(/\s+/g, '-');
     }
 
-    function renderCard(d) {
+    function escHtml(s){return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;');}
+
+    function renderCard(d, i) {
         const disc = calcDiscount(d.retailPrice, d.dealPrice);
+        const tvs = tvsData[i];
+        const tier = tvs.score >= 85 ? 'gold' : tvs.score >= 70 ? 'silver' : 'bronze';
+        const own = ownData[i];
+        const svc5 = own.service;
+        const ins5 = own.insurance * 5;
+        const strap5 = own.strap;
+        const totalCost = d.dealPrice + svc5 + ins5 + strap5;
+        const resaleVal = Math.round(d.dealPrice * own.resale / 100);
+        const netCost = totalCost - resaleVal;
+        const pPct = Math.round(d.dealPrice / totalCost * 100);
+        const sPct = Math.round(svc5 / totalCost * 100);
+        const iPct = 100 - pPct - sPct;
+        const strapHtml = strap5 > 0 ? '<div class="own-row"><span>Strap / Bracelet</span><strong>' + formatPrice(strap5) + '</strong></div>' : '';
         return `
         <div class="deal-card" data-brand="${brandSlug(d.brand)}" data-style="${d.style.toLowerCase()}" data-price="${getPriceRange(d.dealPrice)}" data-dealtype="${d.dealType}">
             <div class="deal-card-image">
                 <span class="deal-badge">${disc}% OFF</span>
                 <span class="deal-type-badge">${dealTypeLabel(d.dealType)}</span>
+                <div class="tvs-badge tvs-badge-${tier}" title="True Value Score">
+                    <span class="tvs-num">${tvs.score}</span>
+                    <span class="tvs-label">TVS</span>
+                    <div class="tvs-tooltip"><strong>True Value Score: ${tvs.score}/100</strong><br>${tvs.tip}</div>
+                </div>
+                <div class="alert-bell" data-watch="${escHtml(d.brand+' '+d.model)}" title="Set price alert">&#128276;</div>
                 ${d.icon}
             </div>
             <div class="deal-card-body">
@@ -493,6 +642,26 @@
                 </div>
                 <div class="deal-card-context">Typical retail: <strong>${formatPrice(d.retailPrice)}</strong></div>
                 <div class="deal-card-why">"${disc}% below typical retail"</div>
+                <button class="own-toggle" onclick="this.nextElementSibling.classList.toggle('open')">&#9881; 5-Year Ownership Cost &#9660;</button>
+                <div class="own-panel">
+                    <div class="own-row"><span>Purchase Price</span><strong>${formatPrice(d.dealPrice)}</strong></div>
+                    <div class="own-row"><span>Est. Service (5yr)</span><strong>${formatPrice(svc5)}</strong></div>
+                    <div class="own-row"><span>Insurance (5yr)</span><strong>${formatPrice(ins5)}</strong></div>
+                    ${strapHtml}
+                    <div class="own-row own-total"><span>Total 5yr Cost</span><strong>${formatPrice(totalCost)}</strong></div>
+                    <div class="own-row"><span>Est. Resale (${own.resale}%)</span><strong style="color:var(--success)">-${formatPrice(resaleVal)}</strong></div>
+                    <div class="own-row own-total"><span>Net Cost of Ownership</span><strong>${formatPrice(netCost)}</strong></div>
+                    <div class="own-bar">
+                        <span class="own-bar-purchase" style="width:${pPct}%"></span>
+                        <span class="own-bar-service" style="width:${sPct}%"></span>
+                        <span class="own-bar-insurance" style="width:${iPct}%"></span>
+                    </div>
+                    <div class="own-legend">
+                        <span class="own-leg-purchase">Purchase</span>
+                        <span class="own-leg-service">Service</span>
+                        <span class="own-leg-insurance">Insurance</span>
+                    </div>
+                </div>
                 <div class="deal-card-footer">
                     <span class="deal-card-retailer">via ${d.retailer}</span>
                     <a href="${d.link}" target="_blank" rel="noopener noreferrer" class="deal-card-link">View Deal &rarr;</a>
@@ -592,9 +761,210 @@
     })();
 
     // =====================
+    // TRUE VALUE SCORE DATA
+    // =====================
+    const tvsData = [
+        {score:72, tip:"12% off retail on the most iconic dive watch. Holds value exceptionally well."},
+        {score:68, tip:"14% off a timeless Datejust. Solid grey-market pricing."},
+        {score:82, tip:"12% below retail on a hot Explorer II. Good entry for Rolex sport models."},
+        {score:88, tip:"30% off the legendary Moonwatch. One of the best Omega deals available."},
+        {score:85, tip:"30% off a versatile Seamaster diver. Excellent value for a METAS-certified watch."},
+        {score:90, tip:"35% off and clearance pricing. Outstanding for a premium Omega dress-sport."},
+        {score:79, tip:"32% off TAG's flagship chronograph. Strong value at this tier."},
+        {score:76, tip:"30% discount on a professional 300m diver. Competitive grey-market deal."},
+        {score:74, tip:"28% off the iconic Monaco. Steve McQueen's favourite at a fair price."},
+        {score:71, tip:"16% off Tudor's most sought-after model. Modest discount but strong resale."},
+        {score:68, tip:"17% off a titanium diver. Tudor holds value well on the secondary market."},
+        {score:73, tip:"21% off a Cartier icon. Luxury dress watches rarely see deeper discounts."},
+        {score:65, tip:"20% off the Tank Must. Reasonable discount for a Cartier entry piece."},
+        {score:92, tip:"37% off a cult-favourite Seiko diver. Exceptional value for the money."},
+        {score:86, tip:"41% off a sharp-edged Presage. One of Seiko's best dress offerings."},
+        {score:80, tip:"39% off a capable field watch. Punches well above its price."},
+        {score:84, tip:"39% off the famous Cocktail Time dial. A stunner at this price."},
+        {score:82, tip:"27% off the hottest watch in its class. The PRX rarely goes this low."},
+        {score:83, tip:"36% off a robust 300m diver. Incredible Swiss value."},
+        {score:81, tip:"34% off with silicon hairspring technology at an entry-level price."},
+        {score:87, tip:"34% off a military-heritage classic. A must-have for field watch fans."},
+        {score:78, tip:"34% off a big, bold pilot watch. Great everyday wearer."},
+        {score:84, tip:"37% off an open-heart skeleton. Clearance price on a beautiful movement."},
+        {score:77, tip:"29% off a true GMT with silicon balance. Strong Swiss value."},
+        {score:85, tip:"34% off a Swiss-made dive watch. Punches way above its price."},
+        {score:75, tip:"28% off a dressy moonphase complication. Fair deal on a refined piece."},
+        {score:70, tip:"31% off Japan's premium G-Shock. Niche but built to last a lifetime."},
+        {score:88, tip:"35% off the hugely popular CasiOak. One of horology's best-sellers."},
+        {score:76, tip:"36% off a solar/radio-controlled dress watch. Sleeper pick."},
+        {score:91, tip:"37% off the legendary Promaster. An ISO-certified diver under $150."},
+        {score:82, tip:"46% off a capable pilot chronograph. Hard to beat for features per dollar."},
+        {score:79, tip:"36% off Citizen's answer to the PRX. Clean automatic at a great price."},
+        {score:95, tip:"54% off a classic dress watch. Simply the best value in watchmaking."},
+        {score:89, tip:"44% off a proven Seiko-movement diver. Outstanding bang for buck."},
+        {score:93, tip:"52% off a sun-and-moon complication. Looks like a $1,000 watch."},
+        {score:90, tip:"47% off a rock-solid diver. One of the best sub-$200 automatics."}
+    ];
+
+    // =====================
+    // OWNERSHIP COST DATA (5-year estimates)
+    // =====================
+    const ownData = [
+        {service:1200, insurance:180, strap:0, resale:92},
+        {service:1200, insurance:150, strap:0, resale:88},
+        {service:1200, insurance:170, strap:0, resale:90},
+        {service:800, insurance:100, strap:0, resale:75},
+        {service:800, insurance:80, strap:0, resale:72},
+        {service:800, insurance:80, strap:0, resale:70},
+        {service:600, insurance:80, strap:100, resale:60},
+        {service:600, insurance:50, strap:80, resale:58},
+        {service:600, insurance:95, strap:100, resale:62},
+        {service:700, insurance:65, strap:0, resale:80},
+        {service:700, insurance:75, strap:0, resale:78},
+        {service:900, insurance:115, strap:0, resale:75},
+        {service:900, insurance:60, strap:80, resale:70},
+        {service:250, insurance:15, strap:40, resale:65},
+        {service:250, insurance:12, strap:40, resale:55},
+        {service:100, insurance:5, strap:30, resale:45},
+        {service:200, insurance:6, strap:30, resale:50},
+        {service:200, insurance:10, strap:30, resale:60},
+        {service:200, insurance:10, strap:30, resale:55},
+        {service:200, insurance:10, strap:40, resale:58},
+        {service:150, insurance:8, strap:30, resale:55},
+        {service:200, insurance:12, strap:40, resale:50},
+        {service:250, insurance:15, strap:40, resale:50},
+        {service:400, insurance:45, strap:0, resale:65},
+        {service:300, insurance:18, strap:0, resale:60},
+        {service:500, insurance:45, strap:50, resale:62},
+        {service:0, insurance:45, strap:0, resale:55},
+        {service:0, insurance:2, strap:20, resale:40},
+        {service:0, insurance:10, strap:30, resale:45},
+        {service:0, insurance:3, strap:20, resale:50},
+        {service:0, insurance:5, strap:20, resale:40},
+        {service:0, insurance:5, strap:20, resale:45},
+        {service:0, insurance:3, strap:20, resale:35},
+        {service:0, insurance:4, strap:20, resale:45},
+        {service:0, insurance:4, strap:20, resale:38},
+        {service:0, insurance:3, strap:20, resale:42}
+    ];
+
+    // =====================
+    // MARKET PULSE DATA
+    // =====================
+    const mpData = [
+        {brand:"Rolex", pct:3, dir:"up", insight:"Strong demand keeps prices rising"},
+        {brand:"Omega", pct:8, dir:"down", insight:"Great time to buy \u2014 prices softening"},
+        {brand:"TAG Heuer", pct:12, dir:"down", insight:"Aggressive discounts across the range"},
+        {brand:"Tudor", pct:5, dir:"down", insight:"Slight dip \u2014 Black Bay models easing"},
+        {brand:"Cartier", pct:6, dir:"up", insight:"Demand rising for Santos & Tank"},
+        {brand:"Seiko", pct:0, dir:"stable", insight:"Holding steady \u2014 consistent value"},
+        {brand:"Tissot", pct:10, dir:"down", insight:"Deep discounts on Powermatic 80 line"},
+        {brand:"Hamilton", pct:7, dir:"down", insight:"Field models dipping \u2014 great entry point"},
+        {brand:"Longines", pct:9, dir:"down", insight:"Swiss value getting even better"},
+        {brand:"Casio", pct:1, dir:"stable", insight:"Stable pricing \u2014 G-Shock demand steady"}
+    ];
+
+    function renderMarketPulse() {
+        var grid = document.getElementById('mpGrid');
+        if (!grid) return;
+        grid.innerHTML = mpData.map(function(m) {
+            var cls = m.dir === 'down' ? 'mp-down' : m.dir === 'up' ? 'mp-up' : 'mp-stable';
+            var arrow = m.dir === 'down' ? '&#9660;' : m.dir === 'up' ? '&#9650;' : '&#9644;';
+            var sign = m.dir === 'down' ? '-' : m.dir === 'up' ? '+' : '';
+            return '<div class="mp-card"><div class="mp-card-left"><span class="mp-brand">' + m.brand + '</span><span class="mp-insight">' + m.insight + '</span></div><div class="mp-card-right ' + cls + '"><span class="mp-arrow">' + arrow + '</span><span class="mp-pct">' + sign + m.pct + '%</span></div></div>';
+        }).join('');
+    }
+
+    // =====================
+    // HIDDEN GEMS DATA
+    // =====================
+    const hgData = [
+        {brand:"Orient", model:"Bambino Version 2", price:"$129", stars:"\u2605\u2605\u2605\u2605\u2605", why:"The undisputed king of affordable dress watches. Domed crystal, exhibition caseback, and a sweep second hand that rivals watches 10\u00d7 its price.", link:"https://www.amazon.com"},
+        {brand:"Tissot", model:"PRX Powermatic 80", price:"$475", stars:"\u2605\u2605\u2605\u2605\u2605", why:"The 1970s integrated-bracelet revival that took the watch world by storm. 80-hour power reserve and Swiss Made at under $500.", link:"https://www.jomashop.com"},
+        {brand:"Seiko", model:"Presage Cocktail Time SRPB43", price:"$259", stars:"\u2605\u2605\u2605\u2605\u2606", why:"That dial. The sunburst Starlight texture catches light like no other at this price. A conversation starter on any wrist.", link:"https://www.amazon.com"},
+        {brand:"Hamilton", model:"Khaki Field Mechanical", price:"$395", stars:"\u2605\u2605\u2605\u2605\u2605", why:"Direct lineage to WWII military watches. Hand-wound, 80hr reserve, sapphire crystal. The quintessential field watch.", link:"https://www.jomashop.com"},
+        {brand:"Citizen", model:"Promaster Diver BN0150", price:"$139", stars:"\u2605\u2605\u2605\u2605\u2606", why:"ISO 6425 certified, Eco-Drive solar powered, and utterly reliable. The go-anywhere dive watch that never needs a battery change.", link:"https://www.amazon.com"},
+        {brand:"Longines", model:"HydroConquest 41mm", price:"$895", stars:"\u2605\u2605\u2605\u2605\u2605", why:"A Swiss-made 300m diver from a heritage brand founded in 1832. Ceramic bezel and chronometer-grade movement at a fraction of competitors.", link:"https://www.amazon.com"}
+    ];
+
+    function renderHiddenGems() {
+        var grid = document.getElementById('hgGrid');
+        if (!grid) return;
+        grid.innerHTML = hgData.map(function(g) {
+            return '<div class="hg-card"><div class="hg-card-brand">' + g.brand + '</div><div class="hg-card-model">' + g.model + '</div><div class="hg-card-why">' + g.why + '</div><div class="hg-card-bottom"><span class="hg-price">' + g.price + '</span><span class="hg-stars">' + g.stars + '</span><a href="' + g.link + '" target="_blank" rel="noopener noreferrer sponsored" class="hg-cta">View Deal &rarr;</a></div></div>';
+        }).join('');
+    }
+
+    // =====================
+    // PRICE ALERT MODAL
+    // =====================
+    var alertBrands = ['Rolex','Omega','TAG Heuer','Tudor','Cartier','Seiko','Tissot','Hamilton','Longines','Casio','Citizen','Orient'];
+    var selectedAlertBrands = new Set();
+    var alertWatchName = '';
+
+    function openAlertModal(watchName) {
+        alertWatchName = watchName || '';
+        var modal = document.getElementById('alertModal');
+        var watchEl = document.getElementById('modalWatch');
+        var brandsEl = document.getElementById('modalBrands');
+        if (watchName) {
+            watchEl.textContent = watchName;
+            watchEl.style.display = 'block';
+        } else {
+            watchEl.style.display = 'none';
+        }
+        brandsEl.innerHTML = alertBrands.map(function(b) {
+            var cls = selectedAlertBrands.has(b) ? ' checked' : '';
+            return '<div class="modal-brand-chk' + cls + '" data-brand="' + b + '">' + b + '</div>';
+        }).join('');
+        brandsEl.querySelectorAll('.modal-brand-chk').forEach(function(el) {
+            el.addEventListener('click', function() {
+                var b = this.dataset.brand;
+                if (selectedAlertBrands.has(b)) { selectedAlertBrands.delete(b); this.classList.remove('checked'); }
+                else { selectedAlertBrands.add(b); this.classList.add('checked'); }
+            });
+        });
+        modal.classList.add('open');
+    }
+
+    function closeAlertModal() {
+        document.getElementById('alertModal').classList.remove('open');
+    }
+
+    function submitAlerts() {
+        var email = document.getElementById('alertEmail').value;
+        if (!email) { alert('Please enter your email address.'); return; }
+        if (selectedAlertBrands.size === 0 && !alertWatchName) { alert('Please select at least one brand to track.'); return; }
+        var brands = Array.from(selectedAlertBrands).join(', ');
+        var body = new FormData();
+        body.append('email', email);
+        body.append('_subject', 'Price Alert Signup');
+        body.append('brands', brands);
+        if (alertWatchName) body.append('watch', alertWatchName);
+        fetch('https://formspree.io/f/xlggbnww', {method:'POST', body:body, headers:{'Accept':'application/json'}})
+        .then(function(r) {
+            if (r.ok) {
+                document.getElementById('alertModal').querySelector('.modal').innerHTML = '<div style="text-align:center;padding:40px 0"><h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:300;margin-bottom:10px">Alerts Set!</h3><p style="color:var(--silver);font-size:.85rem">We will email you when prices drop.</p></div>';
+                setTimeout(closeAlertModal, 2500);
+            } else { alert('Something went wrong. Please try again.'); }
+        })
+        .catch(function() { alert('Something went wrong. Please try again.'); });
+    }
+
+    // =====================
     // INIT
     // =====================
+    renderMarketPulse();
+    renderHiddenGems();
     renderDeals();
+
+    // Alert bell delegation
+    document.addEventListener('click', function(e) {
+        var bell = e.target.closest('.alert-bell');
+        if (bell) openAlertModal(bell.dataset.watch);
+    });
+
+    // FAB and modal listeners
+    document.getElementById('alertFab').addEventListener('click', function() { openAlertModal(); });
+    document.getElementById('modalClose').addEventListener('click', closeAlertModal);
+    document.getElementById('alertModal').addEventListener('click', function(e) { if (e.target === this) closeAlertModal(); });
+    document.getElementById('alertSubmit').addEventListener('click', submitAlerts);
     </script>
 </body>
 </html>
