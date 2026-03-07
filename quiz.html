@@ -75,6 +75,17 @@
         .rec-card .rec-link.primary{background:var(--gold);color:var(--obsidian);border-color:var(--gold)}.rec-card .rec-link.primary:hover{background:var(--gold-light)}
         .retake-btn{display:block;margin:40px auto;padding:14px 40px;background:transparent;border:1px solid var(--slate);color:var(--silver);font-family:'Outfit',sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;transition:all 0.3s}
         .retake-btn:hover{border-color:var(--gold);color:var(--gold)}
+        .quiz-email-capture{background:var(--charcoal);border:1px solid var(--slate);padding:40px 35px;margin:40px 0 10px;text-align:center}
+        .quiz-email-capture h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;margin-bottom:8px;color:var(--cream)}
+        .quiz-email-capture .qec-sub{font-size:0.85rem;color:var(--silver);line-height:1.6;margin-bottom:25px;max-width:500px;margin-left:auto;margin-right:auto}
+        .qec-form{display:flex;flex-direction:column;gap:12px;max-width:380px;margin:0 auto}
+        .qec-form input{padding:14px 16px;background:var(--obsidian);border:1px solid var(--slate);color:var(--cream);font-family:'Outfit',sans-serif;font-size:0.85rem;transition:border-color 0.3s;outline:none}
+        .qec-form input::placeholder{color:var(--gold-dark)}
+        .qec-form input:focus{border-color:var(--gold)}
+        .qec-form button{padding:14px 30px;background:var(--gold);color:var(--obsidian);border:none;font-family:'Outfit',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;cursor:pointer;transition:background 0.3s}
+        .qec-form button:hover{background:var(--gold-light)}
+        .qec-fine{font-size:0.7rem;color:var(--gold-dark);margin-top:12px}
+        .qec-success{display:none;padding:20px;font-size:0.95rem;color:#4ade80;line-height:1.6}
         footer{text-align:center;padding:40px;border-top:1px solid var(--slate);color:var(--silver);font-size:0.85rem}
         @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
         @media(max-width:768px){header{padding:15px 20px}nav{display:none}.options{grid-template-columns:1fr}.rec-card .rec-specs{gap:10px}}
@@ -413,12 +424,51 @@ function showResults(){
         </div>
     </div>`;
   });
+  const topName = top[0].brand + ' ' + top[0].model;
+  const runnerName = top[1] ? top[1].brand + ' ' + top[1].model : '';
+  const thirdName = top[2] ? top[2].brand + ' ' + top[2].model : '';
+  const budgetLabel = answers.budget || '';
+
+  html += `<div class="quiz-email-capture" id="qecBlock">
+    <h3>Want Us to Alert You When Prices Drop on Your Matches?</h3>
+    <p class="qec-sub">Enter your email and we'll notify you when prices drop on the <strong>${topName}</strong> and your other picks &mdash; plus send your full watch recommendation report.</p>
+    <form class="qec-form" id="qecForm">
+      <input type="text" name="firstName" placeholder="First Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="hidden" name="topMatch" value="${topName}">
+      <input type="hidden" name="runnerUp" value="${runnerName}">
+      <input type="hidden" name="thirdPick" value="${thirdName}">
+      <input type="hidden" name="budget" value="${budgetLabel}">
+      <button type="submit">Yes, Alert Me to Price Drops! \u{1F514}</button>
+    </form>
+    <p class="qec-fine">No spam ever. Unsubscribe anytime. We only send watch deal alerts.</p>
+    <div class="qec-success" id="qecSuccess">\u2705 You're on the list! We'll alert you when prices drop on your matches.</div>
+  </div>`;
+
   html += `<button class="retake-btn" onclick="retakeQuiz()">Retake Quiz</button>`;
 
   const container = document.getElementById('resultsContainer');
   container.innerHTML = html;
   container.classList.add('visible');
   window.scrollTo({top:0,behavior:'smooth'});
+
+  document.getElementById('qecForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var fd = new FormData(this);
+    fetch('https://formspree.io/f/xqeyknqr', {method:'POST', body:fd, headers:{'Accept':'application/json'}})
+    .then(function(r){ return r.json(); })
+    .then(function(){
+      document.getElementById('qecForm').style.display='none';
+      document.querySelector('.qec-fine').style.display='none';
+      document.querySelector('.qec-sub').style.display='none';
+      document.getElementById('qecSuccess').style.display='block';
+    })
+    .catch(function(){
+      document.getElementById('qecSuccess').style.display='block';
+      document.getElementById('qecSuccess').textContent='Something went wrong. Please try again.';
+      document.getElementById('qecSuccess').style.color='#ef4444';
+    });
+  });
 }
 
 function retakeQuiz(){
