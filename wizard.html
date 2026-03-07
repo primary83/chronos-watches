@@ -83,6 +83,17 @@
         .profile-tag{font-size:0.75rem;padding:6px 14px;border:1px solid var(--slate);color:var(--silver)}
         .restart-btn{display:block;margin:40px auto;padding:14px 40px;background:transparent;border:1px solid var(--slate);color:var(--silver);font-family:var(--font-body);font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;transition:all 0.3s}
         .restart-btn:hover{border-color:var(--gold);color:var(--gold)}
+        .wiz-email-capture{background:var(--charcoal);border:1px solid var(--slate);padding:40px 35px;margin:30px 0 10px;text-align:center}
+        .wiz-email-capture h3{font-family:var(--font-display);font-size:1.4rem;font-weight:400;margin-bottom:8px;color:var(--cream)}
+        .wiz-email-sub{font-size:0.85rem;color:var(--silver);line-height:1.6;margin-bottom:25px;max-width:500px;margin-left:auto;margin-right:auto}
+        .wiz-email-form{display:flex;flex-direction:column;gap:12px;max-width:380px;margin:0 auto}
+        .wiz-email-form input{padding:14px 16px;background:var(--obsidian);border:1px solid var(--slate);color:var(--cream);font-family:var(--font-body);font-size:0.85rem;transition:border-color 0.3s;outline:none}
+        .wiz-email-form input::placeholder{color:var(--gold-dark)}
+        .wiz-email-form input:focus{border-color:var(--gold)}
+        .wiz-email-form button{padding:14px 30px;background:var(--gold);color:var(--obsidian);border:none;font-family:var(--font-body);font-size:0.8rem;font-weight:600;letter-spacing:0.08em;cursor:pointer;transition:background 0.3s}
+        .wiz-email-form button:hover{background:var(--gold-light)}
+        .wiz-email-fine{font-size:0.7rem;color:var(--gold-dark);margin-top:12px}
+        .wiz-email-ok{display:none;padding:20px;font-size:0.95rem;color:#4ade80;line-height:1.6}
         footer{text-align:center;padding:40px;border-top:1px solid var(--slate);color:var(--silver);font-size:0.85rem}
         @keyframes msgIn{to{opacity:1;transform:translateY(0)}}
         @keyframes dotBounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
@@ -115,6 +126,7 @@
     <a href="#main-content" class="skip-nav">Skip to content</a>
     <header>
         <a href="index.html" class="logo">AUTHENTIC WRIST</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
         <nav id="mainNav">
             <a href="index.html" data-page="index">Home</a>
             <a href="directories.html" data-page="directories">Directories</a>
@@ -206,50 +218,34 @@ const W={
     // ─── CONVERSATION FLOW ───
     steps:[
         {id:'welcome',type:'intro'},
-        {id:'purpose',q:"First, let's talk about <strong>what you need this watch for</strong>. What's the primary role it will play in your life?",
+        {id:'occasion',q:"Let's start — <strong>what's the occasion</strong> for this watch?",
          opts:[
-            {icon:'\u2600\uFE0F',label:'Everyday Watch',desc:'One reliable watch for all occasions',val:'daily'},
-            {icon:'\uD83C\uDFC4',label:'Sport & Adventure',desc:'Diving, hiking, active lifestyle',val:'sport'},
-            {icon:'\uD83D\uDC54',label:'Dress & Formal',desc:'Elegant occasions, business meetings',val:'dress'},
-            {icon:'\u2708\uFE0F',label:'Travel Companion',desc:'Frequent traveler, multiple time zones',val:'travel'},
-            {icon:'\uD83D\uDD28',label:'Tough Beater',desc:'Don\'t want to worry about it',val:'beater'},
-            {icon:'\u2699\uFE0F',label:'Field & Tool',desc:'Rugged, legible, outdoors-ready',val:'field'}
+            {icon:'\u2600\uFE0F',label:'Daily Wear',desc:'A reliable go-to for everyday life',val:'daily'},
+            {icon:'\uD83C\uDF93',label:'Graduation or Milestone',desc:'Celebrating an achievement',val:'milestone'},
+            {icon:'\uD83D\uDCBC',label:'Career & Professional',desc:'Boardroom ready, making an impression',val:'career'},
+            {icon:'\uD83C\uDF89',label:'Birthday or Anniversary',desc:'Marking a special date',val:'celebration'},
+            {icon:'\uD83C\uDFC4',label:'Adventure & Travel',desc:'Active lifestyle, outdoors, or travel',val:'adventure'},
+            {icon:'\uD83C\uDF81',label:'Gift for Someone',desc:'Picking the perfect watch for another person',val:'gift'}
          ]},
-        {id:'style',q:"Great choice. Now, <strong>what aesthetic speaks to you</strong>? How do you want it to look on your wrist?",
+        {id:'personality',q:"Now tell me — <strong>which personality best describes the wearer</strong>?",
          opts:[
-            {icon:'\uD83C\uDFDB\uFE0F',label:'Timeless Classic',desc:'Traditional, never goes out of style',val:'classic'},
-            {icon:'\u26A1',label:'Modern & Bold',desc:'Contemporary design, stands out',val:'modern'},
-            {icon:'\uD83C\uDFAF',label:'Clean & Minimal',desc:'Simple dial, less is more',val:'minimalist'},
-            {icon:'\uD83D\uDEE0\uFE0F',label:'Tool Watch',desc:'Function over form, purposeful',val:'tool'},
-            {icon:'\uD83C\uDF1F',label:'Elegant & Refined',desc:'Thin, dressy, sophisticated',val:'elegant'},
-            {icon:'\uD83D\uDD70\uFE0F',label:'Vintage Inspired',desc:'Retro charm with modern reliability',val:'vintage'}
+            {icon:'\uD83C\uDFDB\uFE0F',label:'Classic & Refined',desc:'Timeless taste, appreciates tradition',val:'classic'},
+            {icon:'\u26A1',label:'Bold & Adventurous',desc:'Stands out, loves trying new things',val:'bold'},
+            {icon:'\uD83C\uDFAF',label:'Understated & Minimal',desc:'Quiet confidence, less is more',val:'minimal'},
+            {icon:'\uD83D\uDEE0\uFE0F',label:'Practical & No-Nonsense',desc:'Function first, built to last',val:'practical'}
          ]},
-        {id:'active',q:"How <strong>active</strong> will you be wearing this watch? This helps me narrow down water resistance and durability.",
+        {id:'experience',q:"What's the wearer's <strong>watch experience level</strong>? This helps me calibrate my suggestions.",
          opts:[
-            {icon:'\uD83C\uDFCB\uFE0F',label:'Very Active',desc:'Swimming, sports, don\'t want to take it off',val:'high'},
-            {icon:'\uD83D\uDEB6',label:'Moderately Active',desc:'Office + weekend adventures',val:'medium'},
-            {icon:'\uD83D\uDCBC',label:'Light Activity',desc:'Mostly desk work and social events',val:'low'}
+            {icon:'\uD83C\uDF31',label:'First Serious Watch',desc:'New to quality timepieces',val:'beginner'},
+            {icon:'\uD83C\uDF3F',label:'Growing Collection',desc:'Owns a few, looking for the next piece',val:'intermediate'},
+            {icon:'\uD83C\uDF33',label:'Seasoned Collector',desc:'Knows what they want, refined taste',val:'expert'}
          ]},
-        {id:'wrist',q:"What about <strong>watch size</strong>? This depends on your wrist and personal taste.",
+        {id:'gifting',q:"Last question — <strong>is this for you or a gift</strong>?",
          opts:[
-            {icon:'\u25CB',label:'Compact (under 39mm)',desc:'Understated, elegant, slim wrists',val:'small'},
-            {icon:'\u25CF',label:'Medium (39–42mm)',desc:'Versatile, fits most wrists well',val:'medium'},
-            {icon:'\u25A0',label:'Large (42mm+)',desc:'Bold presence, bigger wrists',val:'large'},
-            {icon:'\uD83E\uDD37',label:'No Preference',desc:'Open to whatever fits the watch',val:'any'}
-         ]},
-        {id:'brand',q:"Do you have a <strong>brand preference</strong>? This tells me a lot about what you value.",
-         opts:[
-            {icon:'\uD83C\uDFC6',label:'Prestigious Name',desc:'Rolex, Omega, Cartier — recognized brands',val:'prestige'},
-            {icon:'\uD83D\uDCA1',label:'Independent / Niche',desc:'Oris, Nomos, Sinn — under-the-radar',val:'independent'},
-            {icon:'\uD83C\uDFEF',label:'Heritage & History',desc:'Brands with deep horological roots',val:'heritage'},
-            {icon:'\uD83D\uDCB0',label:'Best Value',desc:'Maximum quality per dollar spent',val:'value'}
-         ]},
-        {id:'budget',q:"Last question — <strong>what's your budget</strong>? I'll find the best options in your range.",
-         opts:[
-            {icon:'\uD83D\uDCB5',label:'Under $500',desc:'Great watches at accessible prices',val:'under500'},
-            {icon:'\u26A1',label:'$500 – $2,000',desc:'Serious watchmaking, excellent value',val:'500-2000'},
-            {icon:'\u2728',label:'$2,000 – $5,000',desc:'Entry-level luxury territory',val:'2000-5000'},
-            {icon:'\uD83D\uDC51',label:'$5,000+',desc:'Premium and haute horlogerie',val:'5000+'}
+            {icon:'\uD83D\uDE4B',label:'For Myself',desc:'Treating myself to a new timepiece',val:'self'},
+            {icon:'\uD83D\uDC94',label:'Gift for Partner',desc:'Spouse, significant other',val:'partner'},
+            {icon:'\uD83C\uDF81',label:'Gift for Friend or Family',desc:'Someone I care about',val:'friend'},
+            {icon:'\uD83E\uDD14',label:'Browsing Ideas',desc:'Just exploring, no rush',val:'browsing'}
          ]},
         {id:'results',type:'results'}
     ],
@@ -304,31 +300,48 @@ const W={
     scroll(){setTimeout(()=>window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'}),100)},
 
     // ─── SCORING ───
+    // Map lifestyle answers to watch tags
+    mapAnswers(){
+        var a=this.answers,m={purpose:[],style:[],active:[],brand:[],budget:[]};
+        // Occasion → purpose + active
+        if(a.occasion==='daily'){m.purpose=['daily'];m.active=['medium','high'];}
+        else if(a.occasion==='milestone'||a.occasion==='celebration'){m.purpose=['dress','daily'];m.active=['low','medium'];}
+        else if(a.occasion==='career'){m.purpose=['dress','daily'];m.active=['low','medium'];}
+        else if(a.occasion==='adventure'){m.purpose=['sport','field','beater','travel'];m.active=['high'];}
+        else if(a.occasion==='gift'){m.purpose=['daily','dress'];m.active=['low','medium'];}
+        // Personality → style + brand
+        if(a.personality==='classic'){m.style=['classic','elegant','vintage'];m.brand=['prestige','heritage'];}
+        else if(a.personality==='bold'){m.style=['modern','sporty','tool'];m.brand=['prestige','independent'];}
+        else if(a.personality==='minimal'){m.style=['minimalist','classic','elegant'];m.brand=['independent','heritage'];}
+        else if(a.personality==='practical'){m.style=['tool','sporty','minimalist'];m.brand=['value','independent'];}
+        // Experience → budget
+        if(a.experience==='beginner'){m.budget=['under500','500-2000'];}
+        else if(a.experience==='intermediate'){m.budget=['500-2000','2000-5000'];}
+        else if(a.experience==='expert'){m.budget=['2000-5000','5000+'];}
+        // Gift influence — steer toward crowd-pleasers
+        if(a.gifting==='partner'){m.style.push('elegant','classic');}
+        else if(a.gifting==='friend'){m.brand.push('value');}
+        return m;
+    },
+
     getResults(){
+        var map=this.mapAnswers();
         var scored=this.watches.map(w=>{
             var s=0,max=0;
             // Purpose (weight 3)
-            max+=3;
-            if(w.tags.purpose&&w.tags.purpose.includes(this.answers.purpose))s+=3;
+            max+=3;if(w.tags.purpose&&w.tags.purpose.some(t=>map.purpose.includes(t)))s+=3;
             // Style (weight 2)
-            max+=2;
-            if(w.tags.style&&w.tags.style.includes(this.answers.style))s+=2;
+            max+=2;if(w.tags.style&&w.tags.style.some(t=>map.style.includes(t)))s+=2;
             // Activity (weight 2)
-            max+=2;
-            if(w.tags.active&&w.tags.active.includes(this.answers.active))s+=2;
-            // Wrist (weight 1)
-            max+=1;
-            if(w.tags.wrist&&w.tags.wrist.includes(this.answers.wrist))s+=1;
+            max+=2;if(w.tags.active&&w.tags.active.some(t=>map.active.includes(t)))s+=2;
             // Brand (weight 2)
-            max+=2;
-            if(w.tags.brand&&w.tags.brand.includes(this.answers.brand))s+=2;
-            // Budget (weight 3 — must match)
-            max+=3;
-            if(w.tags.budget&&w.tags.budget.includes(this.answers.budget))s+=3;
+            max+=2;if(w.tags.brand&&w.tags.brand.some(t=>map.brand.includes(t)))s+=2;
+            // Budget (weight 3)
+            max+=3;if(w.tags.budget&&w.tags.budget.some(t=>map.budget.includes(t)))s+=3;
             return{...w,score:s,maxScore:max,pct:Math.round((s/max)*100)};
         });
         scored.sort((a,b)=>b.score-a.score);
-        return scored.filter(w=>w.tags.budget.includes(this.answers.budget)).slice(0,4);
+        return scored.filter(w=>w.tags.budget.some(t=>map.budget.includes(t))).slice(0,4);
     },
 
     showResults(){
@@ -347,7 +360,7 @@ const W={
 
     renderResults(results){
         // Profile summary
-        var labels={purpose:{daily:'Everyday',sport:'Sport & Adventure',dress:'Dress & Formal',travel:'Travel',beater:'Tough Beater',field:'Field & Tool'},style:{classic:'Classic',modern:'Modern',minimalist:'Minimalist',tool:'Tool',elegant:'Elegant',vintage:'Vintage'},active:{high:'Very Active',medium:'Moderately Active',low:'Light Activity'},wrist:{small:'Compact Size',medium:'Medium Size',large:'Large Size',any:'Any Size'},brand:{prestige:'Prestige Brand',independent:'Independent Brand',heritage:'Heritage Brand',value:'Best Value'},budget:{under500:'Under $500','500-2000':'$500\u2013$2K','2000-5000':'$2K\u2013$5K','5000+':'$5K+'}};
+        var labels={occasion:{daily:'Daily Wear',milestone:'Milestone',career:'Career',celebration:'Celebration',adventure:'Adventure',gift:'Gift'},personality:{classic:'Classic & Refined',bold:'Bold & Adventurous',minimal:'Understated',practical:'Practical'},experience:{beginner:'First Watch',intermediate:'Growing Collection',expert:'Seasoned Collector'},gifting:{self:'For Myself',partner:'Gift for Partner',friend:'Gift for Friend',browsing:'Browsing'}};
         var tags='';
         for(var k in this.answers){if(labels[k]&&labels[k][this.answers[k]])tags+='<span class="profile-tag">'+labels[k][this.answers[k]]+'</span>';}
 
@@ -372,15 +385,52 @@ const W={
                 html+='<div class="rec-why">'+r.why+'</div>';
                 html+='<div class="rec-links">';
                 html+='<a href="'+r.links.search+'" target="_blank" rel="nofollow noopener" class="rec-link primary">View on Chrono24</a>';
-                html+='<a href="'+r.links.guide+'" class="rec-link">Read Our Guide</a>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
-        ';
+                html+='<a href="'+r.links.guide+'" class="rec-link">Read Our Guide</a>';
                 html+='</div></div>';
             });
+            // Email capture
+            var topName=results[0]?results[0].brand+' '+results[0].model:'your top pick';
+            var runnerName=results[1]?results[1].brand+' '+results[1].model:'';
+            var thirdName=results[2]?results[2].brand+' '+results[2].model:'';
+            html+='<div class="wiz-email-capture" id="wizEmailBlock">';
+            html+='<h3>Want Us to Alert You When Prices Drop on Your Matches?</h3>';
+            html+='<p class="wiz-email-sub">Enter your email and we\'ll notify you when prices drop on the <strong>'+topName+'</strong> and your other picks &mdash; plus send your full watch recommendation report.</p>';
+            html+='<form class="wiz-email-form" id="wizEmailForm">';
+            html+='<input type="text" name="firstName" placeholder="First Name" required>';
+            html+='<input type="email" name="email" placeholder="Email Address" required>';
+            html+='<input type="hidden" name="topMatch" value="'+topName+'">';
+            html+='<input type="hidden" name="runnerUp" value="'+runnerName+'">';
+            html+='<input type="hidden" name="thirdPick" value="'+thirdName+'">';
+            html+='<input type="hidden" name="occasion" value="'+(this.answers.occasion||'')+'">';
+            html+='<input type="hidden" name="experience" value="'+(this.answers.experience||'')+'">';
+            html+='<input type="hidden" name="source" value="watch-wizard">';
+            html+='<button type="submit">Yes, Alert Me to Price Drops! \uD83D\uDD14</button>';
+            html+='</form>';
+            html+='<p class="wiz-email-fine">No spam ever. Unsubscribe anytime. We only send watch deal alerts.</p>';
+            html+='<div class="wiz-email-ok" id="wizEmailOk">\u2705 You\'re on the list! We\'ll alert you when prices drop on your matches.</div>';
+            html+='</div>';
             html+='<button class="restart-btn" onclick="W.restart()">Start Over</button>';
             rs.innerHTML=html;
             this.el.appendChild(rs);
             this.scroll();
+            // Bind email form
+            var ef=document.getElementById('wizEmailForm');
+            if(ef){ef.addEventListener('submit',function(e){
+                e.preventDefault();
+                var fd=new FormData(ef);
+                fetch('https://formspree.io/f/xqeyknqr',{method:'POST',body:fd,headers:{'Accept':'application/json'}})
+                .then(function(r){return r.json();})
+                .then(function(){
+                    ef.style.display='none';
+                    document.querySelector('.wiz-email-fine').style.display='none';
+                    document.querySelector('.wiz-email-sub').style.display='none';
+                    document.getElementById('wizEmailOk').style.display='block';
+                })
+                .catch(function(){
+                    var ok=document.getElementById('wizEmailOk');
+                    ok.style.display='block';ok.textContent='Something went wrong. Please try again.';ok.style.color='#ef4444';
+                });
+            });}
         });
     },
 
@@ -397,8 +447,8 @@ const W={
         var s=this.steps[this.step];
         if(!s)return;
         if(s.type==='intro'){
-            this.addBot("Welcome! I'm the <strong>Watch Wizard</strong> \u2014 your personal watch advisor. I'll ask you a few questions to understand exactly what you're looking for, then recommend the perfect timepiece.",()=>{
-                this.addBot("I'll consider your lifestyle, style preferences, wrist size, brand taste, and budget to find watches that truly fit <em>you</em>. Let's get started.",()=>{
+            this.addBot("Welcome! I'm the <strong>Watch Wizard</strong> \u2014 your personal watch advisor. Just 4 quick lifestyle questions and I'll recommend the perfect timepiece for you or your gift recipient.",()=>{
+                this.addBot("I'll consider the occasion, personality, and experience level to find watches that truly fit. Let's get started.",()=>{
                     this.step++;
                     this.run();
                 });
