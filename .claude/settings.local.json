@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls c:/Users/prima/OneDrive/Desktop/chronos-watches/guides/*/index.html)",
+      "Bash(ls -d c:/Users/prima/OneDrive/Desktop/chronos-watches/guides/*/index.html)"
+    ]
+  }
+}
