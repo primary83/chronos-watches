@@ -247,7 +247,7 @@
   "name": "Watch Deal Hunter",
   "description": "Hunt for the best watch deals across top brands. Rolex, Omega, TAG Heuer, Seiko, Tissot and more. Compare prices, find discounts, and save on luxury timepieces.",
   "url": "https://authenticwrist.com/deals.html",
-  "numberOfItems": 36,
+  "numberOfItems": 32,
   "itemListOrder": "https://schema.org/ItemListUnordered",
   "publisher": {
     "@type": "Organization",
@@ -292,9 +292,9 @@
             <h1>Find Your Next <em>Watch Deal</em></h1>
             <p>Compare prices across top brands and retailers. From entry-level Seikos to luxury Rolexes — we hunt the deals so you don't have to.</p>
             <div class="hero-stats">
-                <div class="hero-stat"><div class="hero-stat-num" id="dealCount">36</div><div class="hero-stat-label">Active Deals</div></div>
+                <div class="hero-stat"><div class="hero-stat-num" id="dealCount">32</div><div class="hero-stat-label">Active Deals</div></div>
                 <div class="hero-stat"><div class="hero-stat-num">13</div><div class="hero-stat-label">Brands</div></div>
-                <div class="hero-stat"><div class="hero-stat-num">45%</div><div class="hero-stat-label">Avg. Savings</div></div>
+                <div class="hero-stat"><div class="hero-stat-num">18%</div><div class="hero-stat-label">Avg. Savings</div></div>
             </div>
             <div class="last-updated">
                 <span class="pulse"></span>
@@ -325,10 +325,10 @@
                     <div class="dotd-model">Black Bay 58</div>
                     <div class="dotd-style">Diver &middot; 39mm &middot; MT5402 In-House</div>
                     <div class="dotd-prices">
-                        <span class="dotd-deal-price">$3,195</span>
+                        <span class="dotd-deal-price">$3,550</span>
                         <span class="dotd-retail-price">$3,825</span>
                     </div>
-                    <span class="dotd-discount">16% OFF</span>
+                    <span class="dotd-discount">7% OFF</span>
                     <div class="dotd-context">Typical retail: <strong>$3,825</strong> &middot; Use code <strong>CART10</strong> for extra 10% off</div>
                     <div class="dotd-why">"Tudor's most popular diver at grey-market pricing — strong resale value, Rolex DNA at a fraction of the price"</div>
                     <a href="https://www.jomashop.com" target="_blank" rel="noopener noreferrer sponsored" class="dotd-cta">View Deal at Jomashop &rarr;</a>
@@ -420,7 +420,8 @@
                     </div>
                 </div>
             </div>
-            <div class="results-count" id="resultsCount">Showing <strong>36</strong> deals</div>
+            <div class="results-count" id="resultsCount">Showing <strong>32</strong> deals</div>
+            <p style="font-size:.72rem;color:var(--silver);margin-top:8px;font-style:italic">Prices verified April 2026 via retailer websites. Click through to confirm current pricing — prices may fluctuate daily.</p>
         </div>
     </section>
 
@@ -541,69 +542,66 @@
     // DEAL DATA (36 sample deals)
     // ============================
     const deals = [
-        // ROLEX
-        { brand:"Rolex", model:"Submariner Date 126610LN", style:"Diver", retailPrice:10250, dealPrice:8995, dealType:"pct-off", retailer:"Chrono24", link:"https://www.chrono24.com/search/index.htm?query=rolex+submariner+date+126610LN", icon:"\u2693" },
-        { brand:"Rolex", model:"Datejust 36 126234", style:"Dress", retailPrice:8950, dealPrice:7650, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/rolex-datejust-36-watch-126234bkso.html", icon:"\u{1F454}" },
-        { brand:"Rolex", model:"Explorer II 226570", style:"GMT", retailPrice:9550, dealPrice:11200, dealType:"limited-time", retailer:"Chrono24", link:"https://www.chrono24.com/search/index.htm?query=rolex+explorer+ii+226570", icon:"\u{1F30D}", dealPrice2:8450 },
+        // ROLEX — prices verified via Chrono24/WatchCharts March 2026
+        { brand:"Rolex", model:"Submariner Date 126610LN", style:"Diver", retailPrice:10250, dealPrice:12500, dealType:"limited-time", retailer:"Chrono24", link:"https://www.chrono24.com/search/index.htm?query=rolex+submariner+date+126610LN", icon:"\u2693" },
+        { brand:"Rolex", model:"Datejust 36 126234", style:"Dress", retailPrice:8950, dealPrice:9800, dealType:"limited-time", retailer:"Jomashop", link:"https://www.jomashop.com/rolex-datejust-36-watch-126234bkso.html", icon:"\u{1F454}" },
 
-        // OMEGA
-        { brand:"Omega", model:"Speedmaster Moonwatch 3861", style:"Chronograph", retailPrice:6900, dealPrice:4795, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/omega-speedmaster-chronograph-hand-wind-black-dial-mens-watch-31030425001001.html", icon:"\u23F1" },
-        { brand:"Omega", model:"Seamaster 300M Diver", style:"Diver", retailPrice:5400, dealPrice:3795, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/omega-watch-210-30-42-20-01-001.html", icon:"\u2693" },
-        { brand:"Omega", model:"Aqua Terra 150M", style:"Dress", retailPrice:5950, dealPrice:3850, dealType:"clearance", retailer:"Chrono24", link:"https://www.chrono24.com/search/index.htm?query=omega+aqua+terra+150m+41mm", icon:"\u{1F454}" },
+        // OMEGA — prices verified via WatchMaxx/PrestigeTime March 2026
+        { brand:"Omega", model:"Speedmaster Moonwatch 3861", style:"Chronograph", retailPrice:6900, dealPrice:6500, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/omega-speedmaster-chronograph-hand-wind-black-dial-mens-watch-31030425001001.html", icon:"\u23F1" },
+        { brand:"Omega", model:"Seamaster 300M Diver", style:"Diver", retailPrice:5400, dealPrice:4600, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/omega-watch-210-30-42-20-01-001.html", icon:"\u2693" },
+        { brand:"Omega", model:"Aqua Terra 150M", style:"Dress", retailPrice:5950, dealPrice:4200, dealType:"pct-off", retailer:"Chrono24", link:"https://www.chrono24.com/search/index.htm?query=omega+aqua+terra+150m+41mm", icon:"\u{1F454}" },
 
-        // TAG HEUER
-        { brand:"TAG Heuer", model:"Carrera Chronograph", style:"Chronograph", retailPrice:5750, dealPrice:3895, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/tag-heuer-carrera-black-dial-unisex-watch-cbs2210-ba0048.html", icon:"\u23F1" },
-        { brand:"TAG Heuer", model:"Aquaracer Professional 300", style:"Diver", retailPrice:3150, dealPrice:2195, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/TAG-Heuer-Aquaracer-Professional-Automatic/dp/B09S7Y1VSV", icon:"\u2693" },
-        { brand:"TAG Heuer", model:"Monaco Chronograph", style:"Chronograph", retailPrice:6550, dealPrice:4695, dealType:"limited-time", retailer:"Chrono24", link:"https://www.chrono24.com/search/index.htm?query=tag+heuer+monaco+chronograph", icon:"\u23F1" },
+        // TAG HEUER — prices verified via WatchMaxx March 2026
+        { brand:"TAG Heuer", model:"Carrera Chronograph CBS2210", style:"Chronograph", retailPrice:5750, dealPrice:5650, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/tag-heuer-carrera-black-dial-unisex-watch-cbs2210-ba0048.html", icon:"\u23F1" },
+        { brand:"TAG Heuer", model:"Aquaracer Professional 300", style:"Diver", retailPrice:3150, dealPrice:2750, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/TAG-Heuer-Aquaracer-Professional-Automatic/dp/B09S7Y1VSV", icon:"\u2693" },
+        { brand:"TAG Heuer", model:"Monaco Chronograph", style:"Chronograph", retailPrice:6550, dealPrice:5200, dealType:"limited-time", retailer:"Chrono24", link:"https://www.chrono24.com/search/index.htm?query=tag+heuer+monaco+chronograph", icon:"\u23F1" },
 
-        // TUDOR
-        { brand:"Tudor", model:"Black Bay 58", style:"Diver", retailPrice:3825, dealPrice:3195, dealType:"pct-off", retailer:"Chrono24", link:"https://www.chrono24.com/search/index.htm?query=tudor+black+bay+fifty-eight+M79030N", icon:"\u2693" },
-        { brand:"Tudor", model:"Pelagos 39", style:"Diver", retailPrice:4475, dealPrice:3695, dealType:"new-customer", retailer:"Jomashop", link:"https://www.jomashop.com/tudor-pelagos-black-dial-unisex-watch-25407n-0001.html", icon:"\u2693" },
+        // TUDOR — Pelagos verified $4,700 via Jomashop/Dealmoon, BB58 via WatchCharts
+        { brand:"Tudor", model:"Black Bay 58", style:"Diver", retailPrice:3825, dealPrice:3550, dealType:"pct-off", retailer:"Chrono24", link:"https://www.chrono24.com/search/index.htm?query=tudor+black+bay+fifty-eight+M79030N", icon:"\u2693" },
+        { brand:"Tudor", model:"Pelagos 39", style:"Diver", retailPrice:5475, dealPrice:4700, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/tudor-pelagos-black-dial-unisex-watch-25407n-0001.html", icon:"\u2693" },
 
-        // CARTIER
-        { brand:"Cartier", model:"Santos de Cartier Medium", style:"Dress", retailPrice:7250, dealPrice:5695, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/cartier-santos-watch-wssa0029.html", icon:"\u{1F454}" },
-        { brand:"Cartier", model:"Tank Must Large", style:"Dress", retailPrice:3600, dealPrice:2895, dealType:"limited-time", retailer:"Chrono24", link:"https://www.chrono24.com/search/index.htm?query=cartier+tank+must+large", icon:"\u{1F454}" },
+        // CARTIER — Santos verified via PrestigeTime, Tank via Chrono24
+        { brand:"Cartier", model:"Santos de Cartier Medium", style:"Dress", retailPrice:7750, dealPrice:7440, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/cartier-santos-watch-wssa0029.html", icon:"\u{1F454}" },
+        { brand:"Cartier", model:"Tank Must Large", style:"Dress", retailPrice:3600, dealPrice:3100, dealType:"limited-time", retailer:"Chrono24", link:"https://www.chrono24.com/search/index.htm?query=cartier+tank+must+large", icon:"\u{1F454}" },
 
-        // SEIKO
-        { brand:"Seiko", model:"Prospex SPB143 \"62MAS\"", style:"Diver", retailPrice:1100, dealPrice:695, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/Seiko-Recreation-Sapphire-Automatic-SPB143J1/dp/B08DHTGWGP", icon:"\u2693" },
-        { brand:"Seiko", model:"Presage SPB167 Sharp Edged", style:"Dress", retailPrice:925, dealPrice:549, dealType:"clearance", retailer:"Jomashop", link:"https://www.jomashop.com/seiko-presage-watches.html", icon:"\u{1F454}" },
-        { brand:"Seiko", model:"5 Sports Field SRPG35", style:"Field", retailPrice:295, dealPrice:179, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/SRPG35-41-Hour-Reserve-Stainless-Water-Resistant/dp/B0977H56NT", icon:"\u{1F3D5}" },
-        { brand:"Seiko", model:"Presage Cocktail Time SRPB43", style:"Dress", retailPrice:425, dealPrice:259, dealType:"bundle", retailer:"Amazon", link:"https://www.amazon.com/PRESAGE-Automatic-Cocktail-Diving-SRPB43J1/dp/B0711T8CSS", icon:"\u{1F454}" },
+        // SEIKO — SRPG35 verified via Seiko USA MSRP + Amazon sale history
+        { brand:"Seiko", model:"5 Sports Field SRPG35", style:"Field", retailPrice:275, dealPrice:225, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/SRPG35-41-Hour-Reserve-Stainless-Water-Resistant/dp/B0977H56NT", icon:"\u{1F3D5}" },
+        { brand:"Seiko", model:"Presage Cocktail Time SRPB43", style:"Dress", retailPrice:425, dealPrice:350, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/PRESAGE-Automatic-Cocktail-Diving-SRPB43J1/dp/B0711T8CSS", icon:"\u{1F454}" },
 
-        // TISSOT
-        { brand:"Tissot", model:"PRX Powermatic 80", style:"Dress", retailPrice:650, dealPrice:475, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/tissot-prx-powermatic-80-automatic-black-dial-mens-watch-t137-407-11-051-00.html", icon:"\u{1F454}" },
-        { brand:"Tissot", model:"Seastar 1000 Powermatic 80", style:"Diver", retailPrice:775, dealPrice:495, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/Tissot-Seastar-1000-Powermatic-80/dp/B098SSS9NS", icon:"\u2693" },
-        { brand:"Tissot", model:"Gentleman Powermatic 80 Silicium", style:"Dress", retailPrice:745, dealPrice:495, dealType:"new-customer", retailer:"Jomashop", link:"https://www.jomashop.com/tissot-watch-t127-407-11-051-00.html", icon:"\u{1F454}" },
+        // TISSOT — PRX verified via WatchMaxx $603, Gentleman via WatchMaxx
+        { brand:"Tissot", model:"PRX Powermatic 80", style:"Dress", retailPrice:695, dealPrice:603, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/tissot-prx-powermatic-80-automatic-black-dial-mens-watch-t137-407-11-051-00.html", icon:"\u{1F454}" },
+        { brand:"Tissot", model:"Seastar 1000 Powermatic 80", style:"Diver", retailPrice:775, dealPrice:595, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/Tissot-Seastar-1000-Powermatic-80/dp/B098SSS9NS", icon:"\u2693" },
+        { brand:"Tissot", model:"Gentleman Powermatic 80 Silicium", style:"Dress", retailPrice:745, dealPrice:575, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/tissot-watch-t127-407-11-051-00.html", icon:"\u{1F454}" },
 
-        // HAMILTON
-        { brand:"Hamilton", model:"Khaki Field Mechanical", style:"Field", retailPrice:595, dealPrice:395, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/hamilton-khaki-field-watch-h69439931.html", icon:"\u{1F3D5}" },
-        { brand:"Hamilton", model:"Khaki Aviation Pilot Day Date", style:"Pilot", retailPrice:895, dealPrice:595, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/Hamilton-Khaki-Aviation-H64615145-Watch/dp/B07145FMF9", icon:"\u2708" },
-        { brand:"Hamilton", model:"Jazzmaster Open Heart", style:"Skeleton", retailPrice:1095, dealPrice:695, dealType:"clearance", retailer:"Jomashop", link:"https://www.jomashop.com/hamilton-watch-h32705131.html", icon:"\u2699" },
+        // HAMILTON — verified via WatchMaxx: Field $513, Jazzmaster $905
+        { brand:"Hamilton", model:"Khaki Field Mechanical", style:"Field", retailPrice:675, dealPrice:513, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/hamilton-khaki-field-watch-h69439931.html", icon:"\u{1F3D5}" },
+        { brand:"Hamilton", model:"Khaki Aviation Pilot Day Date", style:"Pilot", retailPrice:995, dealPrice:795, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/Hamilton-Khaki-Aviation-H64615145-Watch/dp/B07145FMF9", icon:"\u2708" },
+        { brand:"Hamilton", model:"Jazzmaster Open Heart", style:"Skeleton", retailPrice:1095, dealPrice:905, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/hamilton-watch-h32705131.html", icon:"\u2699" },
 
-        // LONGINES
-        { brand:"Longines", model:"Spirit Zulu Time GMT", style:"GMT", retailPrice:3100, dealPrice:2195, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/longines-spirit-black-dial-unisex-watch-l38124532.html", icon:"\u{1F30D}" },
-        { brand:"Longines", model:"HydroConquest 41mm", style:"Diver", retailPrice:1350, dealPrice:895, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/Longines-Hydroconquest-Automatic-Watch-L37423967/dp/B0763SMXYP", icon:"\u2693" },
-        { brand:"Longines", model:"Master Collection Moonphase", style:"Moonphase", retailPrice:3200, dealPrice:2295, dealType:"limited-time", retailer:"Chrono24", link:"https://www.chrono24.com/search/index.htm?query=longines+master+collection+moonphase", icon:"\u{1F319}" },
+        // LONGINES — Spirit verified via WatchMaxx $2,615, HydroConquest via PrestigeTime $1,235
+        { brand:"Longines", model:"Spirit Zulu Time GMT", style:"GMT", retailPrice:3100, dealPrice:2615, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/longines-spirit-black-dial-unisex-watch-l38124532.html", icon:"\u{1F30D}" },
+        { brand:"Longines", model:"HydroConquest 41mm", style:"Diver", retailPrice:1650, dealPrice:1235, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/Longines-Hydroconquest-Automatic-Watch-L37423967/dp/B0763SMXYP", icon:"\u2693" },
+        { brand:"Longines", model:"Master Collection Moonphase", style:"Moonphase", retailPrice:3200, dealPrice:2600, dealType:"limited-time", retailer:"Chrono24", link:"https://www.chrono24.com/search/index.htm?query=longines+master+collection+moonphase", icon:"\u{1F319}" },
 
-        // CASIO
-        { brand:"Casio", model:"G-Shock MR-G MRGB2000", style:"Field", retailPrice:3200, dealPrice:2195, dealType:"clearance", retailer:"Amazon", link:"https://www.amazon.com/G-Shock-MRGB2000-MR-G-Black/dp/B0BCPXZP2T", icon:"\u{1F3D5}" },
-        { brand:"Casio", model:"G-Shock GA-2100-1A \"CasiOak\"", style:"Field", retailPrice:110, dealPrice:72, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/G-Shock-Casio-GA-2100-Analog-Digital-48-5mm/dp/B0DLLLX1RP", icon:"\u{1F3D5}" },
-        { brand:"Casio", model:"Oceanus OCW-T200S", style:"Dress", retailPrice:700, dealPrice:445, dealType:"bundle", retailer:"Amazon", link:"https://www.amazon.com/Casio-OCW-T200S-1AJF-Bluetooth-Domestic-Products/dp/B07Q2CFYXG", icon:"\u{1F454}" },
+        // CASIO — GA-2100 verified ~$96 Amazon, MR-G verified $3,000
+        { brand:"Casio", model:"G-Shock MR-G MRGB2000", style:"Field", retailPrice:3200, dealPrice:3000, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/G-Shock-MRGB2000-MR-G-Black/dp/B0BCPXZP2T", icon:"\u{1F3D5}" },
+        { brand:"Casio", model:"G-Shock GA-2100-1A \"CasiOak\"", style:"Field", retailPrice:110, dealPrice:96, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/G-Shock-Casio-GA-2100-Analog-Digital-48-5mm/dp/B0DLLLX1RP", icon:"\u{1F3D5}" },
+        { brand:"Casio", model:"Oceanus OCW-T200S", style:"Dress", retailPrice:700, dealPrice:550, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/Casio-OCW-T200S-1AJF-Bluetooth-Domestic-Products/dp/B07Q2CFYXG", icon:"\u{1F454}" },
 
-        // CITIZEN
-        { brand:"Citizen", model:"Promaster Diver BN0150-28E", style:"Diver", retailPrice:220, dealPrice:139, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/Citizen-Eco-Drive-Promaster-Diver-BN0150-28E/dp/B016R90VBK", icon:"\u2693" },
-        { brand:"Citizen", model:"Eco-Drive Pilot Chronograph", style:"Pilot", retailPrice:395, dealPrice:215, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/Citizen-Eco-Drive-Promaster-Keeping-Stainless/dp/B0B57N45T7", icon:"\u2708" },
-        { brand:"Citizen", model:"Tsuyosa Automatic NJ0150", style:"Dress", retailPrice:350, dealPrice:225, dealType:"new-customer", retailer:"Jomashop", link:"https://www.jomashop.com/citizen-automatic-blue-dial-mens-watch-nj0150-81l.html", icon:"\u{1F454}" },
+        // CITIZEN — BN0150 verified ~$165-245 range, Tsuyosa ~$225
+        { brand:"Citizen", model:"Promaster Diver BN0150-28E", style:"Diver", retailPrice:350, dealPrice:165, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/Citizen-Eco-Drive-Promaster-Diver-BN0150-28E/dp/B016R90VBK", icon:"\u2693" },
+        { brand:"Citizen", model:"Tsuyosa Automatic NJ0150", style:"Dress", retailPrice:350, dealPrice:245, dealType:"pct-off", retailer:"Jomashop", link:"https://www.jomashop.com/citizen-automatic-blue-dial-mens-watch-nj0150-81l.html", icon:"\u{1F454}" },
 
-        // ORIENT
-        { brand:"Orient", model:"Bambino Version 2 FAC00005W0", style:"Dress", retailPrice:280, dealPrice:129, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/Orient-Analogue-Automatic-Leather-FAC00005W0/dp/B074CRT2LN", icon:"\u{1F454}" },
-        { brand:"Orient", model:"Kamasu Diver RA-AA0003R19A", style:"Diver", retailPrice:335, dealPrice:189, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/Orient-RA-AA0003R-Kamasu-Stainless-Automatic/dp/B08LBZDXDM", icon:"\u2693" },
-        { brand:"Orient", model:"Sun & Moon V3 FAK00002S0", style:"Moonphase", retailPrice:370, dealPrice:179, dealType:"clearance", retailer:"Amazon", link:"https://www.amazon.com/Orient-Version-Japanese-Automatic-Stainless/dp/B077NSRLTL", icon:"\u{1F319}" },
-        { brand:"Orient", model:"Mako III RA-AA0814R", style:"Diver", retailPrice:300, dealPrice:159, dealType:"bundle", retailer:"Amazon", link:"https://www.amazon.com/Orient-Japanese-Automatic-Diving-Stainless/dp/B09ZG9ZSQF", icon:"\u2693" }
+        // ORIENT — Bambino verified ~$195 Chrono24, Mako III via Amazon
+        { brand:"Orient", model:"Bambino Version 2 FAC00005W0", style:"Dress", retailPrice:280, dealPrice:195, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/Orient-Analogue-Automatic-Leather-FAC00005W0/dp/B074CRT2LN", icon:"\u{1F454}" },
+        { brand:"Orient", model:"Kamasu Diver RA-AA0003R19A", style:"Diver", retailPrice:335, dealPrice:250, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/Orient-RA-AA0003R-Kamasu-Stainless-Automatic/dp/B08LBZDXDM", icon:"\u2693" },
+        { brand:"Orient", model:"Sun & Moon V3 FAK00002S0", style:"Moonphase", retailPrice:370, dealPrice:250, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/Orient-Version-Japanese-Automatic-Stainless/dp/B077NSRLTL", icon:"\u{1F319}" },
+        { brand:"Orient", model:"Mako III RA-AA0814R", style:"Diver", retailPrice:300, dealPrice:220, dealType:"pct-off", retailer:"Amazon", link:"https://www.amazon.com/Orient-Japanese-Automatic-Diving-Stainless/dp/B09ZG9ZSQF", icon:"\u2693" }
     ];
 
-    // Fix the Rolex Explorer — treat as limited-time deal
-    deals[2].dealPrice = 8450;
+    // Note: deals count reduced from 36 to 32 — removed 4 deals with unverifiable prices
+    // Removed: Rolex Explorer II (trades above retail), Seiko SPB143 (unavailable on Amazon),
+    // Seiko SPB167 (not found on Jomashop), Citizen Eco-Drive Pilot (model unclear)
 
     // =====================
     // RENDERING
@@ -795,84 +793,100 @@
     // TRUE VALUE SCORE DATA
     // =====================
     const tvsData = [
-        {score:72, tip:"12% off retail on the most iconic dive watch. Holds value exceptionally well."},
-        {score:68, tip:"14% off a timeless Datejust. Solid grey-market pricing."},
-        {score:82, tip:"12% below retail on a hot Explorer II. Good entry for Rolex sport models."},
-        {score:88, tip:"30% off the legendary Moonwatch. One of the best Omega deals available."},
-        {score:85, tip:"30% off a versatile Seamaster diver. Excellent value for a METAS-certified watch."},
-        {score:90, tip:"35% off and clearance pricing. Outstanding for a premium Omega dress-sport."},
-        {score:79, tip:"32% off TAG's flagship chronograph. Strong value at this tier."},
-        {score:76, tip:"30% discount on a professional 300m diver. Competitive grey-market deal."},
-        {score:74, tip:"28% off the iconic Monaco. Steve McQueen's favourite at a fair price."},
-        {score:71, tip:"16% off Tudor's most sought-after model. Modest discount but strong resale."},
-        {score:68, tip:"17% off a titanium diver. Tudor holds value well on the secondary market."},
-        {score:73, tip:"21% off a Cartier icon. Luxury dress watches rarely see deeper discounts."},
-        {score:65, tip:"20% off the Tank Must. Reasonable discount for a Cartier entry piece."},
-        {score:92, tip:"37% off a cult-favourite Seiko diver. Exceptional value for the money."},
-        {score:86, tip:"41% off a sharp-edged Presage. One of Seiko's best dress offerings."},
-        {score:80, tip:"39% off a capable field watch. Punches well above its price."},
-        {score:84, tip:"39% off the famous Cocktail Time dial. A stunner at this price."},
-        {score:82, tip:"27% off the hottest watch in its class. The PRX rarely goes this low."},
-        {score:83, tip:"36% off a robust 300m diver. Incredible Swiss value."},
-        {score:81, tip:"34% off with silicon hairspring technology at an entry-level price."},
-        {score:87, tip:"34% off a military-heritage classic. A must-have for field watch fans."},
-        {score:78, tip:"34% off a big, bold pilot watch. Great everyday wearer."},
-        {score:84, tip:"37% off an open-heart skeleton. Clearance price on a beautiful movement."},
-        {score:77, tip:"29% off a true GMT with silicon balance. Strong Swiss value."},
-        {score:85, tip:"34% off a Swiss-made dive watch. Punches way above its price."},
-        {score:75, tip:"28% off a dressy moonphase complication. Fair deal on a refined piece."},
-        {score:70, tip:"31% off Japan's premium G-Shock. Niche but built to last a lifetime."},
-        {score:88, tip:"35% off the hugely popular CasiOak. One of horology's best-sellers."},
-        {score:76, tip:"36% off a solar/radio-controlled dress watch. Sleeper pick."},
-        {score:91, tip:"37% off the legendary Promaster. An ISO-certified diver under $150."},
-        {score:82, tip:"46% off a capable pilot chronograph. Hard to beat for features per dollar."},
-        {score:79, tip:"36% off Citizen's answer to the PRX. Clean automatic at a great price."},
-        {score:95, tip:"54% off a classic dress watch. Simply the best value in watchmaking."},
-        {score:89, tip:"44% off a proven Seiko-movement diver. Outstanding bang for buck."},
-        {score:93, tip:"52% off a sun-and-moon complication. Looks like a $1,000 watch."},
-        {score:90, tip:"47% off a rock-solid diver. One of the best sub-$200 automatics."}
+        // Rolex (2)
+        {score:55, tip:"Submariner trades above retail. Strong resale but not a discount buy."},
+        {score:50, tip:"Datejust trades near retail. Best value buying pre-owned."},
+        // Omega (3)
+        {score:72, tip:"6% off retail on the legendary Moonwatch. Solid grey-market pricing."},
+        {score:78, tip:"15% off a METAS-certified Seamaster diver. Good value at grey market."},
+        {score:82, tip:"29% off a premium Omega dress-sport. Strong grey-market discount."},
+        // TAG Heuer (3)
+        {score:60, tip:"2% off TAG's flagship chronograph. Modest grey-market discount."},
+        {score:70, tip:"13% off a professional 300m diver. Decent grey-market savings."},
+        {score:72, tip:"21% off the iconic Monaco. Fair grey-market pricing."},
+        // Tudor (2)
+        {score:68, tip:"7% off Tudor's most popular diver. Strong resale value."},
+        {score:65, tip:"14% off Pelagos 39 via grey market. Tudor holds value well."},
+        // Cartier (2)
+        {score:62, tip:"4% off a Cartier icon. Luxury watches rarely see deep discounts."},
+        {score:65, tip:"14% off the Tank Must. Reasonable grey-market savings."},
+        // Seiko (2)
+        {score:80, tip:"18% off a capable field watch. Punches well above its price."},
+        {score:78, tip:"18% off the famous Cocktail Time dial. A stunner at this price."},
+        // Tissot (3)
+        {score:82, tip:"13% off the hottest watch in its class. Solid grey-market price."},
+        {score:80, tip:"23% off a robust 300m diver. Great Swiss value."},
+        {score:81, tip:"23% off with silicon hairspring technology at an entry-level price."},
+        // Hamilton (3)
+        {score:85, tip:"24% off a military-heritage classic. Excellent grey-market deal."},
+        {score:78, tip:"20% off a bold pilot watch. Great everyday wearer at this price."},
+        {score:75, tip:"17% off an open-heart skeleton. Decent savings on a beautiful movement."},
+        // Longines (3)
+        {score:77, tip:"16% off a true GMT with silicon balance. Good Swiss value."},
+        {score:82, tip:"25% off a Swiss-made dive watch. Strong grey-market discount."},
+        {score:75, tip:"19% off a dressy moonphase complication. Fair deal."},
+        // Casio (3)
+        {score:62, tip:"6% off Japan's premium G-Shock. Niche but built to last."},
+        {score:72, tip:"13% off the hugely popular CasiOak. Modest savings."},
+        {score:70, tip:"21% off a solar/radio-controlled dress watch. Sleeper pick."},
+        // Citizen (2)
+        {score:88, tip:"53% off the legendary Promaster. Outstanding value under $200."},
+        {score:79, tip:"30% off Citizen's answer to the PRX. Clean automatic at a great price."},
+        // Orient (4)
+        {score:85, tip:"30% off a classic dress watch. Exceptional value in watchmaking."},
+        {score:78, tip:"25% off a proven diver with sapphire crystal. Great bang for buck."},
+        {score:80, tip:"32% off a sun-and-moon complication. Looks expensive for the price."},
+        {score:76, tip:"27% off a rock-solid diver. One of the best sub-$250 automatics."}
     ];
 
     // =====================
     // OWNERSHIP COST DATA (5-year estimates)
     // =====================
     const ownData = [
-        {service:1200, insurance:180, strap:0, resale:92},
-        {service:1200, insurance:150, strap:0, resale:88},
-        {service:1200, insurance:170, strap:0, resale:90},
-        {service:800, insurance:100, strap:0, resale:75},
-        {service:800, insurance:80, strap:0, resale:72},
-        {service:800, insurance:80, strap:0, resale:70},
-        {service:600, insurance:80, strap:100, resale:60},
-        {service:600, insurance:50, strap:80, resale:58},
-        {service:600, insurance:95, strap:100, resale:62},
-        {service:700, insurance:65, strap:0, resale:80},
-        {service:700, insurance:75, strap:0, resale:78},
-        {service:900, insurance:115, strap:0, resale:75},
-        {service:900, insurance:60, strap:80, resale:70},
-        {service:250, insurance:15, strap:40, resale:65},
-        {service:250, insurance:12, strap:40, resale:55},
+        // Rolex (2)
+        {service:1200, insurance:250, strap:0, resale:105},
+        {service:1200, insurance:200, strap:0, resale:95},
+        // Omega (3)
+        {service:800, insurance:130, strap:0, resale:75},
+        {service:800, insurance:95, strap:0, resale:72},
+        {service:800, insurance:85, strap:0, resale:68},
+        // TAG Heuer (3)
+        {service:600, insurance:115, strap:100, resale:55},
+        {service:600, insurance:55, strap:80, resale:55},
+        {service:600, insurance:105, strap:100, resale:58},
+        // Tudor (2)
+        {service:700, insurance:70, strap:0, resale:82},
+        {service:700, insurance:95, strap:0, resale:75},
+        // Cartier (2)
+        {service:900, insurance:150, strap:0, resale:82},
+        {service:900, insurance:65, strap:80, resale:75},
+        // Seiko (2)
         {service:100, insurance:5, strap:30, resale:45},
-        {service:200, insurance:6, strap:30, resale:50},
-        {service:200, insurance:10, strap:30, resale:60},
-        {service:200, insurance:10, strap:30, resale:55},
-        {service:200, insurance:10, strap:40, resale:58},
-        {service:150, insurance:8, strap:30, resale:55},
-        {service:200, insurance:12, strap:40, resale:50},
-        {service:250, insurance:15, strap:40, resale:50},
-        {service:400, insurance:45, strap:0, resale:65},
-        {service:300, insurance:18, strap:0, resale:60},
-        {service:500, insurance:45, strap:50, resale:62},
-        {service:0, insurance:45, strap:0, resale:55},
+        {service:200, insurance:8, strap:30, resale:50},
+        // Tissot (3)
+        {service:200, insurance:12, strap:30, resale:60},
+        {service:200, insurance:12, strap:30, resale:55},
+        {service:200, insurance:12, strap:40, resale:58},
+        // Hamilton (3)
+        {service:150, insurance:10, strap:30, resale:55},
+        {service:200, insurance:16, strap:40, resale:50},
+        {service:250, insurance:18, strap:40, resale:50},
+        // Longines (3)
+        {service:400, insurance:55, strap:0, resale:65},
+        {service:300, insurance:25, strap:0, resale:60},
+        {service:500, insurance:55, strap:50, resale:62},
+        // Casio (3)
+        {service:0, insurance:60, strap:0, resale:55},
         {service:0, insurance:2, strap:20, resale:40},
-        {service:0, insurance:10, strap:30, resale:45},
-        {service:0, insurance:3, strap:20, resale:50},
-        {service:0, insurance:5, strap:20, resale:40},
+        {service:0, insurance:12, strap:30, resale:45},
+        // Citizen (2)
+        {service:0, insurance:4, strap:20, resale:50},
         {service:0, insurance:5, strap:20, resale:45},
-        {service:0, insurance:3, strap:20, resale:35},
-        {service:0, insurance:4, strap:20, resale:45},
-        {service:0, insurance:4, strap:20, resale:38},
-        {service:0, insurance:3, strap:20, resale:42}
+        // Orient (4)
+        {service:0, insurance:4, strap:20, resale:35},
+        {service:0, insurance:5, strap:20, resale:45},
+        {service:0, insurance:5, strap:20, resale:38},
+        {service:0, insurance:4, strap:20, resale:42}
     ];
 
     // =====================
