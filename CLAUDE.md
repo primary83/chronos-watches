@@ -10,7 +10,7 @@
 - index.html — Homepage
 - directories.html — Watch directories
 - brands.html — Brand directory (12 major brands)
-- guides.html — 300 expert guides
+- guides.html — 602 expert guides
 - deals.html — Watch deals
 - quiz.html — Watch Finder (6-question budget quiz)
 - wizard.html — Watch Wizard (4-question lifestyle chat UI)
@@ -104,6 +104,6 @@
 - Always commit with descriptive message
 
 ## CURRENT COUNTS
-- Blog/guide pages: 300+
+- Blog/guide pages: 602+
 - Indexed by Google: 13 (growing after SEO fix)
 - Last updated: March 7, 2026
