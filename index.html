@@ -199,11 +199,11 @@
         <div class="ticker-track">
             <div class="ticker-item"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>Authentic Timepieces</div>
             <div class="ticker-item"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>Smart Watches</div>
-            <div class="ticker-item"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>614 Expert Guides</div>
+            <div class="ticker-item"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>619 Expert Guides</div>
             <div class="ticker-item"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>Worldwide Shipping</div>
             <div class="ticker-item"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>Authentic Timepieces</div>
             <div class="ticker-item"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>Smart Watches</div>
-            <div class="ticker-item"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>614 Expert Guides</div>
+            <div class="ticker-item"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>619 Expert Guides</div>
             <div class="ticker-item"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>Worldwide Shipping</div>
         </div>
     </div>
@@ -391,7 +391,7 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <div class="footer-logo">AUTHENTIC WRIST</div>
-                    <p>Your curated destination for authentic luxury — from the world's finest timepieces to cutting-edge smart watches. 614 expert guides and growing.</p>
+                    <p>Your curated destination for authentic luxury — from the world's finest timepieces to cutting-edge smart watches. 619 expert guides and growing.</p>
                     
                 </div>
                 <div class="footer-column">
@@ -406,7 +406,7 @@
                 <div class="footer-column">
                     <h4>Guides</h4>
                     <ul>
-                        <li><a href="blog.html">All 614 Guides</a></li>
+                        <li><a href="blog.html">All 619 Guides</a></li>
                         <li><a href="blog-best-watches-2026.html">Best of 2026</a></li>
                         <li><a href="comparison-rolex-vs-omega-complete.html">Rolex vs Omega</a></li>
                         <li><a href="watch-glossary.html">Watch Glossary</a></li>
@@ -527,7 +527,7 @@ function fmt(t){return t.replace(/\n/g,'<br>').replace(/\*\*(.*?)\*\*/g,'<strong
 function showTyping(){var m=document.getElementById('chatMessages'),d=document.createElement('div');d.className='c-msg bot';d.id='typInd';d.innerHTML='<div class="c-typing"><span></span><span></span><span></span></div>';m.appendChild(d);m.scrollTop=m.scrollHeight}
 function hideTyping(){var t=document.getElementById('typInd');if(t)t.remove()}
 function sendMsg(){var i=document.getElementById('chatInput'),t=i.value.trim();if(!t)return;i.value='';handleInput(t)}
-function handleInput(t){addUser(t);showTyping();setTimeout(function(){hideTyping();processQ(t)},614+Math.random()*500)}
+function handleInput(t){addUser(t);showTyping();setTimeout(function(){hideTyping();processQ(t)},619+Math.random()*500)}
 function processQ(q){var l=q.toLowerCase();if(l.includes('under')||l.includes('budget')||l.includes('$'))budgetQ(l);else if(l.includes('rolex'))brandQ('rolex');else if(l.includes('omega'))brandQ('omega');else if(l.includes('tudor'))brandQ('tudor');else if(l.includes('tag')||l.includes('heuer'))brandQ('tagheuer');else if(l.includes('cartier'))brandQ('cartier');else if(l.includes('breitling'))brandQ('breitling');else if(l.includes('iwc'))brandQ('iwc');else if(l.includes('longines'))brandQ('longines');else if(l.includes('tissot'))brandQ('tissot');else if(l.includes('grand seiko')||l.includes('seiko'))brandQ('grandseiko');else if(l.includes('vs')||l.includes('compare'))compareQ(l);else if(l.includes('deal')||l.includes('sale'))dealsQ();else if(l.includes('promo')||l.includes('code')||l.includes('coupon'))promoQ();else if(l.includes('recommend')||l.includes('suggest')||l.includes('first watch'))recQ();else if(l.includes('grey market')||l.includes('gray market')||l.includes('jomashop'))greyQ();else if(l.includes('invest')||l.includes('value')||l.includes('hold'))investQ();else if(l.includes('dive')||l.includes('water'))diveQ();else if(l.includes('dress')||l.includes('formal'))dressQ();else defaultQ()}
 function brandQ(k){var b=wk.brands[k];if(!b)return defaultQ();addBot("**"+b.name+"** \u2014 "+b.tier+"\n\n**Price Range:** "+b.range+"\n**Value Retention:** "+b.ret+"\n\n**Popular Collections:**\n"+b.pop.map(function(m){return"\u2022 "+m}).join("\n")+"\n\n**Pro Tip:** "+b.tip+"\n\n**Current Deals:** "+b.deals);addQuick([b.name+" deals","Compare to others","Show promo codes"])}
 function budgetQ(q){var b=0,m=q.match(/\$?([\d,]+)/);if(m)b=parseInt(m[1].replace(',',''));if(b<=500||q.includes('under 500')){addBot("Great budget! Top picks under $500:\n\n**Tissot PRX** (~$350-400) \u2014 Hottest watch in this range, Swiss quartz\n**Seiko Presage** (~$300-450) \u2014 Beautiful dials, automatic\n**Orient Bambino** (~$150-200) \u2014 Best dress watch under $200\n**Citizen Eco-Drive** (~$200-400) \u2014 Solar powered, never needs a battery");addQuick(["Tissot PRX deals","Seiko options","Show promo codes"])}else if(b<=1000||q.includes('under 1000')){addBot("$1,000 opens up excellent Swiss options!\n\n**Tissot PRX Powermatic 80** (~$569 grey market) \u2014 Automatic, 80hr power reserve\n**Hamilton Khaki Field** (~$500-700) \u2014 Military heritage, Hollywood icon\n**Seiko Prospex** (~$400-800) \u2014 Professional dive watches\n**Longines Conquest** (~$800-1,000 grey market) \u2014 True Swiss luxury at this price");addQuick(["Tissot PRX deal","Hamilton options","Compare these"])}else if(b<=3000||q.includes('under 3000')){addBot("$3,000 is the sweet spot!\n\n**Tudor Black Bay 58** (~$3,200 grey market) \u2014 Rolex DNA at a fraction. Top pick!\n**Omega Seamaster 300** (~$2,800-3,500 grey market) \u2014 James Bond\u2019s choice\n**TAG Heuer Carrera** (~$2,500-3,000) \u2014 Motorsport heritage\n**Longines Spirit** (~$2,000-2,500) \u2014 COSC certified, excellent finishing");addQuick(["Tudor Black Bay info","Omega deals","TAG Heuer deals"])}else if(b<=5000||q.includes('under 5000')){addBot("$5,000 unlocks serious luxury:\n\n**Omega Speedmaster Moonwatch** (~$4,500-5,000 grey market) \u2014 First watch on the moon\n**Tudor Pelagos** (~$4,200) \u2014 500m dive, titanium\n**Breitling Avenger** (~$2,595-4,500 at Jomashop) \u2014 Up to 41% off!\n**Cartier Santos** (~$5,500 grey market) \u2014 The first pilot\u2019s watch");addQuick(["Speedmaster details","Breitling deals","Cartier info"])}else{addBot("With $"+b.toLocaleString()+"+, you\u2019re in premium territory!\n\n**Rolex** (from ~$7,000) \u2014 Ultimate status, 98% value retention\n**Omega** ($5,000-15,000) \u2014 Speedmaster, Seamaster \u2014 iconic\n**Cartier** ($5,000-20,000) \u2014 Santos, Tank \u2014 jewelry-grade elegance\n**IWC** ($5,000-15,000) \u2014 Portugieser, Big Pilot \u2014 understated luxury");addQuick(["Rolex models","Best investment watches","Compare luxury brands"])}}
